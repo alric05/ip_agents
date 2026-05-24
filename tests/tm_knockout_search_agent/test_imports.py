@@ -16,6 +16,8 @@ MODULES = [
     "src.tm_knockout_search_agent.services",
     "src.tm_knockout_search_agent.services.query_planner",
     "src.tm_knockout_search_agent.services.risk_assessment",
+    "src.tm_knockout_search_agent.services.report",
+    "src.tm_knockout_search_agent.services.report_validator",
     "src.tm_knockout_search_agent.services.stopping",
     "src.tm_knockout_search_agent.services.workflow",
     "src.tm_knockout_search_agent.studio",

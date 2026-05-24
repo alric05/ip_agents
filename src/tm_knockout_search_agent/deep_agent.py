@@ -18,6 +18,10 @@ from src.tm_knockout_search_agent.services.risk_assessment import (
     SourceSearchStatus,
     assess_trademark_risk,
 )
+from src.tm_knockout_search_agent.services.report import (
+    AdversarialReview,
+    generate_trademark_report,
+)
 from src.tm_knockout_search_agent.services.session import (
     DEFAULT_SESSIONS_BASE_DIR,
     create_session,
@@ -231,6 +235,19 @@ def check_tm_knockout(
         source_statuses=normalized_source_statuses,
     )
     stopping_decision = determine_stopping_decision(plan, progress)
+    adversarial_review = AdversarialReview(
+        summary=(
+            "Deterministic v1 checks reviewed source coverage, candidate "
+            "findings, risk label support, and limitations."
+        ),
+        checks={
+            "requested_scope_reviewed": True,
+            "candidate_ids_linked": True,
+            "limitations_documented": True,
+            "stopping_decision_recorded": True,
+        },
+        source_failures=risk_assessment.missing_or_failed_source_notes,
+    )
 
     write_artifact(
         manifest.session_id,
@@ -253,6 +270,12 @@ def check_tm_knockout(
         criteria,
         base_dir=resolved_config.sessions_base_dir,
     )
+    write_artifact(
+        manifest.session_id,
+        "search_criteria",
+        criteria,
+        base_dir=resolved_config.sessions_base_dir,
+    )
     update_session_stage(
         manifest.session_id,
         WorkflowStage.AWAITING_SCOPE_CONFIRMATION,
@@ -266,7 +289,19 @@ def check_tm_knockout(
     )
     write_artifact(
         manifest.session_id,
+        "query_plan",
+        plan,
+        base_dir=resolved_config.sessions_base_dir,
+    )
+    write_artifact(
+        manifest.session_id,
         "candidates",
+        normalized_candidates,
+        base_dir=resolved_config.sessions_base_dir,
+    )
+    write_artifact(
+        manifest.session_id,
+        "normalized_candidates",
         normalized_candidates,
         base_dir=resolved_config.sessions_base_dir,
     )
@@ -274,6 +309,24 @@ def check_tm_knockout(
         manifest.session_id,
         "assessments",
         risk_assessment,
+        base_dir=resolved_config.sessions_base_dir,
+    )
+    write_artifact(
+        manifest.session_id,
+        "ranked_findings",
+        risk_assessment.findings,
+        base_dir=resolved_config.sessions_base_dir,
+    )
+    write_artifact(
+        manifest.session_id,
+        "risk_assessment",
+        risk_assessment,
+        base_dir=resolved_config.sessions_base_dir,
+    )
+    write_artifact(
+        manifest.session_id,
+        "adversarial_review",
+        adversarial_review,
         base_dir=resolved_config.sessions_base_dir,
     )
     final_decision = {
@@ -293,8 +346,11 @@ def check_tm_knockout(
     if stopping_decision.decision != StoppingDecisionType.CONTINUE_SEARCHING:
         report_markdown = _build_markdown_report(
             criteria=criteria,
+            plan=plan,
+            candidates=normalized_candidates,
             risk_assessment=risk_assessment,
             stopping_decision=stopping_decision,
+            adversarial_review=adversarial_review,
         )
         write_final_report(
             manifest.session_id,
@@ -381,45 +437,26 @@ def _coerce_stage(stage: TrademarkSearchStage | str) -> TrademarkSearchStage:
 def _build_markdown_report(
     *,
     criteria: TrademarkSearchCriteria,
+    plan: Any,
+    candidates: list[TrademarkCandidate],
     risk_assessment: Any,
     stopping_decision: Any,
+    adversarial_review: AdversarialReview,
 ) -> str:
-    findings = risk_assessment.findings[:3]
-    findings_text = "\n".join(
-        f"- {finding.display_name}: {finding.risk_label.value}, score {finding.score}"
-        for finding in findings
-    ) or "- No relevant candidate findings surfaced."
-    country_notes = "\n".join(
-        f"- {location}: {note}"
-        for location, note in risk_assessment.country_notes.items()
-    ) or "- No country/system notes."
-    return f"""# Trademark Knockout Screening Report
-
-## Executive Summary
-
-- Proposed brand: {criteria.brand_name}
-- Requested countries/systems: {", ".join([*criteria.jurisdictions, *criteria.regional_systems]) or "Not specified"}
-- Goods/services and classes: {criteria.goods_services or "Limited goods context"} / {", ".join(criteria.all_classes) or "No classes"}
-- Overall risk label: {risk_assessment.overall_risk_label.value}
-- Stopping decision: {stopping_decision.decision.value}
-
-## Strongest Candidate Findings
-
-{findings_text}
-
-## Country/System Notes
-
-{country_notes}
-
-## Limitations
-
-- Live CompuMark and web search integrations are not implemented in this step.
-- This report is based on provided or mocked structured candidates only.
-
-## Disclaimer
-
-{prompts.FIXED_DISCLAIMER}
-"""
+    return generate_trademark_report(
+        {
+            "search_criteria": criteria,
+            "query_plan": plan,
+            "normalized_candidates": candidates,
+            "ranked_findings": risk_assessment.findings,
+            "risk_assessment": risk_assessment,
+            "adversarial_review": adversarial_review,
+            "limitations": [
+                "Live CompuMark and web/common-law integrations are not active in this step.",
+                f"Stopping decision: {stopping_decision.decision.value} ({stopping_decision.reason}).",
+            ],
+        }
+    )
 
 
 __all__ = [

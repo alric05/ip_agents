@@ -31,6 +31,21 @@ from src.tm_knockout_search_agent.services.risk_assessment import (
     TrademarkRiskAssessment,
     assess_trademark_risk,
 )
+from src.tm_knockout_search_agent.services.report import (
+    AdversarialReview,
+    REPORT_SECTION_TITLES,
+    TrademarkReportArtifacts,
+    build_report_artifacts,
+    generate_trademark_report,
+    source_failure_notes,
+)
+from src.tm_knockout_search_agent.services.report_validator import (
+    BANNED_REPORT_TERMS,
+    ReportValidationIssue,
+    ReportValidationResult,
+    extract_report_sections,
+    validate_trademark_report,
+)
 from src.tm_knockout_search_agent.services.stopping import (
     SearchProgress,
     StoppingDecision,
@@ -73,6 +88,17 @@ __all__ = [
     "SourceSearchStatus",
     "TrademarkRiskAssessment",
     "assess_trademark_risk",
+    "AdversarialReview",
+    "REPORT_SECTION_TITLES",
+    "TrademarkReportArtifacts",
+    "build_report_artifacts",
+    "generate_trademark_report",
+    "source_failure_notes",
+    "BANNED_REPORT_TERMS",
+    "ReportValidationIssue",
+    "ReportValidationResult",
+    "extract_report_sections",
+    "validate_trademark_report",
     "SearchProgress",
     "StoppingDecision",
     "StoppingDecisionType",
