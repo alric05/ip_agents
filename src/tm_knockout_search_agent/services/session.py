@@ -38,6 +38,7 @@ DEFAULT_ARTIFACT_FILENAMES: dict[str, str] = {
     "assessments": "assessments.json",
     "risk_assessment": "risk_assessment.json",
     "adversarial_review": "adversarial_review.json",
+    "llm_review": "llm_review.json",
     "final_decision": "final_decision.json",
     "final_report": "final_report.md",
 }
