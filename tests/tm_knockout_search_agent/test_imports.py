@@ -10,6 +10,7 @@ MODULES = [
     "src.tm_knockout_search_agent.prompts",
     "src.tm_knockout_search_agent.state",
     "src.tm_knockout_search_agent.deep_agent",
+    "src.tm_knockout_search_agent.eval_runner",
     "src.tm_knockout_search_agent.main",
     "src.tm_knockout_search_agent.middleware",
     "src.tm_knockout_search_agent.middleware.stage_guard",

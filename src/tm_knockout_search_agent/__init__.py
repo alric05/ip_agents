@@ -1,7 +1,7 @@
 """Trademark knockout search agent package.
 
-This package is an initial skeleton only. The production graph, tools, and
-workflow wiring will be added in later implementation steps.
+This package contains deterministic v1 helpers for trademark knockout
+screening, plus a minimal LangGraph Studio entry point.
 """
 
 from src.tm_knockout_search_agent.deep_agent import (
@@ -11,6 +11,11 @@ from src.tm_knockout_search_agent.deep_agent import (
     check_tm_knockout,
     create_knockout_search_agent,
     create_tm_knockout_search_agent,
+)
+from src.tm_knockout_search_agent.eval_runner import (
+    MockEvalRunResult,
+    MockEvalStatus,
+    run_tm_knockout_mock_e2e,
 )
 from src.tm_knockout_search_agent.state import (
     AgentState,
@@ -48,6 +53,9 @@ __all__ = [
     "check_tm_knockout",
     "create_knockout_search_agent",
     "create_tm_knockout_search_agent",
+    "MockEvalRunResult",
+    "MockEvalStatus",
+    "run_tm_knockout_mock_e2e",
     "CandidateReference",
     "ClaimBreakdown",
     "ClaimElement",
