@@ -5,10 +5,10 @@ knockout screening. It answers:
 
 > Can this proposed brand be safely shortlisted for deeper legal review?
 
-The current v1 implementation is deterministic and local. It can normalize
-inputs, plan searches, normalize mocked source results, assess risk, write
-session artifacts, and generate a Markdown report. Live CompuMark and web search
-integrations are represented as placeholders and must not be assumed active.
+The current v1 implementation can normalize inputs, plan searches, normalize
+source results, assess risk, write session artifacts, and generate a Markdown
+report. CompuMark registry search is wired through the Swagger subset API when
+`COMPUMARK_API_KEY` is configured. Web/common-law search remains a placeholder.
 
 ## Required Input
 
@@ -27,18 +27,19 @@ Jurisdiction notes:
 
 ## Environment Variables
 
-Exact live integration variable names are not finalized. Until CompuMark and web
-search clients are implemented, treat the names below as provisional
-placeholders.
-
-Provisional CompuMark configuration:
+CompuMark configuration:
 
 ```bash
 COMPUMARK_API_KEY=...
-COMPUMARK_BASE_URL=...
-COMPUMARK_CLIENT_ID=...        # if OAuth/client credentials are used
-COMPUMARK_CLIENT_SECRET=...    # if OAuth/client credentials are used
+COMPUMARK_BASE_URL=https://api.clarivate.com/compumark-content/api/v1
+COMPUMARK_TIMEOUT_SECONDS=30
+COMPUMARK_TEXT_TEST_MODE=false
 ```
+
+`COMPUMARK_BASE_URL`, `COMPUMARK_TIMEOUT_SECONDS`, and
+`COMPUMARK_TEXT_TEST_MODE` are optional. The API key is sent as the `X-ApiKey`
+header. The client uses the Swagger flow `POST /count`, `POST /search`, then
+`POST /text`.
 
 Provisional web/common-law search configuration:
 
@@ -50,8 +51,8 @@ GOOGLE_API_KEY=...             # existing repo setting, if reused
 BING_SEARCH_API_KEY=...        # possible provider
 ```
 
-Current v1 smoke tests do not require these variables because they do not run
-live source calls.
+Current unit and mocked E2E tests do not require live source variables because
+they mock CompuMark and do not run web search.
 
 ## LangGraph Studio
 
@@ -112,6 +113,10 @@ With `use_llm=true`, the graph still does not call CompuMark or web search. It
 makes one Azure OpenAI call to review the deterministic artifacts and writes
 `llm_review.json` under the session directory. If Azure OpenAI is reachable only
 through a private endpoint, run this smoke test from the approved network.
+
+The curated `compumark_trademark_search` tool can perform live CompuMark calls
+when invoked by an agent/tool run and `COMPUMARK_API_KEY` is available. Do not
+run broad live searches unless the source budget and scope are intentional.
 
 ## CLI
 
@@ -237,9 +242,14 @@ cat sessions/tm_knockout_search_agent/<session_id>/final_report.md
     goods/services.
   - `Europe` is ambiguous; use `EUIPO` or specific countries.
 
-- Live source results are missing:
-  - Expected in v1 unless CompuMark/web clients have been implemented and wired.
-  - Current tools return deterministic placeholder messages.
+- Live CompuMark results are missing:
+  - Confirm `COMPUMARK_API_KEY` is present in `.env` or the shell environment.
+  - Confirm VPN/private network access if the CompuMark endpoint is restricted.
+  - Check the tool JSON for `error_type`, `error_message`, and source status.
+
+- Live web results are missing:
+  - Expected in v1. Web/common-law search still returns a deterministic
+    placeholder until a web provider is selected and wired.
 
 - LLM smoke call fails with `Public access is disabled`:
   - The Azure OpenAI deployment requires private endpoint/network access.

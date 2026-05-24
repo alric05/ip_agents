@@ -4,6 +4,7 @@ from src.tm_knockout_search_agent.tools.adapters import (
     build_duplicate_key,
     flag_duplicate_candidates,
     normalize_compumark_result,
+    normalize_compumark_trademark_record,
     normalize_web_common_law_result,
 )
 from src.tm_knockout_search_agent.tools.compumark import compumark_trademark_search
@@ -20,6 +21,7 @@ __all__ = [
     "get_tm_knockout_search_tool_names",
     "get_tm_knockout_search_tools",
     "normalize_compumark_result",
+    "normalize_compumark_trademark_record",
     "normalize_web_common_law_result",
     "web_common_law_search",
 ]

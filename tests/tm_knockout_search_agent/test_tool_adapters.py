@@ -6,6 +6,7 @@ from src.tm_knockout_search_agent.state import TrademarkCandidateSource
 from src.tm_knockout_search_agent.tools.adapters import (
     flag_duplicate_candidates,
     normalize_compumark_result,
+    normalize_compumark_trademark_record,
     normalize_web_common_law_result,
 )
 
@@ -83,6 +84,73 @@ def test_missing_optional_fields_do_not_crash_normalization() -> None:
     assert web_candidate.title == "Loft Loop bags"
     assert web_candidate.detected_brand_text is None
     assert web_candidate.duplicate_key is not None
+
+
+def test_compumark_text_record_maps_nested_fields_to_trademark_candidate() -> None:
+    candidate = normalize_compumark_trademark_record(
+        {
+            "id": "US-KLYRA-1",
+            "registrationOfficeCode": "US",
+            "wordMarkSpecification": {"markVerbalElementText": "KLYRA"},
+            "status": {
+                "markCurrentStatus": "Registered",
+                "cmNormalisedStatus": "REGISTERED",
+                "application": {
+                    "applicationNumber": "98765432",
+                    "applicationDate": "20200102",
+                },
+                "registration": {
+                    "registrationNumber": "7654321",
+                    "registrationDate": "20210304",
+                },
+            },
+            "goodsServices": {
+                "intClassDescriptions": [
+                    {
+                        "intClassNumber": "003",
+                        "intGoodsServicesDescription": "Cosmetics and skincare",
+                    },
+                    {
+                        "intClassNumber": "035",
+                        "cmComputerTranslationIntGoodsServicesDescription": (
+                            "Retail store services featuring cosmetics"
+                        ),
+                    },
+                ]
+            },
+            "applicants": [{"applicantName": "Klyra Beauty LLC"}],
+        }
+    )
+
+    assert candidate.id == "US-KLYRA-1"
+    assert candidate.mark_name == "KLYRA"
+    assert candidate.jurisdiction == "US"
+    assert candidate.classes == ["3", "35"]
+    assert candidate.goods_services == (
+        "Class 003: Cosmetics and skincare; "
+        "Class 035: Retail store services featuring cosmetics"
+    )
+    assert candidate.status == "REGISTERED"
+    assert candidate.owner == "Klyra Beauty LLC"
+    assert candidate.application_number == "98765432"
+    assert candidate.registration_number == "7654321"
+    assert candidate.filing_date == "20200102"
+    assert candidate.registration_date == "20210304"
+    assert candidate.duplicate_key == "registration:7654321"
+
+
+def test_compumark_result_auto_detects_text_record_shape() -> None:
+    candidate = normalize_compumark_result(
+        {
+            "id": "EM-KLYRA-1",
+            "registrationOfficeCode": "EM",
+            "wordMarkSpecification": {"markVerbalElementText": "KLYRA"},
+        }
+    )
+
+    assert candidate.id == "EM-KLYRA-1"
+    assert candidate.jurisdiction == "EM"
+    assert candidate.mark_name == "KLYRA"
 
 
 def test_duplicate_compumark_records_detect_by_registration_number() -> None:

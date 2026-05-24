@@ -18,6 +18,16 @@ from src.tm_knockout_search_agent.services.session import (
     write_artifact,
     write_final_report,
 )
+from src.tm_knockout_search_agent.services.compumark_client import (
+    CompuMarkAPIError,
+    CompuMarkClient,
+    CompuMarkConfig,
+    CompuMarkConfigError,
+    CompuMarkSearchExecutionResult,
+    build_compumark_search_requests,
+    execute_compumark_search,
+    normalize_registration_office_codes,
+)
 from src.tm_knockout_search_agent.services.query_planner import (
     normalize_brand_name,
     plan_trademark_search,
@@ -79,6 +89,14 @@ __all__ = [
     "sessions_root",
     "write_artifact",
     "write_final_report",
+    "CompuMarkAPIError",
+    "CompuMarkClient",
+    "CompuMarkConfig",
+    "CompuMarkConfigError",
+    "CompuMarkSearchExecutionResult",
+    "build_compumark_search_requests",
+    "execute_compumark_search",
+    "normalize_registration_office_codes",
     "normalize_brand_name",
     "plan_trademark_search",
     "CandidateAnalysis",
