@@ -1,0 +1,56 @@
+# Novelty Checker - Multi-Agent System
+# LangGraph-based implementation for novelty and prior art search
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Core LangGraph Framework
+# ═══════════════════════════════════════════════════════════════════════════════
+langgraph>=0.2.0
+langchain>=0.3.0
+langchain-core>=0.3.0
+
+# LangGraph CLI & Studio (Native UI)
+langgraph-cli>=0.1.0
+
+# Deep Agents (planning, delegation, skills middleware)
+deepagents>=0.1.0
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# LLM Providers
+# ═══════════════════════════════════════════════════════════════════════════════
+# Azure OpenAI via LiteLLM
+langchain-litellm>=0.2.0
+litellm>=1.0.0
+
+# Additional providers (add as needed)
+# langchain-openai>=1.1.7
+# langchain-aws>=0.2.0
+# langchain-google-genai>=2.0.0
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Data Validation & Utilities
+# ═══════════════════════════════════════════════════════════════════════════════
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+python-dotenv>=1.0.0
+pandas
+openpyxl
+pydantic
+pyyaml>=6.0
+# ═══════════════════════════════════════════════════════════════════════════════
+# HTTP
+# ═══════════════════════════════════════════════════════════════════════════════
+requests>=2.31.0
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Testing
+# ═══════════════════════════════════════════════════════════════════════════════
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+pytest-cov>=4.1.0
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLI & Development
+# ═══════════════════════════════════════════════════════════════════════════════
+rich>=13.0.0
+PyYAML>=6.0.0

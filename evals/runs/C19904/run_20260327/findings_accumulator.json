@@ -1,0 +1,168 @@
+{
+  "rounds": [
+    {
+      "round_number": 2,
+      "source": "citation",
+      "timestamp": "2026-03-27T16:30:19.835901",
+      "new_refs_count": 7
+    }
+  ],
+  "all_references": [
+    {
+      "publication_number": "US9729101B1",
+      "source_seed": "US12401313B1/US12323091B1",
+      "direction": "backward",
+      "triage": "B",
+      "priority_date": "2016-04-25",
+      "why_relevant": "Cited by both US seeds; discusses FPV deployment using mooring buoys and a tensioning frame surrounding PV array\u2014useful adjacent mooring-array context though not specific to concrete block/cross-float retention.",
+      "feature_mapping": {
+        "F1": "N",
+        "F2": "N",
+        "F3": "N",
+        "F4": "N",
+        "F5": "N",
+        "F6": "N"
+      }
+    },
+    {
+      "publication_number": "US20210214056A1",
+      "source_seed": "US12401313B1/US12323091B1",
+      "direction": "backward",
+      "triage": "B",
+      "priority_date": "2020-01-10",
+      "why_relevant": "Cited by both US seeds; floating PV platform with multiple floats + primary frame + module frame; includes a broad list of anchoring means and adjustable positioning\u2014potentially relevant to float/frame architecture and mooring concepts.",
+      "feature_mapping": {
+        "F1": "N",
+        "F2": "N",
+        "F3": "N",
+        "F4": "N",
+        "F5": "N",
+        "F6": "N"
+      }
+    },
+    {
+      "publication_number": "US11319035B2",
+      "source_seed": "US12401313B1/US12323091B1",
+      "direction": "backward",
+      "triage": "C",
+      "priority_date": "2018-02-26",
+      "why_relevant": "Cited by both US seeds; floating solar stage device with outer frame portion and central connecting rod plus multiple buoyant collars\u2014general floating stage structure but not close to cross-pontoon retention or monitoring.",
+      "feature_mapping": {
+        "F1": "N",
+        "F2": "N",
+        "F3": "N",
+        "F4": "N",
+        "F5": "N",
+        "F6": "N"
+      }
+    },
+    {
+      "publication_number": "IL279932A",
+      "source_seed": "US12401313B1/US12323091B1",
+      "direction": "backward",
+      "triage": "B",
+      "priority_date": "2021-01-03",
+      "why_relevant": "Cited by both US seeds; uses a construction grid of beams/crossbeams with off-the-shelf flotation elements tied underneath and anchoring via geogrid\u2014relevant for alternative float-retention vocabulary (grid + ties).",
+      "feature_mapping": {
+        "F1": "N",
+        "F2": "N",
+        "F3": "N",
+        "F4": "N",
+        "F5": "N",
+        "F6": "N"
+      }
+    },
+    {
+      "publication_number": "WO2024078733A1",
+      "source_seed": "US12401313B1/US12323091B1",
+      "direction": "backward",
+      "triage": "B",
+      "priority_date": "2022-10-12",
+      "why_relevant": "Cited by both US seeds; FPV platform with pontoon bodies in groups fixed to a metal frame; adjustable tilt PV modules with actuator arms; two opposite PV fields separated by service path\u2014helpful for mounting-structure art and pontoon grouping.",
+      "feature_mapping": {
+        "F1": "N",
+        "F2": "N",
+        "F3": "N",
+        "F4": "N",
+        "F5": "N",
+        "F6": "N"
+      }
+    },
+    {
+      "publication_number": "CN108347220A",
+      "source_seed": "CN105958909B",
+      "direction": "forward",
+      "triage": "C",
+      "priority_date": "2018-05-18",
+      "why_relevant": "Cites triangular FPV mount seed; floating PV bracket with rotating beam and tracking mechanism\u2014adjacent mounting/bracket vocabulary but likely not bifacial-specific.",
+      "feature_mapping": {
+        "F1": "N",
+        "F2": "N",
+        "F3": "N",
+        "F4": "N",
+        "F5": "N",
+        "F6": "N"
+      }
+    },
+    {
+      "publication_number": "CN112542985A",
+      "source_seed": "CN105958909B",
+      "direction": "forward",
+      "triage": "B",
+      "priority_date": "2020-12-16",
+      "why_relevant": "Cites triangular FPV mount seed; modular bracket/base units for on-water PV with angled supporting rods\u2014relevant to FPV module support/bracket structures (triangular/angled rods) though bifacial not explicit.",
+      "feature_mapping": {
+        "F1": "N",
+        "F2": "N",
+        "F3": "N",
+        "F4": "N",
+        "F5": "N",
+        "F6": "N"
+      }
+    }
+  ],
+  "final_coverage": [
+    {
+      "feature_id": "F1",
+      "level": "",
+      "before": "MODERATE",
+      "after": "MODERATE",
+      "notes": "No clear rectangular divided deck/walls disclosure from citations fetched."
+    },
+    {
+      "feature_id": "F2",
+      "level": "",
+      "before": "MODERATE",
+      "after": "MODERATE",
+      "notes": "No cruciform internal 4-opening pontoon retention found in citation set."
+    },
+    {
+      "feature_id": "F3",
+      "level": "",
+      "before": "MODERATE",
+      "after": "MODERATE",
+      "notes": "Some additional FPV bracket/platform mounting art; still not clearly bifacial + triangular supports."
+    },
+    {
+      "feature_id": "F4",
+      "level": "",
+      "before": "STRONG",
+      "after": "STRONG",
+      "notes": "Citations mention mooring generally but not concrete block + coated SS corner bridle."
+    },
+    {
+      "feature_id": "F5",
+      "level": "",
+      "before": "MODERATE",
+      "after": "MODERATE",
+      "notes": "No dual-side temperature + irradiance telemetry disclosure in citations."
+    },
+    {
+      "feature_id": "F6",
+      "level": "",
+      "before": "MODERATE",
+      "after": "MODERATE",
+      "notes": "No clear junction-box I/V telemetry disclosure in citations."
+    }
+  ]
+}

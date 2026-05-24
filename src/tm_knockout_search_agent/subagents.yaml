@@ -1,0 +1,7 @@
+# v1 intentionally uses no source-specific sub-agents.
+#
+# The orchestrator should run intake, normalization, deterministic planning,
+# curated tool execution, screening, stopping, adversarial review, and reporting
+# directly. Source-specific sub-agents may be added later if CompuMark, web, or
+# other trademark data sources need isolated execution policies.
+{}

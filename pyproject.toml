@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "novelty-checker"
+version = "0.1.0"
+description = "Multi-agent system for novelty and prior art search using LangGraph"
+readme = "README.md"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "langgraph>=0.2.0",
+    "langchain>=0.3.0",
+    "langchain-core>=0.3.0",
+    "langchain-litellm>=0.2.0",
+    "deepagents>=0.1.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+    "PyYAML>=6.0.0",
+    "uvicorn>=0.29.0",
+    "fastapi>=0.111.0",
+    "guardrails-ai>=0.5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-cov>=4.1.0",
+    "rich>=13.0.0",
+]
+eval = [
+    "deepeval>=2.0.0",
+    "sentence-transformers>=2.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.md", "*.yaml", "*.yml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+asyncio_mode = "auto"
+# test_phase1_quick.py references a deleted vs_code_agent/ directory — skip at collection time
+addopts = "--ignore=tests/test_phase1_quick.py"
+markers = [
+    "llm: requires real LLM API access (Azure OpenAI)",
+    "real_api: requires real Derwent API access (DERWENT_JWT_TOKEN)",
+    "real_server: requires DERWENT_JWT_TOKEN and a running server on localhost:8000",
+]

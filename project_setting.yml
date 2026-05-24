@@ -1,0 +1,62 @@
+# Custom settings for this project
+---
+config:
+  project:
+    terraform_version: '1.9.3'
+    base_version: 3.2.0
+    app_name: "dpa-ai-agent-api"
+    app_family: dpa
+    product: "DPA Agent framework"
+    component: agent-api
+    layer: api
+    config_project_key: DSDEVOPS
+    git_repo: https://github.com/clarivate-prod/dpa-ai-agent-base
+    main_region: us-west-2
+    status_email: alonso.hernandez@clarivate.com
+    # If application has an owner (typically the tech lead) update this value
+    owner_email: alonso.hernandez@clarivate.com
+    # Optional - what environment to deploy on PR merge to master branch
+    default_environment: dev-snapshot
+    # ECS attributes
+    listener_port: 8000
+    healthcheck_port: 8000
+    healthcheck_path: /health
+    service_path: /
+    # Valid values can be found at
+    # https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html
+    task_cpu: 2048
+    task_mem: 4096
+    ecs_launchtype: FARGATE
+    ecs_platform_version: LATEST
+    ecs_autoscaling_desired: 1
+    ecs_autoscaling_minmax: 1,1
+    ecs_autoscaling_target_metric: ALBRequestCountPerTarget
+    ecs_autoscaling_target_value: 10
+    ecs_deploy_wait_for_steady_state: "true"
+    ecs_bastion_ingress_ports: 8000,8126
+    metrics_enabled: "false"
+
+    # Custom attributes
+    # foo: default_foo
+  # Custom environment settings
+  # NOTE! 'environments' key must be at the same indent level as the project key
+  environments:
+    dev-snapshot:
+      default:
+        cluster_name: dpa-ai-agent-api-dev-snapshot-us-west-2
+        alb_consumer_cidrs: '["10.236.104.0/21","10.236.40.0/21","10.152.0.0/20","10.103.208.0/21"]'    
+        account_id: "761762634378"    
+    dev-stable:
+      default:
+        cluster_name: dpa-ai-agent-api-dev-stable-us-west-2
+        alb_consumer_cidrs: '["10.236.104.0/21","10.236.40.0/21","10.152.0.0/20","10.103.208.0/21"]'
+        account_id: "761762634378"        
+    prod:
+      default:
+        cluster_name: dpa-ai-agent-api-prod-us-west-2
+        ecs_launchtype: FARGATE
+        metrics_enabled: "true"
+        alb_consumer_cidrs: '["10.236.40.0/21","10.152.32.0/20","10.103.216.0/21"]'
+        account_id: "649280551980"        
+        ecs_autoscaling_desired: 3
+        ecs_autoscaling_minmax: 3,3

@@ -1,0 +1,57 @@
+{
+  "verdict": "not_novel",
+  "confidence": "Medium",
+  "where_novelty_resides": "In the arrangement of parts and structure.",
+  "per_feature_risk": [
+    {
+      "feature": "F1",
+      "risk_level": "Medium",
+      "closest_reference": "US11319035B2"
+    },
+    {
+      "feature": "F2",
+      "risk_level": "Medium",
+      "closest_reference": "US11319035B2"
+    },
+    {
+      "feature": "F3",
+      "risk_level": "Medium",
+      "closest_reference": "US11319035B2"
+    },
+    {
+      "feature": "F4",
+      "risk_level": "Medium",
+      "closest_reference": "US11319035B2"
+    },
+    {
+      "feature": "F5",
+      "risk_level": "Medium",
+      "closest_reference": "US20210214056A1"
+    },
+    {
+      "feature": "F6",
+      "risk_level": "Low",
+      "closest_reference": "IL279932B"
+    },
+    {
+      "feature": "F7",
+      "risk_level": "Medium",
+      "closest_reference": "IL279932B"
+    },
+    {
+      "feature": "F9",
+      "risk_level": "Medium",
+      "closest_reference": "US9729101B1"
+    },
+    {
+      "feature": "F10",
+      "risk_level": "Medium",
+      "closest_reference": "US9729101B1"
+    },
+    {
+      "feature": "F11",
+      "risk_level": "Medium",
+      "closest_reference": "US9729101B1"
+    }
+  ]
+}

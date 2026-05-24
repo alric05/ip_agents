@@ -1,0 +1,18 @@
+{
+  "case_id": "C19904",
+  "domain": "photovoltaic system",
+  "title": "A novel design of floating structure for eco-adaptive floating photovoltaic system: eco-float voltaic platform (EFVP)",
+  "difficulty_band": "Medium",
+  "difficulty_score": 3,
+  "difficulty_notes": "medium",
+  "sme_name": "Shivam",
+  "collection_date": "2026/03/18",
+  "total_time_minutes": 480,
+  "time_breakdown": {
+    "scoping_scoping": 0,
+    "feature_definition": 30,
+    "search_execution_all_queries": 330,
+    "triage_and_feature_mapping": 60,
+    "report/verdict_synthesis": 60
+  }
+}

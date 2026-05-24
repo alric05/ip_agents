@@ -1,0 +1,1759 @@
+<datasources>
+	<datasource>
+		<name>T3</name>
+		<databases>
+			<database name="FLD">
+				<fields>
+					<field name="ssto" phraseSearch="smrt=" searchCode="smrt" retrieveCode="smrt" recordViewCode="smrt"/>
+					<field name="ti" phraseSearch="ti=" searchCode="ti" retrieveCode="ti" recordViewCode="ti"/>
+					<field name="st" recordViewCode="st" retrieveCode="st" searchCode="mst" phraseSearch="mst="/>
+					<field name="fam" phraseSearch="fam=" searchCode="fam" retrieveCode="fam" recordViewCode="fam"/>
+					<field name="famb" phraseSearch="famb=" searchCode="famb" retrieveCode="famb" recordViewCode="famb"/>
+					<field name="lapp" phraseSearch="lapp=" searchCode="lapp" retrieveCode="lapp" recordViewCode="lapp"/>
+					<field name="pad" phraseSearch="pad=" searchCode="pad" recordViewCode="pad" retrieveCode="pad"/>
+					<field name="copa" phraseSearch="copa=" searchCode="copa" recordViewCode="copa" retrieveCode="copa"/>
+					<field name="cuppa" phraseSearch="cuppa=" searchCode="cuppa" recordViewCode="cuppa" retrieveCode="cuppa"/>
+					<field name="gov" phraseSearch="gov=" searchCode="gov" recordViewCode="gov" retrieveCode="gov"/>
+					<field name="ab" retrieveCode="ab" phraseSearch="ab=" searchCode="ab"/>
+					<field name="pn" phraseSearch="pn=" searchCode="pn" recordViewCode="pn" retrieveCode="pn,ti" sortCode="pn"/>
+					<field name="pns" phraseSearch="" searchCode="" recordViewCode="" retrieveCode=""/>
+					<field name="uts" phraseSearch="" searchCode="" recordViewCode="" retrieveCode=""/>
+					<field name="cc" phraseSearch="cc=" searchCode="cc" recordViewCode="cc" retrieveCode="cc"/>
+					<field name="ki" phraseSearch="ki=" searchCode="ki" recordViewCode="ki" retrieveCode="ki"/>
+					<field name="dp" phraseSearch="pd=" searchCode="pd" recordViewCode="pd" retrieveCode="pd" sortCode="pd"/>
+					<field name="grd" recordViewCode="grd" retrieveCode="gd"/>
+					<field name="an" phraseSearch="an=" searchCode="an" recordViewCode="an" retrieveCode="an"/>
+					<field name="ad" recordViewCode="ad" retrieveCode="ad" sortCode="ad" searchCode="ad" phraseSearch="ad="/>
+					<field name="ay" phraseSearch="ay=" searchCode="ay" recordViewCode="ay" retrieveCode="ay"/>
+					<field name="pra" phraseSearch="pr=" searchCode="pr"/>
+					<field name="pr" phraseSearch="pr=" searchCode="pr" recordViewCode="pr" retrieveCode="pr"/>
+					<field name="prc" recordViewCode="prc" retrieveCode="prc" searchCode="prc" phraseSearch="prc="/>
+					<field name="tio" phraseSearch="tio=" searchCode="tio" recordViewCode="ti" retrieveCode="ti" sortCode="ti"/>
+					<field name="tior" phraseSearch="tio=" searchCode="tio" recordViewCode="tio" retrieveCode="tio"/>
+					<field name="prd" recordViewCode="prd" retrieveCode="prd" sortCode="prd" searchCode="prdt" phraseSearch="prdt="/>
+					<field name="ic" phraseSearch="ic=" searchCode="ic" recordViewCode="ic" retrieveCode="ic" sortCode="ic"/>
+					<field name="ica" phraseSearch="icra=" searchCode="icra" id="yes"/>
+					<field name="icrf" phraseSearch="icra=" searchCode="icra" id="yes"/>
+					<field name="icv" phraseSearch="ic=" searchCode="ic"/>
+					<field name="icrv" phraseSearch="ic=" searchCode="ic"/>
+					<field name="icrm" phraseSearch="icrc=" searchCode="icrc" id="yes"/>
+					<field name="lc" phraseSearch="lc=" searchCode="lc" recordViewCode="lc" retrieveCode="lc"/>
+					<field name="ec" phraseSearch="ec=" searchCode="ec" recordViewCode="ec" retrieveCode="ec"/>
+					<field name="abo" phraseSearch="abo=" searchCode="abo" retrieveCode="abo"/>
+					<field name="abol" retrieveCode="ab" phraseSearch="ab="/>
+					<field name="pad" phraseSearch="pad=" searchCode="pad" recordViewCode="pad" retrieveCode="pad"/>
+					<field name="ino" phraseSearch="ino=" searchCode="ino" recordViewCode="ino" retrieveCode="ino"/>
+					<field name="dsc" phraseSearch="dsc=" searchCode="dsc" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="dtd" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="ex" phraseSearch="ex=" searchCode="ex" recordViewCode="ex,exu,exs,exsu" retrieveCode="ex,exu,exs,exsu"/>
+					<field name="uc" searchCode="uc" phraseSearch="uc=" retrieveCode="uc" recordViewCode="uc"/>
+					<field name="ucm" searchCode="ucm" phraseSearch="ucm=" retrieveCode="ucm" recordViewCode="ucm"/>
+					<field name="ucc" searchCode="ucc" phraseSearch="ucc=" retrieveCode="ucm"/>
+					<field name="uco" searchCode="uco" phraseSearch="uco=" retrieveCode="ucm"/>
+					<field name="ucom" searchCode="ucom" phraseSearch="ucom=" retrieveCode="ucm"/>
+					<field name="tie" phraseSearch="tie=" searchCode="tie" retrieveCode="tie" recordViewCode="tie"/>
+					<field name="tis" phraseSearch="tis=" searchCode="tis" recordViewCode="tis" retrieveCode="tis"/>
+					<field name="abe" phraseSearch="abe=" searchCode="abe" recordViewCode="abe" retrieveCode="abe"/>
+					<field name="tif" phraseSearch="tif=" searchCode="tif" retrieveCode="tif" recordViewCode="tif"/>
+					<field name="tig" phraseSearch="tig=" searchCode="tig" retrieveCode="tig" recordViewCode="tig"/>
+					<field name="tie" phraseSearch="tie=" searchCode="tie" retrieveCode="tie" recordViewCode="tie"/>
+					<field name="abf" phraseSearch="abf=" searchCode="abf" retrieveCode="abf" recordViewCode="abf"/>
+					<field name="abg" phraseSearch="abg=" searchCode="abg" retrieveCode="abg" recordViewCode="abg"/>
+					<field name="tid" phraseSearch="tid=" searchCode="tid" recordViewCode="tid" retrieveCode="tid"/>
+					<field name="tita" phraseSearch="tita=" searchCode="tita" recordViewCode="tita" retrieveCode="tita"/>
+					<field name="abs" phraseSearch="abs=" searchCode="abs" retrieveCode="abs" recordViewCode="abs"/>
+					<field name="abp" phraseSearch="abp=" searchCode="abp" retrieveCode="abp" recordViewCode="abp"/>
+					<field name="cle" phraseSearch="cle=" searchCode="cl" retrieveCode="cl"/>
+					<field name="clo" phraseSearch="cl=" searchCode="cl" retrieveCode="cl"/>
+					<field name="cl1o" searchCode="cl1" retrieveCode="cl1"/>
+					<field name="cl1e" searchCode="cl1" retrieveCode="cl1"/>
+					<field name="clf" phraseSearch="clf=" searchCode="clf"/>
+					<field name="clg" phraseSearch="clg=" searchCode="clg"/>
+					<field name="cls" phraseSearch="cls=" searchCode="cls"/>
+					<field name="clp" phraseSearch="clp=" searchCode="clp"/>
+					<field name="col" phraseSearch="col=" searchCode="col" retrieveCode="col" recordViewCode="col"/>
+					<field name="pao" phraseSearch="pao=" searchCode="pao" recordViewCode="pao" retrieveCode="pao,paf"/>
+					<field name="paolc" searchCode="pao" retrieveCode="pao"/>
+					<field name="paool" searchCode="pao" retrieveCode="pao"/>
+					<field name="paoc" phraseSearch="pac=" searchCode="pac" recordViewCode="paoc" retrieveCode="paoc"/>
+					<field name="inad" phraseSearch="inad=" searchCode="inad" retrieveCode="inf"/>
+					<field name="inadl" searchCode="inad" retrieveCode="inf"/>
+					<field name="inadol" searchCode="inad" retrieveCode="inf"/>
+					<field name="ag" phraseSearch="agt=" searchCode="agt" retrieveCode="ag" recordViewCode="ag"/>
+					<field name="agt" retrieveCode="agdf" recordViewCode="agdf"/>
+					<field name="cr" phraseSearch="cr=" searchCode="cr" retrieveCode="crd" recordViewCode="crd"/>
+					<field name="pcp" phraseSearch="pcp=" searchCode="pcp" recordViewCode="pcp" retrieveCode="pcp"/>
+					<field name="pcpn" phraseSearch="pcp=" searchCode="pcp" retrieveCode="pcp"/>
+					<field name="pcpd" phraseSearch="pcpd=" searchCode="pcpd" retrieveCode="pcp"/>
+					<field name="acp" phraseSearch="cpc=" searchCode="cpc" retrieveCode="cpc"/>
+					<field name="cpc" phraseSearch="cpcc=" searchCode="cpcc=" retrieveCode="cpc" recordViewCode="cpc" sortCode="cpc"/>
+					<field name="cpcao" phraseSearch="cpcao=" searchCode="cpcao" retrieveCode="cpc"/>
+					<field name="cpci" phraseSearch="cpci=" searchCode="cpci" retrieveCode="cpc"/>
+					<field name="cpca" phraseSearch="cpca=" searchCode="cpca" retrieveCode="cpc"/>
+					<field name="cpcp" phraseSearch="cpccp=" searchCode="cpccp" retrieveCode="cpc"/>
+					<field name="cpcc" phraseSearch="cpccl=" searchCode="cpccl" retrieveCode="cpc"/>
+					<field name="cpco" phraseSearch="cpo=" searchCode="cpo" recordViewCode="cpc" retrieveCode="cpc"/>
+					<field name="cpoao" phraseSearch="cpoao=" searchCode="cpoao" retrieveCode="cpc"/>
+					<field name="cpoi" phraseSearch="cpoi=" searchCode="cpoi" retrieveCode="cpc"/>
+					<field name="cpoa" phraseSearch="cpoa=" searchCode="cpoa" retrieveCode="cpc"/>
+					<field name="cpop" phraseSearch="cpop=" searchCode="cpop" retrieveCode="cpc"/>
+					<field name="cpoc" phraseSearch="cpol=" searchCode="cpol" retrieveCode="cpc"/>
+					<field name="cpccd" phraseSearch="cpcd=" searchCode="cpcd" retrieveCode="cpcd,cpcdt"/>
+					<field name="aic" phraseSearch="ic=,cpc=" searchCode="ic,cpc" retrieveCode="ic,cpc"/>
+					<field name="icrmi" phraseSearch="icrci=" searchCode="icrci" retrieveCode="ic"/>
+					<field name="icrma" phraseSearch="icrca=" searchCode="icrca"/>
+					<field name="icrai" phraseSearch="icrai=" searchCode="icrai" retrieveCode="ic"/>
+					<field name="icrfi" phraseSearch="icrai=" searchCode="icrai" retrieveCode="ic"/>
+					<field name="icraa" phraseSearch="icraa=" searchCode="icraa"/>
+					<field name="icrfa" phraseSearch="icraa=" searchCode="icraa"/>
+					<field name="icr" phraseSearch="icr=" searchCode="icr"/>
+					<field name="ico7" phraseSearch="ico7=" searchCode="ico7"/>
+					<field name="ico" phraseSearch="ico=" searchCode="ico"/>
+					<field name="icod" phraseSearch="ico=" searchCode="ico"/>
+					<field name="ic7" phraseSearch="ic7=" searchCode="ic7"/>
+					<field name="ic7m" phraseSearch="ic7m=" searchCode="ic7m"/>
+					<field name="icro" phraseSearch="icro=" searchCode="icro"/>
+					<field name="icroc" phraseSearch="icroc=" searchCode="icroc"/>
+					<field name="icroci" phraseSearch="icroci=" searchCode="icroci"/>
+					<field name="icroca" phraseSearch="icroca=" searchCode="icroca"/>
+					<field name="icroa" phraseSearch="icroa=" searchCode="icroa"/>
+					<field name="icroai" phraseSearch="icroai=" searchCode="icroai"/>
+					<field name="icroaa" phraseSearch="icroaa=" searchCode="icroaa"/>
+					<field name="cip" phraseSearch="cip=" searchCode="cip" recordViewCode="cip" retrieveCode="cip"/>
+					<field name="cin" phraseSearch="cin=" searchCode="cin" recordViewCode="cin" retrieveCode="cin"/>
+					<field name="doi" phraseSearch="doi=" searchCode="doi" recordViewCode="doi" retrieveCode="doi"/>
+					<field name="ci" phraseSearch="ci=" searchCode="ci" recordViewCode="ci" retrieveCode="ci"/>
+					<field name="lsc" phraseSearch="lsc=" searchCode="lsc"/>
+					<field name="lst" phraseSearch="lst=" searchCode="lst"/>
+					<field name="lsd" phraseSearch="lsd=" searchCode="lsd"/>
+					<field name="lsi" phraseSearch="lsi=" searchCode="lsi"/>
+					<field name="ls" phraseSearch="ls=" searchCode="ls" recordViewCode="ls" retrieveCode="ls"/>
+					<field name="asg" phraseSearch="asg=" searchCode="asg"/>
+					<field name="asr" phraseSearch="asr=" searchCode="asr"/>
+					<field name="asf" phraseSearch="rfrm=" searchCode="rfrm"/>
+					<field name="asd" phraseSearch="asd=" searchCode="asd" recordViewCode="asd" retrieveCode="asd"/>
+					<field name="cl" phraseSearch="cl=" searchCode="cl" retrieveCode="cl"/>
+					<field name="pry" phraseSearch="pry=" searchCode="pry"/>
+					<field name="rpa" phraseSearch="rpa=" searchCode="rpa" recordViewCode="rpac" retrieveCode="rpac"/>
+					<field name="rpn" phraseSearch="rpn=" searchCode="rpn" recordViewCode="rpn" retrieveCode="rpn"/>
+					<field name="ran" phraseSearch="ran=" searchCode="ran" recordViewCode="ran" retrieveCode="ran"/>
+					<field name="rad" phraseSearch="rad=" searchCode="rad" recordViewCode="rad" retrieveCode="rad"/>
+					<field name="rpd" phraseSearch="rpd=" searchCode="rpd" recordViewCode="rpd" retrieveCode="rpd"/>
+					<field name="dc" phraseSearch="dc=" searchCode="dc"/>
+					<field name="cm" phraseSearch="D00H=" searchCode="D00H"/>
+					<field name="st" recordViewCode="st" retrieveCode="st"/>
+					<field name="pca" phraseSearch="pca=" searchCode="pca" recordViewCode="pca" retrieveCode="pca"/>
+					<field name="pcan" phraseSearch="pca=" searchCode="pca" retrieveCode="pca"/>
+					<field name="pcad" phraseSearch="pcad=" searchCode="pcad" retrieveCode="pca"/>
+					<field name="bs" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="prtc" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="dso" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="ALL" phraseSearch="txt=" searchCode="txt"/>
+					<field name="in" searchCode="in" phraseSearch="in=" retrieveCode="in" sortCode="in"/>
+					<field name="inl" searchCode="in" retrieveCode="in"/>
+					<field name="inol" searchCode="in" retrieveCode="in"/>
+					<field name="pa" searchCode="pa" phraseSearch="pa=" retrieveCode="pa,pad,pao" recordViewCode="pa" sortCode="pa"/>
+					<field name="cas" phraseSearch="asnl=" searchCode="asnl" retrieveCode="pal" recordViewCode="asnl" sortCode="pal"/>
+					<field name="asap" retrieveCode="pa,pad,pao"/>
+					<field name="asapl" retrieveCode="pa,pad,pao"/>
+					<field name="asapol" retrieveCode="pa,pad,pao"/>
+					<field name="cpcdcp" retrieveCode="cpcd,cpcdt"/>
+					<field name="cmp" searchCode="cmp" phraseSearch="cmp="/>
+					<field name="py" searchCode="py" phraseSearch="py=" retrieveCode="py"/>
+					<field name="mod" searchCode="mod" phraseSearch="mod="/>
+					<field name="det" searchCode="det" phraseSearch="det=" recordViewCode="det" retrieveCode="det"/>
+					<field name="cl1" phraseSearch="cl1=" searchCode="cl1" recordViewCode="cl1" retrieveCode="cl1"/>
+					<field name="ict" retrieveCode="ic,ict"/>
+					<field name="cpct" retrieveCode="cpc,cpct"/>
+					<field name="cpcct" retrieveCode="cpc,cpct"/>
+					<field name="fami" recordViewCode="fam" retrieveCode="fam"/>
+					<field name="cipf" recordViewCode="cipf" retrieveCode="cipf"/>
+					<field name="dsd" recordViewCode="dsd" retrieveCode="dsd"/>
+					<field name="famd" recordViewCode="famd" retrieveCode="fam"/>
+					<field name="cipfd" recordViewCode="cipfd" retrieveCode="cipfd"/>
+					<field name="cipd" recordViewCode="cipd" retrieveCode="cipd"/>
+					<field name="agcr" phraseSearch="ag=" searchCode="ag"/>
+					<field name="tab" phraseSearch="tab=" searchCode="tab"/>
+					<field name="ctb" phraseSearch="ctb=" searchCode="ctb"/>
+					<field name="cl" phraseSearch="cl=" searchCode="cl"/>
+					<field name="as" phraseSearch="as=" searchCode="as" recordViewCode="as" retrieveCode="as"/>
+					<field name="prda" phraseSearch="pr=,pc=" searchCode="pr,pc"/>
+					<field name="prds" phraseSearch="prid=" searchCode="prid"/>
+					<field name="aioe" phraseSearch="ic=,ico=,ec=" searchCode="ic,ico,ec"/>
+					<field name="pct" phraseSearch="pca=,pcp=" searchCode="pca,pcp" retrieveCode="pca,pcp"/>
+					<field name="ds" phraseSearch="ds=" searchCode="ds" retrieveCode="ds" recordViewCode="ds"/>
+					<field name="lap" phraseSearch="lp=" searchCode="lp" retrieveCode="lap"/>
+					<field name="tl" recordViewCode="det,lap" retrieveCode="det,lap"/>
+					<field name="ecm" phraseSearch="ecm=" searchCode="ecm" recordViewCode="ec" retrieveCode="ec"/>
+					<field name="eclm" retrieveCode="ec"/>
+					<field name="TXT" phraseSearch="txt=" searchCode="txt"/>
+					<field name="PER" phraseSearch="per=" searchCode="per"/>
+					<field name="ORG" phraseSearch="org=" searchCode="org"/>
+					<field name="LOC" phraseSearch="cc=" searchCode="cc"/>
+					<field name="TFR" phraseSearch="py=" searchCode="py"/>
+					<field name="cipct" recordViewCode="cipct" retrieveCode="cipct"/>
+					<field name="cipfct" recordViewCode="cipfct" retrieveCode="cipfct"/>
+					<field name="cinct" recordViewCode="cinct" retrieveCode="cinct"/>
+					<field name="cipcnt" retrieveCode="cinct,cipfct,cipct"/>
+					<field name="ucfs" recordViewCode="ucm,uct,fscu" retrieveCode="ucm,uct,fscu"/>
+					<field name="clct" recordViewCode="clct" retrieveCode="clct"/>
+					<field name="src" recordViewCode="cip"/>
+					<field name="rel" recordViewCode="cip"/>
+					<field name="re" retrieveCode="rank" sortCode="rank"/>
+					<field name="icg" phraseSearch="icg=" searchCode="icg" recordViewCode="" retrieveCode="icg"/>
+					<field name="rank" retrieveCode="rank" sortCode="rank"/>
+					<field name="paod" phraseSearch="asto=" searchCode="asto"/>
+					<field name="uccm" searchCode="uccm" phraseSearch="uccm=" retrieveCode="ucm"/>
+					<field name="lc" phraseSearch="lc=" searchCode="lc" recordViewCode="lc" retrieveCode="lc"/>
+					<field name="paf" retrieveCode="pa"/>
+					<field name="li" phraseSearch="li=" searchCode="li"/>
+					<field name="op" phraseSearch="op=" searchCode="op"/>
+					<field name="prs" phraseSearch="prs=" searchCode="prs"/>
+					<field name="uspi" phraseSearch="uspi=" searchCode="uspi" recordViewCode="uspi" retrieveCode="uspi"/>
+					<field name="opnd" phraseSearch="opnd=" searchCode="opnd"/>
+					<field name="opn" phraseSearch="opn=" searchCode="opn"/>
+					<field name="opa" phraseSearch="opa=" searchCode="opa"/>
+					<field name="lin" phraseSearch="lin=" searchCode="lin"/>
+					<field name="licd" phraseSearch="licd=" searchCode="licd"/>
+					<field name="prsd" phraseSearch="prsd=" searchCode="prsd"/>
+					<field name="prse" phraseSearch="prs=" searchCode="prs"/>
+					<field name="ltg" phraseSearch="ltg=" searchCode="ltg" recordViewCode="ltg" retrieveCode="ltg"/>
+					<field name="pf" phraseSearch="pf=" searchCode="pf"/>
+					<field name="df" phraseSearch="df=" searchCode="df"/>
+					<field name="ct" phraseSearch="ct=" searchCode="ct"/>
+					<field name="lfd" phraseSearch="lfd=" searchCode="lfd"/>
+					<field name="dn" phraseSearch="dn=" searchCode="dn"/>
+					<field name="sa" phraseSearch="sa=" searchCode="sa"/>
+					<field name="drw" phraseSearch="drw=" searchCode="drw" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="dpki" recordViewCode="pd,ki" retrieveCode="pd,ki"/>
+					<field name="assg" recordViewCode="pad,pao,paf" retrieveCode="pad,pao,paf"/>
+					<field name="andt" recordViewCode="an,ad" retrieveCode="an,ad"/>
+					<field name="pndc" recordViewCode="pr,prd,prc" retrieveCode="pr,prd,prc"/>
+					<field name="famct" recordViewCode="famct" retrieveCode="famct"/>
+					<field name="famctd" recordViewCode="famctd" retrieveCode="famctd"/>
+					<field name="usrc" phraseSearch="cv=" searchCode="cv"/>
+					<field name="rc" phraseSearch="rc=" searchCode="rc"/>
+					<field name="prys" phraseSearch="priy=" searchCode="priy" retrieveCode="pry"/>
+					<field name="co6" recordViewCode="co6" retrieveCode="co6" sortCode="co6" phraseSearch="co6=" searchCode="co6"/>
+					<field name="cok" recordViewCode="co7" retrieveCode="co7" sortCode="co7" phraseSearch="co7=" searchCode="co7"/>
+					<field name="pt" recordViewCode="pt" retrieveCode="pt" sortCode="pt" phraseSearch="pt=" searchCode="pt"/>
+					<field name="ck" recordViewCode="ck" retrieveCode="ck" phraseSearch="ck=" searchCode="ck"/>
+					<field name="crad" phraseSearch="crad=" searchCode="crad"/>
+					<field name="agad" phraseSearch="agad=" searchCode="agad"/>
+					<field name="ac" phraseSearch="ac=" searchCode="ac" retrieveCode="ac"/>
+					<field name="cck" phraseSearch="cck=" searchCode="cck" sortCode="cck" recordViewCode="cck" retrieveCode="cck"/>
+					<field name="fic" phraseSearch="fic=" searchCode="fic" recordViewCode="fic" retrieveCode="fic"/>
+					<field name="ftc" phraseSearch="ftc=" searchCode="ftc" recordViewCode="ftc" retrieveCode="ftc"/>
+					<field name="fit" recordViewCode="fic,fit" retrieveCode="fic,fit"/>
+					<field name="ftt" recordViewCode="ftc,ftt" retrieveCode="ftc,ftt"/>
+					<field name="pd" phraseSearch="" searchCode="" recordViewCode="" retrieveCode="" sortCode="pd"/>
+					<field name="cmf" retrieveCode="cm"/>
+					<field name="ft" retrieveCode="ftc"/>
+					<field name="ftg" retrieveCode="ftg"/>
+					<field name="ftv" retrieveCode="ftv"/>
+					<field name="fi" retrieveCode="fi"/>
+					<field name="fig" retrieveCode="fig"/>
+					<field name="fif" retrieveCode="fif"/>
+					<field name="famdwpi" retrieveCode="fam,lapp,dsd"/>
+					<field name="apv" phraseSearch="pra=" searchCode="pra" retrieveCode="pra"/>
+					<field name="ast" phraseSearch="ans=" searchCode="ans"/>
+					<field name="las" phraseSearch="las=" searchCode="las"/>
+					<field name="lae" phraseSearch="lasg=" searchCode="lasg"/>
+					<field name="lar" phraseSearch="lasr=" searchCode="lasr"/>
+					<field name="lav" phraseSearch="lasc=" searchCode="lasc"/>
+					<field name="lad" phraseSearch="lasd=" searchCode="lasd"/>
+					<field name="laf" phraseSearch="lrfrm=" searchCode="lrfrm"/>
+					<field name="crp" phraseSearch="cipfctnp=" retrieveCode="cipfctnp" sortCode="cipfctnp"/>
+					<field name="cipfctnp" phraseSearch="cipfctnp=" retrieveCode="cipfctnp" sortCode="cipfctnp"/>
+					<field name="upcitd" retrieveCode="upcitd"/>
+					<field name="upnd" retrieveCode="upnd"/>
+					<field name="uplsd" retrieveCode="uplsd"/>
+					<field name="uppad" retrieveCode="uppad"/>
+					<field name="upjlsd" retrieveCode="upjlsd"/>
+					<field name="updwpd" retrieveCode="updwpd"/>
+					<field name="upinpd" retrieveCode="upinpd"/>
+					<field name="upgrnt" retrieveCode="upgrnt"/>
+					<field name="upgrntf" retrieveCode="upgrntf"/>
+					<field name="uplsdf" retrieveCode="uplsdf"/>
+					<field name="ipct" searchCode="ipct" phraseSearch="ipct=" retrieveCode="ipct"/>
+					<field name="tiol" searchCode="ti" retrieveCode="ti"/>
+					<field name="ano" recordViewCode="ano" retrieveCode="ano"/>
+					</fields>
+			</database>
+			<database name="DWPI">
+				<fields>
+					<field name="ssto" phraseSearch="smrt=" searchCode="smrt" retrieveCode="smrt" recordViewCode="smrt"/>
+					<field name="st" recordViewCode="uspi" retrieveCode="uspi"/>
+					<field name="pad" phraseSearch="pad=" searchCode="pad" recordViewCode="pad" retrieveCode="pad"/>
+					<field name="gov" phraseSearch="gov=" searchCode="gov"/>
+					<field name="up" phraseSearch="up=" searchCode="up"/>
+					<field name="agcr" phraseSearch="ag=" searchCode="ag"/>
+					<field name="tab" phraseSearch="tab=" searchCode="tab"/>
+					<field name="tabd" phraseSearch="tid=,abd=" searchCode="tabd"/>
+					<field name="ctb" phraseSearch="ctb=" searchCode="ctb"/>
+					<field name="week" searchCode="up" phraseSearch="up=" recordViewCode="week" retrieveCode="week" sortCode="week"/>
+					<field name="fam" phraseSearch="fam=" searchCode="fam" retrieveCode="fam" recordViewCode="fam"/>
+					<field name="famb" phraseSearch="famb=" searchCode="famb" retrieveCode="famb" recordViewCode="famb"/>
+					<field name="lapp" phraseSearch="lapp=" searchCode="lapp" retrieveCode="lapp" recordViewCode="lapp"/>
+					<field name="ti" phraseSearch="ti=" searchCode="ti" retrieveCode="ti" recordViewCode="ti"/>
+					<field name="ab" retrieveCode="ab" phraseSearch="ab=" searchCode="ab"/>
+					<field name="abol" retrieveCode="ab" phraseSearch="ab="/>
+					<field name="pn" phraseSearch="pn=" searchCode="pn" recordViewCode="pn" retrieveCode="pn,ti" sortCode="pn"/>
+					<field name="pns" phraseSearch="" searchCode="" recordViewCode="" retrieveCode=""/>
+					<field name="pans" phraseSearch="pan=" searchCode="pan" retrieveCode="pan" sortCode="pan"/>
+					<field name="uts" phraseSearch="" searchCode="" recordViewCode="" retrieveCode=""/>
+					<field name="cc" phraseSearch="cc=" searchCode="cc" recordViewCode="cc" retrieveCode="cc"/>
+					<field name="ki" phraseSearch="ki=" searchCode="ki" recordViewCode="ki" retrieveCode="ki"/>
+					<field name="dp" phraseSearch="pd=" searchCode="pd" recordViewCode="pd" retrieveCode="pd" sortCode="pd"/>
+					<field name="an" phraseSearch="an=" searchCode="an" recordViewCode="an" retrieveCode="an"/>
+					<field name="ad" recordViewCode="ad" retrieveCode="ad" sortCode="ad" searchCode="ad" phraseSearch="ad="/>
+					<field name="ay" phraseSearch="ay=" searchCode="ay" recordViewCode="ay" retrieveCode="ay"/>
+					<field name="anb" phraseSearch="anb=" searchCode="anb" recordViewCode="anb" retrieveCode="anb"/>
+					<field name="adb" phraseSearch="adb=" searchCode="adb" recordViewCode="adb" retrieveCode="adb"/>
+					<field name="ayb" phraseSearch="ayb=" searchCode="ayb" recordViewCode="ayb" retrieveCode="ayb"/>
+					<field name="acb" phraseSearch="acb=" searchCode="acb" recordViewCode="acb" retrieveCode="acb"/>
+					<field name="pra" phraseSearch="pr=" searchCode="pr"/>
+					<field name="pr" phraseSearch="pr=" searchCode="pr" recordViewCode="pr" retrieveCode="pr"/>
+					<field name="prc" recordViewCode="prc" retrieveCode="prc" searchCode="prc" phraseSearch="prc="/>
+					<field name="tio" phraseSearch="tio=" searchCode="tio" recordViewCode="ti" retrieveCode="ti" sortCode="ti"/>
+					<field name="tior" phraseSearch="tio=" searchCode="tio" recordViewCode="tio" retrieveCode="tio"/>
+					<field name="tiol" searchCode="ti" retrieveCode="ti"/>
+					<field name="use" phraseSearch="use=" searchCode="use" recordViewCode="use" retrieveCode="use"/>
+					<field name="nov" phraseSearch="nov=" searchCode="nov" recordViewCode="nov" retrieveCode="nov"/>
+					<field name="drw" phraseSearch="drw=" searchCode="drw" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="pan" phraseSearch="pan=" searchCode="pan" recordViewCode="pan" retrieveCode="pan" sortCode="pan"/>
+					<field name="can" phraseSearch="can=" searchCode="can"/>
+					<field name="prd" recordViewCode="prd" retrieveCode="prd" sortCode="prd" searchCode="prdt" phraseSearch="prdt="/>
+					<field name="ds" phraseSearch="ds=" searchCode="ds" retrieveCode="ds" recordViewCode="ds"/>
+					<field name="pry" phraseSearch="pry=" searchCode="pry"/>
+					<field name="dtd" searchCode="dtd" phraseSearch="dtd=" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="ind" searchCode="ind" phraseSearch="ind=" recordViewCode="ind" retrieveCode="ind" sortCode="ind"/>
+					<field name="tid" phraseSearch="tid=" searchCode="tid" recordViewCode="tid" retrieveCode="tid"/>
+					<field name="tita" retrieveCode="tita"/>
+					<field name="tit" phraseSearch="tit=" searchCode="tit" recordViewCode="tit" retrieveCode="tit"/>
+					<field name="dc" phraseSearch="dc=" searchCode="dc"/>
+					<field name="cm" phraseSearch="D00H=" searchCode="D00H" recordViewCode="cm,cmt" retrieveCode="cm,cmt"/>
+					<field name="dwc" retrieveCode="cm"/>
+					<field name="ic" phraseSearch="ic=" searchCode="ic" recordViewCode="ic" retrieveCode="ic" sortCode="ic"/>
+					<field name="icd" phraseSearch="icd=" recordViewCode="icd" searchCode="icd" retrieveCode="icd"/>
+					<field name="cpcd" phraseSearch="cpcd=" recordViewCode="cpcd" searchCode="cpcd" retrieveCode="cpcd,cpcdt"/>
+					<field name="cpccd" phraseSearch="cpcd=" searchCode="cpcd" retrieveCode="cpcd,cpcdt"/>
+					<field name="mc" phraseSearch="mc=,mcm=" searchCode="mc,mcm" recordViewCode="mc,mct" retrieveCode="mc,mct" sortCode="mc"/>
+					<field name="mcm" phraseSearch="mcm=" searchCode="mcm"/>
+					<field name="mcc" phraseSearch="mcc=" searchCode="mcc"/>
+					<field name="co" phraseSearch="co=" searchCode="co" recordViewCode="co" retrieveCode="co,ck" sortCode="co"/>
+					<field name="abd" searchCode="abd" phraseSearch="abd=" recordViewCode="abd" retrieveCode="abd"/>
+					<field name="act" phraseSearch="act=" searchCode="act" recordViewCode="act" retrieveCode="act"/>
+					<field name="mec" phraseSearch="mec=" searchCode="mec" recordViewCode="mec" retrieveCode="mec"/>
+					<field name="ck" recordViewCode="ck" retrieveCode="ck" phraseSearch="ck=" searchCode="ck"/>
+					<field name="ckc" recordViewCode="ckc" retrieveCode="ckc" phraseSearch="ckc=" searchCode="ckc"/>
+					<field name="ckn" recordViewCode="ckn" retrieveCode="ckn" phraseSearch="ckn=" searchCode="ckn"/>
+					<field name="cki" recordViewCode="cki" retrieveCode="cki" phraseSearch="cki=" searchCode="cki"/>
+					<field name="ckr" recordViewCode="ckr" retrieveCode="ckr" phraseSearch="ckr=" searchCode="ckr"/>
+					<field name="lc" phraseSearch="lc=" searchCode="lc" recordViewCode="lc" retrieveCode="lc"/>
+					<field name="ec" phraseSearch="ec=" searchCode="ec" recordViewCode="ec" retrieveCode="ec"/>
+					<field name="ecm" phraseSearch="ecm=" searchCode="ecm" recordViewCode="ec" retrieveCode="ec"/>
+					<field name="eclm" retrieveCode="ec"/>
+					<field name="abo" phraseSearch="abo=" searchCode="abo" recordViewCode="abo"/>
+					<field name="ino" phraseSearch="ino=" searchCode="ino" recordViewCode="ino" retrieveCode="ino"/>
+					<field name="cl1" phraseSearch="cl1=" searchCode="cl1" recordViewCode="cl1" retrieveCode="cl1"/>
+					<field name="cld" recordViewCode="cld" retrieveCode="cld"/>
+					<field name="adv" phraseSearch="adv=" searchCode="adv" recordViewCode="adv" retrieveCode="adv"/>
+					<field name="tie" phraseSearch="tie=" searchCode="tie" retrieveCode="tie" recordViewCode="tie"/>
+					<field name="tis" phraseSearch="tis=" searchCode="tis" recordViewCode="tis" retrieveCode="tis"/>
+					<field name="abe" phraseSearch="abe=" searchCode="abe" recordViewCode="abe" retrieveCode="abe"/>
+					<field name="abs" phraseSearch="abs=" searchCode="abs"/>
+					<field name="abp" phraseSearch="abp=" searchCode="abp"/>
+					<field name="cle" searchCode="cl" retrieveCode="cl"/>
+					<field name="clo" phraseSearch="cl=" searchCode="cl" retrieveCode="cl"/>
+					<field name="cl1o" searchCode="cl1" retrieveCode="cl1"/>
+					<field name="cl1e" searchCode="cl1" retrieveCode="cl1"/>
+					<field name="tif" phraseSearch="tif=" searchCode="tif" retrieveCode="tif" recordViewCode="tif"/>
+					<field name="tig" phraseSearch="tig=" searchCode="tig" retrieveCode="tig" recordViewCode="tig"/>
+					<field name="tie" phraseSearch="tie=" searchCode="tie" retrieveCode="tie" recordViewCode="tie"/>
+					<field name="abf" phraseSearch="abf=" searchCode="abf" retrieveCode="abf" recordViewCode="abf"/>
+					<field name="abg" phraseSearch="abg=" searchCode="abg" retrieveCode="abg" recordViewCode="abg"/>
+					<field name="pao" phraseSearch="pao=" searchCode="pao" recordViewCode="pao" retrieveCode="pao,paf"/>
+					<field name="paolc" searchCode="pao" retrieveCode="pao"/>
+					<field name="paool" searchCode="pao" retrieveCode="pao"/>
+					<field name="acp" phraseSearch="cpc=" searchCode="cpc" retrieveCode="cpc"/>
+					<field name="cpc" phraseSearch="cpcc=" searchCode="cpcc" retrieveCode="cpc" recordViewCode="cpc" sortCode="cpc"/>
+					<field name="cpcao" phraseSearch="cpcao=" searchCode="cpcao" retrieveCode="cpc"/>
+					<field name="cpci" phraseSearch="cpci=" searchCode="cpci" retrieveCode="cpc"/>
+					<field name="cpca" phraseSearch="cpca=" searchCode="cpca" retrieveCode="cpc"/>
+					<field name="cpcp" phraseSearch="cpccp=" searchCode="cpccp" retrieveCode="cpc"/>
+					<field name="cpcc" phraseSearch="cpccl=" searchCode="cpccl" retrieveCode="cpc"/>
+					<field name="cpco" phraseSearch="cpo=" searchCode="cpo" recordViewCode="cpc" retrieveCode="cpc"/>
+					<field name="cpoao" phraseSearch="cpoao=" searchCode="cpoao" retrieveCode="cpc"/>
+					<field name="cpoi" phraseSearch="cpoi=" searchCode="cpoi" retrieveCode="cpc"/>
+					<field name="cpoa" phraseSearch="cpoa=" searchCode="cpoa" retrieveCode="cpc"/>
+					<field name="cpop" phraseSearch="cpop=" searchCode="cpop" retrieveCode="cpc"/>
+					<field name="cpoc" phraseSearch="cpol=" searchCode="cpol" retrieveCode="cpc"/>
+					<field name="aic" phraseSearch="ic=,cpc=" searchCode="ic,cpc" retrieveCode="ic,cpc"/>
+					<field name="icrmi" phraseSearch="icrci=" searchCode="icrci" retrieveCode="ic"/>
+					<field name="icrma" phraseSearch="icrca=" searchCode="icrca"/>
+					<field name="icrai" phraseSearch="icrai=" searchCode="icrai" retrieveCode="ic"/>
+					<field name="icrfi" phraseSearch="icrai=" searchCode="icrai" retrieveCode="ic"/>
+					<field name="icraa" phraseSearch="icraa=" searchCode="icraa"/>
+					<field name="icrfa" phraseSearch="icraa=" searchCode="icraa"/>
+					<field name="ica" phraseSearch="icra=" searchCode="icra" id="yes"/>
+					<field name="icrf" phraseSearch="icra=" searchCode="icra" id="yes"/>
+					<field name="icv" phraseSearch="ic=" searchCode="ic"/>
+					<field name="icrv" phraseSearch="ic=" searchCode="ic"/>
+					<field name="icrm" phraseSearch="icrc=" searchCode="icrc" id="yes"/>
+					<field name="icr" phraseSearch="icr=" searchCode="icr"/>
+					<field name="ico7" phraseSearch="ico7=" searchCode="ico7"/>
+					<field name="ico" phraseSearch="ico=" searchCode="ico"/>
+					<field name="icod" phraseSearch="ico=" searchCode="ico"/>
+					<field name="ic7" phraseSearch="ic7=" searchCode="ic7"/>
+					<field name="ic7m" phraseSearch="ic7m=" searchCode="ic7m"/>
+					<field name="icro" phraseSearch="icro=" searchCode="icro"/>
+					<field name="icroc" phraseSearch="icroc=" searchCode="icroc"/>
+					<field name="icroci" phraseSearch="icroci=" searchCode="icroci"/>
+					<field name="icroca" phraseSearch="icroca=" searchCode="icroca"/>
+					<field name="icroa" phraseSearch="icroa=" searchCode="icroa"/>
+					<field name="icroai" phraseSearch="icroai=" searchCode="icroai"/>
+					<field name="icroaa" phraseSearch="icroaa=" searchCode="icroaa"/>
+					<field name="cip" phraseSearch="cip=" searchCode="cip" recordViewCode="cip" retrieveCode="cip"/>
+					<field name="cin" phraseSearch="cin=" searchCode="cin" recordViewCode="cin" retrieveCode="cin"/>
+					<field name="ci" phraseSearch="ci=" searchCode="ci"/>
+					<field name="inad" phraseSearch="inad=" searchCode="inad" retrieveCode="inf"/>
+					<field name="inadl" searchCode="inad" retrieveCode="inf"/>
+					<field name="inadol" searchCode="inad" retrieveCode="inf"/>
+					<field name="ag" phraseSearch="agt=" searchCode="agt" retrieveCode="ag" recordViewCode="ag"/>
+					<field name="agt" retrieveCode="agdf" recordViewCode="agdf"/>
+					<field name="cr" phraseSearch="cr=" searchCode="cr" retrieveCode="crd" recordViewCode="crd"/>
+					<field name="ex" phraseSearch="ex=" searchCode="ex" retrieveCode="ex,exu,exs,exsu" recordViewCode="ex,exu,exs,exsu"/>
+					<field name="pcp" phraseSearch="pcp=" searchCode="pcp" retrieveCode="pcp" recordViewCode="pcp"/>
+					<field name="uc" searchCode="uc" phraseSearch="uc=" retrieveCode="uc" recordViewCode="uc"/>
+					<field name="ucm" phraseSearch="ucm=" searchCode="ucm" retrieveCode="ucm" recordViewCode="ucm"/>
+					<field name="ucc" searchCode="ucc" phraseSearch="ucc=" retrieveCode="ucm"/>
+					<field name="uccm" searchCode="uccm" phraseSearch="uccm=" retrieveCode="ucm"/>
+					<field name="uco" searchCode="uco" phraseSearch="uco=" retrieveCode="ucm"/>
+					<field name="ucom" searchCode="ucom" phraseSearch="ucom=" retrieveCode="ucm"/>
+					<field name="ls" recordViewCode="ls" retrieveCode="ls"/>
+					<field name="ano" recordViewCode="ano" retrieveCode="ano"/>
+					<field name="cl" phraseSearch="cl=" recordViewCode="cl" retrieveCode="cl"/>
+					<field name="pca" phraseSearch="pca=" searchCode="pca" recordViewCode="pca" retrieveCode="pca"/>
+					<field name="bs" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="prtc" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="dso" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="ddrw" recordViewCode="drw" retrieveCode="drw"/>
+					<field name="ALL" phraseSearch="txt=" searchCode="txt"/>
+					<field name="in" searchCode="in" phraseSearch="in=" retrieveCode="in" sortCode="in"/>
+					<field name="inl" searchCode="in" retrieveCode="in"/>
+					<field name="inol" searchCode="in" retrieveCode="in"/>
+					<field name="pa" searchCode="pa" phraseSearch="pa=" retrieveCode="pa,pad,pao" recordViewCode="pa" sortCode="pa"/>
+					<field name="cmp" searchCode="cmp" phraseSearch="cmp="/>
+					<field name="mod" searchCode="mod" phraseSearch="mod="/>
+					<field name="py" searchCode="py" phraseSearch="py=" retrieveCode="py"/>
+					<field name="det" recordViewCode="det" retrieveCode="det"/>
+					<field name="pad" phraseSearch="pad=" searchCode="pad" recordViewCode="pad" retrieveCode="pad"/>
+					<field name="che" recordViewCode="cic,clc,pi,ps,pc,cuc" retrieveCode="cic,clc,pi,ps,pc,cuc"/>
+					<field name="dab" recordViewCode="adv,nov,use,act,mec,tfs,ddrw,drw" retrieveCode="adv,nov,use,act,mec,tfs,ddrw,drw"/>
+					<field name="abd" searchCode="abd" phraseSearch="abd=" recordViewCode="abd" retrieveCode="abd"/>
+					<field name="pcpn" phraseSearch="pcp=" searchCode="pcp" retrieveCode="pcp"/>
+					<field name="pcpd" phraseSearch="pcpd=" searchCode="pcpd" retrieveCode="pcp"/>
+					<field name="pcan" phraseSearch="pca=" searchCode="pca" retrieveCode="pca"/>
+					<field name="pcad" phraseSearch="pcad=" searchCode="pcad" retrieveCode="pca"/>
+					<field name="rpa" phraseSearch="rpa=" searchCode="rpa" recordViewCode="rpac" retrieveCode="rpac"/>
+					<field name="rpn" phraseSearch="rpn=" searchCode="rpn" recordViewCode="rpn" retrieveCode="rpn"/>
+					<field name="ran" phraseSearch="ran=" searchCode="ran" recordViewCode="ran" retrieveCode="ran"/>
+					<field name="rad" phraseSearch="rad=" searchCode="rad" recordViewCode="rad" retrieveCode="rad"/>
+					<field name="rpd" phraseSearch="rpd=" searchCode="rpd" recordViewCode="rpd" retrieveCode="rpd"/>
+					<field name="ict" retrieveCode="ic,ict"/>
+					<field name="cpct" retrieveCode="cpc,cpct"/>
+					<field name="cpcct" retrieveCode="cpc,cpct"/>
+					<field name="fami" recordViewCode="fam" retrieveCode="fam"/>
+					<field name="cipf" recordViewCode="cipf" retrieveCode="cipf"/>
+					<field name="famd" recordViewCode="famd" retrieveCode="famd"/>
+					<field name="cipfd" recordViewCode="cipfd" retrieveCode="cipfd"/>
+					<field name="cipd" recordViewCode="cipd" retrieveCode="cipd"/>
+					<field name="dsd" recordViewCode="dsd" retrieveCode="dsd"/>
+					<field name="cipct" recordViewCode="cipct" retrieveCode="cipct"/>
+					<field name="cipfct" recordViewCode="cipfct" retrieveCode="cipfct"/>
+					<field name="cinct" recordViewCode="cinct" retrieveCode="cinct"/>
+					<field name="cipcnt" retrieveCode="cinct,cipfct,cipct"/>
+					<field name="crp" retrieveCode="cipfctnp"/>
+					<field name="dcipct" recordViewCode="dcipct" retrieveCode="dcipct"/>
+					<field name="dcipfct" recordViewCode="dcipfct" retrieveCode="dcipfct"/>
+					<field name="dcinct" recordViewCode="dcinct" retrieveCode="dcinct"/>
+					<field name="dpcifos" recordViewCode="dpcifos" retrieveCode="dpcifos"/>
+					<field name="dcipcc" recordViewCode="dcipcc" retrieveCode="dcipcc"/>
+					<field name="dcipfcc" recordViewCode="dcipfcc" retrieveCode="dcipfcc"/>
+					<field name="dcipf" recordViewCode="dcipf" retrieveCode="dcipf"/>
+					<field name="dcip" recordViewCode="dcip" retrieveCode="dcip"/>
+					<field name="dcin" recordViewCode="dcin" retrieveCode="dcin"/>
+					<field name="dpcicnt" recordViewCode="dpcicnt" retrieveCode="dpcicnt"/>
+					<field name="famctd" recordViewCode="famctd" retrieveCode="famctd"/>
+					<field name="clct" recordViewCode="clct" retrieveCode="clct"/>
+					<field name="aioe" phraseSearch="ic=,ico=,ec=" searchCode="ic,ico,ec"/>
+					<field name="racc" retrieveCode="racc"/>
+					<field name="src" recordViewCode="cip"/>
+					<field name="rel" recordViewCode="cip"/>
+					<field name="re" retrieveCode="rank" sortCode="rank"/>
+					<field name="rank" retrieveCode="rank" sortCode="rank"/>
+					<field name="pct" phraseSearch="pca=,pcp=" searchCode="pca,pcp" retrieveCode="pca,pcp"/>
+					<field name="prds" phraseSearch="prid=" searchCode="prid"/>
+					<field name="paf" retrieveCode="pa"/>
+					<field name="plc" phraseSearch="D0AI=,D0AJ=" searchCode="D0AI,D0AJ"/>
+					<field name="pli" phraseSearch="D0AH=" searchCode="D0AH"/>
+					<field name="be" phraseSearch="D0AK=" searchCode="D0AK"/>
+					<field name="dpr" phraseSearch="prd=" searchCode="prd"/>
+					<field name="rand" phraseSearch="rand=" searchCode="rand"/>
+					<field name="rpnd" phraseSearch="rpnd=" searchCode="rpnd"/>
+					<field name="radd" phraseSearch="radd=" searchCode="radd"/>
+					<field name="alld" phraseSearch="alld=" searchCode="alld"/>
+					<field name="ext" phraseSearch="ext=" searchCode="ext" retrieveCode="ext"/>
+					<field name="tfs" phraseSearch="" searchCode="" recordViewCode="tfs" retrieveCode="tfs"/>
+					<field name="prys" phraseSearch="priy=" searchCode="priy" retrieveCode="pry"/>
+					<field name="co6" recordViewCode="co6" retrieveCode="co6" sortCode="co6" phraseSearch="co6=" searchCode="co6"/>
+					<field name="cok" recordViewCode="co7" retrieveCode="co7" sortCode="co7" phraseSearch="co7=" searchCode="co7"/>
+					<field name="pt" recordViewCode="pt" retrieveCode="pt" sortCode="pt" phraseSearch="pt=" searchCode="pt"/>
+					<field name="foc" phraseSearch="foc=" searchCode="foc"/>
+					<field name="pnb" phraseSearch="pnb=" searchCode="pnb"/>
+					<field name="dpb" phraseSearch="dpb=" searchCode="dpb"/>
+					<field name="ccb" phraseSearch="ccb=" searchCode="ccb"/>
+					<field name="kib" phraseSearch="kib=" searchCode="kib"/>
+					<field name="ckf" phraseSearch="ckf=" searchCode="ckf"/>
+					<field name="upf" phraseSearch="upf=" searchCode="upf"/>
+					<field name="upb" phraseSearch="upb=" searchCode="upb"/>
+					<field name="ac" phraseSearch="ac=" searchCode="ac" retrieveCode="ac"/>
+					<field name="cpf" phraseSearch="cpf=" searchCode="cpf"/>
+					<field name="cyf" phraseSearch="cyf=" searchCode="cyf"/>
+					<field name="pyb" phraseSearch="pyb=" searchCode="pyb"/>
+					<field name="cck" phraseSearch="cck=" searchCode="cck" sortCode="cck" recordViewCode="cck" retrieveCode="cck"/>
+					<field name="fic" phraseSearch="fic=" searchCode="fic" recordViewCode="fic" retrieveCode="fic"/>
+					<field name="ftc" phraseSearch="ftc=" searchCode="ftc" recordViewCode="ftc" retrieveCode="ftc"/>
+					<field name="fit" recordViewCode="fic,fit" retrieveCode="fic,fit"/>
+					<field name="ftt" recordViewCode="ftc,ftt" retrieveCode="ftc,ftt"/>
+					<field name="ps" recordViewCode="ps" retrieveCode="ps"/>
+					<field name="pc" recordViewCode="pc" retrieveCode="pc"/>
+					<field name="pi" recordViewCode="pi" retrieveCode="pi"/>
+					<field name="cuc" phraseSearch="D0AC=" searchCode="D0AC" recordViewCode="cuc" retrieveCode="cuc"/>
+					<field name="kw" recordViewCode="kw" retrieveCode="kw"/>
+					<field name="dcfc" recordViewCode="clc,cic,cuc" retrieveCode="clc,cic,cuc"/>
+					<field name="clc" phraseSearch="D00X=,D00Y=,D00Z=,D0AA=,D0AB=" searchCode="D00X,D00Y,D00Z,D0AA,D0AB" recordViewCode="clc" retrieveCode="clc"/>
+					<field name="cic" recordViewCode="cic" retrieveCode="cic"/>
+					<field name="pd" phraseSearch="" searchCode="" recordViewCode="" retrieveCode="" sortCode="pd"/>
+					<field name="icd" phraseSearch="icd=" recordViewCode="icd" searchCode="icd" retrieveCode="icd"/>
+					<field name="cpcd" phraseSearch="cpcd=" recordViewCode="cpcd" searchCode="cpcd" retrieveCode="cpcd,cpcdt"/>
+					<field name="cpcdcp" retrieveCode="cpcd,cpcdt"/>
+					<field name="mcf" retrieveCode="mc"/>
+					<field name="cmf" retrieveCode="cm"/>
+					<field name="ft" retrieveCode="ftc"/>
+					<field name="ftg" retrieveCode="ftg"/>
+					<field name="ftv" retrieveCode="ftv"/>
+					<field name="fi" retrieveCode="fi"/>
+					<field name="fig" retrieveCode="fig"/>
+					<field name="fif" retrieveCode="fif"/>
+					<field name="dcm" phraseSearch="famct=" searchCode="famct" retrieveCode="famct"/>
+					<field name="dcc" phraseSearch="famct=" searchCode="famct" retrieveCode="famcct"/>
+					<field name="dpry" phraseSearch="prye=" searchCode="prye" retrieveCode="prye" sortCode="prye"/>
+					<field name="depc" phraseSearch="prce=" searchCode="prce" retrieveCode="prce" sortCode="prce"/>
+					<field name="dcd" phraseSearch="fdp=" searchCode="fdp"/>
+					<field name="dcdc" phraseSearch="fdp=" searchCode="fdp" searchValuePrefix="CC_"/>
+					<field name="dcdk" phraseSearch="fdp=" searchCode="fdp" searchValuePrefix="KC_"/>
+					<field name="dcds" phraseSearch="fdp=" searchCode="fdp" searchValuePrefix="CS_"/>
+					<field name="dcdr" phraseSearch="fdp=" searchCode="fdp" searchValuePrefix="RC_"/>
+					<field name="dcdd" phraseSearch="fdpd=" searchCode="fdpd"/>
+					<field name="dcdy" phraseSearch="fdpy=" searchCode="fdpy"/>
+					<field name="dcda" phraseSearch="fda=" searchCode="fda"/>
+					<field name="dcdar" phraseSearch="fda=" searchCode="fda" searchValuePrefix="RC_"/>
+					<field name="dcdas" phraseSearch="fda=" searchCode="fda" searchValuePrefix="CS_"/>
+					<field name="dcdp" phraseSearch="fda=" searchCode="fda"/>
+					<field name="dcdpr" phraseSearch="fda=" searchCode="fda" searchValuePrefix="RC_"/>
+					<field name="dcdps" phraseSearch="fda=" searchCode="fda" searchValuePrefix="CS_"/>
+					<field name="dcdi" phraseSearch="fdi=" searchCode="fdi"/>
+					<field name="dcdir" phraseSearch="fdi=" searchCode="fdi" searchValuePrefix="RC_"/>
+					<field name="dcdis" phraseSearch="fdi=" searchCode="fdi" searchValuePrefix="CS_"/>
+					<field name="dcdf" phraseSearch="fdn=" searchCode="fdn"/>
+					<field name="dcdfr" phraseSearch="fdn=" searchCode="fdn" searchValuePrefix="RC_"/>
+					<field name="dcdfs" phraseSearch="fdn=" searchCode="fdn" searchValuePrefix="CS_"/>
+					<field name="dcdor" phraseSearch="fdp=" searchCode="fdp" searchValuePrefix="RC_"/>
+					<field name="dcdos" phraseSearch="fdp=" searchCode="fdp" searchValuePrefix="CS_"/>
+					<field name="dcdn" phraseSearch="fdl=" searchCode="fdl"/>
+					<field name="dcg" phraseSearch="fgp=" searchCode="fgp"/>
+					<field name="dcgc" phraseSearch="fgp=" searchCode="fgp" searchValuePrefix="CC_"/>
+					<field name="dcgk" phraseSearch="fgp=" searchCode="fgp" searchValuePrefix="KC_"/>
+					<field name="dcgs" phraseSearch="fgp=" searchCode="fgp" searchValuePrefix="CS_"/>
+					<field name="dcgr" phraseSearch="fgp=" searchCode="fgp" searchValuePrefix="RC_"/>
+					<field name="dcdg" phraseSearch="fgpd=" searchCode="fgpd"/>
+					<field name="dcgy" phraseSearch="fgpy=" searchCode="fgpy"/>
+					<field name="dcga" phraseSearch="fga=" searchCode="fga"/>
+					<field name="dcgp" phraseSearch="fga=" searchCode="fga"/>
+					<field name="dcgi" phraseSearch="fgi=" searchCode="fgi"/>
+					<field name="dcgf" phraseSearch="fgn=" searchCode="fgn"/>
+					<field name="dcdnr" phraseSearch="fdl=" searchCode="fdl" searchValuePrefix="RC_"/>
+					<field name="dcdns" phraseSearch="fdl=" searchCode="fdl" searchValuePrefix="CS_"/>
+					<field name="ddcce" phraseSearch="cdae=" searchCode="cdae"/>
+					<field name="ddcci" phraseSearch="cdai=" searchCode="cdai"/>
+					<field name="ddcco" phraseSearch="cdao=" searchCode="cdao"/>
+					<field name="ddcct" phraseSearch="cda3=" searchCode="cda3"/>
+					<field name="ddcfe" phraseSearch="cdne=" searchCode="cdne"/>
+					<field name="ddcfi" phraseSearch="cdni=" searchCode="cdni"/>
+					<field name="ddcfo" phraseSearch="cdno=" searchCode="cdno"/>
+					<field name="ddcft" phraseSearch="cdn3=" searchCode="cdn3"/>
+					<field name="ddcne" phraseSearch="cdle=" searchCode="cdle"/>
+					<field name="ddcni" phraseSearch="cdli=" searchCode="cdli"/>
+					<field name="ddcno" phraseSearch="cdlo=" searchCode="cdlo"/>
+					<field name="ddcnt" phraseSearch="cdl3=" searchCode="cdl3"/>
+					<field name="dcgu" phraseSearch="pciw=" searchCode="pciw"/>
+					<field name="dcgar" phraseSearch="fga=" searchCode="fga" searchValuePrefix="RC_"/>
+					<field name="dcgas" phraseSearch="fga=" searchCode="fga" searchValuePrefix="CS_"/>
+					<field name="dcgpr" phraseSearch="fga=" searchCode="fga" searchValuePrefix="RC_"/>
+					<field name="dcgps" phraseSearch="fga=" searchCode="fga" searchValuePrefix="CS_"/>
+					<field name="dcgir" phraseSearch="fgi=" searchCode="fgi" searchValuePrefix="RC_"/>
+					<field name="dcgis" phraseSearch="fgi=" searchCode="fgi" searchValuePrefix="CS_"/>
+					<field name="dcgfr" phraseSearch="fgn=" searchCode="fgn" searchValuePrefix="RC_"/>
+					<field name="dcgfs" phraseSearch="fgn=" searchCode="fgn" searchValuePrefix="CS_"/>
+					<field name="dcgor" phraseSearch="fgp=" searchCode="fgp" searchValuePrefix="RC_"/>
+					<field name="dcgos" phraseSearch="fgp=" searchCode="fgp" searchValuePrefix="CS_"/>
+					<field name="ddce" phraseSearch="cdpe=" searchCode="cdpe"/>
+					<field name="ddci" phraseSearch="cdpi=" searchCode="cdpi"/>
+					<field name="ddco" phraseSearch="cdpo=" searchCode="cdpo"/>
+					<field name="ddct" phraseSearch="cdp3=" searchCode="cdp3"/>
+					<field name="dgce" phraseSearch="cgpe=" searchCode="cgpe"/>
+					<field name="dgci" phraseSearch="cgpi=" searchCode="cgpi"/>
+					<field name="dgco" phraseSearch="cgpo=" searchCode="cgpo"/>
+					<field name="dgct" phraseSearch="cgp3=" searchCode="cgp3"/>
+					<field name="dgcfe" phraseSearch="cgne=" searchCode="cgne"/>
+					<field name="dgcfi" phraseSearch="cgni=" searchCode="cgni"/>
+					<field name="dgcfo" phraseSearch="cgno=" searchCode="cgno"/>
+					<field name="dgcft" phraseSearch="cgn3=" searchCode="cgn3"/>
+					<field name="dgcce" phraseSearch="cgae=" searchCode="cgae"/>
+					<field name="dgcci" phraseSearch="cgai=" searchCode="cgai"/>
+					<field name="dgcco" phraseSearch="cgao=" searchCode="cgao"/>
+					<field name="dgcct" phraseSearch="cga3=" searchCode="cga3"/>
+					<field name="ddc" phraseSearch="cdpt=" searchCode="cdpt" retrieveCode="cdpt" sortCode="cdpt"/>
+					<field name="ddcc" phraseSearch="cdat=" searchCode="cdat" retrieveCode="cdat" sortCode="cdat"/>
+					<field name="ddcf" phraseSearch="cdnt=" searchCode="cdnt" retrieveCode="cdnt" sortCode="cdnt"/>
+					<field name="ddcn" phraseSearch="cdlt=" searchCode="cdlt" retrieveCode="cdlt" sortCode="cdlt"/>
+					<field name="dgc" phraseSearch="cgpt=" searchCode="cgpt" retrieveCode="cgpt" sortCode="cgpt"/>
+					<field name="dgcf" phraseSearch="cgnt=" searchCode="cgnt" retrieveCode="cgnt" sortCode="cgnt"/>
+					<field name="dgcc" phraseSearch="cgat=" searchCode="cgat" retrieveCode="cgat" sortCode="cgat"/>
+					<field name="cdpt" phraseSearch="cdpt=" searchCode="cdpt" retrieveCode="cdpt" sortCode="cdpt"/>
+					<field name="cdat" phraseSearch="cdat=" searchCode="cdat" retrieveCode="cdat" sortCode="cdat"/>
+					<field name="cdnt" phraseSearch="cdnt=" searchCode="cdnt" retrieveCode="cdnt" sortCode="cdnt"/>
+					<field name="cdlt" phraseSearch="cdlt=" searchCode="cdlt" retrieveCode="cdlt" sortCode="cdlt"/>
+					<field name="cgpt" phraseSearch="cgpt=" searchCode="cgpt" retrieveCode="cgpt" sortCode="cgpt"/>
+					<field name="cgnt" phraseSearch="cgnt=" searchCode="cgnt" retrieveCode="cgnt" sortCode="cgnt"/>
+					<field name="cgat" phraseSearch="cgat=" searchCode="cgat" retrieveCode="cgat" sortCode="cgat"/>
+					<field name="upcitd" retrieveCode="upcitd"/>
+					<field name="upnd" retrieveCode="upnd"/>
+					<field name="uplsd" retrieveCode="uplsd"/>
+					<field name="uppad" retrieveCode="uppad"/>
+					<field name="upjlsd" retrieveCode="upjlsd"/>
+					<field name="updwpd" retrieveCode="updwpd"/>
+					<field name="upinpd" retrieveCode="upinpd"/>
+					<field name="upgrnt" retrieveCode="upgrnt"/>
+					<field name="upgrntf" retrieveCode="upgrntf"/>
+					<field name="uplsdf" retrieveCode="uplsdf"/>
+					<field name="abx" searchCode="abx" phraseSearch="abx=" recordViewCode="abx" retrieveCode="abx"/>
+					<field name="adm" searchCode="adm" phraseSearch="adm=" recordViewCode="adm" retrieveCode="adm"/>
+					<field name="def" searchCode="def" phraseSearch="def=" recordViewCode="def" retrieveCode="def"/>
+					<field name="dwdoc" searchCode="dwdoc" phraseSearch="dwdoc=" recordViewCode="dwdoc" retrieveCode="dwdoc"/>
+					<field name="egm" searchCode="egm" phraseSearch="egm=" recordViewCode="egm" retrieveCode="egm"/>
+					<field name="art" searchCode="art" phraseSearch="art=" recordViewCode="art" retrieveCode="art"/>
+					<field name="scm" searchCode="scm" phraseSearch="scm=" recordViewCode="scm" retrieveCode="scm"/>
+					<field name="wdc" searchCode="wdc" phraseSearch="wdc=" recordViewCode="wdc" retrieveCode="wdc"/>
+					<field name="deab" recordViewCode="famb,abx,adm,def,dwdoc,egm,art,scm,wdc" retrieveCode="famb,abx,adm,def,dwdoc,egm,art,scm,wdc"/>
+					<field name="ipct" searchCode="ipct" phraseSearch="ipct=" retrieveCode="ipct"/>
+					<field name="ano" recordViewCode="ano" retrieveCode="ano"/>
+					</fields>
+			</database>
+			<database name="INTEGRATED">
+				<fields>
+					<field name="ssto" phraseSearch="smrt=" searchCode="smrt" retrieveCode="smrt" recordViewCode="smrt"/>
+					<field name="ti" phraseSearch="ti=" searchCode="ti" retrieveCode="ti" recordViewCode="ti"/>
+					<field name="gov" phraseSearch="gov=" searchCode="gov" retrieveCode="gov" recordViewCode="gov"/>
+					<field name="copa" phraseSearch="copa=" searchCode="copa" recordViewCode="copa" retrieveCode="copa"/>
+					<field name="cuppa" phraseSearch="cuppa=" searchCode="cuppa" recordViewCode="cuppa" retrieveCode="cuppa"/>
+					<field name="lap" phraseSearch="lp=" searchCode="lp" retrieveCode="lap"/>
+					<field name="alld" phraseSearch="alld=" searchCode="alld"/>
+					<field name="up" phraseSearch="up=" searchCode="up"/>
+					<field name="agcr" phraseSearch="ag=" searchCode="ag"/>
+					<field name="tab" phraseSearch="tab=" searchCode="tab"/>
+					<field name="ctb" phraseSearch="ctb=" searchCode="ctb"/>
+					<field name="fam" phraseSearch="fam=" searchCode="fam" retrieveCode="fam" recordViewCode="fam"/>
+					<field name="famb" phraseSearch="famb=" searchCode="famb" retrieveCode="famb" recordViewCode="famb"/>
+					<field name="lapp" phraseSearch="lapp=" searchCode="lapp" retrieveCode="lapp" recordViewCode="lapp"/>
+					<field name="ab" retrieveCode="ab" phraseSearch="ab=" searchCode="ab"/>
+					<field name="pn" phraseSearch="pn=" searchCode="pn" recordViewCode="pn" retrieveCode="pn" sortCode="pn"/>
+					<field name="pns" phraseSearch="" searchCode="" recordViewCode="" retrieveCode=""/>
+					<field name="uts" phraseSearch="" searchCode="" recordViewCode="" retrieveCode=""/>
+					<field name="cc" phraseSearch="cc=" searchCode="cc" recordViewCode="cc" retrieveCode="cc"/>
+					<field name="ki" phraseSearch="ki=" searchCode="ki" recordViewCode="ki" retrieveCode="ki"/>
+					<field name="dp" phraseSearch="pd=" searchCode="pd" recordViewCode="pd" retrieveCode="pd" sortCode="pd"/>
+					<field name="grd" recordViewCode="grd" retrieveCode="gd"/>
+					<field name="an" phraseSearch="an=" searchCode="an" recordViewCode="an" retrieveCode="an"/>
+					<field name="ad" recordViewCode="ad" retrieveCode="ad" sortCode="ad" searchCode="ad" phraseSearch="ad="/>
+					<field name="ay" phraseSearch="ay=" searchCode="ay" recordViewCode="ay" retrieveCode="ay"/>
+					<field name="pra" phraseSearch="pr=" searchCode="pr"/>
+					<field name="pr" phraseSearch="pr=" searchCode="pr" recordViewCode="pr" retrieveCode="pr"/>
+					<field name="prc" recordViewCode="prc" retrieveCode="prc" searchCode="prc" phraseSearch="prc="/>
+					<field name="tio" phraseSearch="tio=" searchCode="tio" retrieveCode="ti" recordViewCode="ti" sortCode="ti"/>
+					<field name="tior" phraseSearch="tio=" searchCode="tio" recordViewCode="tio" retrieveCode="tio"/>
+					<field name="use" phraseSearch="use=" searchCode="use" recordViewCode="use" retrieveCode="use"/>
+					<field name="nov" phraseSearch="nov=" searchCode="nov" recordViewCode="nov" retrieveCode="nov"/>
+					<field name="drw" phraseSearch="drw=" searchCode="drw" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="pan" phraseSearch="pan=" searchCode="pan" recordViewCode="pan" retrieveCode="pan" sortCode="pan"/>
+					<field name="pans" phraseSearch="pan=" searchCode="pan" retrieveCode="pan" sortCode="pan"/>
+					<field name="can" recordViewCode="can" retrieveCode="racc" phraseSearch="can=" searchCode="can" sortCode="can"/>
+					<field name="prd" recordViewCode="prd" retrieveCode="prd" sortCode="prd" searchCode="prdt" phraseSearch="prdt="/>
+					<field name="pry" phraseSearch="pry=" searchCode="pry"/>
+					<field name="dtd" searchCode="dtd" phraseSearch="dtd=" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="ind" searchCode="ind" phraseSearch="ind=" recordViewCode="ind" retrieveCode="ind" sortCode="ind"/>
+					<field name="tid" phraseSearch="tid=" searchCode="tid" recordViewCode="tid" retrieveCode="tid"/>
+					<field name="tita" phraseSearch="tita=" searchCode="tita" recordViewCode="tita" retrieveCode="tita"/>
+					<field name="tit" phraseSearch="tit=" searchCode="tit" recordViewCode="tit" retrieveCode="tit"/>
+					<field name="cm" phraseSearch="dc=" searchCode="dc" recordViewCode="cm,cmt" retrieveCode="cm,cmt"/>
+					<field name="dwc" retrieveCode="cm"/>
+					<field name="acp" phraseSearch="cpc=" searchCode="cpc" retrieveCode="cpc"/>
+					<field name="cpc" phraseSearch="cpcc=" searchCode="cpcc" retrieveCode="cpc" recordViewCode="cpc" sortCode="cpc"/>
+					<field name="cpcao" phraseSearch="cpcao=" searchCode="cpcao" retrieveCode="cpc"/>
+					<field name="cpci" phraseSearch="cpci=" searchCode="cpci" retrieveCode="cpc"/>
+					<field name="cpca" phraseSearch="cpca=" searchCode="cpca" retrieveCode="cpc"/>
+					<field name="cpcp" phraseSearch="cpccp=" searchCode="cpccp" retrieveCode="cpc"/>
+					<field name="cpcc" phraseSearch="cpccl=" searchCode="cpccl" retrieveCode="cpc"/>
+					<field name="cpco" phraseSearch="cpo=" searchCode="cpo" recordViewCode="cpc" retrieveCode="cpc"/>
+					<field name="cpoao" phraseSearch="cpoao=" searchCode="cpoao" retrieveCode="cpc"/>
+					<field name="cpoi" phraseSearch="cpoi=" searchCode="cpoi" retrieveCode="cpc"/>
+					<field name="cpoa" phraseSearch="cpoa=" searchCode="cpoa" retrieveCode="cpc"/>
+					<field name="cpop" phraseSearch="cpop=" searchCode="cpop" retrieveCode="cpc"/>
+					<field name="cpoc" phraseSearch="cpol=" searchCode="cpol" retrieveCode="cpc"/>
+					<field name="aic" phraseSearch="ic=,cpc=" searchCode="ic,cpc" retrieveCode="ic,cpc"/>
+					<field name="ic" phraseSearch="ic=" searchCode="ic" recordViewCode="ic" retrieveCode="ic" sortCode="ic"/>
+					<field name="icd" phraseSearch="icd=" recordViewCode="icd" searchCode="icd" retrieveCode="icd"/>
+					<field name="cpcd" phraseSearch="cpcd=" recordViewCode="cpcd" searchCode="cpcd" retrieveCode="cpcd,cpcdt"/>
+					<field name="cpccd" phraseSearch="cpcd=" searchCode="cpcd" retrieveCode="cpcd,cpcdt"/>
+					<field name="ica" phraseSearch="icra=" searchCode="icra" id="yes"/>
+					<field name="icrf" phraseSearch="icra=" searchCode="icra" id="yes"/>
+					<field name="icv" phraseSearch="ic=" searchCode="ic"/>
+					<field name="icrv" phraseSearch="ic=" searchCode="ic"/>
+					<field name="icrm" phraseSearch="icrc=" searchCode="icrc" id="yes"/>
+					<field name="mc" phraseSearch="mc=,mcm=" searchCode="mc,mcm" recordViewCode="mc,mct" retrieveCode="mc,mct" sortCode="mc"/>
+					<field name="mcm" phraseSearch="mcm=" searchCode="mcm"/>
+					<field name="mcc" phraseSearch="mcc=" searchCode="mcc"/>
+					<field name="abd" searchCode="abd" phraseSearch="abd=" recordViewCode="abd" retrieveCode="abd"/>
+					<field name="act" phraseSearch="act=" searchCode="act" recordViewCode="act" retrieveCode="act"/>
+					<field name="mec" phraseSearch="mec=" searchCode="mec" recordViewCode="mec" retrieveCode="mec"/>
+					<field name="ck" recordViewCode="ck" retrieveCode="ck" phraseSearch="ck=" searchCode="ck"/>
+					<field name="ckc" recordViewCode="ckc" retrieveCode="ckc" phraseSearch="ckc=" searchCode="ckc"/>
+					<field name="ckn" recordViewCode="ckn" retrieveCode="ckn" phraseSearch="ckn=" searchCode="ckn"/>
+					<field name="cki" recordViewCode="cki" retrieveCode="cki" phraseSearch="cki=" searchCode="cki"/>
+					<field name="ckr" recordViewCode="ckr" retrieveCode="ckr" phraseSearch="ckr=" searchCode="ckr"/>
+					<field name="lc" phraseSearch="lc=" searchCode="lc" recordViewCode="lc" retrieveCode="lc"/>
+					<field name="ec" phraseSearch="ec=" searchCode="ec" recordViewCode="ec" retrieveCode="ec"/>
+					<field name="ecm" phraseSearch="ecm=" searchCode="ecm" recordViewCode="ec" retrieveCode="ec"/>
+					<field name="eclm" retrieveCode="ec"/>
+					<field name="abo" phraseSearch="abo=" searchCode="abo" retrieveCode="abo"/>
+					<field name="pad" phraseSearch="pad=" searchCode="pad" recordViewCode="pad" retrieveCode="pad"/>
+					<field name="ino" phraseSearch="ino=" searchCode="ino" recordViewCode="ino" retrieveCode="ino"/>
+					<field name="cl1" phraseSearch="cl1=" searchCode="cl1" recordViewCode="cl1" retrieveCode="cl1"/>
+					<field name="cld" recordViewCode="cld" retrieveCode="cld"/>
+					<field name="dsc" phraseSearch="dsc=" searchCode="dsc" retrieveCode="dsc" recordViewCode="dsc"/>
+					<field name="tie" phraseSearch="tie=" searchCode="tie" retrieveCode="tie" recordViewCode="tie"/>
+					<field name="tis" phraseSearch="tis=" searchCode="tis" recordViewCode="tis" retrieveCode="tis"/>
+					<field name="abe" phraseSearch="abe=" searchCode="abe" recordViewCode="abe" retrieveCode="abe"/>
+					<field name="abs" phraseSearch="abs=" searchCode="abs" retrieveCode="abs" recordViewCode="abs"/>
+					<field name="abp" phraseSearch="abp=" searchCode="abp" retrieveCode="abp" recordViewCode="abp"/>
+					<field name="tif" phraseSearch="tif=" searchCode="tif" retrieveCode="tif" recordViewCode="tif"/>
+					<field name="tig" phraseSearch="tig=" searchCode="tig" retrieveCode="tig" recordViewCode="tig"/>
+					<field name="abf" phraseSearch="abf=" searchCode="abf" retrieveCode="abf" recordViewCode="abf"/>
+					<field name="tie" phraseSearch="tie=" searchCode="tie" retrieveCode="tie" recordViewCode="tie"/>
+					<field name="abg" phraseSearch="abg=" searchCode="abg" retrieveCode="abg" recordViewCode="abg"/>
+					<field name="cle" phraseSearch="cle=" searchCode="cl" retrieveCode="cl"/>
+					<field name="clo" phraseSearch="cl=" searchCode="cl" retrieveCode="cl"/>
+					<field name="abol" retrieveCode="ab" phraseSearch="ab="/>
+					<field name="cl1o" searchCode="cl1" retrieveCode="cl1"/>
+					<field name="cl1e" searchCode="cl1" retrieveCode="cl1"/>
+					<field name="clf" phraseSearch="clf=" searchCode="clf"/>
+					<field name="clg" phraseSearch="clg=" searchCode="clg"/>
+					<field name="cls" phraseSearch="cls=" searchCode="cls"/>
+					<field name="clp" phraseSearch="clp=" searchCode="clp"/>
+					<field name="col" phraseSearch="col=" searchCode="col" retrieveCode="col" recordViewCode="col"/>
+					<field name="pao" phraseSearch="pao=" searchCode="pao" recordViewCode="pao" retrieveCode="pao,paf"/>
+					<field name="paolc" searchCode="pao" retrieveCode="pao"/>
+					<field name="paool" searchCode="pao" retrieveCode="pao"/>
+					<field name="paoc" phraseSearch="pac=" searchCode="pac" recordViewCode="paoc" retrieveCode="paoc"/>
+					<field name="paod" phraseSearch="asto=" searchCode="asto"/>
+					<field name="inad" phraseSearch="inad=" searchCode="inad" retrieveCode="inf"/>
+					<field name="inadl" searchCode="inad" retrieveCode="inf"/>
+					<field name="inadol" searchCode="inad" retrieveCode="inf"/>
+					<field name="ag" phraseSearch="agt=" searchCode="agt" recordViewCode="ag" retrieveCode="ag"/>
+					<field name="agt" retrieveCode="agdf" recordViewCode="agdf"/>
+					<field name="cr" phraseSearch="cr=" searchCode="cr" retrieveCode="crd" recordViewCode="crd"/>
+					<field name="pcp" phraseSearch="pcp=" searchCode="pcp" recordViewCode="pcp" retrieveCode="pcp"/>
+					<field name="icrmi" phraseSearch="icrci=" searchCode="icrci" retrieveCode="ic"/>
+					<field name="icrma" phraseSearch="icrca=" searchCode="icrca"/>
+					<field name="icrai" phraseSearch="icrai=" searchCode="icrai" retrieveCode="ic"/>
+					<field name="icrfi" phraseSearch="icrai=" searchCode="icrai" retrieveCode="ic"/>
+					<field name="icraa" phraseSearch="icraa=" searchCode="icraa"/>
+					<field name="icrfa" phraseSearch="icraa=" searchCode="icraa"/>
+					<field name="icr" phraseSearch="icr=" searchCode="icr"/>
+					<field name="ico7" phraseSearch="ico7=" searchCode="ico7"/>
+					<field name="ico" phraseSearch="ico=" searchCode="ico"/>
+					<field name="icod" phraseSearch="ico=" searchCode="ico"/>
+					<field name="ic7" phraseSearch="ic7=" searchCode="ic7"/>
+					<field name="ic7m" phraseSearch="ic7m=" searchCode="ic7m"/>
+					<field name="icro" phraseSearch="icro=" searchCode="icro"/>
+					<field name="icroc" phraseSearch="icroc=" searchCode="icroc"/>
+					<field name="icroci" phraseSearch="icroci=" searchCode="icroci"/>
+					<field name="icroca" phraseSearch="icroca=" searchCode="icroca"/>
+					<field name="icroa" phraseSearch="icroa=" searchCode="icroa"/>
+					<field name="icroai" phraseSearch="icroai=" searchCode="icroai"/>
+					<field name="icroaa" phraseSearch="icroaa=" searchCode="icroaa"/>
+					<field name="lsc" phraseSearch="lsc=" searchCode="lsc"/>
+					<field name="lst" phraseSearch="lst=" searchCode="lst"/>
+					<field name="lsd" phraseSearch="lsd=" searchCode="lsd"/>
+					<field name="lsi" phraseSearch="lsi=" searchCode="lsi"/>
+					<field name="ls" phraseSearch="ls=" searchCode="ls" recordViewCode="ls" retrieveCode="ls"/>
+					<field name="asg" phraseSearch="asg=" searchCode="asg"/>
+					<field name="asr" phraseSearch="asr=" searchCode="asr"/>
+					<field name="asf" phraseSearch="rfrm=" searchCode="rfrm"/>
+					<field name="adv" phraseSearch="adv=" searchCode="adv" retrieveCode="adv" recordViewCode="adv"/>
+					<field name="ex" phraseSearch="ex=" searchCode="ex" recordViewCode="ex,exu,exs,exsu" retrieveCode="ex,exu,exs,exsu"/>
+					<field name="cip" phraseSearch="cip=" searchCode="cip" retrieveCode="cip" recordViewCode="cip"/>
+					<field name="src" recordViewCode="cip"/>
+					<field name="rel" recordViewCode="cip"/>
+					<field name="re" retrieveCode="rank" sortCode="rank"/>
+					<field name="icg" phraseSearch="icg=" searchCode="icg" recordViewCode="" retrieveCode="icg"/>
+					<field name="rank" retrieveCode="rank" sortCode="rank"/>
+					<field name="cin" phraseSearch="cin=" searchCode="cin" retrieveCode="cin" recordViewCode="cin"/>
+					<field name="doi" phraseSearch="doi=" searchCode="doi" retrieveCode="doi" recordViewCode="doi"/>
+					<field name="ci" phraseSearch="ci=" searchCode="ci" retrieveCode="ci" recordViewCode="ci"/>
+					<field name="asd" phraseSearch="asd=" searchCode="asd" recordViewCode="asd" retrieveCode="asd"/>
+					<field name="uc" searchCode="uc" phraseSearch="uc=" retrieveCode="uc" recordViewCode="uc"/>
+					<field name="uco" searchCode="uco" phraseSearch="uco=" retrieveCode="ucm"/>
+					<field name="ucm" phraseSearch="ucm=" searchCode="ucm" retrieveCode="ucm"/>
+					<field name="ucc" searchCode="ucc" phraseSearch="ucc=" retrieveCode="ucm"/>
+					<field name="ucom" phraseSearch="ucom=" searchCode="ucom" retrieveCode="ucm"/>
+					<field name="uccm" searchCode="uccm" phraseSearch="uccm=" retrieveCode="ucm"/>
+					<field name="cl" phraseSearch="cl=" searchCode="cl" recordViewCode="cl" retrieveCode="cl"/>
+					<field name="rpa" phraseSearch="rpa=" searchCode="rpa" recordViewCode="rpa" retrieveCode="rpac"/>
+					<field name="rpn" phraseSearch="rpn=" searchCode="rpn" recordViewCode="rpn" retrieveCode="rpn"/>
+					<field name="ran" phraseSearch="ran=" searchCode="ran" recordViewCode="ran" retrieveCode="ran"/>
+					<field name="rad" phraseSearch="rad=" searchCode="rad" recordViewCode="rad" retrieveCode="rad"/>
+					<field name="rpd" phraseSearch="rpd=" searchCode="rpd" recordViewCode="rpd" retrieveCode="rpd"/>
+					<field name="pca" phraseSearch="pca=" searchCode="pca" recordViewCode="pca" retrieveCode="pca"/>
+					<field name="in" searchCode="inn" phraseSearch="in=" retrieveCode="in" sortCode="in"/>
+					<field name="inl" searchCode="inn" retrieveCode="in"/>
+					<field name="inol" searchCode="inn" retrieveCode="in"/>
+					<field name="pa" searchCode="pa" phraseSearch="pa=" retrieveCode="pa,pad,pao" recordViewCode="pa" sortCode="pa"/>
+					<field name="cas" phraseSearch="asnl=" searchCode="asnl" retrieveCode="pal" recordViewCode="asnl" sortCode="pal"/>
+					<field name="asap" retrieveCode="pa,pad,pao"/>
+					<field name="asapl" retrieveCode="pa,pad,pao"/>
+					<field name="asapol" retrieveCode="pa,pad,pao"/>
+					<field name="cpcdcp" retrieveCode="cpcd,cpcdt"/>
+					<field name="cmp" searchCode="cmp" phraseSearch="cmp="/>
+					<field name="py" searchCode="py" phraseSearch="py=" retrieveCode="py" sortCode="py"/>
+					<field name="mod" searchCode="mod" phraseSearch="mod="/>
+					<field name="det" searchCode="det" phraseSearch="det=" recordViewCode="det" retrieveCode="det"/>
+					<field name="ALL" phraseSearch="txt=" searchCode="txt"/>
+					<field name="rc" phraseSearch="rc=" searchCode="rc"/>
+					<field name="assg" recordViewCode="pad,pao,paf" retrieveCode="pad,pao,paf"/>
+					<field name="acup" recordViewCode="pan,week" retrieveCode="pan,week"/>
+					<field name="andw" recordViewCode="andw" retrieveCode="andw"/>
+					<field name="dpki" recordViewCode="pd,ki" retrieveCode="pd,ki"/>
+					<field name="week" searchCode="up" phraseSearch="up=" recordViewCode="week" retrieveCode="week" sortCode="week"/>
+					<field name="andt" recordViewCode="an,ad" retrieveCode="an,ad"/>
+					<field name="pndc" recordViewCode="pr,prd,prc,prid" retrieveCode="pr,prd,prc,prid"/>
+					<field name="dpndc" recordViewCode="pr,prd,prc,prid" retrieveCode="pr,prd,prc,prid"/>
+					<field name="tl" recordViewCode="det,lap" retrieveCode="det,lap"/>
+					<field name="dab" recordViewCode="famb,adv,nov,use,act,mec,dtd,tfs,ddrw,drw" retrieveCode="famb,adv,nov,use,act,mec,dtd,tfs,ddrw,drw"/>
+					<field name="abd" searchCode="abd" phraseSearch="abd=" recordViewCode="abd" retrieveCode="abd"/>
+					<field name="ucfs" recordViewCode="ucm,uct,fscu" retrieveCode="ucm,uct,fscu"/>
+					<field name="pct" phraseSearch="pca=,pcp=" searchCode="pca,pcp" retrieveCode="pca,pcp"/>
+					<field name="ds" phraseSearch="ds=" searchCode="ds" retrieveCode="ds" recordViewCode="ds"/>
+					<field name="ltg" phraseSearch="ltg=" searchCode="ltg" recordViewCode="ltg" retrieveCode="ltg"/>
+					<field name="li" phraseSearch="li=" searchCode="li" recordViewCode="li" retrieveCode="li"/>
+					<field name="op" phraseSearch="op=" searchCode="op" recordViewCode="op" retrieveCode="op"/>
+					<field name="prs" phraseSearch="prs=" searchCode="prs" recordViewCode="prs" retrieveCode="prs,pre"/>
+					<field name="bs" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="ddrw" recordViewCode="drw" retrieveCode="drw"/>
+					<field name="st" recordViewCode="uspi" retrieveCode="uspi" searchCode="mst" phraseSearch="mst="/>
+					<field name="as" phraseSearch="as=" searchCode="as" recordViewCode="as" retrieveCode="as"/>
+					<field name="co" recordViewCode="co" retrieveCode="co,ck" sortCode="co" phraseSearch="co=" searchCode="co"/>
+					<field name="co6" recordViewCode="co6" retrieveCode="co6" sortCode="co6" phraseSearch="co6=" searchCode="co6"/>
+					<field name="cok" recordViewCode="co7" retrieveCode="co7" sortCode="co7" phraseSearch="co7=" searchCode="co7"/>
+					<field name="pt" recordViewCode="pt" retrieveCode="pt" sortCode="pt" phraseSearch="pt=" searchCode="pt"/>
+					<field name="che" recordViewCode="cic,clc,pi,ps,pc,cuc" retrieveCode="cic,clc,pi,ps,pc,cuc"/>
+					<field name="pcpn" phraseSearch="pcp=" searchCode="pcp" retrieveCode="pcp"/>
+					<field name="pcpd" phraseSearch="pcpd=" searchCode="pcpd" retrieveCode="pcp"/>
+					<field name="pcan" phraseSearch="pca=" searchCode="pca" retrieveCode="pca"/>
+					<field name="pcad" phraseSearch="pcad=" searchCode="pcad" retrieveCode="pca"/>
+					<field name="ict" retrieveCode="ic,ict"/>
+					<field name="cpct" retrieveCode="cpc,cpct"/>
+					<field name="cpcct" retrieveCode="cpc,cpct"/>
+					<field name="fami" recordViewCode="fam" retrieveCode="fam"/>
+					<field name="dsd" recordViewCode="dsd" retrieveCode="dsd"/>
+					<field name="cipf" recordViewCode="cipf" retrieveCode="cipf"/>
+					<field name="famd" recordViewCode="famd" retrieveCode="famd"/>
+					<field name="cipfd" recordViewCode="cipfd" retrieveCode="cipfd"/>
+					<field name="cipd" recordViewCode="cipd" retrieveCode="cipd"/>
+					<field name="TXT" phraseSearch="txt=" searchCode="txt"/>
+					<field name="PER" phraseSearch="per=" searchCode="per"/>
+					<field name="ORG" phraseSearch="org=" searchCode="org"/>
+					<field name="LOC" phraseSearch="cc=" searchCode="cc"/>
+					<field name="TFR" phraseSearch="py=" searchCode="py"/>
+					<field name="prtc" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="cipct" recordViewCode="cipct" retrieveCode="cipct"/>
+					<field name="cipfct" recordViewCode="cipfct" retrieveCode="cipfct"/>
+					<field name="cinct" recordViewCode="cinct" retrieveCode="cinct"/>
+					<field name="famct" recordViewCode="famct" retrieveCode="famct"/>
+					<field name="cipcnt" retrieveCode="cinct,cipfct,cipct"/>
+					<field name="famctd" recordViewCode="famctd" retrieveCode="famctd"/>
+					<field name="clct" recordViewCode="clct" retrieveCode="clct"/>
+					<field name="aioe" phraseSearch="ic=,ico=,ec=" searchCode="ic,ico,ec"/>
+					<field name="racc" retrieveCode="racc"/>
+					<field name="prds" phraseSearch="prid=" searchCode="prid"/>
+					<field name="paf" retrieveCode="pa"/>
+					<field name="plc" phraseSearch="D0AI=,D0AJ=" searchCode="D0AI,D0AJ"/>
+					<field name="pli" phraseSearch="D0AH=" searchCode="D0AH"/>
+					<field name="uspi" phraseSearch="uspi=" searchCode="uspi" recordViewCode="uspi" retrieveCode="uspi"/>
+					<field name="opnd" phraseSearch="opnd=" searchCode="opnd"/>
+					<field name="opn" phraseSearch="opn=" searchCode="opn"/>
+					<field name="opa" phraseSearch="opa=" searchCode="opa"/>
+					<field name="lin" phraseSearch="lin=" searchCode="lin"/>
+					<field name="licd" phraseSearch="licd=" searchCode="licd"/>
+					<field name="prsd" phraseSearch="prsd=" searchCode="prsd"/>
+					<field name="prse" phraseSearch="prs=" searchCode="prs"/>
+					<field name="be" phraseSearch="D0AK=" searchCode="D0AK"/>
+					<field name="pf" phraseSearch="pf=" searchCode="pf"/>
+					<field name="df" phraseSearch="df=" searchCode="df"/>
+					<field name="ct" phraseSearch="ct=" searchCode="ct"/>
+					<field name="lfd" phraseSearch="lfd=" searchCode="lfd"/>
+					<field name="dn" phraseSearch="dn=" searchCode="dn"/>
+					<field name="sa" phraseSearch="sa=" searchCode="sa"/>
+					<field name="dpr" phraseSearch="prd=" searchCode="prd"/>
+					<field name="dc" phraseSearch="dc=" searchCode="dc"/>
+					<field name="ext" phraseSearch="ext=" searchCode="ext" retrieveCode="ext"/>
+					<field name="tfs" phraseSearch="" searchCode="" recordViewCode="tfs" retrieveCode="tfs"/>
+					<field name="usrc" phraseSearch="cv=" searchCode="cv"/>
+					<field name="prys" phraseSearch="priy=" searchCode="priy" retrieveCode="pry"/>
+					<field name="crad" phraseSearch="crad=" searchCode="crad"/>
+					<field name="agad" phraseSearch="agad=" searchCode="agad"/>
+					<field name="foc" phraseSearch="foc=" searchCode="foc"/>
+					<field name="ac" phraseSearch="ac=" searchCode="ac" retrieveCode="ac"/>
+					<field name="pyb" phraseSearch="pyb=" searchCode="pyb"/>
+					<field name="pnb" phraseSearch="pnb=" searchCode="pnb"/>
+					<field name="dpb" phraseSearch="dpb=" searchCode="dpb"/>
+					<field name="ccb" phraseSearch="ccb=" searchCode="ccb"/>
+					<field name="kib" phraseSearch="kib=" searchCode="kib"/>
+					<field name="ckf" phraseSearch="ckf=" searchCode="ckf"/>
+					<field name="upf" phraseSearch="upf=" searchCode="upf"/>
+					<field name="upb" phraseSearch="upb=" searchCode="upb"/>
+					<field name="cck" phraseSearch="cck=" searchCode="cck" sortCode="cck" recordViewCode="cck" retrieveCode="cck"/>
+					<field name="fic" phraseSearch="fic=" searchCode="fic" recordViewCode="fic" retrieveCode="fic"/>
+					<field name="ftc" phraseSearch="ftc=" searchCode="ftc" recordViewCode="ftc" retrieveCode="ftc"/>
+					<field name="fit" recordViewCode="fic,fit" retrieveCode="fic,fit"/>
+					<field name="ftt" recordViewCode="ftc,ftt" retrieveCode="ftc,ftt"/>
+					<field name="ps" recordViewCode="ps" retrieveCode="ps"/>
+					<field name="pc" recordViewCode="pc" retrieveCode="pc"/>
+					<field name="pi" recordViewCode="pi" retrieveCode="pi"/>
+					<field name="cuc" phraseSearch="D0AC=" searchCode="D0AC" recordViewCode="cuc" retrieveCode="cuc"/>
+					<field name="kw" recordViewCode="kw" retrieveCode="kw"/>
+					<field name="dcfc" recordViewCode="clc,cic,cuc" retrieveCode="clc,cic,cuc"/>
+					<field name="clc" phraseSearch="D00X=,D00Y=,D00Z=,D0AA=,D0AB=" searchCode="D00X,D00Y,D00Z,D0AA,D0AB" recordViewCode="clc" retrieveCode="clc"/>
+					<field name="cic" recordViewCode="cic" retrieveCode="cic"/>
+					<field name="pd" phraseSearch="" searchCode="" recordViewCode="" retrieveCode="" sortCode="pd"/>
+					<field name="mcf" retrieveCode="mc"/>
+					<field name="cmf" retrieveCode="cm"/>
+					<field name="ft" retrieveCode="ftc"/>
+					<field name="ftg" retrieveCode="ftg"/>
+					<field name="ftv" retrieveCode="ftv"/>
+					<field name="fi" retrieveCode="fi"/>
+					<field name="fig" retrieveCode="fig"/>
+					<field name="fif" retrieveCode="fif"/>
+					<field name="famdwpi" retrieveCode="fam,lapp,dsd"/>
+					<field name="apv" phraseSearch="pra=" searchCode="pra" retrieveCode="an,ad,pra"/>
+					<field name="ast" phraseSearch="ans=" searchCode="ans"/>
+					<field name="las" phraseSearch="las=" searchCode="las"/>
+					<field name="lae" phraseSearch="lasg=" searchCode="lasg"/>
+					<field name="lar" phraseSearch="lasr=" searchCode="lasr"/>
+					<field name="lav" phraseSearch="lasc=" searchCode="lasc"/>
+					<field name="lad" phraseSearch="lasd=" searchCode="lasd"/>
+					<field name="laf" phraseSearch="lrfrm=" searchCode="lrfrm"/>
+					<field name="dcm" phraseSearch="famct=" searchCode="famct" retrieveCode="famct"/>
+					<field name="dcc" phraseSearch="famct=" searchCode="famct" retrieveCode="famcct"/>
+					<field name="dpry" phraseSearch="prye=" searchCode="prye" retrieveCode="prye" sortCode="prye"/>
+					<field name="depc" phraseSearch="prce=" searchCode="prce" retrieveCode="prce" sortCode="prce"/>
+					<field name="crp" phraseSearch="cipfctnp=" retrieveCode="cipfctnp" sortCode="cipfctnp"/>
+					<field name="cipfctnp" phraseSearch="cipfctnp=" retrieveCode="cipfctnp" sortCode="cipfctnp"/>
+					<field name="dcipct" recordViewCode="dcipct" retrieveCode="dcipct"/>
+					<field name="dcipfct" recordViewCode="dcipfct" retrieveCode="dcipfct"/>
+					<field name="dcinct" recordViewCode="dcinct" retrieveCode="dcinct"/>
+					<field name="dpcifos" recordViewCode="dpcifos" retrieveCode="dpcifos"/>
+					<field name="dcipcc" recordViewCode="dcipcc" retrieveCode="dcipcc"/>
+					<field name="dcipfcc" recordViewCode="dcipfcc" retrieveCode="dcipfcc"/>
+					<field name="dcipf" recordViewCode="dcipf" retrieveCode="dcipf"/>
+					<field name="dcip" recordViewCode="dcip" retrieveCode="dcip"/>
+					<field name="dcin" recordViewCode="dcin" retrieveCode="dcin"/>
+					<field name="dpcicnt" recordViewCode="dpcicnt" retrieveCode="dpcicnt"/>
+					<field name="dcd" phraseSearch="fdp=" searchCode="fdp"/>
+					<field name="dcdc" phraseSearch="fdp=" searchCode="fdp"/>
+					<field name="dcdk" phraseSearch="fdp=" searchCode="fdp"/>
+					<field name="dcds" phraseSearch="fdp=" searchCode="fdp"/>
+					<field name="dcdr" phraseSearch="fdp=" searchCode="fdp"/>
+					<field name="dcdd" phraseSearch="fdpd=" searchCode="fdpd"/>
+					<field name="dcdy" phraseSearch="fdpy=" searchCode="fdpy"/>
+					<field name="dcda" phraseSearch="fda=" searchCode="fda"/>
+					<field name="dcdar" phraseSearch="fda=" searchCode="fda"/>
+					<field name="dcdas" phraseSearch="fda=" searchCode="fda"/>
+					<field name="dcdp" phraseSearch="fda=" searchCode="fda"/>
+					<field name="dcdpr" phraseSearch="fda=" searchCode="fda"/>
+					<field name="dcdps" phraseSearch="fda=" searchCode="fda"/>
+					<field name="dcdi" phraseSearch="fdi=" searchCode="fdi"/>
+					<field name="dcdir" phraseSearch="fdi=" searchCode="fdi"/>
+					<field name="dcdis" phraseSearch="fdi=" searchCode="fdi"/>
+					<field name="dcdf" phraseSearch="fdn=" searchCode="fdn"/>
+					<field name="dcdfr" phraseSearch="fdn=" searchCode="fdn"/>
+					<field name="dcdfs" phraseSearch="fdn=" searchCode="fdn"/>
+					<field name="dcdor" phraseSearch="fdp=" searchCode="fdp"/>
+					<field name="dcdos" phraseSearch="fdp=" searchCode="fdp"/>
+					<field name="dcdn" phraseSearch="fdl=" searchCode="fdl"/>
+					<field name="dcg" phraseSearch="fgp=" searchCode="fgp"/>
+					<field name="dcgc" phraseSearch="fgp=" searchCode="fgp"/>
+					<field name="dcgk" phraseSearch="fgp=" searchCode="fgp"/>
+					<field name="dcgs" phraseSearch="fgp=" searchCode="fgp"/>
+					<field name="dcgr" phraseSearch="fgp=" searchCode="fgp"/>
+					<field name="dcdg" phraseSearch="fgpd=" searchCode="fgpd"/>
+					<field name="dcgy" phraseSearch="fgpy=" searchCode="fgpy"/>
+					<field name="dcga" phraseSearch="fga=" searchCode="fga"/>
+					<field name="dcgp" phraseSearch="fga=" searchCode="fga"/>
+					<field name="dcgi" phraseSearch="fgi=" searchCode="fgi"/>
+					<field name="dcgf" phraseSearch="fgn=" searchCode="fgn"/>
+					<field name="dcdnr" phraseSearch="fdl=" searchCode="fdl"/>
+					<field name="dcdns" phraseSearch="fdl=" searchCode="fdl"/>
+					<field name="ddcce" phraseSearch="cdae=" searchCode="cdae"/>
+					<field name="ddcci" phraseSearch="cdai=" searchCode="cdai"/>
+					<field name="ddcco" phraseSearch="cdao=" searchCode="cdao"/>
+					<field name="ddcct" phraseSearch="cda3=" searchCode="cda3"/>
+					<field name="ddcfe" phraseSearch="cdne=" searchCode="cdne"/>
+					<field name="ddcfi" phraseSearch="cdni=" searchCode="cdni"/>
+					<field name="ddcfo" phraseSearch="cdno=" searchCode="cdno"/>
+					<field name="ddcft" phraseSearch="cdn3=" searchCode="cdn3"/>
+					<field name="ddcne" phraseSearch="cdle=" searchCode="cdle"/>
+					<field name="ddcni" phraseSearch="cdli=" searchCode="cdli"/>
+					<field name="ddcno" phraseSearch="cdlo=" searchCode="cdlo"/>
+					<field name="ddcnt" phraseSearch="cdl3=" searchCode="cdl3"/>
+					<field name="dcgu" phraseSearch="pciw=" searchCode="pciw"/>
+					<field name="dcgar" phraseSearch="fga=" searchCode="fga"/>
+					<field name="dcgas" phraseSearch="fga=" searchCode="fga"/>
+					<field name="dcgpr" phraseSearch="fga=" searchCode="fga"/>
+					<field name="dcgps" phraseSearch="fga=" searchCode="fga"/>
+					<field name="dcgir" phraseSearch="fgi=" searchCode="fgi"/>
+					<field name="dcgis" phraseSearch="fgi=" searchCode="fgi"/>
+					<field name="dcgfr" phraseSearch="fgn=" searchCode="fgn"/>
+					<field name="dcgfs" phraseSearch="fgn=" searchCode="fgn"/>
+					<field name="dcgor" phraseSearch="fgp=" searchCode="fgp"/>
+					<field name="dcgos" phraseSearch="fgp=" searchCode="fgp"/>
+					<field name="ddce" phraseSearch="cdpe=" searchCode="cdpe"/>
+					<field name="ddci" phraseSearch="cdpi=" searchCode="cdpi"/>
+					<field name="ddco" phraseSearch="cdpo=" searchCode="cdpo"/>
+					<field name="ddct" phraseSearch="cdp3=" searchCode="cdp3"/>
+					<field name="dgce" phraseSearch="cgpe=" searchCode="cgpe"/>
+					<field name="dgci" phraseSearch="cgpi=" searchCode="cgpi"/>
+					<field name="dgco" phraseSearch="cgpo=" searchCode="cgpo"/>
+					<field name="dgct" phraseSearch="cgp3=" searchCode="cgp3"/>
+					<field name="dgcfe" phraseSearch="cgne=" searchCode="cgne"/>
+					<field name="dgcfi" phraseSearch="cgni=" searchCode="cgni"/>
+					<field name="dgcfo" phraseSearch="cgno=" searchCode="cgno"/>
+					<field name="dgcft" phraseSearch="cgn3=" searchCode="cgn3"/>
+					<field name="dgcce" phraseSearch="cgae=" searchCode="cgae"/>
+					<field name="dgcci" phraseSearch="cgai=" searchCode="cgai"/>
+					<field name="dgcco" phraseSearch="cgao=" searchCode="cgao"/>
+					<field name="dgcct" phraseSearch="cga3=" searchCode="cga3"/>
+					<field name="ddc" phraseSearch="cdpt=" searchCode="cdpt" retrieveCode="cdpt" sortCode="cdpt"/>
+					<field name="ddcc" phraseSearch="cdat=" searchCode="cdat" retrieveCode="cdat" sortCode="cdat"/>
+					<field name="ddcf" phraseSearch="cdnt=" searchCode="cdnt" retrieveCode="cdnt" sortCode="cdnt"/>
+					<field name="ddcn" phraseSearch="cdlt=" searchCode="cdlt" retrieveCode="cdlt" sortCode="cdlt"/>
+					<field name="dgc" phraseSearch="cgpt=" searchCode="cgpt" retrieveCode="cgpt" sortCode="cgpt"/>
+					<field name="dgcf" phraseSearch="cgnt=" searchCode="cgnt" retrieveCode="cgnt" sortCode="cgnt"/>
+					<field name="dgcc" phraseSearch="cgat=" searchCode="cgat" retrieveCode="cgat" sortCode="cgat"/>
+					<field name="cdpt" phraseSearch="cdpt=" searchCode="cdpt" retrieveCode="cdpt" sortCode="cdpt"/>
+					<field name="cdat" phraseSearch="cdat=" searchCode="cdat" retrieveCode="cdat" sortCode="cdat"/>
+					<field name="cdnt" phraseSearch="cdnt=" searchCode="cdnt" retrieveCode="cdnt" sortCode="cdnt"/>
+					<field name="cdlt" phraseSearch="cdlt=" searchCode="cdlt" retrieveCode="cdlt" sortCode="cdlt"/>
+					<field name="cgpt" phraseSearch="cgpt=" searchCode="cgpt" retrieveCode="cgpt" sortCode="cgpt"/>
+					<field name="cgnt" phraseSearch="cgnt=" searchCode="cgnt" retrieveCode="cgnt" sortCode="cgnt"/>
+					<field name="cgat" phraseSearch="cgat=" searchCode="cgat" retrieveCode="cgat" sortCode="cgat"/>
+					<field name="upcitd" retrieveCode="upcitd"/>
+					<field name="upnd" retrieveCode="upnd"/>
+					<field name="uplsd" retrieveCode="uplsd"/>
+					<field name="uppad" retrieveCode="uppad"/>
+					<field name="upjlsd" retrieveCode="upjlsd"/>
+					<field name="updwpd" retrieveCode="updwpd"/>
+					<field name="upinpd" retrieveCode="upinpd"/>
+					<field name="upgrnt" retrieveCode="upgrnt"/>
+					<field name="upgrntf" retrieveCode="upgrntf"/>
+					<field name="uplsdf" retrieveCode="uplsdf"/>
+					<field name="abx" searchCode="abx" phraseSearch="abx=" recordViewCode="abx" retrieveCode="abx"/>
+					<field name="adm" searchCode="adm" phraseSearch="adm=" recordViewCode="adm" retrieveCode="adm"/>
+					<field name="def" searchCode="def" phraseSearch="def=" recordViewCode="def" retrieveCode="def"/>
+					<field name="dwdoc" searchCode="dwdoc" phraseSearch="dwdoc=" recordViewCode="dwdoc" retrieveCode="dwdoc"/>
+					<field name="egm" searchCode="egm" phraseSearch="egm=" recordViewCode="egm" retrieveCode="egm"/>
+					<field name="art" searchCode="art" phraseSearch="art=" recordViewCode="art" retrieveCode="art"/>
+					<field name="scm" searchCode="scm" phraseSearch="scm=" recordViewCode="scm" retrieveCode="scm"/>
+					<field name="wdc" searchCode="wdc" phraseSearch="wdc=" recordViewCode="wdc" retrieveCode="wdc"/>
+					<field name="deab" recordViewCode="famb,abx,adm,def,dwdoc,egm,art,scm,wdc" retrieveCode="famb,abx,adm,def,dwdoc,egm,art,scm,wdc"/>
+					<field name="ipct" phraseSearch="ipct=" searchCode="ipct" retrieveCode="ipct"/>
+					<field name="isdm" retrieveCode="isdm"/>
+					<field name="tiol" searchCode="ti" retrieveCode="ti"/>
+					<field name="ano" recordViewCode="ano" retrieveCode="ano"/>
+					</fields>
+			</database>
+			<database name="IPAFIELDS">
+				<fields>
+					<field name="ceed" retrieveCode="ceed" sortCode="ceed"/>
+					<field name="cerl" retrieveCode="cerl" sortCode="cerl"/>
+					<field name="cerlf" retrieveCode="cerl|00-00|01-12|13-24|25-36|37-48|49-60|61-72|73-84|85-96|97-108|109-120|121-132|133-144|145-156|157-168|169-180|181-192|193-204|205-216|217-228|229-240|241-100000,cerl17|01-17"/>
+					<field name="copa" retrieveCode="copa" sortCode="copa"/>
+					<field name="copaa" retrieveCode="copaa" sortCode="copaa"/>
+					<field name="caid" retrieveCode="caid" sortCode="caid"/>
+					<field name="cerld" retrieveCode="cerld"/>
+					<field name="grant" retrieveCode="grant"/>
+					<field name="cece" retrieveCode="cece"/>
+					<field name="cifs" retrieveCode="cifs"/>
+					<field name="cdfs" retrieveCode="cdfs"/>
+					<field name="gpn" retrieveCode="gpn"/>
+					<field name="gpid" retrieveCode="gpid"/>
+					<field name="cfdtxt" retrieveCode="cfdtxt"/>
+					<field name="cfeeefd" retrieveCode="cfeeefd"/>
+					<field name="cfetdpp" retrieveCode="cfetdpp"/>
+					<field name="cftdppd" retrieveCode="cftdppd"/>
+					<field name="cfpta" retrieveCode="cfpta"/>
+					<field name="cfppta" retrieveCode="cfppta"/>
+					<field name="cfid" retrieveCode="cfid"/>
+					<field name="cflod" retrieveCode="cflod"/>
+					<field name="ceey" retrieveCode="ceey"/>
+					<field name="cuppa" retrieveCode="cuppa" sortCode="cuppa"/>
+					<field name="cuppaa" retrieveCode="cuppaa" sortCode="cuppaa"/>
+					<field name="iscload" retrieveCode="iscload"/>
+					<field name="cuppaa" retrieveCode="cuppaa"/>
+					<field name="cfls" retrieveCode="cfls"/>
+					<field name="cfspcdd" retrieveCode="cfspcdd"/>
+					<field name="cfuscdd" retrieveCode="cfuscdd"/>
+					<field name="cftdeefd" retrieveCode="cftdeefd"/>
+					<field name="cfwd" retrieveCode="cfwd"/>
+				</fields>
+			</database>
+		</databases>
+	</datasource>
+	<datasource>
+		<name>T3A</name>
+		<databases>
+			<database name="FLD">
+				<fields>
+					<field name="pn"/>
+					<field name="tio"/>
+					<field name="tiol"/>
+					<field name="tie"/>
+					<field name="asap"/>
+					<field name="asapl"/>
+					<field name="asapol"/>
+					<field name="pao"/>
+					<field name="paolc"/>
+					<field name="paool"/>
+					<field name="pad"/>
+					<field name="dp"/>
+					<field name="fdrw"/>
+					<field name="ict"/>
+					<field name="cpct"/>
+					<field name="cpc"/>
+					<field name="cpcp"/>
+					<field name="cpcc"/>
+					<field name="cpccd"/>
+					<field name="in"/>
+					<field name="inl"/>
+					<field name="inol"/>
+					<field name="pr"/>
+					<field name="prd"/>
+					<field name="prys"/>
+					<field name="an"/>
+					<field name="apv"/>
+					<field name="ac"/>
+					<field name="ad"/>
+					<field name="ay"/>
+					<field name="abo"/>
+					<field name="abol"/>
+					<field name="abe"/>
+					<field name="abf"/>
+					<field name="abg"/>
+					<field name="abs"/>
+					<field name="inad"/>
+					<field name="inadl"/>
+					<field name="inadol"/>
+					<field name="cl1"/>
+					<field name="cl1o"/>
+					<field name="cl1e"/>
+					<field name="pcad"/>
+					<field name="pcan"/>
+					<field name="pcpd"/>
+					<field name="pcpn"/>
+					<field name="prc"/>
+					<field name="re"/>
+					<field name="cas"/>
+					<field name="fic"/>
+					<field name="ftc"/>
+					<field name="cl"/>
+					<field name="clo"/>
+					<field name="cle"/>
+					<field name="tid"/>
+					<field name="fami"/>
+					<field name="pdfcopy"/>
+					<field name="brf#cas,pn,tio,asap,dp,fdrw,ict,cpct"/>
+					<field name="ba#cas,pn,tio,asap,dp,fdrw,in,ict,cpct,ucc,ec,pr,prd,an,ad,abo,inad"/>
+					<field name="bae#pn,tie,asapl,cas,dp,fdrw,inl,ict,cpct,pr,prd,an,ad,abe,inad"/>
+					<field name="bao#pn,tiol,asapol,cas,dp,fdrw,inol,ict,cpct,pr,prd,an,ad,abol,inad"/>
+					<field name="bac#cas,pn,tio,asap,dp,fdrw,in,ict,cpct,ucc,ec,pr,prd,an,ad,abo,inad,cl1"/>
+					<field name="bace#pn,tie,asapl,cas,dp,fdrw,inl,ict,cpct,pr,prd,an,ad,abe,inad,cle"/>
+					<field name="baco#pn,tiol,asapol,cas,dp,fdrw,inol,ict,cpct,pr,prd,an,ad,abol,inad,clo"/>
+				</fields>
+			</database>
+			<database name="DWPI">
+				<fields>
+					<field name="pn"/>
+					<field name="tiol"/>
+					<field name="tie"/>
+					<field name="prys"/>
+					<field name="co"/>
+					<field name="abo"/>
+					<field name="abol"/>
+					<field name="abe"/>
+					<field name="cl1o"/>
+					<field name="cl1e"/>
+					<field name="clo"/>
+					<field name="cle"/>
+					<field name="dwc"/>
+					<field name="mc"/>
+					<field name="week"/>
+					<field name="pan"/>
+					<field name="can"/>
+					<field name="dab"/>
+					<field name="abx"/>
+					<field name="ind"/>
+					<field name="ck"/>
+					<field name="dpr"/>
+					<field name="tid"/>
+					<field name="icd"/>
+					<field name="cpcd"/>
+					<field name="cpcdcp"/>
+					<field name="famdwpi"/>
+					<field name="dcm"/>
+					<field name="dcc"/>
+					<field name="cld"/>
+					<field name="bdw#pn,co,dp,ict,cpct,dwc,mc,week,pan,tid,fdrw"/>
+					<field name="da#pn,co,dp,ict,icd,cpct,cpcd,dwc,mc,week,pan,pr,prd,dab,abx,ind,tid,ck"/>
+				</fields>
+			</database>
+			<database name="IPAFIELDS">
+				<fields>
+					<field name="ceed"/>
+					<field name="cerl"/>
+					<field name="cerlf"/>
+					<field name="copa"/>
+					<field name="copaa"/>
+					<field name="caid"/>
+					<field name="cerld"/>
+					<field name="grant"/>
+					<field name="cece"/>
+					<field name="cifs"/>
+					<field name="cdfs"/>
+					<field name="gpn"/>
+					<field name="gpid"/>
+					<field name="cfdtxt"/>
+					<field name="cfeeefd"/>
+					<field name="cfetdpp"/>
+					<field name="cftdppd"/>
+					<field name="cfpta"/>
+					<field name="cfppta"/>
+					<field name="cfid"/>
+					<field name="cflod"/>
+					<field name="ceey"/>
+					<field name="cuppa"/>
+					<field name="cuppaa"/>
+					<field name="iscload"/>
+					<field name="cuppaa"/>
+					<field name="cfls"/>
+					<field name="cfspcdd"/>
+					<field name="cfuscdd"/>
+					<field name="cftdeefd"/>
+					<field name="cfwd"/>
+				</fields>
+			</database>
+		</databases>
+	</datasource>
+	<datasource>
+		<name>T3FAST</name>
+		<databases>
+			<database name="JAPANESE">
+				<fields>
+					<field name="sp" phraseSearch="sp=" searchCode="sp"/>
+					<field name="pd" phraseSearch="" searchCode="" recordViewCode="" retrieveCode="" sortCode="pd"/>
+					<field name="ei" phraseSearch="ei=" searchCode="ei"/>
+					<field name="ee" phraseSearch="ee=" searchCode="ee"/>
+					<field name="paod" phraseSearch="asto=" searchCode="asto"/>
+					<field name="ALL" phraseSearch="txt=" searchCode="txt"/>
+					<field name="ps" phraseSearch="ps=" searchCode="ps"/>
+					<field name="uts" phraseSearch="" searchCode="" recordViewCode="" retrieveCode=""/>
+					<field name="drd" phraseSearch="drd=" searchCode="drd"/>
+					<field name="mi" phraseSearch="mi=" searchCode="mi"/>
+					<field name="ran" phraseSearch="ran=" searchCode="ran"/>
+					<field name="rad" phraseSearch="rad=" searchCode="rad"/>
+					<field name="icv" phraseSearch="ic=" searchCode="ic"/>
+					<field name="icrv" phraseSearch="ic=" searchCode="ic"/>
+					<field name="icraa" phraseSearch="icraa=" searchCode="icraa"/>
+					<field name="icrfa" phraseSearch="icraa=" searchCode="icraa"/>
+					<field name="icroc" phraseSearch="icroc=" searchCode="icroc"/>
+					<field name="icroci" phraseSearch="icroci=" searchCode="icroci"/>
+					<field name="icroca" phraseSearch="icroca=" searchCode="icroca"/>
+					<field name="icroa" phraseSearch="icroa=" searchCode="icroa"/>
+					<field name="icroai" phraseSearch="icroai=" searchCode="icroai"/>
+					<field name="icroaa" phraseSearch="icroaa=" searchCode="icroaa"/>
+					<field name="dw" phraseSearch="dw=" searchCode="dw"/>
+					<field name="dwd" phraseSearch="dwd=" searchCode="dwd"/>
+					<field name="ex" phraseSearch="ex=" searchCode="ex"/>
+					<field name="edg" phraseSearch="edg=" searchCode="edg"/>
+					<field name="erf" phraseSearch="erf=" searchCode="erf"/>
+					<field name="rfd" phraseSearch="rfd=" searchCode="rfd"/>
+					<field name="asc" phraseSearch="asc=" searchCode="asc"/>
+					<field name="asd" phraseSearch="asd=" searchCode="asd"/>
+					<field name="drf" phraseSearch="drf=" searchCode="drf"/>
+					<field name="tan" phraseSearch="tan=" searchCode="tan"/>
+					<field name="tad" phraseSearch="tad=" searchCode="tad"/>
+					<field name="tag" phraseSearch="tag=" searchCode="tag"/>
+					<field name="taf" phraseSearch="taf=" searchCode="taf"/>
+					<field name="tdt" phraseSearch="tdt=" searchCode="tdt"/>
+					<field name="pcad" phraseSearch="pcad=" searchCode="pcad" retrieveCode="pcad"/>
+					<field name="pct" phraseSearch="pca=,pcp=" searchCode="pca,pcp" retrieveCode="pca,pcp"/>
+					<field name="pcp" phraseSearch="pcp=" searchCode="pcp" recordViewCode="pcp" retrieveCode="pcp"/>
+					<field name="pcpd" phraseSearch="pcpd=" searchCode="pcpd" retrieveCode="pcpd"/>
+					<field name="theme" phraseSearch="theme=" searchCode="theme"/>
+					<field name="ffc" phraseSearch="ffc=" searchCode="ffc"/>
+					<field name="frk" phraseSearch="frk=" searchCode="frk"/>
+					<field name="rgn" phraseSearch="rgn=" searchCode="rgn"/>
+					<field name="exd" phraseSearch="exd=" searchCode="exd"/>
+					<field name="rgd" phraseSearch="rgd=" searchCode="rgd" retrieveCode="rd" sortCode="rd"/>
+					<field name="tagd" phraseSearch="tagd=" searchCode="tagd"/>
+					<field name="agn" phraseSearch="agn=" searchCode="agn" retrieveCode="agrn"/>
+					<field name="agrn" phraseSearch="agrn=" searchCode="agrn" retrieveCode="agrn"/>
+					<field name="agd" phraseSearch="agd=" searchCode="agd"/>
+					<field name="inad" phraseSearch="inad=" searchCode="inad" retrieveCode="inf"/>
+					<field name="ic7m" phraseSearch="ic7m=" searchCode="ic7m"/>
+					<field name="ico" phraseSearch="ico=" searchCode="ico"/>
+					<field name="icrai" phraseSearch="icrai=" searchCode="icrai" retrieveCode="ic"/>
+					<field name="icrfi" phraseSearch="icrai=" searchCode="icrai" retrieveCode="ic"/>
+					<field name="icrma" phraseSearch="icrca=" searchCode="icrca"/>
+					<field name="icrmi" phraseSearch="icrci=" searchCode="icrci" retrieveCode="ic"/>
+					<field name="icrm" phraseSearch="icrc=" searchCode="icrc" id="yes"/>
+					<field name="icr" phraseSearch="icr=" searchCode="icr"/>
+					<field name="pca" phraseSearch="pca=" searchCode="pca" recordViewCode="pca" retrieveCode="pca"/>
+					<field name="rpd" phraseSearch="rpd=" searchCode="rpd" recordViewCode="rpd" retrieveCode="rpd"/>
+					<field name="rpn" phraseSearch="rpn=" searchCode="rpn" recordViewCode="rpn" retrieveCode="rpn"/>
+					<field name="rpa" phraseSearch="rpa=" searchCode="rpa" recordViewCode="rpac" retrieveCode="rpac"/>
+					<field name="prys" phraseSearch="prys=" searchCode="priy"/>
+					<field name="prds" phraseSearch="prid=" searchCode="prid"/>
+					<field name="pra" phraseSearch="pr=" searchCode="pr"/>
+					<field name="ay" phraseSearch="ay=" searchCode="ay" recordViewCode="ay" retrieveCode="ay"/>
+					<field name="tab" phraseSearch="tab=" searchCode="tab"/>
+					<field name="ctb" phraseSearch="ctb=" searchCode="ctb"/>
+					<field name="ti" phraseSearch="ti=" searchCode="ti" retrieveCode="ti" recordViewCode="ti"/>
+					<field name="tio" phraseSearch="ti=" searchCode="ti" retrieveCode="ti" recordViewCode="ti"/>
+					<field name="abo" phraseSearch="abo=" searchCode="abo" retrieveCode="abo" recordViewCode="abo"/>
+					<field name="pn" phraseSearch="pn=" searchCode="pn" retrieveCode="pn" recordViewCode="pn" sortCode="pn"/>
+					<field name="an" phraseSearch="an=" searchCode="an" retrieveCode="an" recordViewCode="an" sortCode="an"/>
+					<field name="ad" phraseSearch="ad=" searchCode="ad" retrieveCode="ad" recordViewCode="ad" sortCode="ad"/>
+					<field name="rd" phraseSearch="rd=" searchCode="rd" retrieveCode="rd" recordViewCode="rd"/>
+					<field name="prd" phraseSearch="prd=" searchCode="prd" retrieveCode="prd" recordViewCode="prd"/>
+					<field name="ipc" phraseSearch="ipc=" searchCode="ic" retrieveCode="ic" recordViewCode="ic"/>
+					<field name="in" phraseSearch="in=" searchCode="in" retrieveCode="in" recordViewCode="in" sortCode="in"/>
+					<field name="pa" searchCode="pa" phraseSearch="pa=" retrieveCode="pa,pad,pao" recordViewCode="pa" sortCode="pa"/>
+					<field name="ic" phraseSearch="ic=" searchCode="ic" recordViewCode="ic" retrieveCode="ic" sortCode="ic"/>
+					<field name="py" searchCode="py" phraseSearch="py=" retrieveCode="py" sortCode="py"/>
+					<field name="asgad" recordViewCode="pa,paod" retrieveCode="pa,paf"/>
+					<field name="pao" phraseSearch="pao=" searchCode="pao" recordViewCode="pao" retrieveCode="pao" sortCode="pao"/>
+					<field name="paf" phraseSearch="paf=" searchCode="paf" recordViewCode="paf" retrieveCode="pa" sortCode="paf"/>
+					<field name="invad" recordViewCode="in,inf" retrieveCode="in,inf"/>
+					<field name="inad" phraseSearch="inad=" searchCode="inad" retrieveCode="inf" recordViewCode="inf"/>
+					<field name="dpki" recordViewCode="pd,ki" retrieveCode="pd,ki"/>
+					<field name="dp" phraseSearch="pd=" searchCode="pd" recordViewCode="pd" retrieveCode="pd" sortCode="pd"/>
+					<field name="ki" phraseSearch="ki=" searchCode="ki" recordViewCode="ki" retrieveCode="ki"/>
+					<field name="andt" recordViewCode="an,ad" retrieveCode="an,ad"/>
+					<field name="an" phraseSearch="an=" searchCode="an" retrieveCode="an" recordViewCode="an"/>
+					<field name="ad" phraseSearch="ad=" searchCode="ad" retrieveCode="ad" recordViewCode="ad"/>
+					<field name="pndct" recordViewCode="pr,prd,prc,prt" retrieveCode="pr,prd,prc,prt"/>
+					<field name="pr" phraseSearch="pr=" searchCode="pr" recordViewCode="pr" retrieveCode="pr"/>
+					<field name="prd" recordViewCode="prd" retrieveCode="prd" sortCode="prd" searchCode="prdt" phraseSearch="prdt="/>
+					<field name="prc" recordViewCode="prc" retrieveCode="prc" searchCode="prc" phraseSearch="prc="/>
+					<field name="prt" recordViewCode="prt" retrieveCode="prt" searchCode="prt" phraseSearch="prt="/>
+					<field name="ab" retrieveCode="ab" phraseSearch="ab=" searchCode="ab" recordViewCode="ab"/>
+					<field name="ict" retrieveCode="ic,ict" recordViewCode="ic,ict"/>
+					<field name="ict" phraseSearch="ic=" searchCode="ic" recordViewCode="ic" retrieveCode="ic" sortCode="ic"/>
+					<field name="ic7" phraseSearch="ic7=" searchCode="ic7" recordViewCode="ic7" retrieveCode="ic7"/>
+					<field name="ftt" phraseSearch="ftt=" searchCode="ftt" retrieveCode="ftt" recordViewCode="ftt" sortCode="ftt"/>
+					<field name="ftc" phraseSearch="ftc=" searchCode="ftc" retrieveCode="ftc" recordViewCode="ftc"/>
+					<field name="ft" phraseSearch="ft=" searchCode="ft" retrieveCode="ft" recordViewCode="ft"/>
+					<field name="fit" phraseSearch="fit=" searchCode="fit" retrieveCode="fit" recordViewCode="fit"/>
+					<field name="fic" phraseSearch="fic=" searchCode="fic" retrieveCode="fic" recordViewCode="fic"/>
+					<field name="fc" phraseSearch="fic=" searchCode="fic" retrieveCode="fic" recordViewCode="fc"/>
+					<field name="ls" phraseSearch="ls=" searchCode="ls" retrieveCode="ls" recordViewCode="ls"/>
+					<field name="exm" phraseSearch="exm=" searchCode="exm" retrieveCode="exm" recordViewCode="exm"/>
+					<field name="has" phraseSearch="has=" searchCode="has" retrieveCode="has" recordViewCode="has"/>
+					<field name="ta" phraseSearch="ta=" searchCode="ta" retrieveCode="ta" recordViewCode="ta"/>
+					<field name="rg" phraseSearch="rg=" searchCode="rg" retrieveCode="rg" recordViewCode="rg"/>
+					<field name="cl" phraseSearch="cl=" searchCode="cl" recordViewCode="cl" retrieveCode="cl"/>
+					<field name="clct" recordViewCode="clct" retrieveCode="clct"/>
+					<field name="dsc" phraseSearch="dsc=" searchCode="dsc" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="drw" phraseSearch="drw=" searchCode="drw" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="ba" phraseSearch="ba=" searchCode="ba" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="tf" phraseSearch="tf=" searchCode="tf" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="ia" phraseSearch="ia=" searchCode="ia" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="md" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="pb" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="cl1" phraseSearch="cl1=" searchCode="cl1" recordViewCode="cl1" retrieveCode="cl1"/>
+					<field name="cip" phraseSearch="cip=" searchCode="cip" recordViewCode="cip" retrieveCode="cip"/>
+					<field name="cin" phraseSearch="cin=" searchCode="cin" recordViewCode="cin" retrieveCode="cin"/>
+					<field name="ci" phraseSearch="ci=" searchCode="ci" recordViewCode="ci" retrieveCode="ci"/>
+					<field name="cipct" recordViewCode="cipct" retrieveCode="cipct"/>
+					<field name="cipfct" recordViewCode="cipfct" retrieveCode="cipfct"/>
+					<field name="cinct" recordViewCode="cinct" retrieveCode="cinct"/>
+					<field name="fam" recordViewCode="fam" retrieveCode="fam"/>
+					<field name="famctd" recordViewCode="famctd" retrieveCode="famctd"/>
+					<field name="cipcnt" retrieveCode="cinct,cipfct,cipct"/>
+					<field name="agnt" recordViewCode="agt,agrn,agd" retrieveCode="ag,agrn,agd"/>
+					<field name="ag" phraseSearch="ag=" searchCode="ag" recordViewCode="ag" retrieveCode="ag"/>
+					<field name="agn" phraseSearch="agn=" searchCode="agn" recordViewCode="agn" retrieveCode="agn"/>
+					<field name="agrn" phraseSearch="agrn=" searchCode="agrn" recordViewCode="agrn" retrieveCode="agrn"/>
+					<field name="agdf" phraseSearch="agdf=" searchCode="agdf" retrieveCode="agdf" recordViewCode="agdf"/>
+					<field name="agd" phraseSearch="agd=" searchCode="agd" retrieveCode="agd" recordViewCode="agd"/>
+					<field name="rpa" phraseSearch="rpa=" searchCode="rpa" recordViewCode="rpac" retrieveCode="rpac"/>
+					<field name="pca" phraseSearch="pca=" searchCode="pca" retrieveCode="pca" recordViewCode="pca"/>
+					<field name="cck" phraseSearch="cck=" searchCode="cck" retrieveCode="cck" recordViewCode="cck" sortCode="cck"/>
+					<field name="fs" phraseSearch="fs=" searchCode="fs" retrieveCode="fscu" recordViewCode="fscu"/>
+					<field name="src" recordViewCode="cip"/>
+					<field name="rel" recordViewCode="cip"/>
+					<field name="ALL" phraseSearch="txt=" searchCode="txt"/>
+					<field name="pan" phraseSearch="pan=" searchCode="pan" recordViewCode="pan" retrieveCode="pan" sortCode="pan"/>
+					<field name="gdd" phraseSearch="gdd=" searchCode="gdd" recordViewCode="gdd" retrieveCode="gdd" sortCode="gdd"/>
+					<field name="rdd" phraseSearch="rdd=" searchCode="rdd" recordViewCode="rdd" retrieveCode="rdd" sortCode="rdd"/>
+					<field name="tafd" phraseSearch="tafd=" searchCode="tafd"/>
+					<field name="ds" phraseSearch="ds=" searchCode="ds" retrieveCode="ds" recordViewCode="ds"/>
+					<field name="ica" phraseSearch="icra=" searchCode="icra" id="yes"/>
+					<field name="icrf" phraseSearch="icra=" searchCode="icra" id="yes"/>
+					<field name="ico7" phraseSearch="ico7=" searchCode="ico7" retrieveCode="ic"/>
+					<field name="cip.pn" retrieveCode="cip.pn"/>
+					<field name="cipct" recordViewCode="cipct" retrieveCode="cipct"/>
+					<field name="cin" retrieveCode="cin" includeField="cin.pub,cin.cpct"/>
+					<field name="cinct" recordViewCode="cinct" retrieveCode="cinct"/>
+					<field name="cipf.pn" retrieveCode="cipf.pn"/>
+					<field name="cipfct" recordViewCode="cipfct" retrieveCode="cipfct"/>
+					<field name="pacnt" retrieveCode="pacnt"/>
+					<field name="lta" phraseSearch="lta=" searchCode="lta" recordViewCode="lta" retrieveCode="lta"/>
+					<field name="ltid" phraseSearch="ltid=" searchCode="ltid" recordViewCode="ltid" retrieveCode="ltid"/>
+					<field name="ltd" phraseSearch="ltd=" searchCode="ltd" recordViewCode="ltd" retrieveCode="ltd"/>
+					<field name="ltt" phraseSearch="ltt=" searchCode="ltt" recordViewCode="ltt" retrieveCode="ltt"/>
+					<field name="ltdm" phraseSearch="ltdm=" searchCode="ltdm" recordViewCode="ltdm" retrieveCode="ltdm"/>
+					<field name="ltdf" phraseSearch="ltdf=" searchCode="ltdf" recordViewCode="ltdf" retrieveCode="ltdf"/>
+					<field name="lop" phraseSearch="lop=" searchCode="lop" recordViewCode="lop" retrieveCode="lop"/>
+					<field name="ld" phraseSearch="ld=" searchCode="ld" recordViewCode="ld" retrieveCode="ld"/>
+					<field name="ldd" phraseSearch="ldd=" searchCode="ldd" recordViewCode="ldd" retrieveCode="ldd"/>
+					<field name="ldf" phraseSearch="ldf=" searchCode="ldf" recordViewCode="ldf" retrieveCode="ldf"/>
+					<field name="ldfd" phraseSearch="ldfd=" searchCode="ldfd" recordViewCode="ldfd" retrieveCode="ldfd"/>
+					<field name="ltai" phraseSearch="ltai=" searchCode="ltai" recordViewCode="ltai" retrieveCode="ltai"/>
+					<field name="tid" phraseSearch="tid=" searchCode="tid" recordViewCode="tid" retrieveCode="tid"/>
+					<field name="ke" searchcode="ke" phraseSearch="ke=" retrieveCode="ke" recordViewCode="ke" sortCode="ke"/>
+					<field name="kfd" searchCode="kfd" phraseSearch="kfd=" retrieveCode="kfd" recordViewCode="kfd" sortCode="kfd"/>
+					<field name="ddd" searchCode="ddd" phraseSearch="ddd="/>
+					<field name="kdm" searchCode="kdm" phraseSearch="kdm=" retrieveCode="kdm" recordViewCode="kdm" sortCode="kdm"/>
+					<field name="ded" searchCode="ded" phraseSearch="ded="/>
+					<field name="eai" searchCode="eai" phraseSearch="eai=" retrieveCode="eai" recordViewCode="eai" sortCode="eai"/>
+					<field name="fdd" searchCode="fdd" phraseSearch="fdd="/>
+					<field name="jrc" searchCode="rc" phraseSearch="rc=" retrieveCode="rc" recordViewCode="rc" sortCode="rc"/>
+					<field name="dcr" searchCode="dcr" phraseSearch="dcr="/>
+					<field name="rcd" searchCode="rcd" phraseSearch="rcd="/>
+					<field name="RAI" searchCode="RAI" phraseSearch="RAI=" retrieveCode="RAI" recordViewCode="RAI" sortCode="RAI"/>
+					<field name="cmf" retrieveCode="cm"/>
+					<field name="pry" phraseSearch="pry=" searchCode="pry" recordViewCode="pry" retrieveCode="pry"/>
+					<field name="ay" phraseSearch="ay=" searchCode="ay" recordViewCode="ay" retrieveCode="ay"/>
+					<field name="fi" phraseSearch="fi=" searchCode="fi" recordViewCode="fi" retrieveCode="fi"/>
+					<field name="fig" phraseSearch="fig=" searchCode="fig" recordViewCode="fig" retrieveCode="fig"/>
+					<field name="upcitd" retrieveCode="upcitd"/>
+					<field name="upnd" retrieveCode="upnd"/>
+					<field name="uplsd" retrieveCode="uplsd"/>
+					<field name="uppad" retrieveCode="uppad"/>
+					<field name="upjlsd" retrieveCode="upjlsd"/>
+					<field name="updwpd" retrieveCode="updwpd"/>
+					<field name="upinpd" retrieveCode="upinpd"/>
+					<field name="upgrnt" retrieveCode="upgrnt"/>
+					<field name="upgrntf" retrieveCode="upgrntf"/>
+					<field name="uplsdf" retrieveCode="uplsdf"/>
+					</fields>
+			</database>
+			<database name="DWPI">
+				<fields>
+					<field name="ltai" phraseSearch="ltai=" searchCode="ltai" recordViewCode="ltai" retrieveCode="ltai"/>
+					<field name="tid" phraseSearch="tid=" searchCode="tid" recordViewCode="tid" retrieveCode="tid"/>
+					<field name="co" recordViewCode="co" retrieveCode="co,ck" sortCode="co" phraseSearch="co=" searchCode="co"/>
+					<field name="ck" recordViewCode="ck" retrieveCode="ck" phraseSearch="ck=" searchCode="ck"/>
+					<field name="ind" searchCode="ind" phraseSearch="ind=" recordViewCode="ind" retrieveCode="ind" sortCode="ind"/>
+					<field name="week" searchCode="up" phraseSearch="up=" recordViewCode="week" retrieveCode="week" sortCode="week"/>
+					<field name="ac" phraseSearch="ac=" searchCode="ac" retrieveCode="ac"/>
+					<field name="cm" phraseSearch="dc=" searchCode="dc" recordViewCode="cm,cmt" retrieveCode="cm,cmt"/>
+					<field name="mc" phraseSearch="mc=,mcm=" searchCode="mc,mcm" recordViewCode="mc,mct" retrieveCode="mc,mct" sortCode="mc"/>
+					<field name="sp" phraseSearch="sp=" searchCode="sp"/>
+					<field name="pd" phraseSearch="" searchCode="" recordViewCode="" retrieveCode="" sortCode="pd"/>
+					<field name="ei" phraseSearch="ei=" searchCode="ei"/>
+					<field name="ee" phraseSearch="ee=" searchCode="ee"/>
+					<field name="paod" phraseSearch="paf=" searchCode="paf" retrieveCode="paf"/>
+					<field name="ALL" phraseSearch="txt=" searchCode="txt"/>
+					<field name="ps" phraseSearch="ps=" searchCode="ps"/>
+					<field name="uts" phraseSearch="" searchCode="" recordViewCode="" retrieveCode=""/>
+					<field name="drd" phraseSearch="drd=" searchCode="drd"/>
+					<field name="mi" phraseSearch="mi=" searchCode="mi"/>
+					<field name="ran" phraseSearch="ran=" searchCode="ran"/>
+					<field name="rad" phraseSearch="rad=" searchCode="rad"/>
+					<field name="icv" phraseSearch="ic=" searchCode="ic"/>
+					<field name="icrv" phraseSearch="ic=" searchCode="ic"/>
+					<field name="icraa" phraseSearch="icraa=" searchCode="icraa"/>
+					<field name="icrfa" phraseSearch="icraa=" searchCode="icraa"/>
+					<field name="icroc" phraseSearch="icroc=" searchCode="icroc"/>
+					<field name="icroci" phraseSearch="icroci=" searchCode="icroci"/>
+					<field name="icroca" phraseSearch="icroca=" searchCode="icroca"/>
+					<field name="icroa" phraseSearch="icroa=" searchCode="icroa"/>
+					<field name="icroai" phraseSearch="icroai=" searchCode="icroai"/>
+					<field name="icroaa" phraseSearch="icroaa=" searchCode="icroaa"/>
+					<field name="dw" phraseSearch="dw=" searchCode="dw"/>
+					<field name="dwd" phraseSearch="dwd=" searchCode="dwd"/>
+					<field name="ex" phraseSearch="ex=" searchCode="ex"/>
+					<field name="edg" phraseSearch="edg=" searchCode="edg"/>
+					<field name="erf" phraseSearch="erf=" searchCode="erf"/>
+					<field name="rfd" phraseSearch="rfd=" searchCode="rfd"/>
+					<field name="asc" phraseSearch="asc=" searchCode="asc"/>
+					<field name="asd" phraseSearch="asd=" searchCode="asd"/>
+					<field name="drf" phraseSearch="drf=" searchCode="drf"/>
+					<field name="tan" phraseSearch="tan=" searchCode="tan"/>
+					<field name="tad" phraseSearch="tad=" searchCode="tad"/>
+					<field name="tag" phraseSearch="tag=" searchCode="tag"/>
+					<field name="taf" phraseSearch="taf=" searchCode="taf"/>
+					<field name="tdt" phraseSearch="tdt=" searchCode="tdt"/>
+					<field name="pcad" phraseSearch="pcad=" searchCode="pcad" retrieveCode="pcad"/>
+					<field name="pct" phraseSearch="pca=,pcp=" searchCode="pca,pcp" retrieveCode="pca,pcp"/>
+					<field name="pcp" phraseSearch="pcp=" searchCode="pcp" recordViewCode="pcp" retrieveCode="pcp"/>
+					<field name="pcpd" phraseSearch="pcpd=" searchCode="pcpd" retrieveCode="pcpd"/>
+					<field name="theme" phraseSearch="theme=" searchCode="theme"/>
+					<field name="ffc" phraseSearch="ffc=" searchCode="ffc"/>
+					<field name="frk" phraseSearch="frk=" searchCode="frk"/>
+					<field name="rgn" phraseSearch="rgn=" searchCode="rgn"/>
+					<field name="exd" phraseSearch="exd=" searchCode="exd"/>
+					<field name="rgd" phraseSearch="rgd=" searchCode="rgd" retrieveCode="rd" sortCode="rd"/>
+					<field name="tagd" phraseSearch="tagd=" searchCode="tagd"/>
+					<field name="agn" phraseSearch="agn=" searchCode="agrn" retrieveCode="agrn"/>
+					<field name="agrn" phraseSearch="agrn=" searchCode="agrn" retrieveCode="agrn"/>
+					<field name="agd" phraseSearch="agd=" searchCode="agd"/>
+					<field name="inad" phraseSearch="inad=" searchCode="inad" retrieveCode="inf"/>
+					<field name="ic7m" phraseSearch="ic7m=" searchCode="ic7m"/>
+					<field name="ico" phraseSearch="ico=" searchCode="ico"/>
+					<field name="icrai" phraseSearch="icrai=" searchCode="icrai" retrieveCode="ic"/>
+					<field name="icrfi" phraseSearch="icrai=" searchCode="icrai" retrieveCode="ic"/>
+					<field name="icrma" phraseSearch="icrca=" searchCode="icrca"/>
+					<field name="icrmi" phraseSearch="icrci=" searchCode="icrci" retrieveCode="ic"/>
+					<field name="icrm" phraseSearch="icrc=" searchCode="icrc" id="yes"/>
+					<field name="icr" phraseSearch="icr=" searchCode="icr"/>
+					<field name="pca" phraseSearch="pca=" searchCode="pca" recordViewCode="pca" retrieveCode="pca"/>
+					<field name="rpd" phraseSearch="rpd=" searchCode="rpd" recordViewCode="rpd" retrieveCode="rpd"/>
+					<field name="rpn" phraseSearch="rpn=" searchCode="rpn" recordViewCode="rpn" retrieveCode="rpn"/>
+					<field name="rpa" phraseSearch="rpa=" searchCode="rpa" recordViewCode="rpac" retrieveCode="rpac"/>
+					<field name="prys" phraseSearch="prys=" searchCode="priy"/>
+					<field name="prds" phraseSearch="prid=" searchCode="prid"/>
+					<field name="pra" phraseSearch="pr=" searchCode="pr"/>
+					<field name="ay" phraseSearch="ay=" searchCode="ay" recordViewCode="ay" retrieveCode="ay"/>
+					<field name="tab" phraseSearch="tab=" searchCode="tab"/>
+					<field name="ctb" phraseSearch="ctb=" searchCode="ctb"/>
+					<field name="ti" phraseSearch="ti=" searchCode="ti" retrieveCode="ti" recordViewCode="ti"/>
+					<field name="tio" phraseSearch="ti=" searchCode="ti" retrieveCode="ti" recordViewCode="ti"/>
+					<field name="abo" phraseSearch="abo=" searchCode="abo" retrieveCode="abo" recordViewCode="abo"/>
+					<field name="pn" phraseSearch="pn=" searchCode="pn" retrieveCode="pn" recordViewCode="pn" sortCode="pn"/>
+					<field name="an" phraseSearch="an=" searchCode="an" retrieveCode="an" recordViewCode="an" sortCode="an"/>
+					<field name="ad" phraseSearch="ad=" searchCode="ad" retrieveCode="ad" recordViewCode="ad" sortCode="ad"/>
+					<field name="rd" phraseSearch="rd=" searchCode="rd" retrieveCode="rd" recordViewCode="rd"/>
+					<field name="prd" phraseSearch="prd=" searchCode="prd" retrieveCode="prd" recordViewCode="prd"/>
+					<field name="ipc" phraseSearch="ipc=" searchCode="ic" retrieveCode="ic" recordViewCode="ic"/>
+					<field name="in" phraseSearch="in=" searchCode="in" retrieveCode="in" recordViewCode="in" sortCode="in"/>
+					<field name="pa" searchCode="pa" phraseSearch="pa=" retrieveCode="pa,pad,pao" recordViewCode="pa" sortCode="pa"/>
+					<field name="ke" searchcode="ke" phraseSearch="ke=" retrieveCode="ke" recordViewCode="ke" sortCode="ke"/>
+					<field name="kfd" searchcode="kfd" phraseSearch="kfd=" retrieveCode="kfd" recordViewCode="kfd" sortCode="kfd"/>
+					<field name="ddd" searchCode="ddd" phraseSearch="ddd="/>
+					<field name="kdm" searchCode="kdm" phraseSearch="kdm=" retrieveCode="kdm" recordViewCode="kdm" sortCode="kdm"/>
+					<field name="ded" searchCode="ded" phraseSearch="ded="/>
+					<field name="eai" searchCode="eai" phraseSearch="eai=" retrieveCode="eai" recordViewCode="eai" sortCode="eai"/>
+					<field name="fdd" searchCode="fdd" phraseSearch="fdd="/>
+					<field name="jrc" searchCode="rc" phraseSearch="rc=" retrieveCode="rc" recordViewCode="rc" sortCode="rc"/>
+					<field name="dcr" searchCode="dcr" phraseSearch="dcr="/>
+					<field name="rcd" searchCode="rcd" phraseSearch="rcd="/>
+					<field name="RAI" searchCode="RAI" phraseSearch="RAI=" retrieveCode="RAI" recordViewCode="RAI" sortCode="RAI"/>
+					<field name="ic" phraseSearch="ic=" searchCode="ic" recordViewCode="ic" retrieveCode="ic" sortCode="ic"/>
+					<field name="py" searchCode="py" phraseSearch="py=" retrieveCode="py" sortCode="py"/>
+					<field name="asgad" recordViewCode="pa,paod" retrieveCode="pa,paf"/>
+					<field name="pao" phraseSearch="pao=" searchCode="pao" recordViewCode="pao" retrieveCode="pao" sortCode="pao"/>
+					<field name="paf" phraseSearch="paf=" searchCode="paf" recordViewCode="paf" retrieveCode="pa" sortCode="paf"/>
+					<field name="invad" recordViewCode="in,inf" retrieveCode="in,inf"/>
+					<field name="inad" phraseSearch="inad=" searchCode="inad" retrieveCode="inf" recordViewCode="inf"/>
+					<field name="dpki" recordViewCode="pd,ki" retrieveCode="pd,ki"/>
+					<field name="dp" phraseSearch="pd=" searchCode="pd" recordViewCode="pd" retrieveCode="pd" sortCode="pd"/>
+					<field name="ki" phraseSearch="ki=" searchCode="ki" recordViewCode="ki" retrieveCode="ki"/>
+					<field name="andt" recordViewCode="an,ad" retrieveCode="an,ad"/>
+					<field name="an" phraseSearch="an=" searchCode="an" retrieveCode="an" recordViewCode="an"/>
+					<field name="ad" phraseSearch="ad=" searchCode="ad" retrieveCode="ad" recordViewCode="ad"/>
+					<field name="pndct" recordViewCode="pr,prd,prc,prt" retrieveCode="pr,prd,prc,prt"/>
+					<field name="pr" phraseSearch="pr=" searchCode="pr" recordViewCode="pr" retrieveCode="pr"/>
+					<field name="prd" recordViewCode="prd" retrieveCode="prd" sortCode="prd" searchCode="prdt" phraseSearch="prdt="/>
+					<field name="prc" recordViewCode="prc" retrieveCode="prc" searchCode="prc" phraseSearch="prc="/>
+					<field name="prt" recordViewCode="prt" retrieveCode="prt" searchCode="prt" phraseSearch="prt="/>
+					<field name="ab" retrieveCode="ab" phraseSearch="ab=" searchCode="ab" recordViewCode="ab"/>
+					<field name="ict" retrieveCode="ic,ict" recordViewCode="ic,ict"/>
+					<field name="ict" phraseSearch="ic=" searchCode="ic" recordViewCode="ic" retrieveCode="ic" sortCode="ic"/>
+					<field name="cpct" retrieveCode="cpc,cpct" recordViewCode="cpc,cpct"/>
+					<field name="cpcct" retrieveCode="cpc,cpct" recordViewCode="cpc,cpct"/>
+					<field name="cpct" phraseSearch="cpcc=" searchCode="cpcc" recordViewCode="cpcc" retrieveCode="cpc" sortCode="cpc"/>
+					<field name="acp" phraseSearch="cpc=" searchCode="cpc" retrieveCode="cpc"/>
+					<field name="cpc" phraseSearch="cpcc=" searchCode="cpcc" retrieveCode="cpc" recordViewCode="cpc" sortCode="cpc"/>
+					<field name="cpcao" phraseSearch="cpcao=" searchCode="cpcao" retrieveCode="cpc"/>
+					<field name="cpci" phraseSearch="cpci=" searchCode="cpci" retrieveCode="cpc"/>
+					<field name="cpca" phraseSearch="cpca=" searchCode="cpca" retrieveCode="cpc"/>
+					<field name="cpcp" phraseSearch="cpccp=" searchCode="cpccp" retrieveCode="cpc"/>
+					<field name="cpcc" phraseSearch="cpccl=" searchCode="cpccl" retrieveCode="cpc"/>
+					<field name="cpco" phraseSearch="cpo=" searchCode="cpo" recordViewCode="cpc" retrieveCode="cpc"/>
+					<field name="cpoao" phraseSearch="cpoao=" searchCode="cpoao" retrieveCode="cpc"/>
+					<field name="cpoi" phraseSearch="cpoi=" searchCode="cpoi" retrieveCode="cpc"/>
+					<field name="cpoa" phraseSearch="cpoa=" searchCode="cpoa" retrieveCode="cpc"/>
+					<field name="cpop" phraseSearch="cpop=" searchCode="cpop" retrieveCode="cpc"/>
+					<field name="cpoc" phraseSearch="cpol=" searchCode="cpol" retrieveCode="cpc"/>
+					<field name="aic" phraseSearch="ic=,cpc=" searchCode="ic,cpc" retrieveCode="ic,cpc"/>
+					<field name="ic7" phraseSearch="ic7=" searchCode="ic7" recordViewCode="ic7" retrieveCode="ic7"/>
+					<field name="ftt" phraseSearch="ftt=" searchCode="ftt" retrieveCode="ftt" recordViewCode="ftt" sortCode="ftt"/>
+					<field name="ftc" phraseSearch="ftc=" searchCode="ftc" retrieveCode="ftc" recordViewCode="ftc"/>
+					<field name="ft" phraseSearch="ft=" searchCode="ft" retrieveCode="ft" recordViewCode="ft"/>
+					<field name="fit" phraseSearch="fit=" searchCode="fit" retrieveCode="fit" recordViewCode="fit"/>
+					<field name="fic" phraseSearch="fic=" searchCode="fic" retrieveCode="fic" recordViewCode="fic"/>
+					<field name="fc" phraseSearch="fic=" searchCode="fic" retrieveCode="fic" recordViewCode="fc"/>
+					<field name="ls" phraseSearch="ls=" searchCode="ls" retrieveCode="ls" recordViewCode="ls"/>
+					<field name="exm" phraseSearch="exm=" searchCode="exm" retrieveCode="exm" recordViewCode="exm"/>
+					<field name="ta" phraseSearch="ta=" searchCode="ta" retrieveCode="ta" recordViewCode="ta"/>
+					<field name="rg" phraseSearch="rg=" searchCode="rg" retrieveCode="rg" recordViewCode="rg"/>
+					<field name="cl" phraseSearch="cl=" searchCode="cl" recordViewCode="cl" retrieveCode="cl"/>
+					<field name="clct" recordViewCode="clct" retrieveCode="clct"/>
+					<field name="dsc" phraseSearch="dsc=" searchCode="dsc" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="drw" phraseSearch="drw=" searchCode="drw" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="ba" phraseSearch="ba=" searchCode="ba" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="tf" phraseSearch="tf=" searchCode="tf" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="ia" phraseSearch="ia=" searchCode="ia" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="md" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="pb" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="cl1" phraseSearch="cl1=" searchCode="cl1" recordViewCode="cl1" retrieveCode="cl1"/>
+					<field name="cip" phraseSearch="cip=" searchCode="cip" recordViewCode="cip" retrieveCode="cip"/>
+					<field name="cin" phraseSearch="cin=" searchCode="cin" recordViewCode="cin" retrieveCode="cin"/>
+					<field name="ci" phraseSearch="ci=" searchCode="ci" recordViewCode="ci" retrieveCode="ci"/>
+					<field name="cipct" recordViewCode="cipct" retrieveCode="cipct"/>
+					<field name="cipfct" recordViewCode="cipfct" retrieveCode="cipfct"/>
+					<field name="cinct" recordViewCode="cinct" retrieveCode="cinct"/>
+					<field name="fam" recordViewCode="fam" retrieveCode="fam"/>
+					<field name="famctd" recordViewCode="famctd" retrieveCode="famctd"/>
+					<field name="cipcnt" retrieveCode="cinct,cipfct,cipct"/>
+					<field name="agnt" recordViewCode="agt,agrn,agd" retrieveCode="ag,agrn,agd"/>
+					<field name="ag" phraseSearch="ag=" searchCode="ag" recordViewCode="ag" retrieveCode="ag"/>
+					<field name="agn" phraseSearch="agn=" searchCode="agn" recordViewCode="agn" retrieveCode="agn"/>
+					<field name="agrn" phraseSearch="agrn=" searchCode="agrn" recordViewCode="agrn" retrieveCode="agrn"/>
+					<field name="agdf" phraseSearch="agdf=" searchCode="agdf" retrieveCode="agdf" recordViewCode="agdf"/>
+					<field name="agd" phraseSearch="agd=" searchCode="agd" retrieveCode="agd" recordViewCode="agd"/>
+					<field name="rpa" phraseSearch="rpa=" searchCode="rpa" recordViewCode="rpac" retrieveCode="rpac"/>
+					<field name="pca" phraseSearch="pca=" searchCode="pca" retrieveCode="pca" recordViewCode="pca"/>
+					<field name="cck" phraseSearch="cck=" searchCode="cck" retrieveCode="cck" recordViewCode="cck" sortCode="cck"/>
+					<field name="fs" phraseSearch="fs=" searchCode="fs" retrieveCode="fscu" recordViewCode="fscu"/>
+					<field name="src" recordViewCode="cip"/>
+					<field name="rel" recordViewCode="cip"/>
+					<field name="ALL" phraseSearch="txt=" searchCode="txt"/>
+					<field name="pan" phraseSearch="pan=" searchCode="pan" recordViewCode="pan" retrieveCode="pan" sortCode="pan"/>
+					<field name="gdd" phraseSearch="gdd=" searchCode="gdd" recordViewCode="gdd" retrieveCode="gdd" sortCode="gdd"/>
+					<field name="rdd" phraseSearch="rdd=" searchCode="rdd" recordViewCode="rdd" retrieveCode="rdd" sortCode="rdd"/>
+					<field name="tafd" phraseSearch="tafd=" searchCode="tafd"/>
+					<field name="ds" phraseSearch="ds=" searchCode="ds" retrieveCode="ds" recordViewCode="ds"/>
+					<field name="ica" phraseSearch="icra=" searchCode="icra" id="yes"/>
+					<field name="icrf" phraseSearch="icra=" searchCode="icra" id="yes"/>
+					<field name="ico7" phraseSearch="ico7=" searchCode="ico7" retrieveCode="ic"/>
+					<field name="cip.pn" retrieveCode="cip.pn"/>
+					<field name="cipct" recordViewCode="cipct" retrieveCode="cipct"/>
+					<field name="cin" retrieveCode="cin" includeField="cin.pub,cin.cpct"/>
+					<field name="cinct" recordViewCode="cinct" retrieveCode="cinct"/>
+					<field name="cipf.pn" retrieveCode="cipf.pn"/>
+					<field name="cipfct" recordViewCode="cipfct" retrieveCode="cipfct"/>
+					<field name="pacnt" retrieveCode="pacnt"/>
+					<field name="acup" recordViewCode="pan,week" retrieveCode="pan,week"/>
+					<field name="andw" recordViewCode="andw" retrieveCode="andw"/>
+					<field name="dpndc" recordViewCode="pr,prd,prc,prid" retrieveCode="pr,prd,prc,prid"/>
+					<field name="ec" phraseSearch="ec=" searchCode="ec" recordViewCode="ec" retrieveCode="ec"/>
+					<field name="cl1" phraseSearch="cl1=" searchCode="cl1" recordViewCode="cl1" retrieveCode="cl1"/>
+					<field name="cld" recordViewCode="cld" retrieveCode="cld"/>
+					<field name="abe" phraseSearch="abe=" searchCode="abe" recordViewCode="abe" retrieveCode="abe"/>
+					<field name="pad" phraseSearch="pad=" searchCode="pad" recordViewCode="pad" retrieveCode="pad"/>
+					<field name="pa" searchCode="pa" phraseSearch="pa=" retrieveCode="pa,pad,pao" recordViewCode="pa" sortCode="pa"/>
+					<field name="dp" phraseSearch="pd=" searchCode="pd" recordViewCode="pd" retrieveCode="pd" sortCode="pd"/>
+					<field name="ki" phraseSearch="ki=" searchCode="ki" recordViewCode="ki" retrieveCode="ki"/>
+					<field name="ict" retrieveCode="ic,ict"/>
+					<field name="cpct" retrieveCode="cpc,cpct"/>
+					<field name="fit" recordViewCode="fic,fit" retrieveCode="fic,fit"/>
+					<field name="ftt" recordViewCode="ftc,ftt" retrieveCode="ftc,ftt"/>
+					<field name="famct" recordViewCode="famct" retrieveCode="famct"/>
+					<field name="ag" phraseSearch="agt=" searchCode="agt" recordViewCode="ag" retrieveCode="ag"/>
+					<field name="ucfs" recordViewCode="ucm,uct,fscu" retrieveCode="ucm,uct,fscu"/>
+					<field name="rand" phraseSearch="rand=" searchCode="rand"/>
+					<field name="famb" phraseSearch="famb=" searchCode="famb" retrieveCode="famb" recordViewCode="famb"/>
+					<field name="ddrw" recordViewCode="drw" retrieveCode="drw"/>
+					<field name="drw" phraseSearch="drw=" searchCode="drw" recordViewCode="dsc" retrieveCode="dsc"/>
+					<field name="kw" recordViewCode="kw" retrieveCode="kw"/>
+					<field name="ps" recordViewCode="ps" retrieveCode="ps"/>
+					<field name="pc" recordViewCode="pc" retrieveCode="pc"/>
+					<field name="pi" recordViewCode="pi" retrieveCode="pi"/>
+					<field name="che" recordViewCode="cic,clc,pi,ps,pc,cuc" retrieveCode="cic,clc,pi,ps,pc,cuc"/>
+					<field name="cuc" phraseSearch="D0AC=" searchCode="D0AC" recordViewCode="cuc" retrieveCode="cuc"/>
+					<field name="dcfc" recordViewCode="clc,cic,cuc" retrieveCode="clc,cic,cuc"/>
+					<field name="clc" phraseSearch="D00X=,D00Y=,D00Z=,D0AA=,D0AB=" searchCode="D00X,D00Y,D00Z,D0AA,D0AB" recordViewCode="clc" retrieveCode="clc"/>
+					<field name="cic" recordViewCode="cic" retrieveCode="cic"/>
+					<field name="can" recordViewCode="can" retrieveCode="can" phraseSearch="can=" searchCode="can" sortCode="can"/>
+					<field name="dsd" phraseSearch="dsd=" searchCode="dsd" retrieveCode="dsd" recordViewCode="dsd"/>
+					<field name="dab" recordViewCode="famb,adv,nov,use,act,mec,dtd,tfs,ddrw,drw" retrieveCode="famb,adv,nov,use,act,mec,dtd,tfs,ddrw,drw"/>
+					<field name="tit" phraseSearch="tit=" searchCode="tit" recordViewCode="tit" retrieveCode="tit"/>
+					<field name="lapp" phraseSearch="lapp=" searchCode="lapp" retrieveCode="lapp" recordViewCode="lapp"/>
+					<field name="racc" retrieveCode="racc"/>
+					<field name="mcf" retrieveCode="mc"/>
+					<field name="cmf" retrieveCode="cm"/>
+					<field name="pry" phraseSearch="pry=" searchCode="pry" recordViewCode="pry" retrieveCode="pry"/>
+					<field name="ay" phraseSearch="ay=" searchCode="ay" recordViewCode="ay" retrieveCode="ay"/>
+					<field name="fi" phraseSearch="fi=" searchCode="fi" recordViewCode="fi" retrieveCode="fi"/>
+					<field name="fig" phraseSearch="fig=" searchCode="fig" recordViewCode="fig" retrieveCode="fig"/>
+					<field name="dcipct" recordViewCode="dcipct" retrieveCode="dcipct"/>
+					<field name="dcipfct" recordViewCode="dcipfct" retrieveCode="dcipfct"/>
+					<field name="dcinct" recordViewCode="dcinct" retrieveCode="dcinct"/>
+					<field name="dpcifos" recordViewCode="dpcifos" retrieveCode="dpcifos"/>
+					<field name="dcipcc" recordViewCode="dcipcc" retrieveCode="dcipcc"/>
+					<field name="dcipfcc" recordViewCode="dcipfcc" retrieveCode="dcipfcc"/>
+					<field name="dcipf" recordViewCode="dcipf" retrieveCode="dcipf"/>
+					<field name="dcip" recordViewCode="dcip" retrieveCode="dcip"/>
+					<field name="dcin" recordViewCode="dcin" retrieveCode="dcin"/>
+					<field name="dpcicnt" recordViewCode="dpcicnt" retrieveCode="dpcicnt"/>
+					<field name="upcitd" retrieveCode="upcitd"/>
+					<field name="upnd" retrieveCode="upnd"/>
+					<field name="uplsd" retrieveCode="uplsd"/>
+					<field name="uppad" retrieveCode="uppad"/>
+					<field name="upjlsd" retrieveCode="upjlsd"/>
+					<field name="updwpd" retrieveCode="updwpd"/>
+					<field name="upinpd" retrieveCode="upinpd"/>
+					<field name="upgrnt" retrieveCode="upgrnt"/>
+					<field name="upgrntf" retrieveCode="upgrntf"/>
+					<field name="uplsdf" retrieveCode="uplsdf"/>
+					</fields>
+			</database>
+		</databases>
+	</datasource>
+</datasources>

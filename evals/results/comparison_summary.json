@@ -1,0 +1,831 @@
+{
+  "runners": [
+    "baseline",
+    "deepagent"
+  ],
+  "difficulties": [
+    "Easy",
+    "Medium",
+    "Hard",
+    "All"
+  ],
+  "metrics": {
+    "verdict_accuracy": {
+      "Easy": {
+        "baseline": {
+          "mean": 0.2,
+          "median": 0.0,
+          "std": 0.4472,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 5,
+          "pass_rate": 0.2
+        },
+        "deepagent": {
+          "mean": 0.4,
+          "median": 0.0,
+          "std": 0.5477,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 5,
+          "pass_rate": 0.4
+        }
+      },
+      "Medium": {
+        "baseline": {
+          "mean": 0.2,
+          "median": 0.0,
+          "std": 0.4216,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 10,
+          "pass_rate": 0.2
+        },
+        "deepagent": {
+          "mean": 0.6,
+          "median": 1.0,
+          "std": 0.5164,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 10,
+          "pass_rate": 0.6
+        }
+      },
+      "Hard": {
+        "baseline": {
+          "mean": 0.4286,
+          "median": 0.0,
+          "std": 0.5345,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 7,
+          "pass_rate": 0.4286
+        },
+        "deepagent": {
+          "mean": 0.8571,
+          "median": 1.0,
+          "std": 0.378,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 7,
+          "pass_rate": 0.8571
+        }
+      },
+      "All": {
+        "baseline": {
+          "mean": 0.2727,
+          "median": 0.0,
+          "std": 0.4558,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 22,
+          "pass_rate": 0.2727
+        },
+        "deepagent": {
+          "mean": 0.6364,
+          "median": 1.0,
+          "std": 0.4924,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 22,
+          "pass_rate": 0.6364
+        }
+      }
+    },
+    "prior_art_hit_rate": {
+      "Easy": {
+        "baseline": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 5,
+          "pass_rate": 0.0
+        },
+        "deepagent": {
+          "mean": 0.2,
+          "median": 0.0,
+          "std": 0.4472,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 5,
+          "pass_rate": 0.2
+        }
+      },
+      "Medium": {
+        "baseline": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 10,
+          "pass_rate": 0.0
+        },
+        "deepagent": {
+          "mean": 0.1,
+          "median": 0.0,
+          "std": 0.3162,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 10,
+          "pass_rate": 0.1
+        }
+      },
+      "Hard": {
+        "baseline": {
+          "mean": 0.2857,
+          "median": 0.0,
+          "std": 0.488,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 7,
+          "pass_rate": 0.2857
+        },
+        "deepagent": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 7,
+          "pass_rate": 0.0
+        }
+      },
+      "All": {
+        "baseline": {
+          "mean": 0.0909,
+          "median": 0.0,
+          "std": 0.2942,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 22,
+          "pass_rate": 0.0909
+        },
+        "deepagent": {
+          "mean": 0.0909,
+          "median": 0.0,
+          "std": 0.2942,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 22,
+          "pass_rate": 0.0909
+        }
+      }
+    },
+    "prior_art_recall": {
+      "Easy": {
+        "baseline": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 5,
+          "pass_rate": 0.4
+        },
+        "deepagent": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 5,
+          "pass_rate": 0.4
+        }
+      },
+      "Medium": {
+        "baseline": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 10,
+          "pass_rate": 0.2
+        },
+        "deepagent": {
+          "mean": 0.05,
+          "median": 0.0,
+          "std": 0.1581,
+          "min": 0.0,
+          "max": 0.5,
+          "count": 10,
+          "pass_rate": 0.3
+        }
+      },
+      "Hard": {
+        "baseline": {
+          "mean": 0.0714,
+          "median": 0.0,
+          "std": 0.189,
+          "min": 0.0,
+          "max": 0.5,
+          "count": 7,
+          "pass_rate": 0.2857
+        },
+        "deepagent": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 7,
+          "pass_rate": 0.1429
+        }
+      },
+      "All": {
+        "baseline": {
+          "mean": 0.0227,
+          "median": 0.0,
+          "std": 0.1066,
+          "min": 0.0,
+          "max": 0.5,
+          "count": 22,
+          "pass_rate": 0.2727
+        },
+        "deepagent": {
+          "mean": 0.0227,
+          "median": 0.0,
+          "std": 0.1066,
+          "min": 0.0,
+          "max": 0.5,
+          "count": 22,
+          "pass_rate": 0.2727
+        }
+      }
+    },
+    "feature_precision": {
+      "Easy": {
+        "baseline": {
+          "mean": 0.3524,
+          "median": 0.4286,
+          "std": 0.3361,
+          "min": 0.0,
+          "max": 0.6667,
+          "count": 5,
+          "pass_rate": 0.0
+        },
+        "deepagent": {
+          "mean": 0.6228,
+          "median": 0.7143,
+          "std": 0.24,
+          "min": 0.3333,
+          "max": 0.8333,
+          "count": 5,
+          "pass_rate": 0.6
+        }
+      },
+      "Medium": {
+        "baseline": {
+          "mean": 0.34,
+          "median": 0.3095,
+          "std": 0.3308,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 10,
+          "pass_rate": 0.2
+        },
+        "deepagent": {
+          "mean": 0.7256,
+          "median": 0.7738,
+          "std": 0.1852,
+          "min": 0.4,
+          "max": 1.0,
+          "count": 10,
+          "pass_rate": 0.6
+        }
+      },
+      "Hard": {
+        "baseline": {
+          "mean": 0.3667,
+          "median": 0.4,
+          "std": 0.3575,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 7,
+          "pass_rate": 0.1429
+        },
+        "deepagent": {
+          "mean": 0.625,
+          "median": 0.5714,
+          "std": 0.2256,
+          "min": 0.375,
+          "max": 1.0,
+          "count": 7,
+          "pass_rate": 0.2857
+        }
+      },
+      "All": {
+        "baseline": {
+          "mean": 0.3513,
+          "median": 0.3667,
+          "std": 0.3241,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 22,
+          "pass_rate": 0.1364
+        },
+        "deepagent": {
+          "mean": 0.6702,
+          "median": 0.6905,
+          "std": 0.2071,
+          "min": 0.3333,
+          "max": 1.0,
+          "count": 22,
+          "pass_rate": 0.5
+        }
+      }
+    },
+    "feature_recall": {
+      "Easy": {
+        "baseline": {
+          "mean": 0.4123,
+          "median": 0.625,
+          "std": 0.3827,
+          "min": 0.0,
+          "max": 0.8,
+          "count": 5,
+          "pass_rate": 0.6
+        },
+        "deepagent": {
+          "mean": 0.897,
+          "median": 1.0,
+          "std": 0.1509,
+          "min": 0.6667,
+          "max": 1.0,
+          "count": 5,
+          "pass_rate": 1.0
+        }
+      },
+      "Medium": {
+        "baseline": {
+          "mean": 0.368,
+          "median": 0.3364,
+          "std": 0.3463,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 10,
+          "pass_rate": 0.2
+        },
+        "deepagent": {
+          "mean": 0.8888,
+          "median": 1.0,
+          "std": 0.1529,
+          "min": 0.625,
+          "max": 1.0,
+          "count": 10,
+          "pass_rate": 1.0
+        }
+      },
+      "Hard": {
+        "baseline": {
+          "mean": 0.3934,
+          "median": 0.375,
+          "std": 0.375,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 7,
+          "pass_rate": 0.2857
+        },
+        "deepagent": {
+          "mean": 0.7548,
+          "median": 0.8,
+          "std": 0.2763,
+          "min": 0.3846,
+          "max": 1.0,
+          "count": 7,
+          "pass_rate": 0.7143
+        }
+      },
+      "All": {
+        "baseline": {
+          "mean": 0.3861,
+          "median": 0.3875,
+          "std": 0.3461,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 22,
+          "pass_rate": 0.3182
+        },
+        "deepagent": {
+          "mean": 0.848,
+          "median": 1.0,
+          "std": 0.2011,
+          "min": 0.3846,
+          "max": 1.0,
+          "count": 22,
+          "pass_rate": 0.9091
+        }
+      }
+    },
+    "report_section_completeness": {
+      "Easy": {
+        "baseline": {
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0,
+          "count": 5,
+          "pass_rate": 1.0
+        },
+        "deepagent": {
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0,
+          "count": 5,
+          "pass_rate": 1.0
+        }
+      },
+      "Medium": {
+        "baseline": {
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0,
+          "count": 10,
+          "pass_rate": 1.0
+        },
+        "deepagent": {
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0,
+          "count": 10,
+          "pass_rate": 1.0
+        }
+      },
+      "Hard": {
+        "baseline": {
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0,
+          "count": 7,
+          "pass_rate": 1.0
+        },
+        "deepagent": {
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0,
+          "count": 7,
+          "pass_rate": 1.0
+        }
+      },
+      "All": {
+        "baseline": {
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0,
+          "count": 22,
+          "pass_rate": 1.0
+        },
+        "deepagent": {
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0,
+          "count": 22,
+          "pass_rate": 1.0
+        }
+      }
+    },
+    "search_strategy": {
+      "Easy": {
+        "baseline": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 0,
+          "pass_rate": 0.0
+        },
+        "deepagent": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 0,
+          "pass_rate": 0.0
+        }
+      },
+      "Medium": {
+        "baseline": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 0,
+          "pass_rate": 0.0
+        },
+        "deepagent": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 0,
+          "pass_rate": 0.0
+        }
+      },
+      "Hard": {
+        "baseline": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 0,
+          "pass_rate": 0.0
+        },
+        "deepagent": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 0,
+          "pass_rate": 0.0
+        }
+      },
+      "All": {
+        "baseline": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 0,
+          "pass_rate": 0.0
+        },
+        "deepagent": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 0,
+          "pass_rate": 0.0
+        }
+      }
+    },
+    "triage_agreement": {
+      "Easy": {
+        "baseline": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 5,
+          "pass_rate": 0.0
+        },
+        "deepagent": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 5,
+          "pass_rate": 0.0
+        }
+      },
+      "Medium": {
+        "baseline": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 10,
+          "pass_rate": 0.0
+        },
+        "deepagent": {
+          "mean": 0.1,
+          "median": 0.0,
+          "std": 0.3162,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 10,
+          "pass_rate": 0.1
+        }
+      },
+      "Hard": {
+        "baseline": {
+          "mean": 0.2143,
+          "median": 0.0,
+          "std": 0.3934,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 7,
+          "pass_rate": 0.2857
+        },
+        "deepagent": {
+          "mean": 0.1429,
+          "median": 0.0,
+          "std": 0.378,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 7,
+          "pass_rate": 0.1429
+        }
+      },
+      "All": {
+        "baseline": {
+          "mean": 0.0682,
+          "median": 0.0,
+          "std": 0.2338,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 22,
+          "pass_rate": 0.0909
+        },
+        "deepagent": {
+          "mean": 0.0909,
+          "median": 0.0,
+          "std": 0.2942,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 22,
+          "pass_rate": 0.0909
+        }
+      }
+    },
+    "feature_coverage_accuracy": {
+      "Easy": {
+        "baseline": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 5,
+          "pass_rate": 0.0
+        },
+        "deepagent": {
+          "mean": 0.8333,
+          "median": 1.0,
+          "std": 0.2887,
+          "min": 0.3333,
+          "max": 1.0,
+          "count": 5,
+          "pass_rate": 0.8
+        }
+      },
+      "Medium": {
+        "baseline": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 10,
+          "pass_rate": 0.0
+        },
+        "deepagent": {
+          "mean": 0.4174,
+          "median": 0.45,
+          "std": 0.3339,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 10,
+          "pass_rate": 0.3
+        }
+      },
+      "Hard": {
+        "baseline": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 7,
+          "pass_rate": 0.0
+        },
+        "deepagent": {
+          "mean": 0.7171,
+          "median": 0.75,
+          "std": 0.1921,
+          "min": 0.4,
+          "max": 1.0,
+          "count": 7,
+          "pass_rate": 0.7143
+        }
+      },
+      "All": {
+        "baseline": {
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 22,
+          "pass_rate": 0.0
+        },
+        "deepagent": {
+          "mean": 0.6073,
+          "median": 0.6515,
+          "std": 0.3279,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 22,
+          "pass_rate": 0.5455
+        }
+      }
+    }
+  },
+  "operational": {
+    "baseline": {
+      "Easy": {
+        "count": 5,
+        "avg_duration_s": 202.8,
+        "avg_tokens": 187426,
+        "avg_turns": 1,
+        "total_duration_s": 1014.1
+      },
+      "All": {
+        "count": 22,
+        "avg_duration_s": 182.4,
+        "avg_tokens": 107542,
+        "avg_turns": 1,
+        "total_duration_s": 4013.5
+      },
+      "Medium": {
+        "count": 10,
+        "avg_duration_s": 187.1,
+        "avg_tokens": 76808,
+        "avg_turns": 1,
+        "total_duration_s": 1870.7
+      },
+      "Hard": {
+        "count": 7,
+        "avg_duration_s": 161.2,
+        "avg_tokens": 94386,
+        "avg_turns": 1,
+        "total_duration_s": 1128.7
+      }
+    },
+    "deepagent": {
+      "Easy": {
+        "count": 5,
+        "avg_duration_s": 779.1,
+        "avg_tokens": 0,
+        "avg_turns": 3,
+        "total_duration_s": 3895.7
+      },
+      "All": {
+        "count": 22,
+        "avg_duration_s": 759.1,
+        "avg_tokens": 0,
+        "avg_turns": 3,
+        "total_duration_s": 16700.7
+      },
+      "Medium": {
+        "count": 10,
+        "avg_duration_s": 731.6,
+        "avg_tokens": 0,
+        "avg_turns": 3,
+        "total_duration_s": 7315.9
+      },
+      "Hard": {
+        "count": 7,
+        "avg_duration_s": 784.2,
+        "avg_tokens": 0,
+        "avg_turns": 3,
+        "total_duration_s": 5489.1
+      }
+    }
+  },
+  "winner_by_difficulty": {
+    "Easy": {
+      "deepagent": 4,
+      "baseline": 1
+    },
+    "Medium": {
+      "deepagent": 5
+    },
+    "Hard": {
+      "deepagent": 3,
+      "baseline": 2
+    },
+    "All": {
+      "deepagent": 3,
+      "baseline": 2
+    }
+  }
+}

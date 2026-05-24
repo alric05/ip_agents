@@ -1,0 +1,67 @@
+{
+  "capture_id": 1,
+  "timestamp": "2026-03-26T22:22:33.662783",
+  "tool_name": "batch_citation_search",
+  "tool_args": {
+    "publication_numbers": [
+      "US12323091B1"
+    ],
+    "max_citations_per_patent": 25,
+    "directions": [
+      "forward",
+      "backward"
+    ]
+  },
+  "source_type": "citation",
+  "reference_count": 6,
+  "references": [
+    {
+      "publication_number": "US9729101B1",
+      "title": "Deployment techniques of a floating photovoltaic power generation system",
+      "source_tool": "batch_citation_search",
+      "captured_at": "2026-03-26T22:22:33.662754",
+      "date": "2016-04-25",
+      "abstract": "<novelty> <paragraph>The method (800) involves attaching first and second sections which are adjoining sections to a common one of the mooring buoys in the watercase. Multiple PV modules are unrolled (830) from positions adjacent to first section of tensioning frame and extending modules out from fi..."
+    },
+    {
+      "publication_number": "WO2024078733A1",
+      "title": "Floating photovoltaic platform",
+      "source_tool": "batch_citation_search",
+      "captured_at": "2026-03-26T22:22:33.662757",
+      "date": "2022-10-12",
+      "abstract": "<novelty> <paragraph>The platform has a supporting metal structure on the underside of a main supporting element (2) pontoon portion (1) formed in groups are established. Each group is fixed to a metal frame of the supporting metal structure, where the upper side of the main supporting element are P..."
+    },
+    {
+      "publication_number": "US20210214056A1",
+      "title": "Floatable array ready solar module mounting device, system and method of solar energy collection",
+      "source_tool": "batch_citation_search",
+      "captured_at": "2026-03-26T22:22:33.662759",
+      "date": "2020-01-10",
+      "abstract": "<novelty> <paragraph>The platform includes multiple floats, primary frame (1000), and a module frame (100). The floats has high-density polyethylene resin encapsulating expanded polystyrene foam. The multiple high-density polyethylene resin encapsulating expanded polystyrene foam floats. The multipl..."
+    },
+    {
+      "publication_number": "US20090133732A1",
+      "title": "Floating solar power collectors and application means",
+      "source_tool": "batch_citation_search",
+      "captured_at": "2026-03-26T22:22:33.662760",
+      "date": "2007-11-26",
+      "abstract": "<novelty> <paragraph>The floating solar power collection unit (101) has a watertight floatable container with a transparent top, to enclose a solar panel array for generating electricity. The watertight floatable container has a flexible container to equalize internal and external air pressures of w..."
+    },
+    {
+      "publication_number": "US11319035B2",
+      "title": "Floating type solar power generation equipment stage device",
+      "source_tool": "batch_citation_search",
+      "captured_at": "2026-03-26T22:22:33.662761",
+      "date": "2018-02-26",
+      "abstract": "<novelty> <paragraph>The floating solar power plant stage device comprises a carrier (1,10), which is made of a hard material and has an outer frame portion (11) in a horizontal direction. A connecting rod (12) is arranged in the center of the outer frame portion. The outer frame portion is provided..."
+    },
+    {
+      "publication_number": "IL279932A",
+      "title": "Floating solar panel array installation and mooring and method of assembly",
+      "source_tool": "batch_citation_search",
+      "captured_at": "2026-03-26T22:22:33.662762",
+      "date": "2021-01-03",
+      "abstract": "<novelty> <paragraph>The installation has a floating solar panel array installation main body provided with floating solar panel array elements.</paragraph> </novelty>"
+    }
+  ]
+}

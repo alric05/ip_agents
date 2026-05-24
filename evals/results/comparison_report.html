@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pipeline Comparison: Baseline vs Deep Agent</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.6; }
+.container { max-width: 1400px; margin: 0 auto; padding: 32px 24px; }
+h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; background: linear-gradient(135deg, #6366f1, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+h2 { font-size: 20px; font-weight: 600; margin: 32px 0 16px; color: #94a3b8; }
+h3 { font-size: 16px; font-weight: 600; margin: 16px 0 8px; color: #cbd5e1; }
+.subtitle { font-size: 14px; color: #64748b; margin-bottom: 32px; }
+.summary-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 32px; }
+.card { background: #1e293b; border-radius: 12px; padding: 20px; border: 1px solid #334155; text-align: center; }
+.card-label { font-size: 12px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.card-value { font-size: 28px; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+.card-value.baseline { color: #6366f1; }
+.card-value.deepagent { color: #10b981; }
+.card-value.neutral { color: #e2e8f0; }
+.chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px; }
+.chart-panel { background: #1e293b; border-radius: 12px; padding: 24px; border: 1px solid #334155; }
+.chart-panel.full-width { grid-column: 1 / -1; }
+.chart-container { position: relative; height: 350px; }
+.table-panel { background: #1e293b; border-radius: 12px; padding: 24px; border: 1px solid #334155; margin-bottom: 24px; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { padding: 10px 12px; text-align: left; border-bottom: 2px solid #334155; color: #94a3b8; font-weight: 600; white-space: nowrap; }
+td { padding: 8px 12px; border-bottom: 1px solid #1e293b; }
+tr:hover td { background: #334155; }
+.score-cell { font-family: 'JetBrains Mono', monospace; font-weight: 500; }
+.winner { color: #10b981; font-weight: 700; }
+.loser { color: #94a3b8; }
+.tie { color: #f59e0b; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 600; }
+.badge-easy { background: #065f46; color: #6ee7b7; }
+.badge-medium { background: #92400e; color: #fcd34d; }
+.badge-hard { background: #7f1d1d; color: #fca5a5; }
+.legend { display: flex; gap: 24px; justify-content: center; margin: 16px 0; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+.legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+.improvement { color: #10b981; }
+.degradation { color: #ef4444; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Baseline vs Deep Agent — Pipeline Comparison</h1>
+<p class="subtitle">Evaluation across all fixtures grouped by difficulty (Easy / Medium / Hard)</p>
+
+<div id="summaryCards"></div>
+
+<h2>Tier-1 Metrics by Difficulty</h2>
+<div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#6366f1"></div>Baseline</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#10b981"></div>Deep Agent</div>
+</div>
+<div class="chart-grid" id="tier1Charts"></div>
+
+<h2>Tier-2 Metrics by Difficulty</h2>
+<div class="chart-grid" id="tier2Charts"></div>
+
+<h2>Operational Metrics</h2>
+<div class="chart-grid" id="operationalCharts"></div>
+
+<h2>Per-Case Score Comparison</h2>
+<div class="table-panel" id="perCaseTable"></div>
+
+<h2>Difficulty Breakdown Summary</h2>
+<div class="chart-grid">
+    <div class="chart-panel full-width">
+        <h3>Average Tier-1 Score by Difficulty</h3>
+        <div class="chart-container"><canvas id="difficultyRadar"></canvas></div>
+    </div>
+</div>
+
+<h2>Improvement Analysis</h2>
+<div class="table-panel" id="improvementTable"></div>
+
+</div>
+
+<script>
+const DATA = {"aggregated": {"baseline": {"Easy": {"verdict_accuracy": {"mean": 0.2, "median": 0.0, "std": 0.4472, "min": 0.0, "max": 1.0, "count": 5, "pass_rate": 0.2}, "prior_art_hit_rate": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 5, "pass_rate": 0.0}, "prior_art_recall": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 5, "pass_rate": 0.4}, "feature_precision": {"mean": 0.3524, "median": 0.4286, "std": 0.3361, "min": 0.0, "max": 0.6667, "count": 5, "pass_rate": 0.0}, "feature_recall": {"mean": 0.4123, "median": 0.625, "std": 0.3827, "min": 0.0, "max": 0.8, "count": 5, "pass_rate": 0.6}, "report_section_completeness": {"mean": 1.0, "median": 1.0, "std": 0.0, "min": 1.0, "max": 1.0, "count": 5, "pass_rate": 1.0}, "search_strategy": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 0, "pass_rate": 0.0}, "triage_agreement": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 5, "pass_rate": 0.0}, "feature_coverage_accuracy": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 5, "pass_rate": 0.0}}, "Medium": {"verdict_accuracy": {"mean": 0.2, "median": 0.0, "std": 0.4216, "min": 0.0, "max": 1.0, "count": 10, "pass_rate": 0.2}, "prior_art_hit_rate": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 10, "pass_rate": 0.0}, "prior_art_recall": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 10, "pass_rate": 0.2}, "feature_precision": {"mean": 0.34, "median": 0.3095, "std": 0.3308, "min": 0.0, "max": 1.0, "count": 10, "pass_rate": 0.2}, "feature_recall": {"mean": 0.368, "median": 0.3364, "std": 0.3463, "min": 0.0, "max": 1.0, "count": 10, "pass_rate": 0.2}, "report_section_completeness": {"mean": 1.0, "median": 1.0, "std": 0.0, "min": 1.0, "max": 1.0, "count": 10, "pass_rate": 1.0}, "search_strategy": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 0, "pass_rate": 0.0}, "triage_agreement": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 10, "pass_rate": 0.0}, "feature_coverage_accuracy": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 10, "pass_rate": 0.0}}, "Hard": {"verdict_accuracy": {"mean": 0.4286, "median": 0.0, "std": 0.5345, "min": 0.0, "max": 1.0, "count": 7, "pass_rate": 0.4286}, "prior_art_hit_rate": {"mean": 0.2857, "median": 0.0, "std": 0.488, "min": 0.0, "max": 1.0, "count": 7, "pass_rate": 0.2857}, "prior_art_recall": {"mean": 0.0714, "median": 0.0, "std": 0.189, "min": 0.0, "max": 0.5, "count": 7, "pass_rate": 0.2857}, "feature_precision": {"mean": 0.3667, "median": 0.4, "std": 0.3575, "min": 0.0, "max": 1.0, "count": 7, "pass_rate": 0.1429}, "feature_recall": {"mean": 0.3934, "median": 0.375, "std": 0.375, "min": 0.0, "max": 1.0, "count": 7, "pass_rate": 0.2857}, "report_section_completeness": {"mean": 1.0, "median": 1.0, "std": 0.0, "min": 1.0, "max": 1.0, "count": 7, "pass_rate": 1.0}, "search_strategy": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 0, "pass_rate": 0.0}, "triage_agreement": {"mean": 0.2143, "median": 0.0, "std": 0.3934, "min": 0.0, "max": 1.0, "count": 7, "pass_rate": 0.2857}, "feature_coverage_accuracy": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 7, "pass_rate": 0.0}}, "All": {"verdict_accuracy": {"mean": 0.2727, "median": 0.0, "std": 0.4558, "min": 0.0, "max": 1.0, "count": 22, "pass_rate": 0.2727}, "prior_art_hit_rate": {"mean": 0.0909, "median": 0.0, "std": 0.2942, "min": 0.0, "max": 1.0, "count": 22, "pass_rate": 0.0909}, "prior_art_recall": {"mean": 0.0227, "median": 0.0, "std": 0.1066, "min": 0.0, "max": 0.5, "count": 22, "pass_rate": 0.2727}, "feature_precision": {"mean": 0.3513, "median": 0.3667, "std": 0.3241, "min": 0.0, "max": 1.0, "count": 22, "pass_rate": 0.1364}, "feature_recall": {"mean": 0.3861, "median": 0.3875, "std": 0.3461, "min": 0.0, "max": 1.0, "count": 22, "pass_rate": 0.3182}, "report_section_completeness": {"mean": 1.0, "median": 1.0, "std": 0.0, "min": 1.0, "max": 1.0, "count": 22, "pass_rate": 1.0}, "search_strategy": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 0, "pass_rate": 0.0}, "triage_agreement": {"mean": 0.0682, "median": 0.0, "std": 0.2338, "min": 0.0, "max": 1.0, "count": 22, "pass_rate": 0.0909}, "feature_coverage_accuracy": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 22, "pass_rate": 0.0}}}, "deepagent": {"Easy": {"verdict_accuracy": {"mean": 0.4, "median": 0.0, "std": 0.5477, "min": 0.0, "max": 1.0, "count": 5, "pass_rate": 0.4}, "prior_art_hit_rate": {"mean": 0.2, "median": 0.0, "std": 0.4472, "min": 0.0, "max": 1.0, "count": 5, "pass_rate": 0.2}, "prior_art_recall": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 5, "pass_rate": 0.4}, "feature_precision": {"mean": 0.6228, "median": 0.7143, "std": 0.24, "min": 0.3333, "max": 0.8333, "count": 5, "pass_rate": 0.6}, "feature_recall": {"mean": 0.897, "median": 1.0, "std": 0.1509, "min": 0.6667, "max": 1.0, "count": 5, "pass_rate": 1.0}, "report_section_completeness": {"mean": 1.0, "median": 1.0, "std": 0.0, "min": 1.0, "max": 1.0, "count": 5, "pass_rate": 1.0}, "search_strategy": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 0, "pass_rate": 0.0}, "triage_agreement": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 5, "pass_rate": 0.0}, "feature_coverage_accuracy": {"mean": 0.8333, "median": 1.0, "std": 0.2887, "min": 0.3333, "max": 1.0, "count": 5, "pass_rate": 0.8}}, "Medium": {"verdict_accuracy": {"mean": 0.6, "median": 1.0, "std": 0.5164, "min": 0.0, "max": 1.0, "count": 10, "pass_rate": 0.6}, "prior_art_hit_rate": {"mean": 0.1, "median": 0.0, "std": 0.3162, "min": 0.0, "max": 1.0, "count": 10, "pass_rate": 0.1}, "prior_art_recall": {"mean": 0.05, "median": 0.0, "std": 0.1581, "min": 0.0, "max": 0.5, "count": 10, "pass_rate": 0.3}, "feature_precision": {"mean": 0.7256, "median": 0.7738, "std": 0.1852, "min": 0.4, "max": 1.0, "count": 10, "pass_rate": 0.6}, "feature_recall": {"mean": 0.8888, "median": 1.0, "std": 0.1529, "min": 0.625, "max": 1.0, "count": 10, "pass_rate": 1.0}, "report_section_completeness": {"mean": 1.0, "median": 1.0, "std": 0.0, "min": 1.0, "max": 1.0, "count": 10, "pass_rate": 1.0}, "search_strategy": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 0, "pass_rate": 0.0}, "triage_agreement": {"mean": 0.1, "median": 0.0, "std": 0.3162, "min": 0.0, "max": 1.0, "count": 10, "pass_rate": 0.1}, "feature_coverage_accuracy": {"mean": 0.4174, "median": 0.45, "std": 0.3339, "min": 0.0, "max": 1.0, "count": 10, "pass_rate": 0.3}}, "Hard": {"verdict_accuracy": {"mean": 0.8571, "median": 1.0, "std": 0.378, "min": 0.0, "max": 1.0, "count": 7, "pass_rate": 0.8571}, "prior_art_hit_rate": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 7, "pass_rate": 0.0}, "prior_art_recall": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 7, "pass_rate": 0.1429}, "feature_precision": {"mean": 0.625, "median": 0.5714, "std": 0.2256, "min": 0.375, "max": 1.0, "count": 7, "pass_rate": 0.2857}, "feature_recall": {"mean": 0.7548, "median": 0.8, "std": 0.2763, "min": 0.3846, "max": 1.0, "count": 7, "pass_rate": 0.7143}, "report_section_completeness": {"mean": 1.0, "median": 1.0, "std": 0.0, "min": 1.0, "max": 1.0, "count": 7, "pass_rate": 1.0}, "search_strategy": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 0, "pass_rate": 0.0}, "triage_agreement": {"mean": 0.1429, "median": 0.0, "std": 0.378, "min": 0.0, "max": 1.0, "count": 7, "pass_rate": 0.1429}, "feature_coverage_accuracy": {"mean": 0.7171, "median": 0.75, "std": 0.1921, "min": 0.4, "max": 1.0, "count": 7, "pass_rate": 0.7143}}, "All": {"verdict_accuracy": {"mean": 0.6364, "median": 1.0, "std": 0.4924, "min": 0.0, "max": 1.0, "count": 22, "pass_rate": 0.6364}, "prior_art_hit_rate": {"mean": 0.0909, "median": 0.0, "std": 0.2942, "min": 0.0, "max": 1.0, "count": 22, "pass_rate": 0.0909}, "prior_art_recall": {"mean": 0.0227, "median": 0.0, "std": 0.1066, "min": 0.0, "max": 0.5, "count": 22, "pass_rate": 0.2727}, "feature_precision": {"mean": 0.6702, "median": 0.6905, "std": 0.2071, "min": 0.3333, "max": 1.0, "count": 22, "pass_rate": 0.5}, "feature_recall": {"mean": 0.848, "median": 1.0, "std": 0.2011, "min": 0.3846, "max": 1.0, "count": 22, "pass_rate": 0.9091}, "report_section_completeness": {"mean": 1.0, "median": 1.0, "std": 0.0, "min": 1.0, "max": 1.0, "count": 22, "pass_rate": 1.0}, "search_strategy": {"mean": 0.0, "median": 0.0, "std": 0.0, "min": 0.0, "max": 0.0, "count": 0, "pass_rate": 0.0}, "triage_agreement": {"mean": 0.0909, "median": 0.0, "std": 0.2942, "min": 0.0, "max": 1.0, "count": 22, "pass_rate": 0.0909}, "feature_coverage_accuracy": {"mean": 0.6073, "median": 0.6515, "std": 0.3279, "min": 0.0, "max": 1.0, "count": 22, "pass_rate": 0.5455}}}}, "operational": {"baseline": {"Easy": {"count": 5, "avg_duration_s": 202.8, "avg_tokens": 187426, "avg_turns": 1, "total_duration_s": 1014.1}, "All": {"count": 22, "avg_duration_s": 182.4, "avg_tokens": 107542, "avg_turns": 1, "total_duration_s": 4013.5}, "Medium": {"count": 10, "avg_duration_s": 187.1, "avg_tokens": 76808, "avg_turns": 1, "total_duration_s": 1870.7}, "Hard": {"count": 7, "avg_duration_s": 161.2, "avg_tokens": 94386, "avg_turns": 1, "total_duration_s": 1128.7}}, "deepagent": {"Easy": {"count": 5, "avg_duration_s": 779.1, "avg_tokens": 0, "avg_turns": 3, "total_duration_s": 3895.7}, "All": {"count": 22, "avg_duration_s": 759.1, "avg_tokens": 0, "avg_turns": 3, "total_duration_s": 16700.7}, "Medium": {"count": 10, "avg_duration_s": 731.6, "avg_tokens": 0, "avg_turns": 3, "total_duration_s": 7315.9}, "Hard": {"count": 7, "avg_duration_s": 784.2, "avg_tokens": 0, "avg_turns": 3, "total_duration_s": 5489.1}}}, "per_case": [{"case_id": "355374", "runner": "baseline", "difficulty": "Easy", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.6667, "feature_recall": 0.6364, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.5, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9434, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.775}, "duration_seconds": 204.1, "total_tokens": 74869}, {"case_id": "C11309", "runner": "baseline", "difficulty": "Medium", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.3333, "feature_recall": 0.4, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.375, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9529, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.81}, "duration_seconds": 170.1, "total_tokens": 59250}, {"case_id": "C12933", "runner": "baseline", "difficulty": "Hard", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.4, "feature_recall": 0.375, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.375, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9344, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.89}, "duration_seconds": 236.4, "total_tokens": 288789}, {"case_id": "C19904", "runner": "baseline", "difficulty": "Medium", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 1.0, "feature_recall": 0.5625, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.375, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.953, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.87}, "duration_seconds": 171.2, "total_tokens": 76661}, {"case_id": "C21754", "runner": "baseline", "difficulty": "Hard", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.1667, "feature_recall": 0.2, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.375, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9476, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.815}, "duration_seconds": 189.2, "total_tokens": 49937}, {"case_id": "C24018", "runner": "baseline", "difficulty": "Easy", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.6667, "feature_recall": 0.8, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.375, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.8975, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.825}, "duration_seconds": 369.8, "total_tokens": 670932}, {"case_id": "C29128", "runner": "baseline", "difficulty": "Hard", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.0, "feature_recall": 0.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.375, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9531, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.86}, "duration_seconds": 169.5, "total_tokens": 55039}, {"case_id": "C33467", "runner": "baseline", "difficulty": "Easy", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.4286, "feature_recall": 0.625, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.5, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9655, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.87}, "duration_seconds": 125.1, "total_tokens": 80907}, {"case_id": "C35782", "runner": "baseline", "difficulty": "Easy", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.0, "feature_recall": 0.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.375, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9582, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.845}, "duration_seconds": 150.8, "total_tokens": 48514}, {"case_id": "C35939", "runner": "baseline", "difficulty": "Easy", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.0, "feature_recall": 0.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.375, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9546, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.81}, "duration_seconds": 164.3, "total_tokens": 61908}, {"case_id": "C37177", "runner": "baseline", "difficulty": "Hard", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 1.0, "prior_art_recall": 0.5, "feature_precision": 0.0, "feature_recall": 0.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.375, "triage_agreement": 1.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9588, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.845}, "duration_seconds": 149.6, "total_tokens": 44656}, {"case_id": "C38037", "runner": "baseline", "difficulty": "Medium", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.1667, "feature_recall": 0.1667, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.5, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9568, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.845}, "duration_seconds": 156.1, "total_tokens": 67834}, {"case_id": "C38423", "runner": "baseline", "difficulty": "Hard", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 1.0, "feature_recall": 1.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.375, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9548, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.805}, "duration_seconds": 163.5, "total_tokens": 106404}, {"case_id": "C41616", "runner": "baseline", "difficulty": "Medium", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.0, "feature_recall": 0.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.375, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9539, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.815}, "duration_seconds": 167.3, "total_tokens": 48850}, {"case_id": "C41662", "runner": "baseline", "difficulty": "Medium", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.7143, "feature_recall": 0.7778, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.375, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9465, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.81}, "duration_seconds": 193.8, "total_tokens": 69274}, {"case_id": "C42642", "runner": "baseline", "difficulty": "Medium", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.5, "feature_recall": 1.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.375, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9441, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.785}, "duration_seconds": 201.6, "total_tokens": 54374}, {"case_id": "C42783", "runner": "baseline", "difficulty": "Medium", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.2857, "feature_recall": 0.2727, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.5, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9399, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.795}, "duration_seconds": 217.0, "total_tokens": 77880}, {"case_id": "C42908", "runner": "baseline", "difficulty": "Hard", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.6, "feature_recall": 0.75, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.5, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9698, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.855}, "duration_seconds": 109.3, "total_tokens": 60900}, {"case_id": "C43113", "runner": "baseline", "difficulty": "Medium", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.0, "feature_recall": 0.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.375, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9552, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.855}, "duration_seconds": 161.6, "total_tokens": 58448}, {"case_id": "C43501", "runner": "baseline", "difficulty": "Hard", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 1.0, "prior_art_recall": 0.0, "feature_precision": 0.4, "feature_recall": 0.4286, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.375, "triage_agreement": 0.5, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9693, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.85}, "duration_seconds": 111.2, "total_tokens": 54980}, {"case_id": "C43558", "runner": "baseline", "difficulty": "Medium", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.4, "feature_recall": 0.5, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.375, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9564, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.83}, "duration_seconds": 157.4, "total_tokens": 61687}, {"case_id": "C43562", "runner": "baseline", "difficulty": "Medium", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.0, "feature_recall": 0.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.375, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 1.0, "latency": 0.9241, "token_efficiency": 1.0, "tool_error_rate": 1.0, "search_reproducibility": 0.0, "research_rounds": 0.0, "tool_invocations": 0.805}, "duration_seconds": 274.6, "total_tokens": 193821}, {"case_id": "355374", "runner": "deepagent", "difficulty": "Easy", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.7143, "feature_recall": 0.8182, "report_section_completeness": 1.0, "search_strategy_adequacy": 1.0, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.8333, "cost_per_run": 0.1557, "latency": 0.7732, "token_efficiency": 0.0527, "tool_error_rate": 1.0, "search_reproducibility": 0.973, "research_rounds": 1.0, "tool_invocations": 0.745}, "duration_seconds": 817.1, "total_tokens": 0}, {"case_id": "C11309", "runner": "deepagent", "difficulty": "Medium", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.8333, "feature_recall": 1.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.75, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.4, "cost_per_run": 0.0265, "latency": 0.7626, "token_efficiency": 0.0, "tool_error_rate": 1.0, "search_reproducibility": 0.9107, "research_rounds": 1.0, "tool_invocations": 0.795}, "duration_seconds": 855.4, "total_tokens": 0}, {"case_id": "C12933", "runner": "deepagent", "difficulty": "Hard", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.8333, "feature_recall": 1.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 1.0, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.4, "cost_per_run": 0.1456, "latency": 0.7802, "token_efficiency": 0.0, "tool_error_rate": 1.0, "search_reproducibility": 0.8627, "research_rounds": 1.0, "tool_invocations": 0.78}, "duration_seconds": 791.8, "total_tokens": 0}, {"case_id": "C19904", "runner": "deepagent", "difficulty": "Medium", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 1.0, "prior_art_recall": 0.5, "feature_precision": 1.0, "feature_recall": 0.625, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.75, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.6364, "cost_per_run": 0.5949, "latency": 0.8666, "token_efficiency": 0.0522, "tool_error_rate": 1.0, "search_reproducibility": 0.9286, "research_rounds": 0.5, "tool_invocations": 0.795}, "duration_seconds": 480.9, "total_tokens": 0}, {"case_id": "C21754", "runner": "deepagent", "difficulty": "Hard", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.6667, "feature_recall": 0.8, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.75, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.8, "cost_per_run": 0.4368, "latency": 0.811, "token_efficiency": 0.0, "tool_error_rate": 1.0, "search_reproducibility": 0.9474, "research_rounds": 1.0, "tool_invocations": 0.78}, "duration_seconds": 681.1, "total_tokens": 0}, {"case_id": "C24018", "runner": "deepagent", "difficulty": "Easy", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 1.0, "prior_art_recall": 0.0, "feature_precision": 0.8333, "feature_recall": 1.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.75, "triage_agreement": 0.0, "feature_coverage_accuracy": 1.0, "cost_per_run": 0.1396, "latency": 0.6319, "token_efficiency": 0.0, "tool_error_rate": 1.0, "search_reproducibility": 0.9556, "research_rounds": 1.0, "tool_invocations": 0.745}, "duration_seconds": 1325.7, "total_tokens": 0}, {"case_id": "C29128", "runner": "deepagent", "difficulty": "Hard", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.375, "feature_recall": 0.3846, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.75, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.5556, "cost_per_run": 0.0, "latency": 0.7654, "token_efficiency": 0.0, "tool_error_rate": 1.0, "search_reproducibility": 0.9167, "research_rounds": 1.0, "tool_invocations": 0.735}, "duration_seconds": 845.1, "total_tokens": 0}, {"case_id": "C33467", "runner": "deepagent", "difficulty": "Easy", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.8333, "feature_recall": 1.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.875, "triage_agreement": 0.0, "feature_coverage_accuracy": 1.0, "cost_per_run": 0.6083, "latency": 0.8258, "token_efficiency": 0.3344, "tool_error_rate": 1.0, "search_reproducibility": 0.9375, "research_rounds": 1.0, "tool_invocations": 0.78}, "duration_seconds": 627.7, "total_tokens": 0}, {"case_id": "C35782", "runner": "deepagent", "difficulty": "Easy", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.4, "feature_recall": 1.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.75, "triage_agreement": 0.0, "feature_coverage_accuracy": 1.0, "cost_per_run": 0.7588, "latency": 0.8779, "token_efficiency": 0.0, "tool_error_rate": 1.0, "search_reproducibility": 1.0, "research_rounds": 1.0, "tool_invocations": 0.845}, "duration_seconds": 440.0, "total_tokens": 0}, {"case_id": "C35939", "runner": "deepagent", "difficulty": "Easy", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.3333, "feature_recall": 0.6667, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.75, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.3333, "cost_per_run": 0.3862, "latency": 0.8098, "token_efficiency": 0.2739, "tool_error_rate": 1.0, "search_reproducibility": 0.931, "research_rounds": 1.0, "tool_invocations": 0.765}, "duration_seconds": 685.2, "total_tokens": 0}, {"case_id": "C37177", "runner": "deepagent", "difficulty": "Hard", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.5, "feature_recall": 0.3846, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.75, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.7143, "cost_per_run": 0.5174, "latency": 0.8562, "token_efficiency": 0.1649, "tool_error_rate": 1.0, "search_reproducibility": 1.0, "research_rounds": 1.0, "tool_invocations": 0.735}, "duration_seconds": 518.4, "total_tokens": 0}, {"case_id": "C38037", "runner": "deepagent", "difficulty": "Medium", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.6667, "feature_recall": 0.6667, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.875, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.5, "cost_per_run": 0.6717, "latency": 0.854, "token_efficiency": 0.3934, "tool_error_rate": 1.0, "search_reproducibility": 0.9565, "research_rounds": 1.0, "tool_invocations": 0.775}, "duration_seconds": 526.0, "total_tokens": 0}, {"case_id": "C38423", "runner": "deepagent", "difficulty": "Hard", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 1.0, "feature_recall": 1.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.875, "triage_agreement": 0.0, "feature_coverage_accuracy": 1.0, "cost_per_run": 0.2317, "latency": 0.7766, "token_efficiency": 0.1856, "tool_error_rate": 1.0, "search_reproducibility": 0.9737, "research_rounds": 1.0, "tool_invocations": 0.755}, "duration_seconds": 732.3, "total_tokens": 0}, {"case_id": "C41616", "runner": "deepagent", "difficulty": "Medium", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.875, "feature_recall": 1.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.875, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.5714, "cost_per_run": 0.6851, "latency": 0.8508, "token_efficiency": 0.2725, "tool_error_rate": 1.0, "search_reproducibility": 1.0, "research_rounds": 1.0, "tool_invocations": 0.75}, "duration_seconds": 537.6, "total_tokens": 0}, {"case_id": "C41662", "runner": "deepagent", "difficulty": "Medium", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.8333, "feature_recall": 0.7778, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.875, "triage_agreement": 1.0, "feature_coverage_accuracy": 1.0, "cost_per_run": 0.6173, "latency": 0.8014, "token_efficiency": 0.298, "tool_error_rate": 1.0, "search_reproducibility": 0.9375, "research_rounds": 1.0, "tool_invocations": 0.795}, "duration_seconds": 715.7, "total_tokens": 0}, {"case_id": "C42642", "runner": "deepagent", "difficulty": "Medium", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.5, "feature_recall": 1.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.75, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 0.5894, "latency": 0.8472, "token_efficiency": 0.0378, "tool_error_rate": 1.0, "search_reproducibility": 1.0, "research_rounds": 1.0, "tool_invocations": 0.785}, "duration_seconds": 550.6, "total_tokens": 0}, {"case_id": "C42783", "runner": "deepagent", "difficulty": "Medium", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.8333, "feature_recall": 0.8182, "report_section_completeness": 1.0, "search_strategy_adequacy": 1.0, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.6667, "cost_per_run": 0.361, "latency": 0.8121, "token_efficiency": 0.2919, "tool_error_rate": 1.0, "search_reproducibility": 0.878, "research_rounds": 1.0, "tool_invocations": 0.72}, "duration_seconds": 677.1, "total_tokens": 0}, {"case_id": "C42908", "runner": "deepagent", "difficulty": "Hard", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.5714, "feature_recall": 1.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.875, "triage_agreement": 1.0, "feature_coverage_accuracy": 0.75, "cost_per_run": 0.0204, "latency": 0.7096, "token_efficiency": 0.2814, "tool_error_rate": 1.0, "search_reproducibility": 0.9302, "research_rounds": 1.0, "tool_invocations": 0.73}, "duration_seconds": 1046.3, "total_tokens": 0}, {"case_id": "C43113", "runner": "deepagent", "difficulty": "Medium", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.4, "feature_recall": 1.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.875, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 0.5781, "latency": 0.815, "token_efficiency": 0.0, "tool_error_rate": 1.0, "search_reproducibility": 0.9286, "research_rounds": 1.0, "tool_invocations": 0.825}, "duration_seconds": 666.5, "total_tokens": 0}, {"case_id": "C43501", "runner": "deepagent", "difficulty": "Hard", "scores": {"verdict_accuracy": 1.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.4286, "feature_recall": 0.7143, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.875, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.8, "cost_per_run": 0.6023, "latency": 0.8567, "token_efficiency": 0.0, "tool_error_rate": 1.0, "search_reproducibility": 0.9167, "research_rounds": 1.0, "tool_invocations": 0.785}, "duration_seconds": 874.1, "total_tokens": 0}, {"case_id": "C43558", "runner": "deepagent", "difficulty": "Medium", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.6, "feature_recall": 1.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.75, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.0, "cost_per_run": 0.2506, "latency": 0.718, "token_efficiency": 0.2031, "tool_error_rate": 1.0, "search_reproducibility": 0.931, "research_rounds": 1.0, "tool_invocations": 0.63}, "duration_seconds": 1015.9, "total_tokens": 0}, {"case_id": "C43562", "runner": "deepagent", "difficulty": "Medium", "scores": {"verdict_accuracy": 0.0, "prior_art_hit_rate": 0.0, "prior_art_recall": 0.0, "feature_precision": 0.7143, "feature_recall": 1.0, "report_section_completeness": 1.0, "search_strategy_adequacy": 0.75, "triage_agreement": 0.0, "feature_coverage_accuracy": 0.4, "cost_per_run": 0.0, "latency": 0.6418, "token_efficiency": 0.114, "tool_error_rate": 1.0, "search_reproducibility": 0.9077, "research_rounds": 1.0, "tool_invocations": 0.685}, "duration_seconds": 1290.2, "total_tokens": 0}], "tier1_metrics": ["verdict_accuracy", "prior_art_hit_rate", "prior_art_recall", "feature_precision", "feature_recall"], "tier2_metrics": ["report_section_completeness", "search_strategy", "triage_agreement", "feature_coverage_accuracy"], "summary_cards": [{"label": "Cases Evaluated", "value": "22", "highlight": "neutral"}, {"label": "Baseline Avg T1", "value": "0.225", "highlight": "baseline"}, {"label": "Deep Agent Avg T1", "value": "0.454", "highlight": "deepagent"}, {"label": "Deep Agent Lift", "value": "+101.8%", "highlight": "deepagent"}, {"label": "Baseline Runs", "value": "22", "highlight": "baseline"}, {"label": "Deep Agent Runs", "value": "22", "highlight": "deepagent"}]};
+
+// --- Summary Cards ---
+function renderSummaryCards() {
+    const container = document.getElementById('summaryCards');
+    const cards = DATA.summary_cards;
+    let html = '<div class="summary-cards">';
+    for (const card of cards) {
+        const cls = card.highlight || 'neutral';
+        html += `<div class="card"><div class="card-label">${card.label}</div><div class="card-value ${cls}">${card.value}</div></div>`;
+    }
+    html += '</div>';
+    container.innerHTML = html;
+}
+
+// --- Bar Charts ---
+function createGroupedBarChart(canvasId, metric, data) {
+    const ctx = document.getElementById(canvasId).getContext('2d');
+    const difficulties = ['Easy', 'Medium', 'Hard', 'All'];
+    const baselineScores = difficulties.map(d => data.baseline?.[d]?.[metric]?.mean || 0);
+    const deepagentScores = difficulties.map(d => data.deepagent?.[d]?.[metric]?.mean || 0);
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: difficulties,
+            datasets: [
+                { label: 'Baseline', data: baselineScores, backgroundColor: '#6366f1cc', borderColor: '#6366f1', borderWidth: 1 },
+                { label: 'Deep Agent', data: deepagentScores, backgroundColor: '#10b981cc', borderColor: '#10b981', borderWidth: 1 },
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false }, title: { display: true, text: metric.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()), color: '#e2e8f0', font: { size: 14 } } },
+            scales: {
+                y: { beginAtZero: true, max: 1.0, ticks: { color: '#94a3b8' }, grid: { color: '#334155' } },
+                x: { ticks: { color: '#94a3b8' }, grid: { display: false } }
+            }
+        }
+    });
+}
+
+function renderMetricCharts(containerId, metrics) {
+    const container = document.getElementById(containerId);
+    let html = '';
+    for (const metric of metrics) {
+        const id = 'chart_' + metric;
+        html += `<div class="chart-panel"><div class="chart-container"><canvas id="${id}"></canvas></div></div>`;
+    }
+    container.innerHTML = html;
+    for (const metric of metrics) {
+        createGroupedBarChart('chart_' + metric, metric, DATA.aggregated);
+    }
+}
+
+// --- Operational Charts ---
+function renderOperationalCharts() {
+    const container = document.getElementById('operationalCharts');
+    const ops = ['duration', 'tokens', 'turns'];
+    const labels = { duration: 'Avg Duration (seconds)', tokens: 'Avg Tokens', turns: 'Avg Turns' };
+    let html = '';
+    for (const op of ops) {
+        html += `<div class="chart-panel"><div class="chart-container"><canvas id="op_${op}"></canvas></div></div>`;
+    }
+    container.innerHTML = html;
+
+    const difficulties = ['Easy', 'Medium', 'Hard', 'All'];
+    for (const op of ops) {
+        const ctx = document.getElementById('op_' + op).getContext('2d');
+        const field = op === 'duration' ? 'avg_duration_s' : op === 'tokens' ? 'avg_tokens' : 'avg_turns';
+        const baselineData = difficulties.map(d => DATA.operational?.baseline?.[d]?.[field] || 0);
+        const deepagentData = difficulties.map(d => DATA.operational?.deepagent?.[d]?.[field] || 0);
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: difficulties,
+                datasets: [
+                    { label: 'Baseline', data: baselineData, backgroundColor: '#6366f1cc', borderColor: '#6366f1', borderWidth: 1 },
+                    { label: 'Deep Agent', data: deepagentData, backgroundColor: '#10b981cc', borderColor: '#10b981', borderWidth: 1 },
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false }, title: { display: true, text: labels[op], color: '#e2e8f0', font: { size: 14 } } },
+                scales: {
+                    y: { beginAtZero: true, ticks: { color: '#94a3b8' }, grid: { color: '#334155' } },
+                    x: { ticks: { color: '#94a3b8' }, grid: { display: false } }
+                }
+            }
+        });
+    }
+}
+
+// --- Per-case table ---
+function renderPerCaseTable() {
+    const container = document.getElementById('perCaseTable');
+    const cases = DATA.per_case;
+    const metrics = DATA.tier1_metrics;
+
+    let html = '<table><thead><tr><th>Case</th><th>Difficulty</th><th>Runner</th>';
+    for (const m of metrics) { html += `<th>${m.replace(/_/g, ' ')}</th>`; }
+    html += '<th>Avg T1</th></tr></thead><tbody>';
+
+    // Sort by difficulty then case_id
+    const diffOrder = {'Easy': 0, 'Medium': 1, 'Hard': 2};
+    cases.sort((a, b) => (diffOrder[a.difficulty] || 9) - (diffOrder[b.difficulty] || 9) || a.case_id.localeCompare(b.case_id));
+
+    for (const c of cases) {
+        const badgeCls = 'badge-' + (c.difficulty || 'medium').toLowerCase();
+        const scores = metrics.map(m => c.scores[m] ?? '-');
+        const avg = scores.filter(s => typeof s === 'number').reduce((a, b) => a + b, 0) / Math.max(scores.filter(s => typeof s === 'number').length, 1);
+        const runnerCls = c.runner === 'deepagent' ? 'style="color:#10b981"' : 'style="color:#6366f1"';
+
+        html += `<tr><td>${c.case_id}</td><td><span class="badge ${badgeCls}">${c.difficulty}</span></td><td ${runnerCls}>${c.runner}</td>`;
+        for (const s of scores) {
+            const val = typeof s === 'number' ? s.toFixed(3) : s;
+            html += `<td class="score-cell">${val}</td>`;
+        }
+        html += `<td class="score-cell">${avg.toFixed(3)}</td></tr>`;
+    }
+    html += '</tbody></table>';
+    container.innerHTML = html;
+}
+
+// --- Radar chart for difficulty breakdown ---
+function renderDifficultyRadar() {
+    const ctx = document.getElementById('difficultyRadar').getContext('2d');
+    const metrics = DATA.tier1_metrics;
+    const labels = metrics.map(m => m.replace(/_/g, ' '));
+
+    const datasets = [];
+    const runners = ['baseline', 'deepagent'];
+    const colors = { baseline: '#6366f1', deepagent: '#10b981' };
+
+    for (const runner of runners) {
+        for (const diff of ['Easy', 'Medium', 'Hard']) {
+            const scores = metrics.map(m => DATA.aggregated[runner]?.[diff]?.[m]?.mean || 0);
+            datasets.push({
+                label: `${runner} (${diff})`,
+                data: scores,
+                borderColor: colors[runner],
+                backgroundColor: colors[runner] + '22',
+                borderWidth: diff === 'Hard' ? 3 : diff === 'Medium' ? 2 : 1,
+                borderDash: diff === 'Easy' ? [5, 5] : diff === 'Medium' ? [10, 5] : [],
+                pointRadius: 3,
+            });
+        }
+    }
+
+    new Chart(ctx, {
+        type: 'radar',
+        data: { labels, datasets },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { position: 'right', labels: { color: '#94a3b8', font: { size: 11 } } } },
+            scales: { r: { beginAtZero: true, max: 1.0, ticks: { color: '#94a3b8', backdropColor: 'transparent' }, grid: { color: '#334155' }, pointLabels: { color: '#cbd5e1', font: { size: 11 } } } }
+        }
+    });
+}
+
+// --- Improvement table ---
+function renderImprovementTable() {
+    const container = document.getElementById('improvementTable');
+    const metrics = [...DATA.tier1_metrics, ...DATA.tier2_metrics];
+    const difficulties = ['Easy', 'Medium', 'Hard', 'All'];
+
+    let html = '<table><thead><tr><th>Metric</th>';
+    for (const d of difficulties) { html += `<th>${d}</th>`; }
+    html += '</tr></thead><tbody>';
+
+    for (const metric of metrics) {
+        html += `<tr><td>${metric.replace(/_/g, ' ')}</td>`;
+        for (const diff of difficulties) {
+            const bl = DATA.aggregated?.baseline?.[diff]?.[metric]?.mean || 0;
+            const da = DATA.aggregated?.deepagent?.[diff]?.[metric]?.mean || 0;
+            const delta = da - bl;
+            const pct = bl > 0 ? ((delta / bl) * 100).toFixed(1) : (da > 0 ? '+100' : '0.0');
+            const cls = delta > 0.01 ? 'improvement' : delta < -0.01 ? 'degradation' : '';
+            const sign = delta > 0 ? '+' : '';
+            html += `<td class="score-cell ${cls}">${sign}${pct}%</td>`;
+        }
+        html += '</tr>';
+    }
+    html += '</tbody></table>';
+    html += '<p style="margin-top:12px;font-size:12px;color:#64748b">Positive = Deep Agent outperforms Baseline. Negative = Baseline outperforms Deep Agent.</p>';
+    container.innerHTML = html;
+}
+
+// --- Init ---
+renderSummaryCards();
+renderMetricCharts('tier1Charts', DATA.tier1_metrics);
+renderMetricCharts('tier2Charts', DATA.tier2_metrics);
+renderOperationalCharts();
+renderPerCaseTable();
+renderDifficultyRadar();
+renderImprovementTable();
+</script>
+</body>
+</html>

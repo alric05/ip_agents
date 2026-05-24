@@ -1,0 +1,50 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Session data (generated per-run, not committed)
+sessions/
+
+# Environment files
+.env
+
+# IDE
+.idea/
+.vscode/
+
+# Claude Code
+.claude/
+
+# Node.js (deep-agents-ui)
+node_modules/
+.next/
+.turbo/
+*.log
+
+# OS files
+.DS_Store
+
+# LangGraph
+.langgraph_api/
+.langgraph/
+
+# Pytest
+.pytest_cache/
+
+# Notebooks (scratch/experimental)
+*.ipynb
+
+# Other
+*.pkl
+.git.backup/
+.git.reset-backup*/
+
+# Input files (fixtures)
+fixtures/inputs/

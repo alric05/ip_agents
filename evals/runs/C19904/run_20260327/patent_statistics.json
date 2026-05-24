@@ -1,0 +1,668 @@
+{
+  "session_id": "20260327_162206_6b166109",
+  "generated_at": "2026-03-27T16:36:56.664966",
+  "start_time": "2026-03-27T16:22:06.368379",
+  "summary": {
+    "total_discovered": 71,
+    "total_persisted": 73,
+    "total_triaged": 52,
+    "total_feature_mapped": 30,
+    "total_reported": 16,
+    "overall_retention_pct": 22.5
+  },
+  "total_evaluated": {
+    "total": 74,
+    "by_source": {
+      "patent": 30,
+      "semantic": 38,
+      "citation": 6
+    }
+  },
+  "funnel": {
+    "discovered_to_persisted": {
+      "before": 71,
+      "after": 73,
+      "lost": -2,
+      "loss_pct": -2.8
+    },
+    "persisted_to_triaged": {
+      "before": 73,
+      "after": 52,
+      "lost": 21,
+      "loss_pct": 28.8
+    },
+    "triaged_to_feature_mapped": {
+      "before": 52,
+      "after": 30,
+      "lost": 22,
+      "loss_pct": 42.3
+    },
+    "feature_mapped_to_reported": {
+      "before": 30,
+      "after": 16,
+      "lost": 14,
+      "loss_pct": 46.7
+    }
+  },
+  "by_source": {
+    "patent": {
+      "discovered": 30,
+      "persisted": 30,
+      "triaged": 30,
+      "feature_mapped": 30,
+      "reported": 6
+    },
+    "semantic": {
+      "discovered": 38,
+      "persisted": 38,
+      "triaged": 22,
+      "feature_mapped": 0,
+      "reported": 5
+    },
+    "other": {
+      "discovered": 0,
+      "persisted": 2,
+      "triaged": 0,
+      "feature_mapped": 0,
+      "reported": 5
+    },
+    "citation": {
+      "discovered": 3,
+      "persisted": 3,
+      "triaged": 0,
+      "feature_mapped": 0,
+      "reported": 0
+    }
+  },
+  "by_round": {
+    "1": {
+      "discovered": 40,
+      "new_unique": 40
+    },
+    "2": {
+      "discovered": 31,
+      "new_unique": 31
+    }
+  },
+  "by_triage_level": {
+    "A": {
+      "count": 12,
+      "feature_mapped": 7,
+      "reported": 8
+    },
+    "B": {
+      "count": 30,
+      "feature_mapped": 16,
+      "reported": 0
+    },
+    "unknown": {
+      "count": 25,
+      "feature_mapped": 0,
+      "reported": 7
+    },
+    "C": {
+      "count": 10,
+      "feature_mapped": 7,
+      "reported": 1
+    }
+  },
+  "lost_patents": {
+    "persisted_not_triaged": [
+      {
+        "pub_number": "IN201831021341A",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "US12323091B1",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN206056642U",
+        "source_tool": "semantic_round_2",
+        "round": 2,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "semantic"
+        }
+      },
+      {
+        "pub_number": "CN117353654A",
+        "source_tool": "semantic_round_2",
+        "round": 2,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "semantic"
+        }
+      },
+      {
+        "pub_number": "CN117353655A",
+        "source_tool": "semantic_round_2",
+        "round": 2,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "semantic"
+        }
+      },
+      {
+        "pub_number": "KR2601440B1",
+        "source_tool": "semantic_round_2",
+        "round": 2,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "semantic"
+        }
+      },
+      {
+        "pub_number": "CN219394799U",
+        "source_tool": "semantic_round_2",
+        "round": 2,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "semantic"
+        }
+      },
+      {
+        "pub_number": "CN207208395U",
+        "source_tool": "semantic_round_2",
+        "round": 2,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "semantic"
+        }
+      },
+      {
+        "pub_number": "WO2010064271A2",
+        "source_tool": "semantic_round_2",
+        "round": 2,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "semantic"
+        }
+      },
+      {
+        "pub_number": "GB2608913A",
+        "source_tool": "semantic_round_2",
+        "round": 2,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "semantic"
+        }
+      },
+      {
+        "pub_number": "CN206364749U",
+        "source_tool": "semantic_round_2",
+        "round": 2,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "semantic"
+        }
+      },
+      {
+        "pub_number": "DE202008006347U1",
+        "source_tool": "semantic_round_2",
+        "round": 2,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "semantic"
+        }
+      },
+      {
+        "pub_number": "CN211183899U",
+        "source_tool": "semantic_round_2",
+        "round": 2,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "semantic"
+        }
+      },
+      {
+        "pub_number": "CN207173912U",
+        "source_tool": "semantic_round_2",
+        "round": 2,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "semantic"
+        }
+      },
+      {
+        "pub_number": "US4691656A",
+        "source_tool": "semantic_round_2",
+        "round": 2,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "semantic"
+        }
+      },
+      {
+        "pub_number": "FR2659058A1",
+        "source_tool": "semantic_round_2",
+        "round": 2,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "semantic"
+        }
+      },
+      {
+        "pub_number": "CN107804438A",
+        "source_tool": "semantic_round_2",
+        "round": 2,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "semantic"
+        }
+      },
+      {
+        "pub_number": "US10097131B2",
+        "source_tool": "semantic_round_2",
+        "round": 2,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "semantic"
+        }
+      },
+      {
+        "pub_number": "WO2024078733A1",
+        "source_tool": "citation_round_2",
+        "round": 2,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "citation"
+        }
+      },
+      {
+        "pub_number": "CN108347220A",
+        "source_tool": "citation_round_2",
+        "round": 2,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "citation"
+        }
+      },
+      {
+        "pub_number": "CN112542985A",
+        "source_tool": "citation_round_2",
+        "round": 2,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "citation"
+        }
+      }
+    ],
+    "triaged_not_feature_mapped": [
+      {
+        "pub_number": "US12401313B1",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "A",
+        "metadata": {
+          "triage_label": "A"
+        }
+      },
+      {
+        "pub_number": "CN215554000U",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "A",
+        "metadata": {
+          "triage_label": "A"
+        }
+      },
+      {
+        "pub_number": "CN212766646U",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "A",
+        "metadata": {
+          "triage_label": "A"
+        }
+      },
+      {
+        "pub_number": "CN218617108U",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "A",
+        "metadata": {
+          "triage_label": "A"
+        }
+      },
+      {
+        "pub_number": "CN105958909B",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "A",
+        "metadata": {
+          "triage_label": "A"
+        }
+      },
+      {
+        "pub_number": "CN206481252U",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {
+          "triage_label": "B"
+        }
+      },
+      {
+        "pub_number": "CN206117563U",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {
+          "triage_label": "B"
+        }
+      },
+      {
+        "pub_number": "CN112737503B",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {
+          "triage_label": "B"
+        }
+      },
+      {
+        "pub_number": "CN204594589U",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {
+          "triage_label": "B"
+        }
+      },
+      {
+        "pub_number": "CN220281630U",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {
+          "triage_label": "B"
+        }
+      },
+      {
+        "pub_number": "CN218577985U",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {
+          "triage_label": "B"
+        }
+      },
+      {
+        "pub_number": "CN218858654U",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {
+          "triage_label": "B"
+        }
+      },
+      {
+        "pub_number": "CN119611671A",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {
+          "triage_label": "B"
+        }
+      },
+      {
+        "pub_number": "CN209739292U",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "C",
+        "metadata": {
+          "triage_label": "C"
+        }
+      },
+      {
+        "pub_number": "CN114932983A",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {
+          "triage_label": "B"
+        }
+      },
+      {
+        "pub_number": "CN203504483U",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {
+          "triage_label": "B"
+        }
+      },
+      {
+        "pub_number": "DE3634102A1",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "C",
+        "metadata": {
+          "triage_label": "C"
+        }
+      },
+      {
+        "pub_number": "CN221316601U",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "C",
+        "metadata": {
+          "triage_label": "C"
+        }
+      },
+      {
+        "pub_number": "KR2158200B1",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {
+          "triage_label": "B"
+        }
+      },
+      {
+        "pub_number": "CN212605702U",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {
+          "triage_label": "B"
+        }
+      },
+      {
+        "pub_number": "CN218416326U",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {
+          "triage_label": "B"
+        }
+      },
+      {
+        "pub_number": "CN104124915A",
+        "source_tool": "semantic_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {
+          "triage_label": "B"
+        }
+      }
+    ],
+    "feature_mapped_not_reported": [
+      {
+        "pub_number": "WO2017057018A1",
+        "source_tool": "patent_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN110239682A",
+        "source_tool": "patent_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN207939436U",
+        "source_tool": "patent_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN205770043U",
+        "source_tool": "patent_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN107351985B",
+        "source_tool": "patent_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {}
+      },
+      {
+        "pub_number": "US20040134405A1",
+        "source_tool": "patent_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN206524815U",
+        "source_tool": "patent_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN206133561U",
+        "source_tool": "patent_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN210402694U",
+        "source_tool": "patent_round_1",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN201457703U",
+        "source_tool": "patent_round_1",
+        "round": null,
+        "triage_label": "C",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN106656000B",
+        "source_tool": "patent_round_1",
+        "round": null,
+        "triage_label": "C",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN205986946U",
+        "source_tool": "patent_round_1",
+        "round": null,
+        "triage_label": "C",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN212163269U",
+        "source_tool": "patent_round_1",
+        "round": null,
+        "triage_label": "C",
+        "metadata": {}
+      },
+      {
+        "pub_number": "JP2013138163A",
+        "source_tool": "patent_round_1",
+        "round": null,
+        "triage_label": "C",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN203242650U",
+        "source_tool": "patent_round_1",
+        "round": null,
+        "triage_label": "C",
+        "metadata": {}
+      },
+      {
+        "pub_number": "US11319035B2",
+        "source_tool": "patent_round_2",
+        "round": null,
+        "triage_label": "A",
+        "metadata": {}
+      },
+      {
+        "pub_number": "US9729101B1",
+        "source_tool": "patent_round_2",
+        "round": null,
+        "triage_label": "A",
+        "metadata": {}
+      },
+      {
+        "pub_number": "EP4663530A1",
+        "source_tool": "patent_round_2",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN206629012U",
+        "source_tool": "patent_round_2",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN107341566A",
+        "source_tool": "patent_round_2",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN120200553A",
+        "source_tool": "patent_round_2",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN107196594B",
+        "source_tool": "patent_round_2",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN107346955A",
+        "source_tool": "patent_round_2",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN107465388A",
+        "source_tool": "patent_round_2",
+        "round": null,
+        "triage_label": "B",
+        "metadata": {}
+      }
+    ]
+  }
+}

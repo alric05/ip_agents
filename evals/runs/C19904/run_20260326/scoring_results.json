@@ -1,0 +1,786 @@
+{
+  "fixture_results": {
+    "single": [
+      {
+        "metric_name": "verdict_accuracy",
+        "score": 1.0,
+        "confidence": 1.0,
+        "passed": true,
+        "threshold": 0.7,
+        "failures": [],
+        "evidence": {
+          "agent_verdict": "not_novel",
+          "expected_verdict": "not_novel",
+          "match_type": "exact",
+          "score": 1.0
+        },
+        "scorer_type": "deterministic"
+      },
+      {
+        "metric_name": "prior_art_hit_rate",
+        "score": 1.0,
+        "confidence": 1.0,
+        "passed": true,
+        "threshold": 0.75,
+        "failures": [],
+        "evidence": {
+          "hit": true,
+          "gt_a_ref_count": 2,
+          "agent_ref_count": 6,
+          "matched_ref": "IL279932B"
+        },
+        "scorer_type": "deterministic"
+      },
+      {
+        "metric_name": "prior_art_recall",
+        "score": 1.0,
+        "confidence": 1.0,
+        "passed": true,
+        "threshold": 0.4,
+        "failures": [],
+        "evidence": {
+          "recall": 1.0,
+          "precision": 0.3333333333333333,
+          "gt_blocking_count": 2,
+          "agent_ref_count": 6,
+          "found_count": 2,
+          "missed_count": 0,
+          "extra_count": 4,
+          "found_refs": [
+            {
+              "gt": "IL279932",
+              "agent": "IL279932"
+            },
+            {
+              "gt": "US11319035",
+              "agent": "US11319035"
+            }
+          ],
+          "missed_refs": []
+        },
+        "scorer_type": "deterministic"
+      },
+      {
+        "metric_name": "feature_precision",
+        "score": 0.5,
+        "confidence": 1.0,
+        "passed": false,
+        "threshold": 0.7,
+        "failures": [
+          {
+            "type": "spurious_features",
+            "severity": "minor",
+            "evidence": "3 agent features not in ground truth",
+            "affected_element": "PV + environmental sensor suite with onboard data logger, Electrical monitoring: junction box + current/voltage sensors to logger, Modular array build-out using repeated float units"
+          }
+        ],
+        "evidence": {
+          "precision": 0.5,
+          "gt_feature_count": 11,
+          "agent_feature_count": 6,
+          "matched_count": 3,
+          "matched_pairs": [
+            {
+              "agent_feature": "Corner mooring to concrete blocks with coated steel wires",
+              "gt_feature": "a plurality of plastic-coated stainless steel wires, connected between a first concrete block and a first corner of the rectangular float;",
+              "score": 0.5094
+            },
+            {
+              "agent_feature": "Rectangular float + cross support holding 4 pontoons",
+              "gt_feature": "a set of four pontoons, wherein the cross-shaped support is configured to hold each one of the four pontoons between a different opening formed by the cross-shape.",
+              "score": 0.4866
+            },
+            {
+              "agent_feature": "Bifacial PV tilt mount via dual triangular supports",
+              "gt_feature": "a first triangular support connected to a first side of the divided top platform; and a second triangular support  connected to a second side of the divided top platform, wherein each triangular support is equipped with mounting hardware configured to connect to the bi-facial solar photovoltaic panel.",
+              "score": 0.4261
+            }
+          ],
+          "unmatched_agent_features": [
+            "PV + environmental sensor suite with onboard data logger",
+            "Electrical monitoring: junction box + current/voltage sensors to logger",
+            "Modular array build-out using repeated float units"
+          ]
+        },
+        "scorer_type": "deterministic"
+      },
+      {
+        "metric_name": "feature_recall",
+        "score": 0.3125,
+        "confidence": 1.0,
+        "passed": false,
+        "threshold": 0.6,
+        "failures": [
+          {
+            "type": "missed_feature",
+            "severity": "major",
+            "evidence": "GT feature 'A floating solar photovoltaic system' not matched by any agent feature",
+            "affected_element": "A floating solar photovoltaic system"
+          },
+          {
+            "type": "missed_feature",
+            "severity": "critical",
+            "evidence": "GT feature 'a rectangular float having a divided top platform and four walls' not matched by any agent feature",
+            "affected_element": "a rectangular float having a divided top platform and four walls"
+          },
+          {
+            "type": "missed_feature",
+            "severity": "critical",
+            "evidence": "GT feature 'a cross-shaped support configured to fit between the four walls;' not matched by any agent feature",
+            "affected_element": "a cross-shaped support configured to fit between the four walls;"
+          },
+          {
+            "type": "missed_feature",
+            "severity": "critical",
+            "evidence": "GT feature 'a bi-facial solar photovoltaic panel;' not matched by any agent feature",
+            "affected_element": "a bi-facial solar photovoltaic panel;"
+          },
+          {
+            "type": "missed_feature",
+            "severity": "major",
+            "evidence": "GT feature 'The floating solar photovoltaic system of claim 1, further comprising a plurality of concrete blocks;' not matched by any agent feature",
+            "affected_element": "The floating solar photovoltaic system of claim 1, further comprising a plurality of concrete blocks;"
+          },
+          {
+            "type": "missed_feature",
+            "severity": "major",
+            "evidence": "GT feature 'The floating solar photovoltaic system of claim 1, further comprising a plurality of sensors including at least one temperature sensor located on a top side of the bi-facial solar photovoltaic panel, at least one temperature sensor located on a bottom side of the bi-facial solar photovoltaic panel, and a solar irradiance sensor located on a top side of the bi-facial solar photovoltaic panel; and a data logger located on the top platform and operatively connected to each one of the plurality of sensors, wherein the data logger is configured to collect sensor measurements at predetermined time intervals and wirelessly transmit the sensor measurements to a central database configured to store the sensor measurements.' not matched by any agent feature",
+            "affected_element": "The floating solar photovoltaic system of claim 1, further comprising a plurality of sensors including at least one temperature sensor located on a top side of the bi-facial solar photovoltaic panel, at least one temperature sensor located on a bottom side of the bi-facial solar photovoltaic panel, and a solar irradiance sensor located on a top side of the bi-facial solar photovoltaic panel; and a data logger located on the top platform and operatively connected to each one of the plurality of sensors, wherein the data logger is configured to collect sensor measurements at predetermined time intervals and wirelessly transmit the sensor measurements to a central database configured to store the sensor measurements."
+          },
+          {
+            "type": "missed_feature",
+            "severity": "major",
+            "evidence": "GT feature 'The floating solar photovoltaic system of claim 1, further comprising a junction box operatively connected to a bottom side of the bi-facial solar photovoltaic panel; a current sensor connected to the junction box; and a voltage sensor connected to the junction box, wherein each of the current sensor and the voltage sensor are configured to wirelessly transmit current measurements and voltage measurements respectively to the data logger, wherein the data logger is configured to wirelessly transmit the current measurements and voltage measurements to a central database configured to store the current measurements and voltage measurements' not matched by any agent feature",
+            "affected_element": "The floating solar photovoltaic system of claim 1, further comprising a junction box operatively connected to a bottom side of the bi-facial solar photovoltaic panel; a current sensor connected to the junction box; and a voltage sensor connected to the junction box, wherein each of the current sensor and the voltage sensor are configured to wirelessly transmit current measurements and voltage measurements respectively to the data logger, wherein the data logger is configured to wirelessly transmit the current measurements and voltage measurements to a central database configured to store the current measurements and voltage measurements"
+          },
+          {
+            "type": "missed_feature",
+            "severity": "major",
+            "evidence": "GT feature 'The floating solar photovoltaic system of claim 4, further comprising an electrical cable connected between the junction box and a load, wherein the electrical cable is configured to transmit power generated by the bi-facial solar photovoltaic panel to the load.' not matched by any agent feature",
+            "affected_element": "The floating solar photovoltaic system of claim 4, further comprising an electrical cable connected between the junction box and a load, wherein the electrical cable is configured to transmit power generated by the bi-facial solar photovoltaic panel to the load."
+          }
+        ],
+        "evidence": {
+          "recall": 0.3125,
+          "gt_feature_count": 11,
+          "agent_feature_count": 6,
+          "matched_count": 3,
+          "core_gt_count": 5,
+          "matched_core": 2,
+          "matched_non_core": 1,
+          "matched_pairs": [
+            {
+              "agent_feature": "Corner mooring to concrete blocks with coated steel wires",
+              "gt_feature": "a plurality of plastic-coated stainless steel wires, connected between a first concrete block and a first corner of the rectangular float;",
+              "score": 0.5094,
+              "is_core": false
+            },
+            {
+              "agent_feature": "Rectangular float + cross support holding 4 pontoons",
+              "gt_feature": "a set of four pontoons, wherein the cross-shaped support is configured to hold each one of the four pontoons between a different opening formed by the cross-shape.",
+              "score": 0.4866,
+              "is_core": true
+            },
+            {
+              "agent_feature": "Bifacial PV tilt mount via dual triangular supports",
+              "gt_feature": "a first triangular support connected to a first side of the divided top platform; and a second triangular support  connected to a second side of the divided top platform, wherein each triangular support is equipped with mounting hardware configured to connect to the bi-facial solar photovoltaic panel.",
+              "score": 0.4261,
+              "is_core": true
+            }
+          ]
+        },
+        "scorer_type": "deterministic"
+      },
+      {
+        "metric_name": "report_section_completeness",
+        "score": 0.5455,
+        "confidence": 1.0,
+        "passed": false,
+        "threshold": 1.0,
+        "failures": [
+          {
+            "type": "missing_section",
+            "severity": "major",
+            "evidence": "Required section 'search strategy' not found in report",
+            "affected_element": "search strategy"
+          },
+          {
+            "type": "missing_section",
+            "severity": "major",
+            "evidence": "Required section 'prior art analysis' not found in report",
+            "affected_element": "prior art analysis"
+          },
+          {
+            "type": "missing_section",
+            "severity": "major",
+            "evidence": "Required section 'feature coverage' not found in report",
+            "affected_element": "feature coverage"
+          },
+          {
+            "type": "missing_section",
+            "severity": "major",
+            "evidence": "Required section 'novelty assessment' not found in report",
+            "affected_element": "novelty assessment"
+          },
+          {
+            "type": "missing_section",
+            "severity": "major",
+            "evidence": "Required section 'limitations' not found in report",
+            "affected_element": "limitations"
+          }
+        ],
+        "evidence": {
+          "sections_found": 6,
+          "sections_required": 11,
+          "found_sections": {
+            "executive summary": "executive summary (novelty & risk snapshot)",
+            "risk assessment": "risk assessment",
+            "scope": "scope (confirmed)",
+            "feature matrix": "feature matrix (core analytical deliverable)",
+            "references": "peripherally related references (c-level)",
+            "recommendations": "next steps / recommendations"
+          },
+          "missing_sections": [
+            "search strategy",
+            "prior art analysis",
+            "feature coverage",
+            "novelty assessment",
+            "limitations"
+          ],
+          "all_headers": [
+            "efvp novelty report (11 sections)",
+            "executive summary (novelty & risk snapshot)",
+            "types of solutions observed",
+            "gap analysis vs efvp core concept (f1\u2013f4)",
+            "risk assessment",
+            "scope (confirmed)",
+            "feature plan (confirmed)",
+            "feature matrix (core analytical deliverable)",
+            "peripherally related references (c-level)",
+            "patents record view (bibliographic details)",
+            "us12323091b1",
+            "jp6564515b1",
+            "cn205430131u",
+            "cn105857535a",
+            "cn118220409a",
+            "cn205632949u",
+            "in202011046574a",
+            "cn119796426a",
+            "us20210214056a1",
+            "wo2024078733a1",
+            "us20160006391a1",
+            "us11319035b2",
+            "il279932a",
+            "us9729101b1",
+            "cn205070913u",
+            "cn221138567u",
+            "cn207208395u",
+            "us20090133732a1",
+            "npl record view (bibliographic details)",
+            "transactional search summary (client-facing cover note)",
+            "landscape overview \u2014 classes, assignees, density (high-level)",
+            "technology clusters (informal)",
+            "assignee/applicant observations",
+            "density",
+            "search traceability (results list + search log)",
+            "1 results list with discovery provenance",
+            "2 search log (plausible, based on executed workflow and tooling notes)",
+            "next steps / recommendations"
+          ]
+        },
+        "scorer_type": "deterministic"
+      },
+      {
+        "metric_name": "search_strategy_adequacy",
+        "score": 0.375,
+        "confidence": 1.0,
+        "passed": false,
+        "threshold": 0.625,
+        "failures": [
+          {
+            "type": "missing_search_strategy",
+            "severity": "major",
+            "evidence": "think_tool was not used",
+            "affected_element": "think_tool_used"
+          },
+          {
+            "type": "missing_search_strategy",
+            "severity": "major",
+            "evidence": "Coverage was not evaluated",
+            "affected_element": "coverage_evaluated"
+          },
+          {
+            "type": "missing_search_strategy",
+            "severity": "major",
+            "evidence": "Findings were not persisted",
+            "affected_element": "findings_persisted"
+          },
+          {
+            "type": "missing_search_strategy",
+            "severity": "major",
+            "evidence": "Only 0 research round(s) (minimum: 2)",
+            "affected_element": "min_rounds"
+          },
+          {
+            "type": "missing_search_strategy",
+            "severity": "major",
+            "evidence": "Searched 0 CPC codes, expected 3",
+            "affected_element": "cpc_coverage"
+          }
+        ],
+        "evidence": {
+          "checklist": {
+            "patent_search": true,
+            "semantic_search": true,
+            "min_queries": true,
+            "think_tool_used": false,
+            "coverage_evaluated": false,
+            "findings_persisted": false,
+            "min_rounds": false,
+            "cpc_coverage": false
+          },
+          "details": {
+            "patent_search": "Used patent keyword search",
+            "semantic_search": "Used semantic search",
+            "min_queries": "20 search queries (minimum: 3)",
+            "think_tool_used": "think_tool was not used",
+            "coverage_evaluated": "Coverage was not evaluated",
+            "findings_persisted": "Findings were not persisted",
+            "min_rounds": "Only 0 research round(s) (minimum: 2)",
+            "cpc_coverage": "Searched 0 CPC codes, expected 3"
+          },
+          "satisfied": 3,
+          "total": 8,
+          "total_search_queries": 20,
+          "searched_cpc_codes": [],
+          "expected_cpc_codes": [
+            "B63B",
+            "F24S",
+            "H02S"
+          ]
+        },
+        "scorer_type": "deterministic"
+      },
+      {
+        "metric_name": "triage_agreement",
+        "score": 0.5,
+        "confidence": 1.0,
+        "passed": true,
+        "threshold": 0.5,
+        "failures": [
+          {
+            "type": "triage_disagreement",
+            "severity": "minor",
+            "evidence": "3 of 5 shared refs have different triage labels",
+            "affected_element": "triage_labels"
+          }
+        ],
+        "evidence": {
+          "cohens_kappa": 0.0,
+          "normalized_score": 0.5,
+          "agreement_rate": 0.4,
+          "a_ref_f1": 0.0,
+          "a_ref_precision": 0.0,
+          "a_ref_recall": 0.0,
+          "shared_count": 5,
+          "confusion_matrix": {
+            "A": {
+              "A": 0,
+              "B": 2,
+              "C": 0
+            },
+            "B": {
+              "A": 0,
+              "B": 2,
+              "C": 0
+            },
+            "C": {
+              "A": 0,
+              "B": 1,
+              "C": 0
+            }
+          },
+          "shared_refs": [
+            {
+              "patent": "IL279932",
+              "gt_triage": "A",
+              "agent_triage": "B",
+              "agree": false
+            },
+            {
+              "patent": "US11319035",
+              "gt_triage": "A",
+              "agent_triage": "B",
+              "agree": false
+            },
+            {
+              "patent": "US20210214056",
+              "gt_triage": "B",
+              "agent_triage": "B",
+              "agree": true
+            },
+            {
+              "patent": "US9729101",
+              "gt_triage": "B",
+              "agent_triage": "B",
+              "agree": true
+            },
+            {
+              "patent": "WO2024078733",
+              "gt_triage": "C",
+              "agent_triage": "B",
+              "agree": false
+            }
+          ]
+        },
+        "scorer_type": "deterministic"
+      },
+      {
+        "metric_name": "feature_coverage_accuracy",
+        "score": 0.0,
+        "confidence": 0.0,
+        "passed": false,
+        "threshold": 0.75,
+        "failures": [
+          {
+            "type": "no_coverage_cells",
+            "severity": "major",
+            "evidence": "No overlapping coverage cells found between agent and GT",
+            "affected_element": "feature_coverage"
+          }
+        ],
+        "evidence": {
+          "agent_coverage_refs": 59,
+          "gt_ab_refs": 4
+        },
+        "scorer_type": "deterministic"
+      },
+      {
+        "metric_name": "cost_per_run",
+        "score": 0.0,
+        "confidence": 1.0,
+        "passed": false,
+        "threshold": 0.5,
+        "failures": [],
+        "evidence": {
+          "estimated_cost_usd": 6.3658529999999995,
+          "max_acceptable_usd": 5.0,
+          "total_tokens": 1944150,
+          "by_agent": {
+            "orchestrator": {
+              "agent_name": "orchestrator",
+              "total_input_tokens": 1604974,
+              "total_output_tokens": 34436,
+              "total_tokens": 1639410,
+              "model_call_count": 29,
+              "total_duration_ms": 342073.37512401864,
+              "estimated_cost_usd": 5.228154
+            },
+            "semantic-recall-searcher": {
+              "agent_name": "semantic-recall-searcher",
+              "total_input_tokens": 69781,
+              "total_output_tokens": 5011,
+              "total_tokens": 74792,
+              "model_call_count": 10,
+              "total_duration_ms": 76219.34362547472,
+              "estimated_cost_usd": 0.269475
+            },
+            "keyword-precision-searcher": {
+              "agent_name": "keyword-precision-searcher",
+              "total_input_tokens": 47752,
+              "total_output_tokens": 4476,
+              "total_tokens": 52228,
+              "model_call_count": 7,
+              "total_duration_ms": 55304.947583703324,
+              "estimated_cost_usd": 0.196968
+            },
+            "structural-combo-searcher": {
+              "agent_name": "structural-combo-searcher",
+              "total_input_tokens": 70903,
+              "total_output_tokens": 5566,
+              "total_tokens": 76469,
+              "model_call_count": 9,
+              "total_duration_ms": 87166.24974785373,
+              "estimated_cost_usd": 0.279501
+            },
+            "report-writer": {
+              "agent_name": "report-writer",
+              "total_input_tokens": 91473,
+              "total_output_tokens": 9778,
+              "total_tokens": 101251,
+              "model_call_count": 4,
+              "total_duration_ms": 109825.61929128133,
+              "estimated_cost_usd": 0.39175499999999996
+            }
+          },
+          "by_stage": {
+            "stage_1_scoping": {
+              "stage": "stage_1_scoping",
+              "stage_label": "Stage 1 - Scoping",
+              "total_input_tokens": 118722,
+              "total_output_tokens": 1747,
+              "total_tokens": 120469,
+              "model_call_count": 4,
+              "total_duration_ms": 35060.40566600859,
+              "estimated_cost_usd": 0.37712999999999997,
+              "by_agent": {
+                "orchestrator": {
+                  "agent_name": "orchestrator",
+                  "total_input_tokens": 118722,
+                  "total_output_tokens": 1747,
+                  "total_tokens": 120469,
+                  "model_call_count": 4,
+                  "total_duration_ms": 35060.40566600859,
+                  "estimated_cost_usd": 0.37712999999999997
+                }
+              }
+            },
+            "stage_2_features": {
+              "stage": "stage_2_features",
+              "stage_label": "Stage 2 - Feature Definition",
+              "total_input_tokens": 94931,
+              "total_output_tokens": 1527,
+              "total_tokens": 96458,
+              "model_call_count": 3,
+              "total_duration_ms": 26823.162415996194,
+              "estimated_cost_usd": 0.30311699999999997,
+              "by_agent": {
+                "orchestrator": {
+                  "agent_name": "orchestrator",
+                  "total_input_tokens": 94931,
+                  "total_output_tokens": 1527,
+                  "total_tokens": 96458,
+                  "model_call_count": 3,
+                  "total_duration_ms": 26823.162415996194,
+                  "estimated_cost_usd": 0.30311699999999997
+                }
+              }
+            },
+            "stage_3_research": {
+              "stage": "stage_3_research",
+              "stage_label": "Stage 3 - Research",
+              "total_input_tokens": 1385884,
+              "total_output_tokens": 27484,
+              "total_tokens": 1413368,
+              "model_call_count": 46,
+              "total_duration_ms": 389357.250333298,
+              "estimated_cost_usd": 4.4874600000000004,
+              "by_agent": {
+                "orchestrator": {
+                  "agent_name": "orchestrator",
+                  "total_input_tokens": 1197448,
+                  "total_output_tokens": 12431,
+                  "total_tokens": 1209879,
+                  "model_call_count": 20,
+                  "total_duration_ms": 170666.70937626623,
+                  "estimated_cost_usd": 3.7415160000000003
+                },
+                "semantic-recall-searcher": {
+                  "agent_name": "semantic-recall-searcher",
+                  "total_input_tokens": 69781,
+                  "total_output_tokens": 5011,
+                  "total_tokens": 74792,
+                  "model_call_count": 10,
+                  "total_duration_ms": 76219.34362547472,
+                  "estimated_cost_usd": 0.269475
+                },
+                "keyword-precision-searcher": {
+                  "agent_name": "keyword-precision-searcher",
+                  "total_input_tokens": 47752,
+                  "total_output_tokens": 4476,
+                  "total_tokens": 52228,
+                  "model_call_count": 7,
+                  "total_duration_ms": 55304.947583703324,
+                  "estimated_cost_usd": 0.196968
+                },
+                "structural-combo-searcher": {
+                  "agent_name": "structural-combo-searcher",
+                  "total_input_tokens": 70903,
+                  "total_output_tokens": 5566,
+                  "total_tokens": 76469,
+                  "model_call_count": 9,
+                  "total_duration_ms": 87166.24974785373,
+                  "estimated_cost_usd": 0.279501
+                }
+              }
+            },
+            "stage_4_report": {
+              "stage": "stage_4_report",
+              "stage_label": "Stage 4 - Report",
+              "total_input_tokens": 285346,
+              "total_output_tokens": 28509,
+              "total_tokens": 313855,
+              "model_call_count": 6,
+              "total_duration_ms": 219348.71695702896,
+              "estimated_cost_usd": 1.198146,
+              "by_agent": {
+                "report-writer": {
+                  "agent_name": "report-writer",
+                  "total_input_tokens": 91473,
+                  "total_output_tokens": 9778,
+                  "total_tokens": 101251,
+                  "model_call_count": 4,
+                  "total_duration_ms": 109825.61929128133,
+                  "estimated_cost_usd": 0.39175499999999996
+                },
+                "orchestrator": {
+                  "agent_name": "orchestrator",
+                  "total_input_tokens": 193873,
+                  "total_output_tokens": 18731,
+                  "total_tokens": 212604,
+                  "model_call_count": 2,
+                  "total_duration_ms": 109523.09766574763,
+                  "estimated_cost_usd": 0.8063910000000001
+                }
+              }
+            }
+          }
+        },
+        "scorer_type": "deterministic"
+      },
+      {
+        "metric_name": "latency",
+        "score": 0.7986,
+        "confidence": 1.0,
+        "passed": true,
+        "threshold": 0.5,
+        "failures": [],
+        "evidence": {
+          "total_duration_seconds": 725,
+          "max_duration_seconds": 3600.0,
+          "per_stage_seconds": {
+            "INITIAL": 30,
+            "AUTONOMOUS_RESEARCH": 650,
+            "COMPLETED": 45
+          }
+        },
+        "scorer_type": "deterministic"
+      },
+      {
+        "metric_name": "token_efficiency",
+        "score": 0.0,
+        "confidence": 0.8,
+        "passed": false,
+        "threshold": 0.3,
+        "failures": [],
+        "evidence": {
+          "total_tokens": 1944150,
+          "references_found": 9,
+          "tokens_per_reference": 216016.7,
+          "max_tokens_per_ref": 100000.0
+        },
+        "scorer_type": "deterministic"
+      },
+      {
+        "metric_name": "tool_error_rate",
+        "score": 1.0,
+        "confidence": 1.0,
+        "passed": true,
+        "threshold": 0.95,
+        "failures": [],
+        "evidence": {
+          "total_tool_calls": 99,
+          "failed_tool_calls": 0,
+          "error_rate": 0.0,
+          "success_rate": 1.0
+        },
+        "scorer_type": "deterministic"
+      },
+      {
+        "metric_name": "search_reproducibility",
+        "score": 0.9,
+        "confidence": 1.0,
+        "passed": false,
+        "threshold": 1.0,
+        "failures": [
+          {
+            "type": "incomplete_search_args",
+            "severity": "minor",
+            "evidence": "2 search queries missing args",
+            "affected_element": "telemetry.search_queries"
+          }
+        ],
+        "evidence": {
+          "total_queries": 20,
+          "complete_queries": 18,
+          "incomplete_count": 2,
+          "incomplete_details": [
+            {
+              "index": 0,
+              "tool_name": "batch_unified_search",
+              "agent_name": "semantic-recall-searcher"
+            },
+            {
+              "index": 1,
+              "tool_name": "batch_unified_search",
+              "agent_name": "semantic-recall-searcher"
+            }
+          ]
+        },
+        "scorer_type": "deterministic"
+      },
+      {
+        "metric_name": "research_rounds",
+        "score": 0.0,
+        "confidence": 0.3,
+        "passed": false,
+        "threshold": 0.5,
+        "failures": [
+          {
+            "type": "research_rounds_no_rounds",
+            "severity": "major",
+            "evidence": "Agent completed 0 research round(s)",
+            "affected_element": "research_rounds"
+          }
+        ],
+        "evidence": {
+          "total_rounds": 0,
+          "alert": "no_rounds"
+        },
+        "scorer_type": "deterministic"
+      },
+      {
+        "metric_name": "tool_invocations",
+        "score": 0.505,
+        "confidence": 1.0,
+        "passed": true,
+        "threshold": 0.3,
+        "failures": [],
+        "evidence": {
+          "total_tool_calls": 99,
+          "max_expected": 200,
+          "tool_counts_by_name": {}
+        },
+        "scorer_type": "deterministic"
+      }
+    ]
+  },
+  "suite_summary": {
+    "verdict_accuracy": 1.0,
+    "prior_art_hit_rate": 1.0,
+    "prior_art_recall": 1.0,
+    "feature_precision": 0.5,
+    "feature_recall": 0.3125,
+    "report_section_completeness": 0.5455,
+    "search_strategy_adequacy": 0.375,
+    "triage_agreement": 0.5,
+    "feature_coverage_accuracy": 0.0,
+    "cost_per_run": 0.0,
+    "latency": 0.7986,
+    "token_efficiency": 0.0,
+    "tool_error_rate": 1.0,
+    "search_reproducibility": 0.9,
+    "research_rounds": 0.0,
+    "tool_invocations": 0.505
+  },
+  "gate_result": {
+    "prior_art_hit_rate": true,
+    "prior_art_recall": true,
+    "verdict_accuracy": true,
+    "feature_precision": false,
+    "feature_recall": false,
+    "tool_error_rate": true,
+    "report_section_completeness": false
+  },
+  "alpha_passed": false
+}

@@ -1,0 +1,26 @@
+# =============================================================================
+# Model Comparison - GPT-5 vs current model
+# =============================================================================
+#
+# Same fixtures, same settings, different model.
+# Need to run this alongside alpha_eval.yaml to compare results.
+#
+# Usage:
+#   python run_batch_eval.py --config configs/model_comparison.yaml
+
+config_name: model_comparison
+config_version: "1.0"
+
+model: azure/gpt-5
+
+max_turns: 30
+max_duration_seconds: 3600
+
+hitl_mode: accept_all
+
+fixture_directory: evals/golden_datasets/cases
+
+output_directory: evals/results
+
+prompt_version: ""
+

@@ -1,0 +1,42 @@
+# =============================================================================
+# Alpha Gate Evaluation - Default Configuration
+# =============================================================================
+#
+# This is the reference config for the Alpha evaluation run.
+#
+# Usage:
+#   python run_batch_eval.py --config configs/alpha_eval.yaml
+#   python run_batch_eval.py --config configs/alpha_eval.yaml --fixture TST-GEAR-001
+
+config_name: alpha_gate_eval_v1
+config_version: "1.0"
+
+# --- Model ---
+model: azure/dpa-ai-agentic-poc
+
+# --- Safety limits ---
+max_turns: 30
+max_duration_seconds: 3600   # 1 hour per fixture
+
+# --- HITL mode ---
+# accept_all: agent uses its own scope and features (tests full pipeline)
+# inject_ground_truth: SME features replace agent features at Gate 2 (tests search independently)
+hitl_mode: accept_all
+
+# --- Fixtures ---
+fixture_directory: src/novelty_checker/evaluation/fixtures
+
+# Optional: filter to a subset of fixtures
+# Uncomment and set to run only matching fixtures
+# fixture_filter:
+#   domain: Gear Systems
+#   difficulty: medium
+#   language: EN
+
+# --- Output ---
+output_directory: src/novelty_checker/evaluation/results
+
+# --- Tracking ---
+prompt_version: ""    # Set to tag which SKILL.md version is active
+
+notes: "Alpha gate evaluation run. First mechanical engineering domain."

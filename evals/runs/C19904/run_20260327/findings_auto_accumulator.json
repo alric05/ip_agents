@@ -1,0 +1,953 @@
+{
+  "version": "1.0",
+  "created_at": "2026-03-27T16:36:56.673818",
+  "total_captures": 78,
+  "total_references": 78,
+  "backfilled": true,
+  "by_source": {
+    "patent": [
+      {
+        "publication_number": "WO2021022444A1",
+        "triage_label": "A",
+        "round": 1
+      },
+      {
+        "publication_number": "US20060225635A1",
+        "triage_label": "A",
+        "round": 1
+      },
+      {
+        "publication_number": "US3779192A",
+        "triage_label": "A",
+        "round": 1
+      },
+      {
+        "publication_number": "WO2017057018A1",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "CN110239682A",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "CN207939436U",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "CN205770043U",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "CN107351985B",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "US20040134405A1",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "CN201457703U",
+        "triage_label": "C",
+        "round": 1
+      },
+      {
+        "publication_number": "ES2549367B1",
+        "triage_label": "C",
+        "round": 1
+      },
+      {
+        "publication_number": "CN106656000B",
+        "triage_label": "C",
+        "round": 1
+      },
+      {
+        "publication_number": "CN206524815U",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "CN206133561U",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "CN210402694U",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "CN205986946U",
+        "triage_label": "C",
+        "round": 1
+      },
+      {
+        "publication_number": "CN212163269U",
+        "triage_label": "C",
+        "round": 1
+      },
+      {
+        "publication_number": "JP2013138163A",
+        "triage_label": "C",
+        "round": 1
+      },
+      {
+        "publication_number": "CN203242650U",
+        "triage_label": "C",
+        "round": 1
+      },
+      {
+        "publication_number": "US20210214056A1",
+        "triage_label": "A",
+        "round": 2
+      },
+      {
+        "publication_number": "US11319035B2",
+        "triage_label": "A",
+        "round": 2
+      },
+      {
+        "publication_number": "US9729101B1",
+        "triage_label": "A",
+        "round": 2
+      },
+      {
+        "publication_number": "US12483186B2",
+        "triage_label": "A",
+        "round": 2
+      },
+      {
+        "publication_number": "EP4663530A1",
+        "triage_label": "B",
+        "round": 2
+      },
+      {
+        "publication_number": "CN206629012U",
+        "triage_label": "B",
+        "round": 2
+      },
+      {
+        "publication_number": "CN107341566A",
+        "triage_label": "B",
+        "round": 2
+      },
+      {
+        "publication_number": "CN120200553A",
+        "triage_label": "B",
+        "round": 2
+      },
+      {
+        "publication_number": "CN107196594B",
+        "triage_label": "B",
+        "round": 2
+      },
+      {
+        "publication_number": "CN107346955A",
+        "triage_label": "B",
+        "round": 2
+      },
+      {
+        "publication_number": "CN107465388A",
+        "triage_label": "B",
+        "round": 2
+      },
+      {
+        "publication_number": "US20090133732A1",
+        "triage_label": "C",
+        "round": 2
+      }
+    ],
+    "semantic": [
+      {
+        "publication_number": "US12401313B1",
+        "triage_label": "A",
+        "round": 1
+      },
+      {
+        "publication_number": "CN220281630U",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "CN218577985U",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "CN218858654U",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "CN119611671A",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "CN209739292U",
+        "triage_label": "C",
+        "round": 1
+      },
+      {
+        "publication_number": "CN114932983A",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "ES1287702U",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "CN203504483U",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "DE3634102A1",
+        "triage_label": "C",
+        "round": 1
+      },
+      {
+        "publication_number": "CN221316601U",
+        "triage_label": "C",
+        "round": 1
+      },
+      {
+        "publication_number": "KR2158200B1",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "CN215554000U",
+        "triage_label": "A",
+        "round": 1
+      },
+      {
+        "publication_number": "CN212766646U",
+        "triage_label": "A",
+        "round": 1
+      },
+      {
+        "publication_number": "CN218617108U",
+        "triage_label": "A",
+        "round": 1
+      },
+      {
+        "publication_number": "CN206481252U",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "CN212605702U",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "CN105958909B",
+        "triage_label": "A",
+        "round": 1
+      },
+      {
+        "publication_number": "CN206117563U",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "IN201831021341A",
+        "triage_label": "A",
+        "round": 1
+      },
+      {
+        "publication_number": "CN218416326U",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "CN112737503B",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "CN104124915A",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "CN204594589U",
+        "triage_label": "B",
+        "round": 1
+      },
+      {
+        "publication_number": "IN202011046574A",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "CN206056642U",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "CN117353654A",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "CN117353655A",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "KR2601440B1",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "CN219394799U",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "CN207208395U",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "WO2010064271A2",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "GB2608913A",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "CN206364749U",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "DE202008006347U1",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "IL303565A",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "CN211183899U",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "RU214053U1",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "CN207173912U",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "US4691656A",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "FR2659058A1",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "CN107804438A",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "US10097131B2",
+        "triage_label": null,
+        "round": 2
+      }
+    ],
+    "citations": [
+      {
+        "publication_number": "IL279932A",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "WO2024078733A1",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "CN108347220A",
+        "triage_label": null,
+        "round": 2
+      },
+      {
+        "publication_number": "CN112542985A",
+        "triage_label": null,
+        "round": 2
+      }
+    ]
+  },
+  "all_references": [
+    {
+      "publication_number": "WO2021022444A1",
+      "triage_label": "A",
+      "title": "Bifacial solar module arrangement structure for float base",
+      "source_type": "patent",
+      "round_number": 1
+    },
+    {
+      "publication_number": "US20060225635A1",
+      "triage_label": "A",
+      "title": "Floating dock w/ pontoon modules secured to underside",
+      "source_type": "patent",
+      "round_number": 1
+    },
+    {
+      "publication_number": "US3779192A",
+      "triage_label": "A",
+      "title": "Modular flotation unit for docks (reinforced concrete/foam)",
+      "source_type": "patent",
+      "round_number": 1
+    },
+    {
+      "publication_number": "WO2017057018A1",
+      "triage_label": "B",
+      "title": "Float for photovoltaic power generation unit",
+      "source_type": "patent",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN110239682A",
+      "triage_label": "B",
+      "title": "Floating device for PV panel supporting mechanism",
+      "source_type": "patent",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN207939436U",
+      "triage_label": "B",
+      "title": "Floating type photovoltaic bracket",
+      "source_type": "patent",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN205770043U",
+      "triage_label": "B",
+      "title": "FPV array anchoring system",
+      "source_type": "patent",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN107351985B",
+      "triage_label": "B",
+      "title": "Anchoring system for floating water photovoltaic power station",
+      "source_type": "patent",
+      "round_number": 1
+    },
+    {
+      "publication_number": "US20040134405A1",
+      "triage_label": "B",
+      "title": "Modular floating assembly of interconnected modules anchored",
+      "source_type": "patent",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN201457703U",
+      "triage_label": "C",
+      "title": "Modularized floating platform wharf",
+      "source_type": "patent",
+      "round_number": 1
+    },
+    {
+      "publication_number": "ES2549367B1",
+      "triage_label": "C",
+      "title": "Method for manufacturing/implanting modular floating platform",
+      "source_type": "patent",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN106656000B",
+      "triage_label": "C",
+      "title": "FPV connection device (dovetail bracket)",
+      "source_type": "patent",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN206524815U",
+      "triage_label": "B",
+      "title": "PV module data measuring device (temp coefficient)",
+      "source_type": "patent",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN206133561U",
+      "triage_label": "B",
+      "title": "PV monitoring data transmission device",
+      "source_type": "patent",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN210402694U",
+      "triage_label": "B",
+      "title": "PV intelligent data collecting device",
+      "source_type": "patent",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN205986946U",
+      "triage_label": "C",
+      "title": "PV big data cloud service system",
+      "source_type": "patent",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN212163269U",
+      "triage_label": "C",
+      "title": "PV component data monitoring system",
+      "source_type": "patent",
+      "round_number": 1
+    },
+    {
+      "publication_number": "JP2013138163A",
+      "triage_label": "C",
+      "title": "Installation structure for bifacial module + reflector",
+      "source_type": "patent",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN203242650U",
+      "triage_label": "C",
+      "title": "Double-surface solar battery component (junction box)",
+      "source_type": "patent",
+      "round_number": 1
+    },
+    {
+      "publication_number": "US12401313B1",
+      "triage_label": "A",
+      "title": "Pontoon platform supported solar PV system\u2026 **cross-shaped support**\u2026 **bi-facial** panel",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN220281630U",
+      "triage_label": "B",
+      "title": "Offshore floating PV platform with stabilizing mechanism",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN218577985U",
+      "triage_label": "B",
+      "title": "Semi-submerged floating PV system with main frame",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN218858654U",
+      "triage_label": "B",
+      "title": "Floating PV platform with folding bracket on floating block",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN119611671A",
+      "triage_label": "B",
+      "title": "Floating PV platform with **gravity anchor",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN209739292U",
+      "triage_label": "C",
+      "title": "Water surface PV bracket floating platform",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN114932983A",
+      "triage_label": "B",
+      "title": "Marine floating PV platform with anchoring mechanism",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "ES1287702U",
+      "triage_label": "B",
+      "title": "Modular floating PV platform with adjustable anchor pieces",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN203504483U",
+      "triage_label": "B",
+      "title": "Pontoon-type water surface PV station (beams/rods, balance weight)",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "DE3634102A1",
+      "triage_label": "C",
+      "title": "Floating solar cell pontoon of flexibly joined segments",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN221316601U",
+      "triage_label": "C",
+      "title": "Water PV floating mounting platform with longitudinal/transverse tubes crossed",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "KR2158200B1",
+      "triage_label": "B",
+      "title": "Floating solar install structure with **triangular bracket** and ball joint hinge",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN215554000U",
+      "triage_label": "A",
+      "title": "New-type water surface PV anchoring system with **counterweight block",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN212766646U",
+      "triage_label": "A",
+      "title": "Anchor system\u2026 **Y-shaped steel wire rope**\u2026 stainless buckle",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN218617108U",
+      "triage_label": "A",
+      "title": "Floating PV buoy fixing **concrete block** anchor structure",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN206481252U",
+      "triage_label": "B",
+      "title": "Foam cement plate floating solar device with reinforced concrete block + steel cable",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN212605702U",
+      "triage_label": "B",
+      "title": "Water PV array bracket, mirror-image inclined mounting",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN105958909B",
+      "triage_label": "A",
+      "title": "Triangular-shaped** floating PV power station mounting frame",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN206117563U",
+      "triage_label": "B",
+      "title": "Water floating PV bracket device with triangular frame/tripod",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "IN201831021341A",
+      "triage_label": "A",
+      "title": "PV single-module performance device sensing **temperature, irradiance, current, voltage** + comms",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN218416326U",
+      "triage_label": "B",
+      "title": "PV module temperature coefficient monitoring with temp + radiation + shunt sensing",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN112737503B",
+      "triage_label": "B",
+      "title": "PV plant working-state monitoring with V/I + temp + sunlight radiation",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN104124915A",
+      "triage_label": "B",
+      "title": "Micro-inverter PV component monitoring with wireless communications + center",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "CN204594589U",
+      "triage_label": "B",
+      "title": "Combiner-box PV module real-time temperature monitoring + comms",
+      "source_type": "semantic",
+      "round_number": 1
+    },
+    {
+      "publication_number": "US20210214056A1",
+      "triage_label": "A",
+      "title": "Floatable array-ready solar module mounting device/system",
+      "source_type": "patent",
+      "round_number": 2
+    },
+    {
+      "publication_number": "US11319035B2",
+      "triage_label": "A",
+      "title": "Floating type solar power generation equipment stage device",
+      "source_type": "patent",
+      "round_number": 2
+    },
+    {
+      "publication_number": "US9729101B1",
+      "triage_label": "A",
+      "title": "Deployment techniques of floating PV power generation system",
+      "source_type": "patent",
+      "round_number": 2
+    },
+    {
+      "publication_number": "US12483186B2",
+      "triage_label": "A",
+      "title": "Modular floating PV arrays w/ triangular floats supporting PV at angle",
+      "source_type": "patent",
+      "round_number": 2
+    },
+    {
+      "publication_number": "EP4663530A1",
+      "triage_label": "B",
+      "title": "Float structure w/ top frame + interconnected pontoons + cross beams",
+      "source_type": "patent",
+      "round_number": 2
+    },
+    {
+      "publication_number": "CN206629012U",
+      "triage_label": "B",
+      "title": "Water dual-sided solar cell power generation system (floating support)",
+      "source_type": "patent",
+      "round_number": 2
+    },
+    {
+      "publication_number": "CN107341566A",
+      "triage_label": "B",
+      "title": "PV power generation predicting device w/ field data collection + wireless",
+      "source_type": "patent",
+      "round_number": 2
+    },
+    {
+      "publication_number": "CN120200553A",
+      "triage_label": "B",
+      "title": "Offshore FPV safe operation early warning (field sensor system)",
+      "source_type": "patent",
+      "round_number": 2
+    },
+    {
+      "publication_number": "CN107196594B",
+      "triage_label": "B",
+      "title": "PV assembly unit w/ gap between module and floating body + reflector",
+      "source_type": "patent",
+      "round_number": 2
+    },
+    {
+      "publication_number": "CN107346955A",
+      "triage_label": "B",
+      "title": "PV assembly unit + water PV generating system (concave pit reflector)",
+      "source_type": "patent",
+      "round_number": 2
+    },
+    {
+      "publication_number": "CN107465388A",
+      "triage_label": "B",
+      "title": "Improve water generating double-face PV assembly",
+      "source_type": "patent",
+      "round_number": 2
+    },
+    {
+      "publication_number": "US20090133732A1",
+      "triage_label": "C",
+      "title": "Floating solar power collectors and application means",
+      "source_type": "patent",
+      "round_number": 2
+    },
+    {
+      "publication_number": "IN202011046574A",
+      "triage_label": null,
+      "title": "Monitoring floating solar power plant using IoT sensor nodes",
+      "source_type": "semantic",
+      "round_number": 2
+    },
+    {
+      "publication_number": "CN206056642U",
+      "triage_label": null,
+      "title": "PV environment monitoring instrument incl. PV backplate temperature instrument",
+      "source_type": "semantic",
+      "round_number": 2
+    },
+    {
+      "publication_number": "CN117353654A",
+      "triage_label": null,
+      "title": "On-site monitoring system for offshore floating photovoltaics",
+      "source_type": "semantic",
+      "round_number": 2
+    },
+    {
+      "publication_number": "CN117353655A",
+      "triage_label": null,
+      "title": "RTK-based offshore floating PV intelligent monitoring system",
+      "source_type": "semantic",
+      "round_number": 2
+    },
+    {
+      "publication_number": "KR2601440B1",
+      "triage_label": null,
+      "title": "LoRa-based real-time monitoring of solar junction box",
+      "source_type": "semantic",
+      "round_number": 2
+    },
+    {
+      "publication_number": "CN219394799U",
+      "triage_label": null,
+      "title": "Measuring PV component power generation in sea-surface floating environment",
+      "source_type": "semantic",
+      "round_number": 2
+    },
+    {
+      "publication_number": "CN207208395U",
+      "triage_label": null,
+      "title": "Water-surface floating PV device with light sensor",
+      "source_type": "semantic",
+      "round_number": 2
+    },
+    {
+      "publication_number": "WO2010064271A2",
+      "triage_label": null,
+      "title": "Modular floating structure for photovoltaic installation",
+      "source_type": "semantic",
+      "round_number": 2
+    },
+    {
+      "publication_number": "GB2608913A",
+      "triage_label": null,
+      "title": "Modular raft system for floating PV panel installation",
+      "source_type": "semantic",
+      "round_number": 2
+    },
+    {
+      "publication_number": "CN206364749U",
+      "triage_label": null,
+      "title": "Raft-type PV water-surface floating device",
+      "source_type": "semantic",
+      "round_number": 2
+    },
+    {
+      "publication_number": "DE202008006347U1",
+      "triage_label": null,
+      "title": "Support system for PV on pontoon-like floating body",
+      "source_type": "semantic",
+      "round_number": 2
+    },
+    {
+      "publication_number": "IL303565A",
+      "triage_label": null,
+      "title": "Modular floating platform PV arrays with triangular floats",
+      "source_type": "semantic",
+      "round_number": 2
+    },
+    {
+      "publication_number": "CN211183899U",
+      "triage_label": null,
+      "title": "PV junction box mounting structure for water-surface floating station",
+      "source_type": "semantic",
+      "round_number": 2
+    },
+    {
+      "publication_number": "RU214053U1",
+      "triage_label": null,
+      "title": "Floating multilayer platform with buoyancy modules connected by clamps",
+      "source_type": "semantic",
+      "round_number": 2
+    },
+    {
+      "publication_number": "CN207173912U",
+      "triage_label": null,
+      "title": "Water floating platform with floating grid plates",
+      "source_type": "semantic",
+      "round_number": 2
+    },
+    {
+      "publication_number": "US4691656A",
+      "triage_label": null,
+      "title": "Floating dock construction with detachable buoyancy boxes",
+      "source_type": "semantic",
+      "round_number": 2
+    },
+    {
+      "publication_number": "FR2659058A1",
+      "triage_label": null,
+      "title": "Modular pontoon deck with skirt over pneumatic float assembly",
+      "source_type": "semantic",
+      "round_number": 2
+    },
+    {
+      "publication_number": "CN107804438A",
+      "triage_label": null,
+      "title": "Modular offshore working platform with buoyancy chamber cavity + fasteners",
+      "source_type": "semantic",
+      "round_number": 2
+    },
+    {
+      "publication_number": "US10097131B2",
+      "triage_label": null,
+      "title": "Buoyant platform panel with integrated buoyancy unit + couplers",
+      "source_type": "semantic",
+      "round_number": 2
+    },
+    {
+      "publication_number": "IL279932A",
+      "triage_label": null,
+      "title": "N/A",
+      "source_type": "citations",
+      "round_number": 2
+    },
+    {
+      "publication_number": "WO2024078733A1",
+      "triage_label": null,
+      "title": "N/A",
+      "source_type": "citations",
+      "round_number": 2
+    },
+    {
+      "publication_number": "CN108347220A",
+      "triage_label": null,
+      "title": "N/A",
+      "source_type": "citations",
+      "round_number": 2
+    },
+    {
+      "publication_number": "CN112542985A",
+      "triage_label": null,
+      "title": "N/A",
+      "source_type": "citations",
+      "round_number": 2
+    }
+  ]
+}

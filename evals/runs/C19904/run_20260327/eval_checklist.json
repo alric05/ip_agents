@@ -1,0 +1,29 @@
+{
+  "passed": false,
+  "checks": {
+    "patent_search_called": true,
+    "semantic_search_called": true,
+    "npl_search_called": false,
+    "min_search_queries": true,
+    "think_tool_used": true,
+    "coverage_evaluated": true,
+    "findings_persisted": true,
+    "scope_artifact_exists": true,
+    "features_artifact_exists": true,
+    "report_generated": true,
+    "run_completed_without_error": true
+  },
+  "details": {
+    "patent_search_called": "patent_keyword_search called 27 times (via sub-agents)",
+    "semantic_search_called": "batch_semantic_search called 2 times, semantic_patent_search called 18 times (via sub-agents)",
+    "npl_search_called": "FAILED: No NPL search tool was called (expected npl_search or batch_npl_search at orchestrator or sub-agent level)",
+    "min_search_queries": "57 total search tool calls (orchestrator: 0, sub-agents: 57, minimum: 3)",
+    "think_tool_used": "think_tool called 2 times during AUTONOMOUS_RESEARCH",
+    "coverage_evaluated": "Coverage assessed via think_tool reflection (2 think_tool calls found with coverage analysis content)",
+    "findings_persisted": "save_round_findings called 1 time",
+    "scope_artifact_exists": "scope.md exists (1,790 bytes)",
+    "features_artifact_exists": "features.md exists (1,773 bytes)",
+    "report_generated": "final_report.md exists (24,793 bytes)",
+    "run_completed_without_error": "Run completed successfully"
+  }
+}

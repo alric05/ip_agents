@@ -1,0 +1,268 @@
+{
+  "session_id": "20260326_221532_cb95fa53",
+  "generated_at": "2026-03-26T22:26:42.817198",
+  "start_time": "2026-03-26T22:15:32.073777",
+  "summary": {
+    "total_discovered": 6,
+    "total_persisted": 19,
+    "total_triaged": 0,
+    "total_feature_mapped": 0,
+    "total_reported": 30,
+    "overall_retention_pct": 500.0
+  },
+  "total_evaluated": {
+    "total": 6,
+    "by_source": {
+      "citation": 6
+    }
+  },
+  "funnel": {
+    "discovered_to_persisted": {
+      "before": 6,
+      "after": 19,
+      "lost": -13,
+      "loss_pct": -216.7
+    },
+    "persisted_to_triaged": {
+      "before": 19,
+      "after": 0,
+      "lost": 19,
+      "loss_pct": 100.0
+    },
+    "triaged_to_feature_mapped": {
+      "before": 0,
+      "after": 0,
+      "lost": 0,
+      "loss_pct": 0.0
+    },
+    "feature_mapped_to_reported": {
+      "before": 0,
+      "after": 30,
+      "lost": -30,
+      "loss_pct": 0.0
+    }
+  },
+  "by_source": {
+    "other": {
+      "discovered": 0,
+      "persisted": 19,
+      "triaged": 0,
+      "feature_mapped": 0,
+      "reported": 25
+    },
+    "citation": {
+      "discovered": 6,
+      "persisted": 0,
+      "triaged": 0,
+      "feature_mapped": 0,
+      "reported": 5
+    }
+  },
+  "by_round": {},
+  "by_triage_level": {
+    "unknown": {
+      "count": 33,
+      "feature_mapped": 0,
+      "reported": 30
+    }
+  },
+  "lost_patents": {
+    "discovered_not_persisted": [
+      {
+        "pub_number": "US9729101B1",
+        "source_tool": "batch_citation_search",
+        "round": null,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "citation",
+          "title": "Deployment techniques of a floating photovoltaic power generation system"
+        }
+      },
+      {
+        "pub_number": "WO2024078733A1",
+        "source_tool": "batch_citation_search",
+        "round": null,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "citation",
+          "title": "Floating photovoltaic platform"
+        }
+      },
+      {
+        "pub_number": "US20210214056A1",
+        "source_tool": "batch_citation_search",
+        "round": null,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "citation",
+          "title": "Floatable array ready solar module mounting device, system and method of solar energy collection"
+        }
+      },
+      {
+        "pub_number": "US20090133732A1",
+        "source_tool": "batch_citation_search",
+        "round": null,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "citation",
+          "title": "Floating solar power collectors and application means"
+        }
+      },
+      {
+        "pub_number": "US11319035B2",
+        "source_tool": "batch_citation_search",
+        "round": null,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "citation",
+          "title": "Floating type solar power generation equipment stage device"
+        }
+      },
+      {
+        "pub_number": "IL279932A",
+        "source_tool": "batch_citation_search",
+        "round": null,
+        "triage_label": "unknown",
+        "metadata": {
+          "source_type": "citation",
+          "title": "Floating solar panel array installation and mooring and method of assembly"
+        }
+      }
+    ],
+    "persisted_not_triaged": [
+      {
+        "pub_number": "CN205430131U",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN105857535A",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "JP06564515B1",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN118220409A",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN205632949U",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN212766646U",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN212766645U",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN208897268U",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN104124915B",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN205160467U",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN108879959A",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN218368211U",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN206808435U",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN218858654U",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN119370277A",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN115694328A",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN217445281U",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "MY203354A",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      },
+      {
+        "pub_number": "CN222966971U",
+        "source_tool": "save_round_findings",
+        "round": 1,
+        "triage_label": "unknown",
+        "metadata": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,4081 @@
+{
+  "schema_version": "1.1",
+  "trace_type": "novelty_checker",
+  "run_metadata": {
+    "session_id": "20260326_221532_cb95fa53",
+    "total_duration_seconds": 725,
+    "final_phase": "COMPLETED",
+    "model_name": "gpt-5.2"
+  },
+  "turns": [],
+  "stage_summary": {
+    "INITIAL": {
+      "total_duration_seconds": 30
+    },
+    "AUTONOMOUS_RESEARCH": {
+      "total_duration_seconds": 650
+    },
+    "COMPLETED": {
+      "total_duration_seconds": 45
+    }
+  },
+  "telemetry": {
+    "session_id": "20260326_221532_cb95fa53",
+    "start_time": "2026-03-26T22:15:32.073748",
+    "rounds": [],
+    "tool_calls": [
+      {
+        "tool_name": "write_todos",
+        "timestamp": "2026-03-26T22:15:38.750902",
+        "duration_ms": 0.7563750259578228,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "write_todos",
+        "timestamp": "2026-03-26T22:16:01.071758",
+        "duration_ms": 0.5137918051332235,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "write_file",
+        "timestamp": "2026-03-26T22:16:07.817970",
+        "duration_ms": 3.53358406573534,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "write_todos",
+        "timestamp": "2026-03-26T22:16:29.076051",
+        "duration_ms": 0.7066249381750822,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "write_file",
+        "timestamp": "2026-03-26T22:16:34.690460",
+        "duration_ms": 1.967957941815257,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "get_all_findings",
+        "timestamp": "2026-03-26T22:16:36.063243",
+        "duration_ms": 0.9824158623814583,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "read_file",
+        "timestamp": "2026-03-26T22:16:38.383563",
+        "duration_ms": 3.743792185559869,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "read_file",
+        "timestamp": "2026-03-26T22:16:38.383778",
+        "duration_ms": 6.014749873429537,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "ls",
+        "timestamp": "2026-03-26T22:16:38.384075",
+        "duration_ms": 8.528125006705523,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "batch_unified_search",
+        "timestamp": "2026-03-26T22:17:06.569119",
+        "duration_ms": 0.5986669566482306,
+        "success": true,
+        "error": null,
+        "agent_name": "semantic-recall-searcher",
+        "args": {
+          "max_results_per_query": 10
+        }
+      },
+      {
+        "tool_name": "think_tool",
+        "timestamp": "2026-03-26T22:17:12.778097",
+        "duration_ms": 0.46237511560320854,
+        "success": true,
+        "error": null,
+        "agent_name": "semantic-recall-searcher",
+        "args": null
+      },
+      {
+        "tool_name": "batch_unified_search",
+        "timestamp": "2026-03-26T22:17:13.702411",
+        "duration_ms": 0.774540938436985,
+        "success": true,
+        "error": null,
+        "agent_name": "semantic-recall-searcher",
+        "args": {
+          "max_results_per_query": 10
+        }
+      },
+      {
+        "tool_name": "think_tool",
+        "timestamp": "2026-03-26T22:17:17.179191",
+        "duration_ms": 1.021666917949915,
+        "success": true,
+        "error": null,
+        "agent_name": "semantic-recall-searcher",
+        "args": null
+      },
+      {
+        "tool_name": "batch_unified_search",
+        "timestamp": "2026-03-26T22:17:33.564930",
+        "duration_ms": 7840.602291980758,
+        "success": true,
+        "error": null,
+        "agent_name": "semantic-recall-searcher",
+        "args": {
+          "max_results_per_query": 10,
+          "from_year": 2000,
+          "to_year": 2026,
+          "semantic_queries": [
+            {
+              "query_id": "S1",
+              "query_text": "A floating photovoltaic platform built from a rectangular float module that has an internal cross shaped or cruciform frame dividing the deck into four openings, each opening holding a separate pontoon or buoyant cassette",
+              "feature_ids": [
+                "F1",
+                "F6"
+              ]
+            },
+            {
+              "query_id": "S2",
+              "query_text": "Modular floating solar raft where a frame with orthogonal beams holds multiple detachable pontoons and supports photovoltaic modules on top, designed to connect many rafts into an array",
+              "feature_ids": [
+                "F1",
+                "F6"
+              ]
+            },
+            {
+              "query_id": "S3",
+              "query_text": "Floating solar array mooring using concrete deadweight anchor blocks on the bottom and corner tether lines or cables attached to the corners of floating PV units",
+              "feature_ids": [
+                "F3",
+                "F6"
+              ]
+            },
+            {
+              "query_id": "S4",
+              "query_text": "Bifacial photovoltaic panel mounted on a floating structure at a fixed tilt using triangular brackets or A-frame supports so the rear side receives reflected light from water",
+              "feature_ids": [
+                "F2"
+              ]
+            },
+            {
+              "query_id": "S5",
+              "query_text": "Floating PV performance monitoring using sensors for front and rear irradiance and top and bottom module temperature, connected to a data logger with wireless transmission to a remote database",
+              "feature_ids": [
+                "F4",
+                "F5"
+              ]
+            },
+            {
+              "query_id": "S6",
+              "query_text": "Floating photovoltaic system with junction box or combiner box that measures string current and voltage and sends telemetry wirelessly from a floating platform to a central server",
+              "feature_ids": [
+                "F4",
+                "F5"
+              ]
+            }
+          ],
+          "npl_queries": [
+            {
+              "query_id": "N1",
+              "query_text": "TS=(floating photovoltaic monitoring wireless data logger irradiance temperature bifacial)",
+              "feature_ids": [
+                "F2",
+                "F4",
+                "F5"
+              ]
+            },
+            {
+              "query_id": "N2",
+              "query_text": "TS=(floating solar mooring deadweight concrete anchor corner tether)",
+              "feature_ids": [
+                "F3",
+                "F6"
+              ]
+            },
+            {
+              "query_id": "N3",
+              "query_text": "TS=(modular floating PV platform pontoon frame cross beam)",
+              "feature_ids": [
+                "F1",
+                "F6"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "tool_name": "think_tool",
+        "timestamp": "2026-03-26T22:17:39.361334",
+        "duration_ms": 0.3970838151872158,
+        "success": true,
+        "error": null,
+        "agent_name": "semantic-recall-searcher",
+        "args": null
+      },
+      {
+        "tool_name": "semantic_patent_search",
+        "timestamp": "2026-03-26T22:17:43.413495",
+        "duration_ms": 1877.5642910040915,
+        "success": true,
+        "error": null,
+        "agent_name": "semantic-recall-searcher",
+        "args": {
+          "query": "A floating photovoltaic platform built from a rectangular float module that has an internal cross shaped or cruciform frame dividing the deck into four openings, each opening holding a separate pontoon or buoyant cassette",
+          "feature_id": "F1,F6",
+          "max_results": 10
+        }
+      },
+      {
+        "tool_name": "semantic_patent_search",
+        "timestamp": "2026-03-26T22:17:43.624839",
+        "duration_ms": 2088.8754171319306,
+        "success": true,
+        "error": null,
+        "agent_name": "semantic-recall-searcher",
+        "args": {
+          "query": "Floating solar array mooring using concrete deadweight anchor blocks on the bottom and corner tether lines or cables attached to the corners of floating PV units",
+          "feature_id": "F3",
+          "max_results": 10
+        }
+      },
+      {
+        "tool_name": "semantic_patent_search",
+        "timestamp": "2026-03-26T22:17:44.736132",
+        "duration_ms": 3200.1519170589745,
+        "success": true,
+        "error": null,
+        "agent_name": "semantic-recall-searcher",
+        "args": {
+          "query": "Floating PV performance monitoring using sensors for front and rear irradiance and top and bottom module temperature, connected to a data logger with wireless transmission to a remote database",
+          "feature_id": "F4,F5",
+          "max_results": 10
+        }
+      },
+      {
+        "tool_name": "think_tool",
+        "timestamp": "2026-03-26T22:17:55.108592",
+        "duration_ms": 0.447999918833375,
+        "success": true,
+        "error": null,
+        "agent_name": "semantic-recall-searcher",
+        "args": null
+      },
+      {
+        "tool_name": "semantic_patent_search",
+        "timestamp": "2026-03-26T22:17:58.248702",
+        "duration_ms": 1252.5644169654697,
+        "success": true,
+        "error": null,
+        "agent_name": "semantic-recall-searcher",
+        "args": {
+          "query": "Bifacial photovoltaic panels mounted on floating solar platforms at a fixed tilt angle using triangular brackets, A-frame supports, or inclined mounting rails so the rear side captures reflection from water",
+          "feature_id": "F2",
+          "max_results": 15
+        }
+      },
+      {
+        "tool_name": "batch_unified_search",
+        "timestamp": "2026-03-26T22:18:00.280384",
+        "duration_ms": 38861.910958075896,
+        "success": true,
+        "error": null,
+        "agent_name": "structural-combo-searcher",
+        "args": {
+          "max_results_per_query": 10,
+          "patent_queries": [
+            {
+              "query_id": "K1_A_F1F2",
+              "query_text": "@(title,abstract,claims) ((floating NEAR/10 photovoltaic OR FPV OR solar) AND (rectangular NEAR/10 float* OR pontoon* OR buoyant module*) AND (cross NEAR/15 support OR cruciform OR \"cross-shaped\" OR \"cross shaped\" OR orthogonal NEAR/5 beam*) AND (four NEAR/10 opening* OR four NEAR/10 cavity* OR four NEAR/10 compartment*) AND (triangular NEAR/10 support* OR A-frame OR \"A frame\" OR \"A-frame\" OR tilted NEAR/5 mount*))",
+              "feature_ids": [
+                "F1",
+                "F2"
+              ]
+            },
+            {
+              "query_id": "K1_B_F1F3",
+              "query_text": "@(title,abstract,claims) ((floating NEAR/10 photovoltaic OR FPV OR solar) AND (rectangular NEAR/10 float* OR pontoon* OR buoyant module*) AND (cross NEAR/15 support OR cruciform OR orthogonal NEAR/5 beam*) AND (deadweight OR sinker OR concrete NEAR/5 block*) AND (corner NEAR/10 moor* OR mooring corner*) AND (wire* NEAR/10 plastic-coat* OR \"plastic coated\" OR polymer-coat*))",
+              "feature_ids": [
+                "F1",
+                "F3"
+              ]
+            },
+            {
+              "query_id": "K1_C_F1F4",
+              "query_text": "@(title,abstract,claims) ((floating NEAR/10 photovoltaic OR FPV OR solar) AND (rectangular NEAR/10 float* OR pontoon* OR buoyant module*) AND (cross NEAR/15 support OR cruciform OR orthogonal NEAR/5 beam*) AND (sensor* OR temperature OR irradiance OR pyranometer OR logger OR datalogger OR wireless OR telemetry))",
+              "feature_ids": [
+                "F1",
+                "F4"
+              ]
+            },
+            {
+              "query_id": "K1_D_F2F4",
+              "query_text": "@(title,abstract,claims) ((floating NEAR/10 photovoltaic OR FPV OR solar) AND (bifacial OR \"double-sided\" OR double sided) AND (triangular NEAR/10 support* OR A-frame OR \"A-frame\" OR tilted NEAR/5 mount*) AND ((temperature NEAR/5 sensor*) OR (backsheet NEAR/10 temperature) OR (rear NEAR/10 temperature) OR (front NEAR/10 temperature)) AND (irradiance OR pyranometer OR albedometer OR \"rear irradiance\" OR \"front irradiance\") AND (logger OR datalogger OR wireless OR telemetry OR SCADA))",
+              "feature_ids": [
+                "F2",
+                "F4"
+              ]
+            },
+            {
+              "query_id": "K1_FPV_modular_cross",
+              "query_text": "@(title,abstract,claims) ((modular NEAR/10 floating platform OR floating dock) AND (rectangular NEAR/10 module) AND (cruciform OR cross-shaped OR \"cross shaped\" OR orthogonal NEAR/5 rib* OR crossbeam*) AND (four NEAR/10 opening* OR four NEAR/10 recess* OR four NEAR/10 cavity*))",
+              "feature_ids": [
+                "F1"
+              ]
+            },
+            {
+              "query_id": "K1_moor_deadweight",
+              "query_text": "@(title,abstract,claims) ((floating solar OR floating photovoltaic OR FPV) AND (deadweight OR sinker OR concrete block) AND (wire rope OR cable) AND (plastic-coated OR polymer-coated OR sheathed) AND (corner mooring OR mooring at corner))",
+              "feature_ids": [
+                "F3"
+              ]
+            }
+          ],
+          "npl_queries": [
+            {
+              "query_id": "N1_FPV_bifacial_monitoring",
+              "query_text": "TS=(floating photovoltaic bifacial monitoring rear irradiance temperature sensor datalogger wireless)",
+              "feature_ids": [
+                "F2",
+                "F4"
+              ]
+            },
+            {
+              "query_id": "N1_FPV_mooring_deadweight",
+              "query_text": "TS=(floating photovoltaic mooring deadweight concrete block wire rope coated)",
+              "feature_ids": [
+                "F3"
+              ]
+            }
+          ],
+          "semantic_queries": [
+            {
+              "query_id": "S1_comboA",
+              "query_text": "Floating photovoltaic modular rectangular float platform that uses an internal cross or cruciform support to create four openings that each retain a separate pontoon, and includes triangular or A-frame supports to hold a solar panel at a fixed tilt.",
+              "feature_ids": [
+                "F1",
+                "F2"
+              ]
+            },
+            {
+              "query_id": "S1_comboB",
+              "query_text": "Floating solar platform with rectangular float modules and corner mooring lines to concrete deadweight blocks, optionally using coated stainless wire ropes or cables.",
+              "feature_ids": [
+                "F1",
+                "F3"
+              ]
+            },
+            {
+              "query_id": "S1_comboC",
+              "query_text": "Floating photovoltaic platform with integrated environmental and PV sensors such as module temperature and irradiance, a data logger, and wireless telemetry to a central database, built on modular floats.",
+              "feature_ids": [
+                "F1",
+                "F4"
+              ]
+            },
+            {
+              "query_id": "S1_comboD",
+              "query_text": "Bifacial floating photovoltaic system with fixed-tilt triangular/A-frame mounting structures and monitoring of front and rear module temperature and irradiance, with wireless logging or SCADA.",
+              "feature_ids": [
+                "F2",
+                "F4"
+              ]
+            },
+            {
+              "query_id": "S1_cross_frame_pontoons",
+              "query_text": "Modular floating dock or pontoon platform where a rectangular frame has internal orthogonal cross members forming multiple openings that each capture separate pontoons or buoyancy blocks.",
+              "feature_ids": [
+                "F1"
+              ]
+            }
+          ],
+          "from_year": 2000,
+          "to_year": 2026
+        }
+      },
+      {
+        "tool_name": "think_tool",
+        "timestamp": "2026-03-26T22:18:12.842114",
+        "duration_ms": 0.7752079982310534,
+        "success": true,
+        "error": null,
+        "agent_name": "structural-combo-searcher",
+        "args": null
+      },
+      {
+        "tool_name": "task",
+        "timestamp": "2026-03-26T22:18:33.255963",
+        "duration_ms": 88707.11495890282,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "batch_unified_search",
+        "timestamp": "2026-03-26T22:18:44.034849",
+        "duration_ms": 85795.97666696645,
+        "success": true,
+        "error": null,
+        "agent_name": "keyword-precision-searcher",
+        "args": {
+          "patent_queries": [
+            {
+              "query_id": "K1-F1-1",
+              "query_text": "@(dwpi_title,dwpi_novelty) ((floating OR pontoon* OR buoyant) NEAR/5 (photovoltaic OR solar)) AND (rectangular ADJ/3 (float* OR platform OR pontoon*)) AND (cross ADJ/3 (brace OR support OR frame))",
+              "feature_ids": [
+                "F1"
+              ]
+            },
+            {
+              "query_id": "K1-F1-2",
+              "query_text": "@(title,abstract,claims) ((rectangular OR square) NEAR/5 (float* OR pontoon* OR platform)) AND ((cross OR X-shaped) NEAR/3 (brace OR frame OR support)) AND (four NEAR/3 (opening* OR compartment* OR pontoon*))",
+              "feature_ids": [
+                "F1"
+              ]
+            },
+            {
+              "query_id": "K1-F1-3",
+              "query_text": "@(dwpi_title,dwpi_novelty) ((cross OR X-shaped) ADJ/3 (brace OR frame OR support)) AND (pontoon* OR float*) AND (modular ADJ/3 unit)",
+              "feature_ids": [
+                "F1"
+              ]
+            },
+            {
+              "query_id": "K1-F2-1",
+              "query_text": "@(dwpi_title,dwpi_novelty) (bifacial NEAR/5 (photovoltaic OR PV)) AND ((triangular OR A-frame) NEAR/3 (support OR bracket OR mount)) AND (floating OR pontoon* OR raft)",
+              "feature_ids": [
+                "F2"
+              ]
+            },
+            {
+              "query_id": "K1-F2-2",
+              "query_text": "@(title,abstract,claims) ((A-frame OR \"A frame\" OR triangular) NEAR/3 (bracket OR support OR mount)) AND (tilt* NEAR/5 (panel OR module OR photovoltaic)) AND (float* OR pontoon* OR floating)",
+              "feature_ids": [
+                "F2"
+              ]
+            },
+            {
+              "query_id": "K1-F3-1",
+              "query_text": "@(dwpi_title,dwpi_novelty) ((deadweight OR \"concrete block\" OR concrete) NEAR/5 (anchor OR mooring)) AND (floating NEAR/5 (solar OR photovoltaic OR PV))",
+              "feature_ids": [
+                "F3"
+              ]
+            },
+            {
+              "query_id": "K1-F3-2",
+              "query_text": "@(title,abstract,claims) ((plastic-coated OR polymer-coated OR coated) NEAR/3 (stainless ADJ/2 (wire OR cable))) AND (mooring OR tether*) AND (floating NEAR/5 (solar OR photovoltaic OR PV))",
+              "feature_ids": [
+                "F3"
+              ]
+            },
+            {
+              "query_id": "K1-F4-1",
+              "query_text": "@(dwpi_title,dwpi_novelty) ((irradiance OR pyranometer OR \"solar radiation\") NEAR/5 sensor) AND (\"data logger\" OR datalogger OR telemetry) AND (floating NEAR/5 (photovoltaic OR solar OR PV))",
+              "feature_ids": [
+                "F4"
+              ]
+            },
+            {
+              "query_id": "K1-F4-2",
+              "query_text": "@(title,abstract,claims) ((backsheet OR rear) NEAR/3 temperature NEAR/3 sensor) AND (irradiance NEAR/5 sensor) AND ((wireless OR NB-IoT OR LTE OR LoRa) NEAR/10 (logger OR monitoring OR telemetry)) AND (floating NEAR/5 (photovoltaic OR solar OR PV))",
+              "feature_ids": [
+                "F4"
+              ]
+            },
+            {
+              "query_id": "K1-F5-1",
+              "query_text": "@(title,abstract,claims) ((junction box OR combiner box) NEAR/10 (current sensor OR voltage sensor)) AND (wireless NEAR/10 (transmit* OR telemetry OR monitoring)) AND (floating NEAR/5 (solar OR photovoltaic OR PV))",
+              "feature_ids": [
+                "F5"
+              ]
+            },
+            {
+              "query_id": "K1-F6-1",
+              "query_text": "@(dwpi_title,dwpi_novelty) ((modular OR connectable OR interconnect*) NEAR/5 (float* OR pontoon* OR raft)) AND (array NEAR/5 (floating solar OR floating photovoltaic OR FPV))",
+              "feature_ids": [
+                "F6"
+              ]
+            }
+          ],
+          "npl_queries": [
+            {
+              "query_id": "NPL-TI-1",
+              "query_text": "TI=((floating NEAR/3 photovoltaic) OR (floating NEAR/3 solar) OR FPV)",
+              "feature_ids": [
+                "F1",
+                "F6"
+              ]
+            },
+            {
+              "query_id": "NPL-TI-2",
+              "query_text": "TI=((bifacial NEAR/3 floating) AND (mount OR bracket OR A-frame OR \"A frame\"))",
+              "feature_ids": [
+                "F2"
+              ]
+            },
+            {
+              "query_id": "NPL-TI-3",
+              "query_text": "TI=((deadweight OR concrete) NEAR/3 (anchor OR mooring) NEAR/3 (floating solar OR floating photovoltaic))",
+              "feature_ids": [
+                "F3"
+              ]
+            },
+            {
+              "query_id": "NPL-TI-4",
+              "query_text": "TI=((irradiance OR pyranometer OR \"data logger\" OR telemetry) NEAR/3 (floating photovoltaic OR floating solar))",
+              "feature_ids": [
+                "F4"
+              ]
+            }
+          ],
+          "semantic_queries": [],
+          "max_results_per_query": 10,
+          "from_year": 2000,
+          "to_year": 2026
+        }
+      },
+      {
+        "tool_name": "think_tool",
+        "timestamp": "2026-03-26T22:18:54.578752",
+        "duration_ms": 0.5872920155525208,
+        "success": true,
+        "error": null,
+        "agent_name": "keyword-precision-searcher",
+        "args": null
+      },
+      {
+        "tool_name": "batch_unified_search",
+        "timestamp": "2026-03-26T22:18:59.222645",
+        "duration_ms": 34638.85183306411,
+        "success": true,
+        "error": null,
+        "agent_name": "structural-combo-searcher",
+        "args": {
+          "max_results_per_query": 10,
+          "patent_queries": [
+            {
+              "query_id": "K2_F1_cruciform_four_pontoons",
+              "query_text": "@(title,abstract,claims) ((floating dock OR floating platform OR floating photovoltaic OR floating solar) AND (cruciform OR \"cross-shaped\" OR \"cross shaped\" OR \"cross member\" OR crossbeam* OR lattice OR grid) NEAR/20 (frame OR support OR rib*) AND (four NEAR/10 (pontoon* OR float* OR buoyancy member* OR buoyant body* OR buoyancy block*)) AND (opening* OR recess* OR cavity OR compartment OR pocket))",
+              "feature_ids": [
+                "F1"
+              ]
+            },
+            {
+              "query_id": "K2_F1_rectangular_frame_four_floats",
+              "query_text": "@(title,abstract,claims) ((rectangular OR quadrilateral) NEAR/10 (frame OR module OR float) AND ((cross NEAR/5 rib*) OR (orthogonal NEAR/5 beam*) OR (internal NEAR/5 partition*)) AND (retain* OR hold* OR trap* OR receive*) NEAR/15 (four NEAR/5 (float* OR pontoon* OR buoyancy body*)))",
+              "feature_ids": [
+                "F1"
+              ]
+            },
+            {
+              "query_id": "K2_comboB_deadweight_corner",
+              "query_text": "@(title,abstract,claims) ((floating photovoltaic OR floating solar) AND (module OR array OR platform) AND ((deadweight OR \"dead weight\" OR gravity OR concrete) NEAR/5 (anchor OR block OR ballast)) AND (corner NEAR/10 (mooring OR anchor line OR bridle)) AND (wire rope OR cable) AND (sheath* OR jacket* OR coated OR plastic))",
+              "feature_ids": [
+                "F1",
+                "F3"
+              ]
+            },
+            {
+              "query_id": "K2_comboD_bifacial_rear_irradiance",
+              "query_text": "@(title,abstract,claims) ((floating photovoltaic OR floating solar) AND (bifacial OR double-sided OR \"double sided\") AND (rear NEAR/5 irradiance OR backside NEAR/5 irradiance OR albedo OR albedometer OR \"rear pyranometer\") AND ((front NEAR/5 temperature) OR (rear NEAR/5 temperature) OR (backsheet NEAR/5 temperature)) AND (logger OR datalogger OR SCADA OR telemetry OR wireless))",
+              "feature_ids": [
+                "F2",
+                "F4"
+              ]
+            }
+          ],
+          "semantic_queries": [
+            {
+              "query_id": "S2_F1_cruciform_cells",
+              "query_text": "A modular floating dock or platform module where a rectangular outer frame has a central cross-shaped beam structure that divides the interior into four pockets or openings, each pocket receiving a separate pontoon or buoyant block.",
+              "feature_ids": [
+                "F1"
+              ]
+            },
+            {
+              "query_id": "S2_comboA_cross_and_Aframe",
+              "query_text": "Floating solar platform using a rectangular float module with a cruciform internal support that holds four separate floats, combined with A-frame or triangular mounting brackets that hold a photovoltaic panel at a fixed tilt.",
+              "feature_ids": [
+                "F1",
+                "F2"
+              ]
+            },
+            {
+              "query_id": "S2_comboB_corner_gravity_anchor",
+              "query_text": "Floating photovoltaic array with corner bridle moorings connected to gravity anchors or concrete deadweight blocks using polymer-sheathed wire ropes or coated stainless steel cables.",
+              "feature_ids": [
+                "F1",
+                "F3"
+              ]
+            },
+            {
+              "query_id": "S2_comboD_bifacial_dual_temp",
+              "query_text": "Bifacial floating photovoltaic installation that measures both front-side and rear-side module temperature and also measures front and rear irradiance, sending data via wireless telemetry or SCADA to a central database.",
+              "feature_ids": [
+                "F2",
+                "F4"
+              ]
+            }
+          ],
+          "from_year": 1995,
+          "to_year": 2026
+        }
+      },
+      {
+        "tool_name": "think_tool",
+        "timestamp": "2026-03-26T22:19:09.116970",
+        "duration_ms": 0.7897501345723867,
+        "success": true,
+        "error": null,
+        "agent_name": "structural-combo-searcher",
+        "args": null
+      },
+      {
+        "tool_name": "batch_unified_search",
+        "timestamp": "2026-03-26T22:19:31.439690",
+        "duration_ms": 30312.680625123903,
+        "success": true,
+        "error": null,
+        "agent_name": "keyword-precision-searcher",
+        "args": {
+          "patent_queries": [
+            {
+              "query_id": "K2-F1-1",
+              "query_text": "@(title,abstract,claims) ((cross-shaped OR cross shaped OR cruciform OR cruciate) NEAR/3 (partition OR rib* OR support OR frame)) AND ((four OR 4) NEAR/5 (pontoon* OR float* OR chamber* OR compartment* OR opening*)) AND ((rectangular OR square) NEAR/5 (float* OR platform OR module))",
+              "feature_ids": [
+                "F1"
+              ]
+            },
+            {
+              "query_id": "K2-F1-2",
+              "query_text": "@(dwpi_title,dwpi_novelty) ((cruciform OR cross-shaped OR \"cross shaped\") NEAR/5 (support OR frame OR partition)) AND ((four OR 4) NEAR/5 (pontoon* OR float* OR compartment*))",
+              "feature_ids": [
+                "F1"
+              ]
+            },
+            {
+              "query_id": "K2-F3-1",
+              "query_text": "@(title,abstract,claims) ((corner OR vertex) NEAR/5 mooring) AND ((deadweight OR concrete) NEAR/10 (block OR anchor)) AND ((plastic-coated OR polymer-coated) NEAR/5 (stainless NEAR/3 (wire OR cable)))",
+              "feature_ids": [
+                "F3"
+              ]
+            },
+            {
+              "query_id": "K2-F4-1",
+              "query_text": "@(title,abstract,claims) ((floating NEAR/5 photovoltaic) OR (floating NEAR/5 solar) OR FPV) AND ((backsheet OR rear OR underside OR \"bottom surface\") NEAR/5 (temperature sensor OR thermistor)) AND (irradiance NEAR/5 sensor) AND (\"data logger\" OR datalogger)",
+              "feature_ids": [
+                "F4"
+              ]
+            },
+            {
+              "query_id": "K2-F4-2",
+              "query_text": "@(dwpi_title,dwpi_novelty) ((floating NEAR/5 photovoltaic) OR (floating NEAR/5 solar)) AND ((temperature OR irradiance) NEAR/5 sensor) AND ((wireless OR telemetry) NEAR/5 (logger OR monitoring))",
+              "feature_ids": [
+                "F4"
+              ]
+            }
+          ],
+          "npl_queries": [],
+          "semantic_queries": [],
+          "max_results_per_query": 10
+        }
+      },
+      {
+        "tool_name": "think_tool",
+        "timestamp": "2026-03-26T22:19:38.777801",
+        "duration_ms": 1.004708930850029,
+        "success": true,
+        "error": null,
+        "agent_name": "keyword-precision-searcher",
+        "args": null
+      },
+      {
+        "tool_name": "batch_unified_search",
+        "timestamp": "2026-03-26T22:19:40.279739",
+        "duration_ms": 22362.047041999176,
+        "success": true,
+        "error": null,
+        "agent_name": "structural-combo-searcher",
+        "args": {
+          "max_results_per_query": 10,
+          "patent_queries": [
+            {
+              "query_id": "K3_comboD_floating_bifacial_sensors",
+              "query_text": "@(title,abstract,claims) ((floating NEAR/10 (photovoltaic OR solar)) AND (bifacial OR \"double-sided\" OR \"double sided\") AND ((rear OR backside OR backsheet) NEAR/10 (temperature OR temp* OR thermistor OR RTD)) AND ((front OR topside) NEAR/10 (temperature OR temp* OR thermistor OR RTD)) AND ((rear OR backside) NEAR/10 (irradiance OR pyranometer OR albedometer OR albedo)) AND (wireless OR telemetry OR SCADA OR datalogger OR logger))",
+              "feature_ids": [
+                "F2",
+                "F4"
+              ]
+            },
+            {
+              "query_id": "K3_comboA_cross_Aframe_expanded",
+              "query_text": "@(title,abstract,claims) ((floating NEAR/10 (photovoltaic OR solar)) AND (cruciform OR cross-shaped OR \"cross shaped\" OR orthogonal NEAR/5 beam* OR internal NEAR/5 partition*) AND (four NEAR/10 (pontoon* OR float* OR buoyancy member*)) AND (triangular OR \"A-frame\" OR \"A frame\" OR inclined OR tilted) NEAR/15 (support* OR bracket* OR mount*))",
+              "feature_ids": [
+                "F1",
+                "F2"
+              ]
+            },
+            {
+              "query_id": "K3_comboC_sensors_on_float_module",
+              "query_text": "@(title,abstract,claims) ((floating NEAR/10 (photovoltaic OR solar)) AND (float module OR buoyant module OR pontoon module) AND (sensor* NEAR/10 (temperature OR irradiance)) AND (logger OR datalogger) AND (wireless OR radio OR telemetry))",
+              "feature_ids": [
+                "F1",
+                "F4"
+              ]
+            }
+          ],
+          "semantic_queries": [
+            {
+              "query_id": "S3_comboD_albedo_rear_front",
+              "query_text": "Floating bifacial PV array that measures rear-side irradiance (albedo) and both front-side and rear-side module temperature, with a data logger and wireless communication.",
+              "feature_ids": [
+                "F2",
+                "F4"
+              ]
+            },
+            {
+              "query_id": "S3_comboA_cruciform_float_Aframe",
+              "query_text": "A floating photovoltaic pontoon where a rectangular deck has internal orthogonal cross beams forming four compartments for separate buoyancy blocks, and the PV module is held on two triangular side frames at a fixed tilt.",
+              "feature_ids": [
+                "F1",
+                "F2"
+              ]
+            },
+            {
+              "query_id": "S3_comboC_FPV_IoT_sensors",
+              "query_text": "Floating solar system with IoT sensor package on the float measuring PV temperature and solar irradiance, sending data wirelessly to a central database or cloud for monitoring.",
+              "feature_ids": [
+                "F1",
+                "F4"
+              ]
+            }
+          ],
+          "from_year": 2000,
+          "to_year": 2026
+        }
+      },
+      {
+        "tool_name": "think_tool",
+        "timestamp": "2026-03-26T22:19:46.948373",
+        "duration_ms": 0.3871670924127102,
+        "success": true,
+        "error": null,
+        "agent_name": "structural-combo-searcher",
+        "args": null
+      },
+      {
+        "tool_name": "batch_unified_search",
+        "timestamp": "2026-03-26T22:19:50.552254",
+        "duration_ms": 7557.5157918501645,
+        "success": true,
+        "error": null,
+        "agent_name": "keyword-precision-searcher",
+        "args": {
+          "patent_queries": [
+            {
+              "query_id": "K3-F4-1",
+              "query_text": "@(title,abstract,claims) ((floating NEAR/5 (photovoltaic OR solar OR PV)) OR FPV) AND ((sampling OR sample* OR interval* OR periodic* OR \"time interval\") NEAR/5 (logger OR \"data logger\" OR datalogger)) AND ((wireless OR radio OR LTE OR NB-IoT OR \"cellular\") NEAR/10 (transmit* OR communication OR telemetry)) AND ((server OR database OR cloud OR remote) NEAR/10 (monitor* OR store* OR manage*))",
+              "feature_ids": [
+                "F4"
+              ]
+            },
+            {
+              "query_id": "K3-F4-2",
+              "query_text": "@(dwpi_title,dwpi_novelty) ((floating NEAR/5 photovoltaic) OR (floating NEAR/5 solar)) AND ((data logger OR datalogger) NEAR/5 (wireless OR telemetry)) AND ((temperature OR irradiance) NEAR/5 (sensor OR monitoring))",
+              "feature_ids": [
+                "F4"
+              ]
+            },
+            {
+              "query_id": "K3-F4-3",
+              "query_text": "@(title,abstract,claims) ((bifacial OR bi-facial) NEAR/10 (temperature OR thermal) NEAR/5 sensor) AND ((floating OR pontoon* OR raft) NEAR/10 (photovoltaic OR solar OR PV))",
+              "feature_ids": [
+                "F4"
+              ]
+            }
+          ],
+          "npl_queries": [],
+          "semantic_queries": [],
+          "max_results_per_query": 10
+        }
+      },
+      {
+        "tool_name": "think_tool",
+        "timestamp": "2026-03-26T22:19:54.075386",
+        "duration_ms": 0.3768329042941332,
+        "success": true,
+        "error": null,
+        "agent_name": "keyword-precision-searcher",
+        "args": null
+      },
+      {
+        "tool_name": "batch_unified_search",
+        "timestamp": "2026-03-26T22:20:02.195653",
+        "duration_ms": 8808.846999891102,
+        "success": true,
+        "error": null,
+        "agent_name": "structural-combo-searcher",
+        "args": {
+          "max_results_per_query": 10,
+          "patent_queries": [
+            {
+              "query_id": "K4_comboD_force_floating_water_albedo",
+              "query_text": "@(title,abstract,claims) ((bifacial OR \"double-sided\" OR \"double sided\") AND (floating OR raft* OR pontoon* OR buoyant) AND (water OR reservoir OR lake) AND ((rear OR backside) NEAR/10 (irradiance OR pyranometer OR albedometer OR albedo)) AND ((front OR topside) NEAR/10 temperature) AND ((rear OR backside OR backsheet) NEAR/10 temperature) AND (monitor* OR logger OR SCADA OR telemetry))",
+              "feature_ids": [
+                "F2",
+                "F4"
+              ]
+            },
+            {
+              "query_id": "K4_deadweight_concrete_anchor_coated_wire",
+              "query_text": "@(title,abstract,claims) (((floating solar OR floating photovoltaic OR FPV) NEAR/20 (mooring OR anchoring)) AND (concrete NEAR/5 (block OR ballast OR sinker) OR deadweight OR \"dead weight\" OR gravity anchor) AND (wire rope OR cable OR stainless) AND (plastic-coated OR polymer-coated OR sheathed OR jacketed))",
+              "feature_ids": [
+                "F3"
+              ]
+            }
+          ],
+          "semantic_queries": [
+            {
+              "query_id": "S4_comboD_floating_bifacial_scada",
+              "query_text": "SCADA or monitoring system for a bifacial floating photovoltaic plant measuring front and rear irradiance and front and rear module temperatures, particularly on water reservoirs or lakes, with wireless communications.",
+              "feature_ids": [
+                "F2",
+                "F4"
+              ]
+            },
+            {
+              "query_id": "S4_comboB_deadweight_corner_bridle",
+              "query_text": "Floating PV array moored at the corners using bridle lines to concrete deadweight blocks (gravity anchors), possibly using coated wire ropes or stainless cables.",
+              "feature_ids": [
+                "F1",
+                "F3"
+              ]
+            }
+          ],
+          "from_year": 2000,
+          "to_year": 2026
+        }
+      },
+      {
+        "tool_name": "task",
+        "timestamp": "2026-03-26T22:20:03.655799",
+        "duration_ms": 179106.92645795643,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "think_tool",
+        "timestamp": "2026-03-26T22:20:07.828026",
+        "duration_ms": 0.423541059717536,
+        "success": true,
+        "error": null,
+        "agent_name": "structural-combo-searcher",
+        "args": null
+      },
+      {
+        "tool_name": "task",
+        "timestamp": "2026-03-26T22:20:16.825348",
+        "duration_ms": 192275.26125009172,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "save_round_findings",
+        "timestamp": "2026-03-26T22:20:43.005824",
+        "duration_ms": 3.1686669681221247,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "write_file",
+        "timestamp": "2026-03-26T22:20:58.685232",
+        "duration_ms": 14.37608408741653,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "think_tool",
+        "timestamp": "2026-03-26T22:21:07.535545",
+        "duration_ms": 0.7275000680238008,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "semantic_patent_search",
+        "timestamp": "2026-03-26T22:21:15.666184",
+        "duration_ms": 1609.323666896671,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": {
+          "query": "Rectangular floating photovoltaic module that uses an internal cross-shaped or cruciform partition to create four compartments, each holding a separate pontoon or buoyancy module; used as a building block for floating solar arrays.",
+          "feature_id": "F1",
+          "max_results": 25
+        }
+      },
+      {
+        "tool_name": "semantic_patent_search",
+        "timestamp": "2026-03-26T22:21:15.671176",
+        "duration_ms": 1614.2883750144392,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": {
+          "query": "Floating photovoltaic monitoring system for bifacial panels that measures both top-side and bottom-side module temperature, plus solar irradiance, logs data on the floating platform, and sends it wirelessly to a remote database or cloud.",
+          "feature_id": "F4",
+          "max_results": 25
+        }
+      },
+      {
+        "tool_name": "patent_keyword_search",
+        "timestamp": "2026-03-26T22:21:21.030262",
+        "duration_ms": 6973.258167039603,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": {
+          "query": "@(title,abstract,claims) ((floating NEAR/5 (photovoltaic OR solar OR PV) OR FPV) AND ((backsheet OR underside OR bottom OR rear) NEAR/3 (temperature OR thermal) NEAR/3 sensor) AND ((topside OR top) NEAR/3 (temperature OR thermal) NEAR/3 sensor) AND (irradiance OR pyranometer OR albedo) AND (\"data logger\" OR datalogger OR telemetry) AND (wireless OR LTE OR \"cellular\" OR NB-IoT OR LoRa) AND (database OR cloud OR server))",
+          "feature_id": "F4",
+          "max_results": 25
+        }
+      },
+      {
+        "tool_name": "patent_keyword_search",
+        "timestamp": "2026-03-26T22:21:22.487745",
+        "duration_ms": 8430.795249994844,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": {
+          "query": "@(title,abstract,claims) ((floating NEAR/5 (photovoltaic OR solar OR PV) OR FPV) AND (cruciform OR \"cross-shaped\" OR \"cross shaped\" OR crossbeam* OR crossmember* OR \"cross member\" OR orthogonal NEAR/3 beam*) AND ((four OR 4) NEAR/5 (compartment* OR cavity OR bay OR opening* OR recess* OR pocket*)) AND (pontoon* OR buoyancy NEAR/2 (module* OR member* OR block* OR body*)))",
+          "feature_id": "F1",
+          "max_results": 25
+        }
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:21:25.458276",
+        "duration_ms": 1218.8826671335846,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "patent_keyword_search",
+        "timestamp": "2026-03-26T22:22:29.605900",
+        "duration_ms": 61578.267166856676,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": {
+          "query": "@(dwpi_title,dwpi_novelty) (\"floating structure\" NEAR/5 (eco-adaptive OR ecoadaptive OR \"eco adaptive\") NEAR/10 photovoltaic)",
+          "feature_id": "F1",
+          "max_results": 5
+        }
+      },
+      {
+        "tool_name": "batch_citation_search",
+        "timestamp": "2026-03-26T22:22:33.656216",
+        "duration_ms": 1933.1078750547022,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": {
+          "publication_numbers": [
+            "US12323091B1"
+          ],
+          "max_citations_per_patent": 25,
+          "directions": [
+            "forward",
+            "backward"
+          ]
+        }
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:22:37.170473",
+        "duration_ms": 1276.3902919832617,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:22:37.248339",
+        "duration_ms": 1354.5086251106113,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:22:37.289833",
+        "duration_ms": 1395.7705840002745,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:22:37.309556",
+        "duration_ms": 1415.5068339314312,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:22:37.312668",
+        "duration_ms": 1418.820874998346,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:22:37.325839",
+        "duration_ms": 1432.0455831475556,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "write_file",
+        "timestamp": "2026-03-26T22:22:53.420201",
+        "duration_ms": 13.053582981228828,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "think_tool",
+        "timestamp": "2026-03-26T22:22:59.534511",
+        "duration_ms": 0.43575000017881393,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "write_todos",
+        "timestamp": "2026-03-26T22:23:17.076035",
+        "duration_ms": 0.8263750933110714,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "write_file",
+        "timestamp": "2026-03-26T22:23:17.083663",
+        "duration_ms": 22.22325000911951,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "read_file",
+        "timestamp": "2026-03-26T22:23:18.856326",
+        "duration_ms": 28.64745818078518,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "read_file",
+        "timestamp": "2026-03-26T22:23:21.065406",
+        "duration_ms": 33.760208170861006,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:28.188352",
+        "duration_ms": 1274.9696669634432,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:28.222459",
+        "duration_ms": 1302.345999982208,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:28.324950",
+        "duration_ms": 1411.42770787701,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:28.360596",
+        "duration_ms": 1447.090916801244,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:28.360641",
+        "duration_ms": 1440.509415930137,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:28.370848",
+        "duration_ms": 1457.372333155945,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:28.383431",
+        "duration_ms": 1464.6142909768969,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:28.383462",
+        "duration_ms": 1465.6704580411315,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:28.415845",
+        "duration_ms": 1498.7856249790639,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "build_feature_matrix",
+        "timestamp": "2026-03-26T22:23:30.538385",
+        "duration_ms": 0.48220809549093246,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "write_todos",
+        "timestamp": "2026-03-26T22:23:32.818249",
+        "duration_ms": 0.5677910521626472,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "get_all_findings",
+        "timestamp": "2026-03-26T22:23:58.218237",
+        "duration_ms": 3.2870001159608364,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "summarize_findings_for_report",
+        "timestamp": "2026-03-26T22:23:58.218268",
+        "duration_ms": 3.3018330577760935,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:59.636633",
+        "duration_ms": 1418.9104998949915,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:59.747791",
+        "duration_ms": 1532.6997500378639,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:59.747923",
+        "duration_ms": 1532.8452920075506,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:59.747943",
+        "duration_ms": 1532.8729168977588,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:59.747978",
+        "duration_ms": 1530.221166787669,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:59.766882",
+        "duration_ms": 1551.826999988407,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:59.766959",
+        "duration_ms": 1549.1802080068737,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:59.772078",
+        "duration_ms": 1557.009832933545,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:59.772152",
+        "duration_ms": 1554.4122499413788,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:59.775712",
+        "duration_ms": 1559.080583974719,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:59.775791",
+        "duration_ms": 1560.7492909766734,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:59.787723",
+        "duration_ms": 1572.7209588512778,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:59.787774",
+        "duration_ms": 1570.008291862905,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:23:59.798443",
+        "duration_ms": 1580.692958086729,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:24:01.051155",
+        "duration_ms": 2833.280833205208,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:24:01.164952",
+        "duration_ms": 2947.1329171210527,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:24:01.219768",
+        "duration_ms": 3001.9567909184843,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "get_patent_details",
+        "timestamp": "2026-03-26T22:24:01.332204",
+        "duration_ms": 3114.3713330384344,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "ls",
+        "timestamp": "2026-03-26T22:24:03.369573",
+        "duration_ms": 3.449375042691827,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "read_file",
+        "timestamp": "2026-03-26T22:24:05.294874",
+        "duration_ms": 4.077666904777288,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "read_file",
+        "timestamp": "2026-03-26T22:24:05.296153",
+        "duration_ms": 13.151915976777673,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "read_file",
+        "timestamp": "2026-03-26T22:24:05.297411",
+        "duration_ms": 9.304416133090854,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "read_file",
+        "timestamp": "2026-03-26T22:24:05.297458",
+        "duration_ms": 17.665291903540492,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "read_file",
+        "timestamp": "2026-03-26T22:24:05.306896",
+        "duration_ms": 21.303458139300346,
+        "success": true,
+        "error": null,
+        "agent_name": "report-writer",
+        "args": null
+      },
+      {
+        "tool_name": "task",
+        "timestamp": "2026-03-26T22:25:47.651520",
+        "duration_ms": 113075.31541585922,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "write_todos",
+        "timestamp": "2026-03-26T22:26:42.783264",
+        "duration_ms": 1.2227909173816442,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      },
+      {
+        "tool_name": "write_file",
+        "timestamp": "2026-03-26T22:26:42.785304",
+        "duration_ms": 38.80150010809302,
+        "success": true,
+        "error": null,
+        "agent_name": "orchestrator",
+        "args": null
+      }
+    ],
+    "model_calls": [
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:15:38.747058",
+        "duration_ms": 6032.326207961887,
+        "input_tokens": 28814,
+        "output_tokens": 146,
+        "total_tokens": 28960,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.088194,
+        "stage": "stage_1_scoping"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:15:58.129526",
+        "duration_ms": 19373.91349999234,
+        "input_tokens": 29115,
+        "output_tokens": 1124,
+        "total_tokens": 30239,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.100833,
+        "stage": "stage_1_scoping"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:16:01.064422",
+        "duration_ms": 2926.536582875997,
+        "input_tokens": 30246,
+        "output_tokens": 143,
+        "total_tokens": 30389,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.092454,
+        "stage": "stage_1_scoping"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:16:07.803465",
+        "duration_ms": 6727.629375178367,
+        "input_tokens": 30547,
+        "output_tokens": 334,
+        "total_tokens": 30881,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.095649,
+        "stage": "stage_1_scoping"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:16:26.319047",
+        "duration_ms": 18483.14437502995,
+        "input_tokens": 30896,
+        "output_tokens": 964,
+        "total_tokens": 31860,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.104256,
+        "stage": "stage_2_features"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:16:29.067502",
+        "duration_ms": 2736.8879159912467,
+        "input_tokens": 31867,
+        "output_tokens": 143,
+        "total_tokens": 32010,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.097317,
+        "stage": "stage_2_features"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:16:34.684479",
+        "duration_ms": 5603.130124974996,
+        "input_tokens": 32168,
+        "output_tokens": 420,
+        "total_tokens": 32588,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.101544,
+        "stage": "stage_2_features"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:16:36.045278",
+        "duration_ms": 1348.371208179742,
+        "input_tokens": 32603,
+        "output_tokens": 16,
+        "total_tokens": 32619,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.098001,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:16:38.369453",
+        "duration_ms": 2291.2307498045266,
+        "input_tokens": 32861,
+        "output_tokens": 78,
+        "total_tokens": 32939,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.099519,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:17:04.539682",
+        "duration_ms": 26148.80624995567,
+        "input_tokens": 33760,
+        "output_tokens": 1482,
+        "total_tokens": 35242,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.119064,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "semantic-recall-searcher",
+        "timestamp": "2026-03-26T22:17:06.553938",
+        "duration_ms": 1983.324833214283,
+        "input_tokens": 4313,
+        "output_tokens": 23,
+        "total_tokens": 4336,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.013215,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "semantic-recall-searcher",
+        "timestamp": "2026-03-26T22:17:12.763916",
+        "duration_ms": 6183.974541956559,
+        "input_tokens": 4423,
+        "output_tokens": 311,
+        "total_tokens": 4734,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.017001,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "semantic-recall-searcher",
+        "timestamp": "2026-03-26T22:17:13.694920",
+        "duration_ms": 908.2190000917763,
+        "input_tokens": 4755,
+        "output_tokens": 23,
+        "total_tokens": 4778,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.014541,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "semantic-recall-searcher",
+        "timestamp": "2026-03-26T22:17:17.161974",
+        "duration_ms": 3454.9741668161005,
+        "input_tokens": 4865,
+        "output_tokens": 164,
+        "total_tokens": 5029,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.016563,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "keyword-precision-searcher",
+        "timestamp": "2026-03-26T22:17:18.232899",
+        "duration_ms": 13678.795832907781,
+        "input_tokens": 4570,
+        "output_tokens": 1100,
+        "total_tokens": 5670,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.02691,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "structural-combo-searcher",
+        "timestamp": "2026-03-26T22:17:21.412121",
+        "duration_ms": 16826.77058293484,
+        "input_tokens": 4498,
+        "output_tokens": 1148,
+        "total_tokens": 5646,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.02727,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "semantic-recall-searcher",
+        "timestamp": "2026-03-26T22:17:25.719229",
+        "duration_ms": 8525.120167061687,
+        "input_tokens": 5050,
+        "output_tokens": 455,
+        "total_tokens": 5505,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.02061,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "semantic-recall-searcher",
+        "timestamp": "2026-03-26T22:17:39.355535",
+        "duration_ms": 5782.831750111654,
+        "input_tokens": 5670,
+        "output_tokens": 268,
+        "total_tokens": 5938,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.020226,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "semantic-recall-searcher",
+        "timestamp": "2026-03-26T22:17:41.527518",
+        "duration_ms": 2161.4796249195933,
+        "input_tokens": 5959,
+        "output_tokens": 199,
+        "total_tokens": 6158,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.020265,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "semantic-recall-searcher",
+        "timestamp": "2026-03-26T22:17:55.098727",
+        "duration_ms": 10357.031000079587,
+        "input_tokens": 10459,
+        "output_tokens": 584,
+        "total_tokens": 11043,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.038385,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "semantic-recall-searcher",
+        "timestamp": "2026-03-26T22:17:56.986787",
+        "duration_ms": 1873.5392501112074,
+        "input_tokens": 11064,
+        "output_tokens": 65,
+        "total_tokens": 11129,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.033972,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "structural-combo-searcher",
+        "timestamp": "2026-03-26T22:18:12.829238",
+        "duration_ms": 12462.66712504439,
+        "input_tokens": 5922,
+        "output_tokens": 627,
+        "total_tokens": 6549,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.02529,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "structural-combo-searcher",
+        "timestamp": "2026-03-26T22:18:24.519834",
+        "duration_ms": 11668.322250014171,
+        "input_tokens": 6570,
+        "output_tokens": 779,
+        "total_tokens": 7349,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.029058,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "semantic-recall-searcher",
+        "timestamp": "2026-03-26T22:18:33.245782",
+        "duration_ms": 34988.849291112274,
+        "input_tokens": 13223,
+        "output_tokens": 2919,
+        "total_tokens": 16142,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.074697,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "keyword-precision-searcher",
+        "timestamp": "2026-03-26T22:18:54.568044",
+        "duration_ms": 10522.746999980882,
+        "input_tokens": 5954,
+        "output_tokens": 485,
+        "total_tokens": 6439,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.023682,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "keyword-precision-searcher",
+        "timestamp": "2026-03-26T22:19:01.120392",
+        "duration_ms": 6531.620375113562,
+        "input_tokens": 6460,
+        "output_tokens": 468,
+        "total_tokens": 6928,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.024996,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "structural-combo-searcher",
+        "timestamp": "2026-03-26T22:19:09.096662",
+        "duration_ms": 9805.993666872382,
+        "input_tokens": 7592,
+        "output_tokens": 482,
+        "total_tokens": 8074,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.02856,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "structural-combo-searcher",
+        "timestamp": "2026-03-26T22:19:17.907316",
+        "duration_ms": 8776.463041082025,
+        "input_tokens": 8095,
+        "output_tokens": 605,
+        "total_tokens": 8700,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.031545,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "keyword-precision-searcher",
+        "timestamp": "2026-03-26T22:19:38.762948",
+        "duration_ms": 7312.6645418815315,
+        "input_tokens": 7104,
+        "output_tokens": 366,
+        "total_tokens": 7470,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.025704,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "keyword-precision-searcher",
+        "timestamp": "2026-03-26T22:19:42.985823",
+        "duration_ms": 4196.1887090001255,
+        "input_tokens": 7491,
+        "output_tokens": 331,
+        "total_tokens": 7822,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.026445,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "structural-combo-searcher",
+        "timestamp": "2026-03-26T22:19:46.937749",
+        "duration_ms": 6651.422416092828,
+        "input_tokens": 8908,
+        "output_tokens": 356,
+        "total_tokens": 9264,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.030996,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "structural-combo-searcher",
+        "timestamp": "2026-03-26T22:19:53.379764",
+        "duration_ms": 6425.846040947363,
+        "input_tokens": 9285,
+        "output_tokens": 414,
+        "total_tokens": 9699,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.032823,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "keyword-precision-searcher",
+        "timestamp": "2026-03-26T22:19:54.062351",
+        "duration_ms": 3503.3427078742534,
+        "input_tokens": 7968,
+        "output_tokens": 216,
+        "total_tokens": 8184,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.026496,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "keyword-precision-searcher",
+        "timestamp": "2026-03-26T22:20:03.645699",
+        "duration_ms": 9559.58841694519,
+        "input_tokens": 8205,
+        "output_tokens": 1510,
+        "total_tokens": 9715,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.042735,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "structural-combo-searcher",
+        "timestamp": "2026-03-26T22:20:07.813888",
+        "duration_ms": 5594.54141696915,
+        "input_tokens": 9863,
+        "output_tokens": 286,
+        "total_tokens": 10149,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.033021,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "structural-combo-searcher",
+        "timestamp": "2026-03-26T22:20:16.814624",
+        "duration_ms": 8954.223207896575,
+        "input_tokens": 10170,
+        "output_tokens": 869,
+        "total_tokens": 11039,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.040938,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:20:42.981470",
+        "duration_ms": 26146.275417180732,
+        "input_tokens": 40421,
+        "output_tokens": 2926,
+        "total_tokens": 43347,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.156375,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:20:58.650714",
+        "duration_ms": 15631.49583293125,
+        "input_tokens": 47049,
+        "output_tokens": 1863,
+        "total_tokens": 48912,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.163503,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:21:07.511054",
+        "duration_ms": 8804.870124906301,
+        "input_tokens": 48932,
+        "output_tokens": 739,
+        "total_tokens": 49671,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.155664,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:21:14.040679",
+        "duration_ms": 6486.124749993905,
+        "input_tokens": 49692,
+        "output_tokens": 452,
+        "total_tokens": 50144,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.1545,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:21:24.218309",
+        "duration_ms": 1706.4149579964578,
+        "input_tokens": 59935,
+        "output_tokens": 26,
+        "total_tokens": 59961,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.180117,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:21:27.991765",
+        "duration_ms": 2521.8116249889135,
+        "input_tokens": 61430,
+        "output_tokens": 69,
+        "total_tokens": 61499,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.185118,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:22:31.708568",
+        "duration_ms": 2055.9927499853075,
+        "input_tokens": 61554,
+        "output_tokens": 45,
+        "total_tokens": 61599,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.185202,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:22:35.856910",
+        "duration_ms": 2187.2940841130912,
+        "input_tokens": 62363,
+        "output_tokens": 153,
+        "total_tokens": 62516,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.188925,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:22:53.398136",
+        "duration_ms": 16034.023832995445,
+        "input_tokens": 67607,
+        "output_tokens": 1012,
+        "total_tokens": 68619,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.214965,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:22:59.512130",
+        "duration_ms": 6083.842084044591,
+        "input_tokens": 68639,
+        "output_tokens": 442,
+        "total_tokens": 69081,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.211221,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:23:17.046868",
+        "duration_ms": 17493.975292192772,
+        "input_tokens": 69102,
+        "output_tokens": 1353,
+        "total_tokens": 70455,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.223542,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:23:18.810817",
+        "duration_ms": 1698.8779590465128,
+        "input_tokens": 70623,
+        "output_tokens": 30,
+        "total_tokens": 70653,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.212229,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:23:21.007030",
+        "duration_ms": 2139.6116660907865,
+        "input_tokens": 71813,
+        "output_tokens": 25,
+        "total_tokens": 71838,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.215739,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:23:26.886305",
+        "duration_ms": 5789.978416869417,
+        "input_tokens": 73123,
+        "output_tokens": 211,
+        "total_tokens": 73334,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.221901,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:23:30.528030",
+        "duration_ms": 2102.954583009705,
+        "input_tokens": 82174,
+        "output_tokens": 54,
+        "total_tokens": 82228,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.24717,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:23:32.808504",
+        "duration_ms": 2261.4539170172065,
+        "input_tokens": 82314,
+        "output_tokens": 143,
+        "total_tokens": 82457,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.248658,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:23:54.561645",
+        "duration_ms": 21733.303874963894,
+        "input_tokens": 81453,
+        "output_tokens": 1312,
+        "total_tokens": 82765,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.260103,
+        "stage": "stage_3_research"
+      },
+      {
+        "agent_name": "report-writer",
+        "timestamp": "2026-03-26T22:23:58.206546",
+        "duration_ms": 3628.1757501419634,
+        "input_tokens": 5345,
+        "output_tokens": 439,
+        "total_tokens": 5784,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.021303,
+        "stage": "stage_4_report"
+      },
+      {
+        "agent_name": "report-writer",
+        "timestamp": "2026-03-26T22:24:03.358379",
+        "duration_ms": 1995.5365830101073,
+        "input_tokens": 26542,
+        "output_tokens": 18,
+        "total_tokens": 26560,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.079842,
+        "stage": "stage_4_report"
+      },
+      {
+        "agent_name": "report-writer",
+        "timestamp": "2026-03-26T22:24:05.268095",
+        "duration_ms": 1891.5136251598597,
+        "input_tokens": 26604,
+        "output_tokens": 144,
+        "total_tokens": 26748,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.08154,
+        "stage": "stage_4_report"
+      },
+      {
+        "agent_name": "report-writer",
+        "timestamp": "2026-03-26T22:25:47.627238",
+        "duration_ms": 102310.3933329694,
+        "input_tokens": 32982,
+        "output_tokens": 9177,
+        "total_tokens": 42159,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.20907,
+        "stage": "stage_4_report"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:26:42.722796",
+        "duration_ms": 55058.60366579145,
+        "input_tokens": 91947,
+        "output_tokens": 9812,
+        "total_tokens": 101759,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.393585,
+        "stage": "stage_4_report"
+      },
+      {
+        "agent_name": "orchestrator",
+        "timestamp": "2026-03-26T22:27:37.288817",
+        "duration_ms": 54464.493999956176,
+        "input_tokens": 101926,
+        "output_tokens": 8919,
+        "total_tokens": 110845,
+        "model_name": "azure/gpt-5.2",
+        "estimated_cost_usd": 0.412806,
+        "stage": "stage_4_report"
+      }
+    ],
+    "token_usage": {
+      "by_agent": {
+        "orchestrator": {
+          "agent_name": "orchestrator",
+          "total_input_tokens": 1604974,
+          "total_output_tokens": 34436,
+          "total_tokens": 1639410,
+          "model_call_count": 29,
+          "total_duration_ms": 342073.37512401864,
+          "estimated_cost_usd": 5.228154
+        },
+        "semantic-recall-searcher": {
+          "agent_name": "semantic-recall-searcher",
+          "total_input_tokens": 69781,
+          "total_output_tokens": 5011,
+          "total_tokens": 74792,
+          "model_call_count": 10,
+          "total_duration_ms": 76219.34362547472,
+          "estimated_cost_usd": 0.269475
+        },
+        "keyword-precision-searcher": {
+          "agent_name": "keyword-precision-searcher",
+          "total_input_tokens": 47752,
+          "total_output_tokens": 4476,
+          "total_tokens": 52228,
+          "model_call_count": 7,
+          "total_duration_ms": 55304.947583703324,
+          "estimated_cost_usd": 0.196968
+        },
+        "structural-combo-searcher": {
+          "agent_name": "structural-combo-searcher",
+          "total_input_tokens": 70903,
+          "total_output_tokens": 5566,
+          "total_tokens": 76469,
+          "model_call_count": 9,
+          "total_duration_ms": 87166.24974785373,
+          "estimated_cost_usd": 0.279501
+        },
+        "report-writer": {
+          "agent_name": "report-writer",
+          "total_input_tokens": 91473,
+          "total_output_tokens": 9778,
+          "total_tokens": 101251,
+          "model_call_count": 4,
+          "total_duration_ms": 109825.61929128133,
+          "estimated_cost_usd": 0.39175499999999996
+        }
+      },
+      "by_stage": {
+        "stage_1_scoping": {
+          "stage": "stage_1_scoping",
+          "stage_label": "Stage 1 - Scoping",
+          "total_input_tokens": 118722,
+          "total_output_tokens": 1747,
+          "total_tokens": 120469,
+          "model_call_count": 4,
+          "total_duration_ms": 35060.40566600859,
+          "estimated_cost_usd": 0.37712999999999997,
+          "by_agent": {
+            "orchestrator": {
+              "agent_name": "orchestrator",
+              "total_input_tokens": 118722,
+              "total_output_tokens": 1747,
+              "total_tokens": 120469,
+              "model_call_count": 4,
+              "total_duration_ms": 35060.40566600859,
+              "estimated_cost_usd": 0.37712999999999997
+            }
+          }
+        },
+        "stage_2_features": {
+          "stage": "stage_2_features",
+          "stage_label": "Stage 2 - Feature Definition",
+          "total_input_tokens": 94931,
+          "total_output_tokens": 1527,
+          "total_tokens": 96458,
+          "model_call_count": 3,
+          "total_duration_ms": 26823.162415996194,
+          "estimated_cost_usd": 0.30311699999999997,
+          "by_agent": {
+            "orchestrator": {
+              "agent_name": "orchestrator",
+              "total_input_tokens": 94931,
+              "total_output_tokens": 1527,
+              "total_tokens": 96458,
+              "model_call_count": 3,
+              "total_duration_ms": 26823.162415996194,
+              "estimated_cost_usd": 0.30311699999999997
+            }
+          }
+        },
+        "stage_3_research": {
+          "stage": "stage_3_research",
+          "stage_label": "Stage 3 - Research",
+          "total_input_tokens": 1385884,
+          "total_output_tokens": 27484,
+          "total_tokens": 1413368,
+          "model_call_count": 46,
+          "total_duration_ms": 389357.250333298,
+          "estimated_cost_usd": 4.4874600000000004,
+          "by_agent": {
+            "orchestrator": {
+              "agent_name": "orchestrator",
+              "total_input_tokens": 1197448,
+              "total_output_tokens": 12431,
+              "total_tokens": 1209879,
+              "model_call_count": 20,
+              "total_duration_ms": 170666.70937626623,
+              "estimated_cost_usd": 3.7415160000000003
+            },
+            "semantic-recall-searcher": {
+              "agent_name": "semantic-recall-searcher",
+              "total_input_tokens": 69781,
+              "total_output_tokens": 5011,
+              "total_tokens": 74792,
+              "model_call_count": 10,
+              "total_duration_ms": 76219.34362547472,
+              "estimated_cost_usd": 0.269475
+            },
+            "keyword-precision-searcher": {
+              "agent_name": "keyword-precision-searcher",
+              "total_input_tokens": 47752,
+              "total_output_tokens": 4476,
+              "total_tokens": 52228,
+              "model_call_count": 7,
+              "total_duration_ms": 55304.947583703324,
+              "estimated_cost_usd": 0.196968
+            },
+            "structural-combo-searcher": {
+              "agent_name": "structural-combo-searcher",
+              "total_input_tokens": 70903,
+              "total_output_tokens": 5566,
+              "total_tokens": 76469,
+              "model_call_count": 9,
+              "total_duration_ms": 87166.24974785373,
+              "estimated_cost_usd": 0.279501
+            }
+          }
+        },
+        "stage_4_report": {
+          "stage": "stage_4_report",
+          "stage_label": "Stage 4 - Report",
+          "total_input_tokens": 285346,
+          "total_output_tokens": 28509,
+          "total_tokens": 313855,
+          "model_call_count": 6,
+          "total_duration_ms": 219348.71695702896,
+          "estimated_cost_usd": 1.198146,
+          "by_agent": {
+            "report-writer": {
+              "agent_name": "report-writer",
+              "total_input_tokens": 91473,
+              "total_output_tokens": 9778,
+              "total_tokens": 101251,
+              "model_call_count": 4,
+              "total_duration_ms": 109825.61929128133,
+              "estimated_cost_usd": 0.39175499999999996
+            },
+            "orchestrator": {
+              "agent_name": "orchestrator",
+              "total_input_tokens": 193873,
+              "total_output_tokens": 18731,
+              "total_tokens": 212604,
+              "model_call_count": 2,
+              "total_duration_ms": 109523.09766574763,
+              "estimated_cost_usd": 0.8063910000000001
+            }
+          }
+        }
+      },
+      "cumulative": {
+        "total_input_tokens": 1884883,
+        "total_output_tokens": 59267,
+        "total_tokens": 1944150,
+        "model_call_count": 59,
+        "estimated_cost_usd": 6.3658529999999995
+      }
+    },
+    "execution_trace": [
+      {
+        "agent_name": "orchestrator",
+        "span_type": "agent_lifecycle",
+        "start_time": "2026-03-26T22:15:32.703903",
+        "end_time": "2026-03-26T22:15:58.134430",
+        "duration_seconds": 25.430527
+      },
+      {
+        "agent_name": "orchestrator",
+        "span_type": "agent_lifecycle",
+        "start_time": "2026-03-26T22:15:58.136818",
+        "end_time": "2026-03-26T22:16:26.324797",
+        "duration_seconds": 28.187979
+      },
+      {
+        "agent_name": "orchestrator",
+        "span_type": "agent_lifecycle",
+        "start_time": "2026-03-26T22:16:26.328290",
+        "end_time": null,
+        "duration_seconds": null
+      },
+      {
+        "agent_name": "keyword-precision-searcher",
+        "span_type": "agent_lifecycle",
+        "start_time": "2026-03-26T22:17:04.552548",
+        "end_time": "2026-03-26T22:20:03.653791",
+        "duration_seconds": 179.101243
+      },
+      {
+        "agent_name": "semantic-recall-searcher",
+        "span_type": "agent_lifecycle",
+        "start_time": "2026-03-26T22:17:04.552579",
+        "end_time": "2026-03-26T22:18:33.253704",
+        "duration_seconds": 88.701125
+      },
+      {
+        "agent_name": "structural-combo-searcher",
+        "span_type": "agent_lifecycle",
+        "start_time": "2026-03-26T22:17:04.552591",
+        "end_time": "2026-03-26T22:20:16.823310",
+        "duration_seconds": 192.270719
+      },
+      {
+        "agent_name": "report-writer",
+        "span_type": "agent_lifecycle",
+        "start_time": "2026-03-26T22:23:54.577091",
+        "end_time": "2026-03-26T22:25:47.646507",
+        "duration_seconds": 113.069416
+      }
+    ],
+    "summary": {
+      "session_id": "20260326_221532_cb95fa53",
+      "start_time": "2026-03-26T22:15:32.073748",
+      "total_rounds": 0,
+      "total_tool_calls": 99,
+      "failed_tool_calls": 0,
+      "success_rate": 1.0,
+      "avg_tool_duration_ms": 9656.005656139718,
+      "rounds": [],
+      "token_usage": {
+        "by_agent": {
+          "orchestrator": {
+            "agent_name": "orchestrator",
+            "total_input_tokens": 1604974,
+            "total_output_tokens": 34436,
+            "total_tokens": 1639410,
+            "model_call_count": 29,
+            "total_duration_ms": 342073.37512401864,
+            "estimated_cost_usd": 5.228154
+          },
+          "semantic-recall-searcher": {
+            "agent_name": "semantic-recall-searcher",
+            "total_input_tokens": 69781,
+            "total_output_tokens": 5011,
+            "total_tokens": 74792,
+            "model_call_count": 10,
+            "total_duration_ms": 76219.34362547472,
+            "estimated_cost_usd": 0.269475
+          },
+          "keyword-precision-searcher": {
+            "agent_name": "keyword-precision-searcher",
+            "total_input_tokens": 47752,
+            "total_output_tokens": 4476,
+            "total_tokens": 52228,
+            "model_call_count": 7,
+            "total_duration_ms": 55304.947583703324,
+            "estimated_cost_usd": 0.196968
+          },
+          "structural-combo-searcher": {
+            "agent_name": "structural-combo-searcher",
+            "total_input_tokens": 70903,
+            "total_output_tokens": 5566,
+            "total_tokens": 76469,
+            "model_call_count": 9,
+            "total_duration_ms": 87166.24974785373,
+            "estimated_cost_usd": 0.279501
+          },
+          "report-writer": {
+            "agent_name": "report-writer",
+            "total_input_tokens": 91473,
+            "total_output_tokens": 9778,
+            "total_tokens": 101251,
+            "model_call_count": 4,
+            "total_duration_ms": 109825.61929128133,
+            "estimated_cost_usd": 0.39175499999999996
+          }
+        },
+        "by_stage": {
+          "stage_1_scoping": {
+            "stage": "stage_1_scoping",
+            "stage_label": "Stage 1 - Scoping",
+            "total_input_tokens": 118722,
+            "total_output_tokens": 1747,
+            "total_tokens": 120469,
+            "model_call_count": 4,
+            "total_duration_ms": 35060.40566600859,
+            "estimated_cost_usd": 0.37712999999999997,
+            "by_agent": {
+              "orchestrator": {
+                "agent_name": "orchestrator",
+                "total_input_tokens": 118722,
+                "total_output_tokens": 1747,
+                "total_tokens": 120469,
+                "model_call_count": 4,
+                "total_duration_ms": 35060.40566600859,
+                "estimated_cost_usd": 0.37712999999999997
+              }
+            }
+          },
+          "stage_2_features": {
+            "stage": "stage_2_features",
+            "stage_label": "Stage 2 - Feature Definition",
+            "total_input_tokens": 94931,
+            "total_output_tokens": 1527,
+            "total_tokens": 96458,
+            "model_call_count": 3,
+            "total_duration_ms": 26823.162415996194,
+            "estimated_cost_usd": 0.30311699999999997,
+            "by_agent": {
+              "orchestrator": {
+                "agent_name": "orchestrator",
+                "total_input_tokens": 94931,
+                "total_output_tokens": 1527,
+                "total_tokens": 96458,
+                "model_call_count": 3,
+                "total_duration_ms": 26823.162415996194,
+                "estimated_cost_usd": 0.30311699999999997
+              }
+            }
+          },
+          "stage_3_research": {
+            "stage": "stage_3_research",
+            "stage_label": "Stage 3 - Research",
+            "total_input_tokens": 1385884,
+            "total_output_tokens": 27484,
+            "total_tokens": 1413368,
+            "model_call_count": 46,
+            "total_duration_ms": 389357.250333298,
+            "estimated_cost_usd": 4.4874600000000004,
+            "by_agent": {
+              "orchestrator": {
+                "agent_name": "orchestrator",
+                "total_input_tokens": 1197448,
+                "total_output_tokens": 12431,
+                "total_tokens": 1209879,
+                "model_call_count": 20,
+                "total_duration_ms": 170666.70937626623,
+                "estimated_cost_usd": 3.7415160000000003
+              },
+              "semantic-recall-searcher": {
+                "agent_name": "semantic-recall-searcher",
+                "total_input_tokens": 69781,
+                "total_output_tokens": 5011,
+                "total_tokens": 74792,
+                "model_call_count": 10,
+                "total_duration_ms": 76219.34362547472,
+                "estimated_cost_usd": 0.269475
+              },
+              "keyword-precision-searcher": {
+                "agent_name": "keyword-precision-searcher",
+                "total_input_tokens": 47752,
+                "total_output_tokens": 4476,
+                "total_tokens": 52228,
+                "model_call_count": 7,
+                "total_duration_ms": 55304.947583703324,
+                "estimated_cost_usd": 0.196968
+              },
+              "structural-combo-searcher": {
+                "agent_name": "structural-combo-searcher",
+                "total_input_tokens": 70903,
+                "total_output_tokens": 5566,
+                "total_tokens": 76469,
+                "model_call_count": 9,
+                "total_duration_ms": 87166.24974785373,
+                "estimated_cost_usd": 0.279501
+              }
+            }
+          },
+          "stage_4_report": {
+            "stage": "stage_4_report",
+            "stage_label": "Stage 4 - Report",
+            "total_input_tokens": 285346,
+            "total_output_tokens": 28509,
+            "total_tokens": 313855,
+            "model_call_count": 6,
+            "total_duration_ms": 219348.71695702896,
+            "estimated_cost_usd": 1.198146,
+            "by_agent": {
+              "report-writer": {
+                "agent_name": "report-writer",
+                "total_input_tokens": 91473,
+                "total_output_tokens": 9778,
+                "total_tokens": 101251,
+                "model_call_count": 4,
+                "total_duration_ms": 109825.61929128133,
+                "estimated_cost_usd": 0.39175499999999996
+              },
+              "orchestrator": {
+                "agent_name": "orchestrator",
+                "total_input_tokens": 193873,
+                "total_output_tokens": 18731,
+                "total_tokens": 212604,
+                "model_call_count": 2,
+                "total_duration_ms": 109523.09766574763,
+                "estimated_cost_usd": 0.8063910000000001
+              }
+            }
+          }
+        },
+        "cumulative": {
+          "total_input_tokens": 1884883,
+          "total_output_tokens": 59267,
+          "total_tokens": 1944150,
+          "model_call_count": 59,
+          "estimated_cost_usd": 6.3658529999999995
+        }
+      },
+      "search_queries": [
+        {
+          "agent_name": "semantic-recall-searcher",
+          "tool_name": "batch_unified_search",
+          "args": {
+            "max_results_per_query": 10
+          },
+          "timestamp": "2026-03-26T22:17:06.569119",
+          "success": true,
+          "duration_ms": 0.5986669566482306
+        },
+        {
+          "agent_name": "semantic-recall-searcher",
+          "tool_name": "batch_unified_search",
+          "args": {
+            "max_results_per_query": 10
+          },
+          "timestamp": "2026-03-26T22:17:13.702411",
+          "success": true,
+          "duration_ms": 0.774540938436985
+        },
+        {
+          "agent_name": "semantic-recall-searcher",
+          "tool_name": "batch_unified_search",
+          "args": {
+            "max_results_per_query": 10,
+            "from_year": 2000,
+            "to_year": 2026,
+            "semantic_queries": [
+              {
+                "query_id": "S1",
+                "query_text": "A floating photovoltaic platform built from a rectangular float module that has an internal cross shaped or cruciform frame dividing the deck into four openings, each opening holding a separate pontoon or buoyant cassette",
+                "feature_ids": [
+                  "F1",
+                  "F6"
+                ]
+              },
+              {
+                "query_id": "S2",
+                "query_text": "Modular floating solar raft where a frame with orthogonal beams holds multiple detachable pontoons and supports photovoltaic modules on top, designed to connect many rafts into an array",
+                "feature_ids": [
+                  "F1",
+                  "F6"
+                ]
+              },
+              {
+                "query_id": "S3",
+                "query_text": "Floating solar array mooring using concrete deadweight anchor blocks on the bottom and corner tether lines or cables attached to the corners of floating PV units",
+                "feature_ids": [
+                  "F3",
+                  "F6"
+                ]
+              },
+              {
+                "query_id": "S4",
+                "query_text": "Bifacial photovoltaic panel mounted on a floating structure at a fixed tilt using triangular brackets or A-frame supports so the rear side receives reflected light from water",
+                "feature_ids": [
+                  "F2"
+                ]
+              },
+              {
+                "query_id": "S5",
+                "query_text": "Floating PV performance monitoring using sensors for front and rear irradiance and top and bottom module temperature, connected to a data logger with wireless transmission to a remote database",
+                "feature_ids": [
+                  "F4",
+                  "F5"
+                ]
+              },
+              {
+                "query_id": "S6",
+                "query_text": "Floating photovoltaic system with junction box or combiner box that measures string current and voltage and sends telemetry wirelessly from a floating platform to a central server",
+                "feature_ids": [
+                  "F4",
+                  "F5"
+                ]
+              }
+            ],
+            "npl_queries": [
+              {
+                "query_id": "N1",
+                "query_text": "TS=(floating photovoltaic monitoring wireless data logger irradiance temperature bifacial)",
+                "feature_ids": [
+                  "F2",
+                  "F4",
+                  "F5"
+                ]
+              },
+              {
+                "query_id": "N2",
+                "query_text": "TS=(floating solar mooring deadweight concrete anchor corner tether)",
+                "feature_ids": [
+                  "F3",
+                  "F6"
+                ]
+              },
+              {
+                "query_id": "N3",
+                "query_text": "TS=(modular floating PV platform pontoon frame cross beam)",
+                "feature_ids": [
+                  "F1",
+                  "F6"
+                ]
+              }
+            ]
+          },
+          "timestamp": "2026-03-26T22:17:33.564930",
+          "success": true,
+          "duration_ms": 7840.602291980758
+        },
+        {
+          "agent_name": "semantic-recall-searcher",
+          "tool_name": "semantic_patent_search",
+          "args": {
+            "query": "A floating photovoltaic platform built from a rectangular float module that has an internal cross shaped or cruciform frame dividing the deck into four openings, each opening holding a separate pontoon or buoyant cassette",
+            "feature_id": "F1,F6",
+            "max_results": 10
+          },
+          "timestamp": "2026-03-26T22:17:43.413495",
+          "success": true,
+          "duration_ms": 1877.5642910040915
+        },
+        {
+          "agent_name": "semantic-recall-searcher",
+          "tool_name": "semantic_patent_search",
+          "args": {
+            "query": "Floating solar array mooring using concrete deadweight anchor blocks on the bottom and corner tether lines or cables attached to the corners of floating PV units",
+            "feature_id": "F3",
+            "max_results": 10
+          },
+          "timestamp": "2026-03-26T22:17:43.624839",
+          "success": true,
+          "duration_ms": 2088.8754171319306
+        },
+        {
+          "agent_name": "semantic-recall-searcher",
+          "tool_name": "semantic_patent_search",
+          "args": {
+            "query": "Floating PV performance monitoring using sensors for front and rear irradiance and top and bottom module temperature, connected to a data logger with wireless transmission to a remote database",
+            "feature_id": "F4,F5",
+            "max_results": 10
+          },
+          "timestamp": "2026-03-26T22:17:44.736132",
+          "success": true,
+          "duration_ms": 3200.1519170589745
+        },
+        {
+          "agent_name": "semantic-recall-searcher",
+          "tool_name": "semantic_patent_search",
+          "args": {
+            "query": "Bifacial photovoltaic panels mounted on floating solar platforms at a fixed tilt angle using triangular brackets, A-frame supports, or inclined mounting rails so the rear side captures reflection from water",
+            "feature_id": "F2",
+            "max_results": 15
+          },
+          "timestamp": "2026-03-26T22:17:58.248702",
+          "success": true,
+          "duration_ms": 1252.5644169654697
+        },
+        {
+          "agent_name": "structural-combo-searcher",
+          "tool_name": "batch_unified_search",
+          "args": {
+            "max_results_per_query": 10,
+            "patent_queries": [
+              {
+                "query_id": "K1_A_F1F2",
+                "query_text": "@(title,abstract,claims) ((floating NEAR/10 photovoltaic OR FPV OR solar) AND (rectangular NEAR/10 float* OR pontoon* OR buoyant module*) AND (cross NEAR/15 support OR cruciform OR \"cross-shaped\" OR \"cross shaped\" OR orthogonal NEAR/5 beam*) AND (four NEAR/10 opening* OR four NEAR/10 cavity* OR four NEAR/10 compartment*) AND (triangular NEAR/10 support* OR A-frame OR \"A frame\" OR \"A-frame\" OR tilted NEAR/5 mount*))",
+                "feature_ids": [
+                  "F1",
+                  "F2"
+                ]
+              },
+              {
+                "query_id": "K1_B_F1F3",
+                "query_text": "@(title,abstract,claims) ((floating NEAR/10 photovoltaic OR FPV OR solar) AND (rectangular NEAR/10 float* OR pontoon* OR buoyant module*) AND (cross NEAR/15 support OR cruciform OR orthogonal NEAR/5 beam*) AND (deadweight OR sinker OR concrete NEAR/5 block*) AND (corner NEAR/10 moor* OR mooring corner*) AND (wire* NEAR/10 plastic-coat* OR \"plastic coated\" OR polymer-coat*))",
+                "feature_ids": [
+                  "F1",
+                  "F3"
+                ]
+              },
+              {
+                "query_id": "K1_C_F1F4",
+                "query_text": "@(title,abstract,claims) ((floating NEAR/10 photovoltaic OR FPV OR solar) AND (rectangular NEAR/10 float* OR pontoon* OR buoyant module*) AND (cross NEAR/15 support OR cruciform OR orthogonal NEAR/5 beam*) AND (sensor* OR temperature OR irradiance OR pyranometer OR logger OR datalogger OR wireless OR telemetry))",
+                "feature_ids": [
+                  "F1",
+                  "F4"
+                ]
+              },
+              {
+                "query_id": "K1_D_F2F4",
+                "query_text": "@(title,abstract,claims) ((floating NEAR/10 photovoltaic OR FPV OR solar) AND (bifacial OR \"double-sided\" OR double sided) AND (triangular NEAR/10 support* OR A-frame OR \"A-frame\" OR tilted NEAR/5 mount*) AND ((temperature NEAR/5 sensor*) OR (backsheet NEAR/10 temperature) OR (rear NEAR/10 temperature) OR (front NEAR/10 temperature)) AND (irradiance OR pyranometer OR albedometer OR \"rear irradiance\" OR \"front irradiance\") AND (logger OR datalogger OR wireless OR telemetry OR SCADA))",
+                "feature_ids": [
+                  "F2",
+                  "F4"
+                ]
+              },
+              {
+                "query_id": "K1_FPV_modular_cross",
+                "query_text": "@(title,abstract,claims) ((modular NEAR/10 floating platform OR floating dock) AND (rectangular NEAR/10 module) AND (cruciform OR cross-shaped OR \"cross shaped\" OR orthogonal NEAR/5 rib* OR crossbeam*) AND (four NEAR/10 opening* OR four NEAR/10 recess* OR four NEAR/10 cavity*))",
+                "feature_ids": [
+                  "F1"
+                ]
+              },
+              {
+                "query_id": "K1_moor_deadweight",
+                "query_text": "@(title,abstract,claims) ((floating solar OR floating photovoltaic OR FPV) AND (deadweight OR sinker OR concrete block) AND (wire rope OR cable) AND (plastic-coated OR polymer-coated OR sheathed) AND (corner mooring OR mooring at corner))",
+                "feature_ids": [
+                  "F3"
+                ]
+              }
+            ],
+            "npl_queries": [
+              {
+                "query_id": "N1_FPV_bifacial_monitoring",
+                "query_text": "TS=(floating photovoltaic bifacial monitoring rear irradiance temperature sensor datalogger wireless)",
+                "feature_ids": [
+                  "F2",
+                  "F4"
+                ]
+              },
+              {
+                "query_id": "N1_FPV_mooring_deadweight",
+                "query_text": "TS=(floating photovoltaic mooring deadweight concrete block wire rope coated)",
+                "feature_ids": [
+                  "F3"
+                ]
+              }
+            ],
+            "semantic_queries": [
+              {
+                "query_id": "S1_comboA",
+                "query_text": "Floating photovoltaic modular rectangular float platform that uses an internal cross or cruciform support to create four openings that each retain a separate pontoon, and includes triangular or A-frame supports to hold a solar panel at a fixed tilt.",
+                "feature_ids": [
+                  "F1",
+                  "F2"
+                ]
+              },
+              {
+                "query_id": "S1_comboB",
+                "query_text": "Floating solar platform with rectangular float modules and corner mooring lines to concrete deadweight blocks, optionally using coated stainless wire ropes or cables.",
+                "feature_ids": [
+                  "F1",
+                  "F3"
+                ]
+              },
+              {
+                "query_id": "S1_comboC",
+                "query_text": "Floating photovoltaic platform with integrated environmental and PV sensors such as module temperature and irradiance, a data logger, and wireless telemetry to a central database, built on modular floats.",
+                "feature_ids": [
+                  "F1",
+                  "F4"
+                ]
+              },
+              {
+                "query_id": "S1_comboD",
+                "query_text": "Bifacial floating photovoltaic system with fixed-tilt triangular/A-frame mounting structures and monitoring of front and rear module temperature and irradiance, with wireless logging or SCADA.",
+                "feature_ids": [
+                  "F2",
+                  "F4"
+                ]
+              },
+              {
+                "query_id": "S1_cross_frame_pontoons",
+                "query_text": "Modular floating dock or pontoon platform where a rectangular frame has internal orthogonal cross members forming multiple openings that each capture separate pontoons or buoyancy blocks.",
+                "feature_ids": [
+                  "F1"
+                ]
+              }
+            ],
+            "from_year": 2000,
+            "to_year": 2026
+          },
+          "timestamp": "2026-03-26T22:18:00.280384",
+          "success": true,
+          "duration_ms": 38861.910958075896
+        },
+        {
+          "agent_name": "keyword-precision-searcher",
+          "tool_name": "batch_unified_search",
+          "args": {
+            "patent_queries": [
+              {
+                "query_id": "K1-F1-1",
+                "query_text": "@(dwpi_title,dwpi_novelty) ((floating OR pontoon* OR buoyant) NEAR/5 (photovoltaic OR solar)) AND (rectangular ADJ/3 (float* OR platform OR pontoon*)) AND (cross ADJ/3 (brace OR support OR frame))",
+                "feature_ids": [
+                  "F1"
+                ]
+              },
+              {
+                "query_id": "K1-F1-2",
+                "query_text": "@(title,abstract,claims) ((rectangular OR square) NEAR/5 (float* OR pontoon* OR platform)) AND ((cross OR X-shaped) NEAR/3 (brace OR frame OR support)) AND (four NEAR/3 (opening* OR compartment* OR pontoon*))",
+                "feature_ids": [
+                  "F1"
+                ]
+              },
+              {
+                "query_id": "K1-F1-3",
+                "query_text": "@(dwpi_title,dwpi_novelty) ((cross OR X-shaped) ADJ/3 (brace OR frame OR support)) AND (pontoon* OR float*) AND (modular ADJ/3 unit)",
+                "feature_ids": [
+                  "F1"
+                ]
+              },
+              {
+                "query_id": "K1-F2-1",
+                "query_text": "@(dwpi_title,dwpi_novelty) (bifacial NEAR/5 (photovoltaic OR PV)) AND ((triangular OR A-frame) NEAR/3 (support OR bracket OR mount)) AND (floating OR pontoon* OR raft)",
+                "feature_ids": [
+                  "F2"
+                ]
+              },
+              {
+                "query_id": "K1-F2-2",
+                "query_text": "@(title,abstract,claims) ((A-frame OR \"A frame\" OR triangular) NEAR/3 (bracket OR support OR mount)) AND (tilt* NEAR/5 (panel OR module OR photovoltaic)) AND (float* OR pontoon* OR floating)",
+                "feature_ids": [
+                  "F2"
+                ]
+              },
+              {
+                "query_id": "K1-F3-1",
+                "query_text": "@(dwpi_title,dwpi_novelty) ((deadweight OR \"concrete block\" OR concrete) NEAR/5 (anchor OR mooring)) AND (floating NEAR/5 (solar OR photovoltaic OR PV))",
+                "feature_ids": [
+                  "F3"
+                ]
+              },
+              {
+                "query_id": "K1-F3-2",
+                "query_text": "@(title,abstract,claims) ((plastic-coated OR polymer-coated OR coated) NEAR/3 (stainless ADJ/2 (wire OR cable))) AND (mooring OR tether*) AND (floating NEAR/5 (solar OR photovoltaic OR PV))",
+                "feature_ids": [
+                  "F3"
+                ]
+              },
+              {
+                "query_id": "K1-F4-1",
+                "query_text": "@(dwpi_title,dwpi_novelty) ((irradiance OR pyranometer OR \"solar radiation\") NEAR/5 sensor) AND (\"data logger\" OR datalogger OR telemetry) AND (floating NEAR/5 (photovoltaic OR solar OR PV))",
+                "feature_ids": [
+                  "F4"
+                ]
+              },
+              {
+                "query_id": "K1-F4-2",
+                "query_text": "@(title,abstract,claims) ((backsheet OR rear) NEAR/3 temperature NEAR/3 sensor) AND (irradiance NEAR/5 sensor) AND ((wireless OR NB-IoT OR LTE OR LoRa) NEAR/10 (logger OR monitoring OR telemetry)) AND (floating NEAR/5 (photovoltaic OR solar OR PV))",
+                "feature_ids": [
+                  "F4"
+                ]
+              },
+              {
+                "query_id": "K1-F5-1",
+                "query_text": "@(title,abstract,claims) ((junction box OR combiner box) NEAR/10 (current sensor OR voltage sensor)) AND (wireless NEAR/10 (transmit* OR telemetry OR monitoring)) AND (floating NEAR/5 (solar OR photovoltaic OR PV))",
+                "feature_ids": [
+                  "F5"
+                ]
+              },
+              {
+                "query_id": "K1-F6-1",
+                "query_text": "@(dwpi_title,dwpi_novelty) ((modular OR connectable OR interconnect*) NEAR/5 (float* OR pontoon* OR raft)) AND (array NEAR/5 (floating solar OR floating photovoltaic OR FPV))",
+                "feature_ids": [
+                  "F6"
+                ]
+              }
+            ],
+            "npl_queries": [
+              {
+                "query_id": "NPL-TI-1",
+                "query_text": "TI=((floating NEAR/3 photovoltaic) OR (floating NEAR/3 solar) OR FPV)",
+                "feature_ids": [
+                  "F1",
+                  "F6"
+                ]
+              },
+              {
+                "query_id": "NPL-TI-2",
+                "query_text": "TI=((bifacial NEAR/3 floating) AND (mount OR bracket OR A-frame OR \"A frame\"))",
+                "feature_ids": [
+                  "F2"
+                ]
+              },
+              {
+                "query_id": "NPL-TI-3",
+                "query_text": "TI=((deadweight OR concrete) NEAR/3 (anchor OR mooring) NEAR/3 (floating solar OR floating photovoltaic))",
+                "feature_ids": [
+                  "F3"
+                ]
+              },
+              {
+                "query_id": "NPL-TI-4",
+                "query_text": "TI=((irradiance OR pyranometer OR \"data logger\" OR telemetry) NEAR/3 (floating photovoltaic OR floating solar))",
+                "feature_ids": [
+                  "F4"
+                ]
+              }
+            ],
+            "semantic_queries": [],
+            "max_results_per_query": 10,
+            "from_year": 2000,
+            "to_year": 2026
+          },
+          "timestamp": "2026-03-26T22:18:44.034849",
+          "success": true,
+          "duration_ms": 85795.97666696645
+        },
+        {
+          "agent_name": "structural-combo-searcher",
+          "tool_name": "batch_unified_search",
+          "args": {
+            "max_results_per_query": 10,
+            "patent_queries": [
+              {
+                "query_id": "K2_F1_cruciform_four_pontoons",
+                "query_text": "@(title,abstract,claims) ((floating dock OR floating platform OR floating photovoltaic OR floating solar) AND (cruciform OR \"cross-shaped\" OR \"cross shaped\" OR \"cross member\" OR crossbeam* OR lattice OR grid) NEAR/20 (frame OR support OR rib*) AND (four NEAR/10 (pontoon* OR float* OR buoyancy member* OR buoyant body* OR buoyancy block*)) AND (opening* OR recess* OR cavity OR compartment OR pocket))",
+                "feature_ids": [
+                  "F1"
+                ]
+              },
+              {
+                "query_id": "K2_F1_rectangular_frame_four_floats",
+                "query_text": "@(title,abstract,claims) ((rectangular OR quadrilateral) NEAR/10 (frame OR module OR float) AND ((cross NEAR/5 rib*) OR (orthogonal NEAR/5 beam*) OR (internal NEAR/5 partition*)) AND (retain* OR hold* OR trap* OR receive*) NEAR/15 (four NEAR/5 (float* OR pontoon* OR buoyancy body*)))",
+                "feature_ids": [
+                  "F1"
+                ]
+              },
+              {
+                "query_id": "K2_comboB_deadweight_corner",
+                "query_text": "@(title,abstract,claims) ((floating photovoltaic OR floating solar) AND (module OR array OR platform) AND ((deadweight OR \"dead weight\" OR gravity OR concrete) NEAR/5 (anchor OR block OR ballast)) AND (corner NEAR/10 (mooring OR anchor line OR bridle)) AND (wire rope OR cable) AND (sheath* OR jacket* OR coated OR plastic))",
+                "feature_ids": [
+                  "F1",
+                  "F3"
+                ]
+              },
+              {
+                "query_id": "K2_comboD_bifacial_rear_irradiance",
+                "query_text": "@(title,abstract,claims) ((floating photovoltaic OR floating solar) AND (bifacial OR double-sided OR \"double sided\") AND (rear NEAR/5 irradiance OR backside NEAR/5 irradiance OR albedo OR albedometer OR \"rear pyranometer\") AND ((front NEAR/5 temperature) OR (rear NEAR/5 temperature) OR (backsheet NEAR/5 temperature)) AND (logger OR datalogger OR SCADA OR telemetry OR wireless))",
+                "feature_ids": [
+                  "F2",
+                  "F4"
+                ]
+              }
+            ],
+            "semantic_queries": [
+              {
+                "query_id": "S2_F1_cruciform_cells",
+                "query_text": "A modular floating dock or platform module where a rectangular outer frame has a central cross-shaped beam structure that divides the interior into four pockets or openings, each pocket receiving a separate pontoon or buoyant block.",
+                "feature_ids": [
+                  "F1"
+                ]
+              },
+              {
+                "query_id": "S2_comboA_cross_and_Aframe",
+                "query_text": "Floating solar platform using a rectangular float module with a cruciform internal support that holds four separate floats, combined with A-frame or triangular mounting brackets that hold a photovoltaic panel at a fixed tilt.",
+                "feature_ids": [
+                  "F1",
+                  "F2"
+                ]
+              },
+              {
+                "query_id": "S2_comboB_corner_gravity_anchor",
+                "query_text": "Floating photovoltaic array with corner bridle moorings connected to gravity anchors or concrete deadweight blocks using polymer-sheathed wire ropes or coated stainless steel cables.",
+                "feature_ids": [
+                  "F1",
+                  "F3"
+                ]
+              },
+              {
+                "query_id": "S2_comboD_bifacial_dual_temp",
+                "query_text": "Bifacial floating photovoltaic installation that measures both front-side and rear-side module temperature and also measures front and rear irradiance, sending data via wireless telemetry or SCADA to a central database.",
+                "feature_ids": [
+                  "F2",
+                  "F4"
+                ]
+              }
+            ],
+            "from_year": 1995,
+            "to_year": 2026
+          },
+          "timestamp": "2026-03-26T22:18:59.222645",
+          "success": true,
+          "duration_ms": 34638.85183306411
+        },
+        {
+          "agent_name": "keyword-precision-searcher",
+          "tool_name": "batch_unified_search",
+          "args": {
+            "patent_queries": [
+              {
+                "query_id": "K2-F1-1",
+                "query_text": "@(title,abstract,claims) ((cross-shaped OR cross shaped OR cruciform OR cruciate) NEAR/3 (partition OR rib* OR support OR frame)) AND ((four OR 4) NEAR/5 (pontoon* OR float* OR chamber* OR compartment* OR opening*)) AND ((rectangular OR square) NEAR/5 (float* OR platform OR module))",
+                "feature_ids": [
+                  "F1"
+                ]
+              },
+              {
+                "query_id": "K2-F1-2",
+                "query_text": "@(dwpi_title,dwpi_novelty) ((cruciform OR cross-shaped OR \"cross shaped\") NEAR/5 (support OR frame OR partition)) AND ((four OR 4) NEAR/5 (pontoon* OR float* OR compartment*))",
+                "feature_ids": [
+                  "F1"
+                ]
+              },
+              {
+                "query_id": "K2-F3-1",
+                "query_text": "@(title,abstract,claims) ((corner OR vertex) NEAR/5 mooring) AND ((deadweight OR concrete) NEAR/10 (block OR anchor)) AND ((plastic-coated OR polymer-coated) NEAR/5 (stainless NEAR/3 (wire OR cable)))",
+                "feature_ids": [
+                  "F3"
+                ]
+              },
+              {
+                "query_id": "K2-F4-1",
+                "query_text": "@(title,abstract,claims) ((floating NEAR/5 photovoltaic) OR (floating NEAR/5 solar) OR FPV) AND ((backsheet OR rear OR underside OR \"bottom surface\") NEAR/5 (temperature sensor OR thermistor)) AND (irradiance NEAR/5 sensor) AND (\"data logger\" OR datalogger)",
+                "feature_ids": [
+                  "F4"
+                ]
+              },
+              {
+                "query_id": "K2-F4-2",
+                "query_text": "@(dwpi_title,dwpi_novelty) ((floating NEAR/5 photovoltaic) OR (floating NEAR/5 solar)) AND ((temperature OR irradiance) NEAR/5 sensor) AND ((wireless OR telemetry) NEAR/5 (logger OR monitoring))",
+                "feature_ids": [
+                  "F4"
+                ]
+              }
+            ],
+            "npl_queries": [],
+            "semantic_queries": [],
+            "max_results_per_query": 10
+          },
+          "timestamp": "2026-03-26T22:19:31.439690",
+          "success": true,
+          "duration_ms": 30312.680625123903
+        },
+        {
+          "agent_name": "structural-combo-searcher",
+          "tool_name": "batch_unified_search",
+          "args": {
+            "max_results_per_query": 10,
+            "patent_queries": [
+              {
+                "query_id": "K3_comboD_floating_bifacial_sensors",
+                "query_text": "@(title,abstract,claims) ((floating NEAR/10 (photovoltaic OR solar)) AND (bifacial OR \"double-sided\" OR \"double sided\") AND ((rear OR backside OR backsheet) NEAR/10 (temperature OR temp* OR thermistor OR RTD)) AND ((front OR topside) NEAR/10 (temperature OR temp* OR thermistor OR RTD)) AND ((rear OR backside) NEAR/10 (irradiance OR pyranometer OR albedometer OR albedo)) AND (wireless OR telemetry OR SCADA OR datalogger OR logger))",
+                "feature_ids": [
+                  "F2",
+                  "F4"
+                ]
+              },
+              {
+                "query_id": "K3_comboA_cross_Aframe_expanded",
+                "query_text": "@(title,abstract,claims) ((floating NEAR/10 (photovoltaic OR solar)) AND (cruciform OR cross-shaped OR \"cross shaped\" OR orthogonal NEAR/5 beam* OR internal NEAR/5 partition*) AND (four NEAR/10 (pontoon* OR float* OR buoyancy member*)) AND (triangular OR \"A-frame\" OR \"A frame\" OR inclined OR tilted) NEAR/15 (support* OR bracket* OR mount*))",
+                "feature_ids": [
+                  "F1",
+                  "F2"
+                ]
+              },
+              {
+                "query_id": "K3_comboC_sensors_on_float_module",
+                "query_text": "@(title,abstract,claims) ((floating NEAR/10 (photovoltaic OR solar)) AND (float module OR buoyant module OR pontoon module) AND (sensor* NEAR/10 (temperature OR irradiance)) AND (logger OR datalogger) AND (wireless OR radio OR telemetry))",
+                "feature_ids": [
+                  "F1",
+                  "F4"
+                ]
+              }
+            ],
+            "semantic_queries": [
+              {
+                "query_id": "S3_comboD_albedo_rear_front",
+                "query_text": "Floating bifacial PV array that measures rear-side irradiance (albedo) and both front-side and rear-side module temperature, with a data logger and wireless communication.",
+                "feature_ids": [
+                  "F2",
+                  "F4"
+                ]
+              },
+              {
+                "query_id": "S3_comboA_cruciform_float_Aframe",
+                "query_text": "A floating photovoltaic pontoon where a rectangular deck has internal orthogonal cross beams forming four compartments for separate buoyancy blocks, and the PV module is held on two triangular side frames at a fixed tilt.",
+                "feature_ids": [
+                  "F1",
+                  "F2"
+                ]
+              },
+              {
+                "query_id": "S3_comboC_FPV_IoT_sensors",
+                "query_text": "Floating solar system with IoT sensor package on the float measuring PV temperature and solar irradiance, sending data wirelessly to a central database or cloud for monitoring.",
+                "feature_ids": [
+                  "F1",
+                  "F4"
+                ]
+              }
+            ],
+            "from_year": 2000,
+            "to_year": 2026
+          },
+          "timestamp": "2026-03-26T22:19:40.279739",
+          "success": true,
+          "duration_ms": 22362.047041999176
+        },
+        {
+          "agent_name": "keyword-precision-searcher",
+          "tool_name": "batch_unified_search",
+          "args": {
+            "patent_queries": [
+              {
+                "query_id": "K3-F4-1",
+                "query_text": "@(title,abstract,claims) ((floating NEAR/5 (photovoltaic OR solar OR PV)) OR FPV) AND ((sampling OR sample* OR interval* OR periodic* OR \"time interval\") NEAR/5 (logger OR \"data logger\" OR datalogger)) AND ((wireless OR radio OR LTE OR NB-IoT OR \"cellular\") NEAR/10 (transmit* OR communication OR telemetry)) AND ((server OR database OR cloud OR remote) NEAR/10 (monitor* OR store* OR manage*))",
+                "feature_ids": [
+                  "F4"
+                ]
+              },
+              {
+                "query_id": "K3-F4-2",
+                "query_text": "@(dwpi_title,dwpi_novelty) ((floating NEAR/5 photovoltaic) OR (floating NEAR/5 solar)) AND ((data logger OR datalogger) NEAR/5 (wireless OR telemetry)) AND ((temperature OR irradiance) NEAR/5 (sensor OR monitoring))",
+                "feature_ids": [
+                  "F4"
+                ]
+              },
+              {
+                "query_id": "K3-F4-3",
+                "query_text": "@(title,abstract,claims) ((bifacial OR bi-facial) NEAR/10 (temperature OR thermal) NEAR/5 sensor) AND ((floating OR pontoon* OR raft) NEAR/10 (photovoltaic OR solar OR PV))",
+                "feature_ids": [
+                  "F4"
+                ]
+              }
+            ],
+            "npl_queries": [],
+            "semantic_queries": [],
+            "max_results_per_query": 10
+          },
+          "timestamp": "2026-03-26T22:19:50.552254",
+          "success": true,
+          "duration_ms": 7557.5157918501645
+        },
+        {
+          "agent_name": "structural-combo-searcher",
+          "tool_name": "batch_unified_search",
+          "args": {
+            "max_results_per_query": 10,
+            "patent_queries": [
+              {
+                "query_id": "K4_comboD_force_floating_water_albedo",
+                "query_text": "@(title,abstract,claims) ((bifacial OR \"double-sided\" OR \"double sided\") AND (floating OR raft* OR pontoon* OR buoyant) AND (water OR reservoir OR lake) AND ((rear OR backside) NEAR/10 (irradiance OR pyranometer OR albedometer OR albedo)) AND ((front OR topside) NEAR/10 temperature) AND ((rear OR backside OR backsheet) NEAR/10 temperature) AND (monitor* OR logger OR SCADA OR telemetry))",
+                "feature_ids": [
+                  "F2",
+                  "F4"
+                ]
+              },
+              {
+                "query_id": "K4_deadweight_concrete_anchor_coated_wire",
+                "query_text": "@(title,abstract,claims) (((floating solar OR floating photovoltaic OR FPV) NEAR/20 (mooring OR anchoring)) AND (concrete NEAR/5 (block OR ballast OR sinker) OR deadweight OR \"dead weight\" OR gravity anchor) AND (wire rope OR cable OR stainless) AND (plastic-coated OR polymer-coated OR sheathed OR jacketed))",
+                "feature_ids": [
+                  "F3"
+                ]
+              }
+            ],
+            "semantic_queries": [
+              {
+                "query_id": "S4_comboD_floating_bifacial_scada",
+                "query_text": "SCADA or monitoring system for a bifacial floating photovoltaic plant measuring front and rear irradiance and front and rear module temperatures, particularly on water reservoirs or lakes, with wireless communications.",
+                "feature_ids": [
+                  "F2",
+                  "F4"
+                ]
+              },
+              {
+                "query_id": "S4_comboB_deadweight_corner_bridle",
+                "query_text": "Floating PV array moored at the corners using bridle lines to concrete deadweight blocks (gravity anchors), possibly using coated wire ropes or stainless cables.",
+                "feature_ids": [
+                  "F1",
+                  "F3"
+                ]
+              }
+            ],
+            "from_year": 2000,
+            "to_year": 2026
+          },
+          "timestamp": "2026-03-26T22:20:02.195653",
+          "success": true,
+          "duration_ms": 8808.846999891102
+        },
+        {
+          "agent_name": "orchestrator",
+          "tool_name": "semantic_patent_search",
+          "args": {
+            "query": "Rectangular floating photovoltaic module that uses an internal cross-shaped or cruciform partition to create four compartments, each holding a separate pontoon or buoyancy module; used as a building block for floating solar arrays.",
+            "feature_id": "F1",
+            "max_results": 25
+          },
+          "timestamp": "2026-03-26T22:21:15.666184",
+          "success": true,
+          "duration_ms": 1609.323666896671
+        },
+        {
+          "agent_name": "orchestrator",
+          "tool_name": "semantic_patent_search",
+          "args": {
+            "query": "Floating photovoltaic monitoring system for bifacial panels that measures both top-side and bottom-side module temperature, plus solar irradiance, logs data on the floating platform, and sends it wirelessly to a remote database or cloud.",
+            "feature_id": "F4",
+            "max_results": 25
+          },
+          "timestamp": "2026-03-26T22:21:15.671176",
+          "success": true,
+          "duration_ms": 1614.2883750144392
+        },
+        {
+          "agent_name": "orchestrator",
+          "tool_name": "patent_keyword_search",
+          "args": {
+            "query": "@(title,abstract,claims) ((floating NEAR/5 (photovoltaic OR solar OR PV) OR FPV) AND ((backsheet OR underside OR bottom OR rear) NEAR/3 (temperature OR thermal) NEAR/3 sensor) AND ((topside OR top) NEAR/3 (temperature OR thermal) NEAR/3 sensor) AND (irradiance OR pyranometer OR albedo) AND (\"data logger\" OR datalogger OR telemetry) AND (wireless OR LTE OR \"cellular\" OR NB-IoT OR LoRa) AND (database OR cloud OR server))",
+            "feature_id": "F4",
+            "max_results": 25
+          },
+          "timestamp": "2026-03-26T22:21:21.030262",
+          "success": true,
+          "duration_ms": 6973.258167039603
+        },
+        {
+          "agent_name": "orchestrator",
+          "tool_name": "patent_keyword_search",
+          "args": {
+            "query": "@(title,abstract,claims) ((floating NEAR/5 (photovoltaic OR solar OR PV) OR FPV) AND (cruciform OR \"cross-shaped\" OR \"cross shaped\" OR crossbeam* OR crossmember* OR \"cross member\" OR orthogonal NEAR/3 beam*) AND ((four OR 4) NEAR/5 (compartment* OR cavity OR bay OR opening* OR recess* OR pocket*)) AND (pontoon* OR buoyancy NEAR/2 (module* OR member* OR block* OR body*)))",
+            "feature_id": "F1",
+            "max_results": 25
+          },
+          "timestamp": "2026-03-26T22:21:22.487745",
+          "success": true,
+          "duration_ms": 8430.795249994844
+        },
+        {
+          "agent_name": "orchestrator",
+          "tool_name": "patent_keyword_search",
+          "args": {
+            "query": "@(dwpi_title,dwpi_novelty) (\"floating structure\" NEAR/5 (eco-adaptive OR ecoadaptive OR \"eco adaptive\") NEAR/10 photovoltaic)",
+            "feature_id": "F1",
+            "max_results": 5
+          },
+          "timestamp": "2026-03-26T22:22:29.605900",
+          "success": true,
+          "duration_ms": 61578.267166856676
+        },
+        {
+          "agent_name": "orchestrator",
+          "tool_name": "batch_citation_search",
+          "args": {
+            "publication_numbers": [
+              "US12323091B1"
+            ],
+            "max_citations_per_patent": 25,
+            "directions": [
+              "forward",
+              "backward"
+            ]
+          },
+          "timestamp": "2026-03-26T22:22:33.656216",
+          "success": true,
+          "duration_ms": 1933.1078750547022
+        }
+      ]
+    },
+    "total_rounds": 0,
+    "total_tool_calls": 99,
+    "failed_tool_calls": 0,
+    "success_rate": 1.0,
+    "search_queries": [
+      {
+        "agent_name": "semantic-recall-searcher",
+        "tool_name": "batch_unified_search",
+        "args": {
+          "max_results_per_query": 10
+        },
+        "success": true
+      },
+      {
+        "agent_name": "semantic-recall-searcher",
+        "tool_name": "batch_unified_search",
+        "args": {
+          "max_results_per_query": 10
+        },
+        "success": true
+      },
+      {
+        "agent_name": "semantic-recall-searcher",
+        "tool_name": "batch_unified_search",
+        "args": {
+          "max_results_per_query": 10,
+          "from_year": 2000,
+          "to_year": 2026,
+          "semantic_queries": [
+            {
+              "query_id": "S1",
+              "query_text": "A floating photovoltaic platform built from a rectangular float module that has an internal cross shaped or cruciform frame dividing the deck into four openings, each opening holding a separate pontoon or buoyant cassette",
+              "feature_ids": [
+                "F1",
+                "F6"
+              ]
+            },
+            {
+              "query_id": "S2",
+              "query_text": "Modular floating solar raft where a frame with orthogonal beams holds multiple detachable pontoons and supports photovoltaic modules on top, designed to connect many rafts into an array",
+              "feature_ids": [
+                "F1",
+                "F6"
+              ]
+            },
+            {
+              "query_id": "S3",
+              "query_text": "Floating solar array mooring using concrete deadweight anchor blocks on the bottom and corner tether lines or cables attached to the corners of floating PV units",
+              "feature_ids": [
+                "F3",
+                "F6"
+              ]
+            },
+            {
+              "query_id": "S4",
+              "query_text": "Bifacial photovoltaic panel mounted on a floating structure at a fixed tilt using triangular brackets or A-frame supports so the rear side receives reflected light from water",
+              "feature_ids": [
+                "F2"
+              ]
+            },
+            {
+              "query_id": "S5",
+              "query_text": "Floating PV performance monitoring using sensors for front and rear irradiance and top and bottom module temperature, connected to a data logger with wireless transmission to a remote database",
+              "feature_ids": [
+                "F4",
+                "F5"
+              ]
+            },
+            {
+              "query_id": "S6",
+              "query_text": "Floating photovoltaic system with junction box or combiner box that measures string current and voltage and sends telemetry wirelessly from a floating platform to a central server",
+              "feature_ids": [
+                "F4",
+                "F5"
+              ]
+            }
+          ],
+          "npl_queries": [
+            {
+              "query_id": "N1",
+              "query_text": "TS=(floating photovoltaic monitoring wireless data logger irradiance temperature bifacial)",
+              "feature_ids": [
+                "F2",
+                "F4",
+                "F5"
+              ]
+            },
+            {
+              "query_id": "N2",
+              "query_text": "TS=(floating solar mooring deadweight concrete anchor corner tether)",
+              "feature_ids": [
+                "F3",
+                "F6"
+              ]
+            },
+            {
+              "query_id": "N3",
+              "query_text": "TS=(modular floating PV platform pontoon frame cross beam)",
+              "feature_ids": [
+                "F1",
+                "F6"
+              ]
+            }
+          ]
+        },
+        "success": true
+      },
+      {
+        "agent_name": "semantic-recall-searcher",
+        "tool_name": "semantic_patent_search",
+        "args": {
+          "query": "A floating photovoltaic platform built from a rectangular float module that has an internal cross shaped or cruciform frame dividing the deck into four openings, each opening holding a separate pontoon or buoyant cassette",
+          "feature_id": "F1,F6",
+          "max_results": 10
+        },
+        "success": true
+      },
+      {
+        "agent_name": "semantic-recall-searcher",
+        "tool_name": "semantic_patent_search",
+        "args": {
+          "query": "Floating solar array mooring using concrete deadweight anchor blocks on the bottom and corner tether lines or cables attached to the corners of floating PV units",
+          "feature_id": "F3",
+          "max_results": 10
+        },
+        "success": true
+      },
+      {
+        "agent_name": "semantic-recall-searcher",
+        "tool_name": "semantic_patent_search",
+        "args": {
+          "query": "Floating PV performance monitoring using sensors for front and rear irradiance and top and bottom module temperature, connected to a data logger with wireless transmission to a remote database",
+          "feature_id": "F4,F5",
+          "max_results": 10
+        },
+        "success": true
+      },
+      {
+        "agent_name": "semantic-recall-searcher",
+        "tool_name": "semantic_patent_search",
+        "args": {
+          "query": "Bifacial photovoltaic panels mounted on floating solar platforms at a fixed tilt angle using triangular brackets, A-frame supports, or inclined mounting rails so the rear side captures reflection from water",
+          "feature_id": "F2",
+          "max_results": 15
+        },
+        "success": true
+      },
+      {
+        "agent_name": "structural-combo-searcher",
+        "tool_name": "batch_unified_search",
+        "args": {
+          "max_results_per_query": 10,
+          "patent_queries": [
+            {
+              "query_id": "K1_A_F1F2",
+              "query_text": "@(title,abstract,claims) ((floating NEAR/10 photovoltaic OR FPV OR solar) AND (rectangular NEAR/10 float* OR pontoon* OR buoyant module*) AND (cross NEAR/15 support OR cruciform OR \"cross-shaped\" OR \"cross shaped\" OR orthogonal NEAR/5 beam*) AND (four NEAR/10 opening* OR four NEAR/10 cavity* OR four NEAR/10 compartment*) AND (triangular NEAR/10 support* OR A-frame OR \"A frame\" OR \"A-frame\" OR tilted NEAR/5 mount*))",
+              "feature_ids": [
+                "F1",
+                "F2"
+              ]
+            },
+            {
+              "query_id": "K1_B_F1F3",
+              "query_text": "@(title,abstract,claims) ((floating NEAR/10 photovoltaic OR FPV OR solar) AND (rectangular NEAR/10 float* OR pontoon* OR buoyant module*) AND (cross NEAR/15 support OR cruciform OR orthogonal NEAR/5 beam*) AND (deadweight OR sinker OR concrete NEAR/5 block*) AND (corner NEAR/10 moor* OR mooring corner*) AND (wire* NEAR/10 plastic-coat* OR \"plastic coated\" OR polymer-coat*))",
+              "feature_ids": [
+                "F1",
+                "F3"
+              ]
+            },
+            {
+              "query_id": "K1_C_F1F4",
+              "query_text": "@(title,abstract,claims) ((floating NEAR/10 photovoltaic OR FPV OR solar) AND (rectangular NEAR/10 float* OR pontoon* OR buoyant module*) AND (cross NEAR/15 support OR cruciform OR orthogonal NEAR/5 beam*) AND (sensor* OR temperature OR irradiance OR pyranometer OR logger OR datalogger OR wireless OR telemetry))",
+              "feature_ids": [
+                "F1",
+                "F4"
+              ]
+            },
+            {
+              "query_id": "K1_D_F2F4",
+              "query_text": "@(title,abstract,claims) ((floating NEAR/10 photovoltaic OR FPV OR solar) AND (bifacial OR \"double-sided\" OR double sided) AND (triangular NEAR/10 support* OR A-frame OR \"A-frame\" OR tilted NEAR/5 mount*) AND ((temperature NEAR/5 sensor*) OR (backsheet NEAR/10 temperature) OR (rear NEAR/10 temperature) OR (front NEAR/10 temperature)) AND (irradiance OR pyranometer OR albedometer OR \"rear irradiance\" OR \"front irradiance\") AND (logger OR datalogger OR wireless OR telemetry OR SCADA))",
+              "feature_ids": [
+                "F2",
+                "F4"
+              ]
+            },
+            {
+              "query_id": "K1_FPV_modular_cross",
+              "query_text": "@(title,abstract,claims) ((modular NEAR/10 floating platform OR floating dock) AND (rectangular NEAR/10 module) AND (cruciform OR cross-shaped OR \"cross shaped\" OR orthogonal NEAR/5 rib* OR crossbeam*) AND (four NEAR/10 opening* OR four NEAR/10 recess* OR four NEAR/10 cavity*))",
+              "feature_ids": [
+                "F1"
+              ]
+            },
+            {
+              "query_id": "K1_moor_deadweight",
+              "query_text": "@(title,abstract,claims) ((floating solar OR floating photovoltaic OR FPV) AND (deadweight OR sinker OR concrete block) AND (wire rope OR cable) AND (plastic-coated OR polymer-coated OR sheathed) AND (corner mooring OR mooring at corner))",
+              "feature_ids": [
+                "F3"
+              ]
+            }
+          ],
+          "npl_queries": [
+            {
+              "query_id": "N1_FPV_bifacial_monitoring",
+              "query_text": "TS=(floating photovoltaic bifacial monitoring rear irradiance temperature sensor datalogger wireless)",
+              "feature_ids": [
+                "F2",
+                "F4"
+              ]
+            },
+            {
+              "query_id": "N1_FPV_mooring_deadweight",
+              "query_text": "TS=(floating photovoltaic mooring deadweight concrete block wire rope coated)",
+              "feature_ids": [
+                "F3"
+              ]
+            }
+          ],
+          "semantic_queries": [
+            {
+              "query_id": "S1_comboA",
+              "query_text": "Floating photovoltaic modular rectangular float platform that uses an internal cross or cruciform support to create four openings that each retain a separate pontoon, and includes triangular or A-frame supports to hold a solar panel at a fixed tilt.",
+              "feature_ids": [
+                "F1",
+                "F2"
+              ]
+            },
+            {
+              "query_id": "S1_comboB",
+              "query_text": "Floating solar platform with rectangular float modules and corner mooring lines to concrete deadweight blocks, optionally using coated stainless wire ropes or cables.",
+              "feature_ids": [
+                "F1",
+                "F3"
+              ]
+            },
+            {
+              "query_id": "S1_comboC",
+              "query_text": "Floating photovoltaic platform with integrated environmental and PV sensors such as module temperature and irradiance, a data logger, and wireless telemetry to a central database, built on modular floats.",
+              "feature_ids": [
+                "F1",
+                "F4"
+              ]
+            },
+            {
+              "query_id": "S1_comboD",
+              "query_text": "Bifacial floating photovoltaic system with fixed-tilt triangular/A-frame mounting structures and monitoring of front and rear module temperature and irradiance, with wireless logging or SCADA.",
+              "feature_ids": [
+                "F2",
+                "F4"
+              ]
+            },
+            {
+              "query_id": "S1_cross_frame_pontoons",
+              "query_text": "Modular floating dock or pontoon platform where a rectangular frame has internal orthogonal cross members forming multiple openings that each capture separate pontoons or buoyancy blocks.",
+              "feature_ids": [
+                "F1"
+              ]
+            }
+          ],
+          "from_year": 2000,
+          "to_year": 2026
+        },
+        "success": true
+      },
+      {
+        "agent_name": "keyword-precision-searcher",
+        "tool_name": "batch_unified_search",
+        "args": {
+          "patent_queries": [
+            {
+              "query_id": "K1-F1-1",
+              "query_text": "@(dwpi_title,dwpi_novelty) ((floating OR pontoon* OR buoyant) NEAR/5 (photovoltaic OR solar)) AND (rectangular ADJ/3 (float* OR platform OR pontoon*)) AND (cross ADJ/3 (brace OR support OR frame))",
+              "feature_ids": [
+                "F1"
+              ]
+            },
+            {
+              "query_id": "K1-F1-2",
+              "query_text": "@(title,abstract,claims) ((rectangular OR square) NEAR/5 (float* OR pontoon* OR platform)) AND ((cross OR X-shaped) NEAR/3 (brace OR frame OR support)) AND (four NEAR/3 (opening* OR compartment* OR pontoon*))",
+              "feature_ids": [
+                "F1"
+              ]
+            },
+            {
+              "query_id": "K1-F1-3",
+              "query_text": "@(dwpi_title,dwpi_novelty) ((cross OR X-shaped) ADJ/3 (brace OR frame OR support)) AND (pontoon* OR float*) AND (modular ADJ/3 unit)",
+              "feature_ids": [
+                "F1"
+              ]
+            },
+            {
+              "query_id": "K1-F2-1",
+              "query_text": "@(dwpi_title,dwpi_novelty) (bifacial NEAR/5 (photovoltaic OR PV)) AND ((triangular OR A-frame) NEAR/3 (support OR bracket OR mount)) AND (floating OR pontoon* OR raft)",
+              "feature_ids": [
+                "F2"
+              ]
+            },
+            {
+              "query_id": "K1-F2-2",
+              "query_text": "@(title,abstract,claims) ((A-frame OR \"A frame\" OR triangular) NEAR/3 (bracket OR support OR mount)) AND (tilt* NEAR/5 (panel OR module OR photovoltaic)) AND (float* OR pontoon* OR floating)",
+              "feature_ids": [
+                "F2"
+              ]
+            },
+            {
+              "query_id": "K1-F3-1",
+              "query_text": "@(dwpi_title,dwpi_novelty) ((deadweight OR \"concrete block\" OR concrete) NEAR/5 (anchor OR mooring)) AND (floating NEAR/5 (solar OR photovoltaic OR PV))",
+              "feature_ids": [
+                "F3"
+              ]
+            },
+            {
+              "query_id": "K1-F3-2",
+              "query_text": "@(title,abstract,claims) ((plastic-coated OR polymer-coated OR coated) NEAR/3 (stainless ADJ/2 (wire OR cable))) AND (mooring OR tether*) AND (floating NEAR/5 (solar OR photovoltaic OR PV))",
+              "feature_ids": [
+                "F3"
+              ]
+            },
+            {
+              "query_id": "K1-F4-1",
+              "query_text": "@(dwpi_title,dwpi_novelty) ((irradiance OR pyranometer OR \"solar radiation\") NEAR/5 sensor) AND (\"data logger\" OR datalogger OR telemetry) AND (floating NEAR/5 (photovoltaic OR solar OR PV))",
+              "feature_ids": [
+                "F4"
+              ]
+            },
+            {
+              "query_id": "K1-F4-2",
+              "query_text": "@(title,abstract,claims) ((backsheet OR rear) NEAR/3 temperature NEAR/3 sensor) AND (irradiance NEAR/5 sensor) AND ((wireless OR NB-IoT OR LTE OR LoRa) NEAR/10 (logger OR monitoring OR telemetry)) AND (floating NEAR/5 (photovoltaic OR solar OR PV))",
+              "feature_ids": [
+                "F4"
+              ]
+            },
+            {
+              "query_id": "K1-F5-1",
+              "query_text": "@(title,abstract,claims) ((junction box OR combiner box) NEAR/10 (current sensor OR voltage sensor)) AND (wireless NEAR/10 (transmit* OR telemetry OR monitoring)) AND (floating NEAR/5 (solar OR photovoltaic OR PV))",
+              "feature_ids": [
+                "F5"
+              ]
+            },
+            {
+              "query_id": "K1-F6-1",
+              "query_text": "@(dwpi_title,dwpi_novelty) ((modular OR connectable OR interconnect*) NEAR/5 (float* OR pontoon* OR raft)) AND (array NEAR/5 (floating solar OR floating photovoltaic OR FPV))",
+              "feature_ids": [
+                "F6"
+              ]
+            }
+          ],
+          "npl_queries": [
+            {
+              "query_id": "NPL-TI-1",
+              "query_text": "TI=((floating NEAR/3 photovoltaic) OR (floating NEAR/3 solar) OR FPV)",
+              "feature_ids": [
+                "F1",
+                "F6"
+              ]
+            },
+            {
+              "query_id": "NPL-TI-2",
+              "query_text": "TI=((bifacial NEAR/3 floating) AND (mount OR bracket OR A-frame OR \"A frame\"))",
+              "feature_ids": [
+                "F2"
+              ]
+            },
+            {
+              "query_id": "NPL-TI-3",
+              "query_text": "TI=((deadweight OR concrete) NEAR/3 (anchor OR mooring) NEAR/3 (floating solar OR floating photovoltaic))",
+              "feature_ids": [
+                "F3"
+              ]
+            },
+            {
+              "query_id": "NPL-TI-4",
+              "query_text": "TI=((irradiance OR pyranometer OR \"data logger\" OR telemetry) NEAR/3 (floating photovoltaic OR floating solar))",
+              "feature_ids": [
+                "F4"
+              ]
+            }
+          ],
+          "semantic_queries": [],
+          "max_results_per_query": 10,
+          "from_year": 2000,
+          "to_year": 2026
+        },
+        "success": true
+      },
+      {
+        "agent_name": "structural-combo-searcher",
+        "tool_name": "batch_unified_search",
+        "args": {
+          "max_results_per_query": 10,
+          "patent_queries": [
+            {
+              "query_id": "K2_F1_cruciform_four_pontoons",
+              "query_text": "@(title,abstract,claims) ((floating dock OR floating platform OR floating photovoltaic OR floating solar) AND (cruciform OR \"cross-shaped\" OR \"cross shaped\" OR \"cross member\" OR crossbeam* OR lattice OR grid) NEAR/20 (frame OR support OR rib*) AND (four NEAR/10 (pontoon* OR float* OR buoyancy member* OR buoyant body* OR buoyancy block*)) AND (opening* OR recess* OR cavity OR compartment OR pocket))",
+              "feature_ids": [
+                "F1"
+              ]
+            },
+            {
+              "query_id": "K2_F1_rectangular_frame_four_floats",
+              "query_text": "@(title,abstract,claims) ((rectangular OR quadrilateral) NEAR/10 (frame OR module OR float) AND ((cross NEAR/5 rib*) OR (orthogonal NEAR/5 beam*) OR (internal NEAR/5 partition*)) AND (retain* OR hold* OR trap* OR receive*) NEAR/15 (four NEAR/5 (float* OR pontoon* OR buoyancy body*)))",
+              "feature_ids": [
+                "F1"
+              ]
+            },
+            {
+              "query_id": "K2_comboB_deadweight_corner",
+              "query_text": "@(title,abstract,claims) ((floating photovoltaic OR floating solar) AND (module OR array OR platform) AND ((deadweight OR \"dead weight\" OR gravity OR concrete) NEAR/5 (anchor OR block OR ballast)) AND (corner NEAR/10 (mooring OR anchor line OR bridle)) AND (wire rope OR cable) AND (sheath* OR jacket* OR coated OR plastic))",
+              "feature_ids": [
+                "F1",
+                "F3"
+              ]
+            },
+            {
+              "query_id": "K2_comboD_bifacial_rear_irradiance",
+              "query_text": "@(title,abstract,claims) ((floating photovoltaic OR floating solar) AND (bifacial OR double-sided OR \"double sided\") AND (rear NEAR/5 irradiance OR backside NEAR/5 irradiance OR albedo OR albedometer OR \"rear pyranometer\") AND ((front NEAR/5 temperature) OR (rear NEAR/5 temperature) OR (backsheet NEAR/5 temperature)) AND (logger OR datalogger OR SCADA OR telemetry OR wireless))",
+              "feature_ids": [
+                "F2",
+                "F4"
+              ]
+            }
+          ],
+          "semantic_queries": [
+            {
+              "query_id": "S2_F1_cruciform_cells",
+              "query_text": "A modular floating dock or platform module where a rectangular outer frame has a central cross-shaped beam structure that divides the interior into four pockets or openings, each pocket receiving a separate pontoon or buoyant block.",
+              "feature_ids": [
+                "F1"
+              ]
+            },
+            {
+              "query_id": "S2_comboA_cross_and_Aframe",
+              "query_text": "Floating solar platform using a rectangular float module with a cruciform internal support that holds four separate floats, combined with A-frame or triangular mounting brackets that hold a photovoltaic panel at a fixed tilt.",
+              "feature_ids": [
+                "F1",
+                "F2"
+              ]
+            },
+            {
+              "query_id": "S2_comboB_corner_gravity_anchor",
+              "query_text": "Floating photovoltaic array with corner bridle moorings connected to gravity anchors or concrete deadweight blocks using polymer-sheathed wire ropes or coated stainless steel cables.",
+              "feature_ids": [
+                "F1",
+                "F3"
+              ]
+            },
+            {
+              "query_id": "S2_comboD_bifacial_dual_temp",
+              "query_text": "Bifacial floating photovoltaic installation that measures both front-side and rear-side module temperature and also measures front and rear irradiance, sending data via wireless telemetry or SCADA to a central database.",
+              "feature_ids": [
+                "F2",
+                "F4"
+              ]
+            }
+          ],
+          "from_year": 1995,
+          "to_year": 2026
+        },
+        "success": true
+      },
+      {
+        "agent_name": "keyword-precision-searcher",
+        "tool_name": "batch_unified_search",
+        "args": {
+          "patent_queries": [
+            {
+              "query_id": "K2-F1-1",
+              "query_text": "@(title,abstract,claims) ((cross-shaped OR cross shaped OR cruciform OR cruciate) NEAR/3 (partition OR rib* OR support OR frame)) AND ((four OR 4) NEAR/5 (pontoon* OR float* OR chamber* OR compartment* OR opening*)) AND ((rectangular OR square) NEAR/5 (float* OR platform OR module))",
+              "feature_ids": [
+                "F1"
+              ]
+            },
+            {
+              "query_id": "K2-F1-2",
+              "query_text": "@(dwpi_title,dwpi_novelty) ((cruciform OR cross-shaped OR \"cross shaped\") NEAR/5 (support OR frame OR partition)) AND ((four OR 4) NEAR/5 (pontoon* OR float* OR compartment*))",
+              "feature_ids": [
+                "F1"
+              ]
+            },
+            {
+              "query_id": "K2-F3-1",
+              "query_text": "@(title,abstract,claims) ((corner OR vertex) NEAR/5 mooring) AND ((deadweight OR concrete) NEAR/10 (block OR anchor)) AND ((plastic-coated OR polymer-coated) NEAR/5 (stainless NEAR/3 (wire OR cable)))",
+              "feature_ids": [
+                "F3"
+              ]
+            },
+            {
+              "query_id": "K2-F4-1",
+              "query_text": "@(title,abstract,claims) ((floating NEAR/5 photovoltaic) OR (floating NEAR/5 solar) OR FPV) AND ((backsheet OR rear OR underside OR \"bottom surface\") NEAR/5 (temperature sensor OR thermistor)) AND (irradiance NEAR/5 sensor) AND (\"data logger\" OR datalogger)",
+              "feature_ids": [
+                "F4"
+              ]
+            },
+            {
+              "query_id": "K2-F4-2",
+              "query_text": "@(dwpi_title,dwpi_novelty) ((floating NEAR/5 photovoltaic) OR (floating NEAR/5 solar)) AND ((temperature OR irradiance) NEAR/5 sensor) AND ((wireless OR telemetry) NEAR/5 (logger OR monitoring))",
+              "feature_ids": [
+                "F4"
+              ]
+            }
+          ],
+          "npl_queries": [],
+          "semantic_queries": [],
+          "max_results_per_query": 10
+        },
+        "success": true
+      },
+      {
+        "agent_name": "structural-combo-searcher",
+        "tool_name": "batch_unified_search",
+        "args": {
+          "max_results_per_query": 10,
+          "patent_queries": [
+            {
+              "query_id": "K3_comboD_floating_bifacial_sensors",
+              "query_text": "@(title,abstract,claims) ((floating NEAR/10 (photovoltaic OR solar)) AND (bifacial OR \"double-sided\" OR \"double sided\") AND ((rear OR backside OR backsheet) NEAR/10 (temperature OR temp* OR thermistor OR RTD)) AND ((front OR topside) NEAR/10 (temperature OR temp* OR thermistor OR RTD)) AND ((rear OR backside) NEAR/10 (irradiance OR pyranometer OR albedometer OR albedo)) AND (wireless OR telemetry OR SCADA OR datalogger OR logger))",
+              "feature_ids": [
+                "F2",
+                "F4"
+              ]
+            },
+            {
+              "query_id": "K3_comboA_cross_Aframe_expanded",
+              "query_text": "@(title,abstract,claims) ((floating NEAR/10 (photovoltaic OR solar)) AND (cruciform OR cross-shaped OR \"cross shaped\" OR orthogonal NEAR/5 beam* OR internal NEAR/5 partition*) AND (four NEAR/10 (pontoon* OR float* OR buoyancy member*)) AND (triangular OR \"A-frame\" OR \"A frame\" OR inclined OR tilted) NEAR/15 (support* OR bracket* OR mount*))",
+              "feature_ids": [
+                "F1",
+                "F2"
+              ]
+            },
+            {
+              "query_id": "K3_comboC_sensors_on_float_module",
+              "query_text": "@(title,abstract,claims) ((floating NEAR/10 (photovoltaic OR solar)) AND (float module OR buoyant module OR pontoon module) AND (sensor* NEAR/10 (temperature OR irradiance)) AND (logger OR datalogger) AND (wireless OR radio OR telemetry))",
+              "feature_ids": [
+                "F1",
+                "F4"
+              ]
+            }
+          ],
+          "semantic_queries": [
+            {
+              "query_id": "S3_comboD_albedo_rear_front",
+              "query_text": "Floating bifacial PV array that measures rear-side irradiance (albedo) and both front-side and rear-side module temperature, with a data logger and wireless communication.",
+              "feature_ids": [
+                "F2",
+                "F4"
+              ]
+            },
+            {
+              "query_id": "S3_comboA_cruciform_float_Aframe",
+              "query_text": "A floating photovoltaic pontoon where a rectangular deck has internal orthogonal cross beams forming four compartments for separate buoyancy blocks, and the PV module is held on two triangular side frames at a fixed tilt.",
+              "feature_ids": [
+                "F1",
+                "F2"
+              ]
+            },
+            {
+              "query_id": "S3_comboC_FPV_IoT_sensors",
+              "query_text": "Floating solar system with IoT sensor package on the float measuring PV temperature and solar irradiance, sending data wirelessly to a central database or cloud for monitoring.",
+              "feature_ids": [
+                "F1",
+                "F4"
+              ]
+            }
+          ],
+          "from_year": 2000,
+          "to_year": 2026
+        },
+        "success": true
+      },
+      {
+        "agent_name": "keyword-precision-searcher",
+        "tool_name": "batch_unified_search",
+        "args": {
+          "patent_queries": [
+            {
+              "query_id": "K3-F4-1",
+              "query_text": "@(title,abstract,claims) ((floating NEAR/5 (photovoltaic OR solar OR PV)) OR FPV) AND ((sampling OR sample* OR interval* OR periodic* OR \"time interval\") NEAR/5 (logger OR \"data logger\" OR datalogger)) AND ((wireless OR radio OR LTE OR NB-IoT OR \"cellular\") NEAR/10 (transmit* OR communication OR telemetry)) AND ((server OR database OR cloud OR remote) NEAR/10 (monitor* OR store* OR manage*))",
+              "feature_ids": [
+                "F4"
+              ]
+            },
+            {
+              "query_id": "K3-F4-2",
+              "query_text": "@(dwpi_title,dwpi_novelty) ((floating NEAR/5 photovoltaic) OR (floating NEAR/5 solar)) AND ((data logger OR datalogger) NEAR/5 (wireless OR telemetry)) AND ((temperature OR irradiance) NEAR/5 (sensor OR monitoring))",
+              "feature_ids": [
+                "F4"
+              ]
+            },
+            {
+              "query_id": "K3-F4-3",
+              "query_text": "@(title,abstract,claims) ((bifacial OR bi-facial) NEAR/10 (temperature OR thermal) NEAR/5 sensor) AND ((floating OR pontoon* OR raft) NEAR/10 (photovoltaic OR solar OR PV))",
+              "feature_ids": [
+                "F4"
+              ]
+            }
+          ],
+          "npl_queries": [],
+          "semantic_queries": [],
+          "max_results_per_query": 10
+        },
+        "success": true
+      },
+      {
+        "agent_name": "structural-combo-searcher",
+        "tool_name": "batch_unified_search",
+        "args": {
+          "max_results_per_query": 10,
+          "patent_queries": [
+            {
+              "query_id": "K4_comboD_force_floating_water_albedo",
+              "query_text": "@(title,abstract,claims) ((bifacial OR \"double-sided\" OR \"double sided\") AND (floating OR raft* OR pontoon* OR buoyant) AND (water OR reservoir OR lake) AND ((rear OR backside) NEAR/10 (irradiance OR pyranometer OR albedometer OR albedo)) AND ((front OR topside) NEAR/10 temperature) AND ((rear OR backside OR backsheet) NEAR/10 temperature) AND (monitor* OR logger OR SCADA OR telemetry))",
+              "feature_ids": [
+                "F2",
+                "F4"
+              ]
+            },
+            {
+              "query_id": "K4_deadweight_concrete_anchor_coated_wire",
+              "query_text": "@(title,abstract,claims) (((floating solar OR floating photovoltaic OR FPV) NEAR/20 (mooring OR anchoring)) AND (concrete NEAR/5 (block OR ballast OR sinker) OR deadweight OR \"dead weight\" OR gravity anchor) AND (wire rope OR cable OR stainless) AND (plastic-coated OR polymer-coated OR sheathed OR jacketed))",
+              "feature_ids": [
+                "F3"
+              ]
+            }
+          ],
+          "semantic_queries": [
+            {
+              "query_id": "S4_comboD_floating_bifacial_scada",
+              "query_text": "SCADA or monitoring system for a bifacial floating photovoltaic plant measuring front and rear irradiance and front and rear module temperatures, particularly on water reservoirs or lakes, with wireless communications.",
+              "feature_ids": [
+                "F2",
+                "F4"
+              ]
+            },
+            {
+              "query_id": "S4_comboB_deadweight_corner_bridle",
+              "query_text": "Floating PV array moored at the corners using bridle lines to concrete deadweight blocks (gravity anchors), possibly using coated wire ropes or stainless cables.",
+              "feature_ids": [
+                "F1",
+                "F3"
+              ]
+            }
+          ],
+          "from_year": 2000,
+          "to_year": 2026
+        },
+        "success": true
+      },
+      {
+        "agent_name": "orchestrator",
+        "tool_name": "semantic_patent_search",
+        "args": {
+          "query": "Rectangular floating photovoltaic module that uses an internal cross-shaped or cruciform partition to create four compartments, each holding a separate pontoon or buoyancy module; used as a building block for floating solar arrays.",
+          "feature_id": "F1",
+          "max_results": 25
+        },
+        "success": true
+      },
+      {
+        "agent_name": "orchestrator",
+        "tool_name": "semantic_patent_search",
+        "args": {
+          "query": "Floating photovoltaic monitoring system for bifacial panels that measures both top-side and bottom-side module temperature, plus solar irradiance, logs data on the floating platform, and sends it wirelessly to a remote database or cloud.",
+          "feature_id": "F4",
+          "max_results": 25
+        },
+        "success": true
+      },
+      {
+        "agent_name": "orchestrator",
+        "tool_name": "patent_keyword_search",
+        "args": {
+          "query": "@(title,abstract,claims) ((floating NEAR/5 (photovoltaic OR solar OR PV) OR FPV) AND ((backsheet OR underside OR bottom OR rear) NEAR/3 (temperature OR thermal) NEAR/3 sensor) AND ((topside OR top) NEAR/3 (temperature OR thermal) NEAR/3 sensor) AND (irradiance OR pyranometer OR albedo) AND (\"data logger\" OR datalogger OR telemetry) AND (wireless OR LTE OR \"cellular\" OR NB-IoT OR LoRa) AND (database OR cloud OR server))",
+          "feature_id": "F4",
+          "max_results": 25
+        },
+        "success": true
+      },
+      {
+        "agent_name": "orchestrator",
+        "tool_name": "patent_keyword_search",
+        "args": {
+          "query": "@(title,abstract,claims) ((floating NEAR/5 (photovoltaic OR solar OR PV) OR FPV) AND (cruciform OR \"cross-shaped\" OR \"cross shaped\" OR crossbeam* OR crossmember* OR \"cross member\" OR orthogonal NEAR/3 beam*) AND ((four OR 4) NEAR/5 (compartment* OR cavity OR bay OR opening* OR recess* OR pocket*)) AND (pontoon* OR buoyancy NEAR/2 (module* OR member* OR block* OR body*)))",
+          "feature_id": "F1",
+          "max_results": 25
+        },
+        "success": true
+      },
+      {
+        "agent_name": "orchestrator",
+        "tool_name": "patent_keyword_search",
+        "args": {
+          "query": "@(dwpi_title,dwpi_novelty) (\"floating structure\" NEAR/5 (eco-adaptive OR ecoadaptive OR \"eco adaptive\") NEAR/10 photovoltaic)",
+          "feature_id": "F1",
+          "max_results": 5
+        },
+        "success": true
+      },
+      {
+        "agent_name": "orchestrator",
+        "tool_name": "batch_citation_search",
+        "args": {
+          "publication_numbers": [
+            "US12323091B1"
+          ],
+          "max_citations_per_patent": 25,
+          "directions": [
+            "forward",
+            "backward"
+          ]
+        },
+        "success": true
+      }
+    ]
+  },
+  "checklist": {
+    "passed": true,
+    "checks": {},
+    "details": {}
+  },
+  "artifacts_manifest": [
+    {
+      "filename": "final_report.md",
+      "exists": true,
+      "size_bytes": 37072
+    },
+    {
+      "filename": "scope.md",
+      "exists": true,
+      "size_bytes": 1494
+    },
+    {
+      "filename": "patent_statistics.md",
+      "exists": true,
+      "size_bytes": 2671
+    },
+    {
+      "filename": "references.md",
+      "exists": true,
+      "size_bytes": 4427
+    },
+    {
+      "filename": "telemetry.json",
+      "exists": true,
+      "size_bytes": 123280
+    },
+    {
+      "filename": "features.md",
+      "exists": true,
+      "size_bytes": 1746
+    },
+    {
+      "filename": "patent_statistics.json",
+      "exists": true,
+      "size_bytes": 6745
+    },
+    {
+      "filename": "findings_auto_accumulator.json",
+      "exists": true,
+      "size_bytes": 3865
+    }
+  ]
+}
