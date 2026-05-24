@@ -1,13 +1,12 @@
 """Factory for the TM knockout search agent v1 orchestrator.
 
-This module intentionally keeps the v1 agent independent and deterministic. It
-does not register LangGraph, call live trademark APIs, or create source-specific
-sub-agents.
+This module intentionally keeps the v1 agent independent and simple. Live
+CompuMark execution is opt-in; the default path remains deterministic and local.
 """
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 from typing import Any
 
@@ -28,6 +27,10 @@ from src.tm_knockout_search_agent.services.session import (
     write_artifact,
     write_final_report,
 )
+from src.tm_knockout_search_agent.services.search_execution import (
+    TrademarkSourceExecutionResult,
+    execute_trademark_search_plan,
+)
 from src.tm_knockout_search_agent.services.stopping import (
     SearchProgress,
     StoppingDecisionType,
@@ -41,6 +44,7 @@ from src.tm_knockout_search_agent.state import (
     WorkflowStage,
 )
 from src.tm_knockout_search_agent.tools.registry import get_tm_knockout_search_tools
+from src.tm_knockout_search_agent.tools.adapters import flag_duplicate_candidates
 
 
 TM_KNOCKOUT_AGENT_NAME = "tm_knockout_search_agent"
@@ -60,6 +64,7 @@ class TMKnockoutAgentConfig:
     max_candidates_to_surface_in_report: int = 10
     include_web_search: bool = True
     include_inactive_contextual: bool = False
+    live_compumark: bool = False
     language: str = "English"
     sessions_base_dir: str | Path = DEFAULT_SESSIONS_BASE_DIR
 
@@ -84,6 +89,12 @@ class TMKnockoutSearchAgent:
         """Invoke deterministic screening from structured input."""
         _ = config
         payload = dict(input_data)
+        config_override = self.config
+        if "live_compumark" in payload:
+            config_override = replace(
+                self.config,
+                live_compumark=bool(payload.pop("live_compumark")),
+            )
         return check_tm_knockout(
             brand=payload.pop("brand", payload.pop("brand_name", None)),
             countries=payload.pop("countries", payload.pop("jurisdictions", None)),
@@ -95,7 +106,7 @@ class TMKnockoutSearchAgent:
             source_statuses=payload.pop("source_statuses", None),
             completed_query_group_ids=payload.pop("completed_query_group_ids", None),
             completed_stages=payload.pop("completed_stages", None),
-            agent_config=self.config,
+            agent_config=config_override,
         )
 
 
@@ -129,6 +140,7 @@ def create_tm_knockout_search_agent(
     max_candidates_to_surface_in_report: int = 10,
     include_web_search: bool = True,
     include_inactive_contextual: bool = False,
+    live_compumark: bool = False,
     language: str = "English",
     sessions_base_dir: str | Path = DEFAULT_SESSIONS_BASE_DIR,
 ) -> TMKnockoutSearchAgent:
@@ -143,6 +155,7 @@ def create_tm_knockout_search_agent(
             max_candidates_to_surface_in_report=max_candidates_to_surface_in_report,
             include_web_search=include_web_search,
             include_inactive_contextual=include_inactive_contextual,
+            live_compumark=live_compumark,
             language=language,
             sessions_base_dir=sessions_base_dir,
         )
@@ -174,6 +187,7 @@ def check_tm_knockout(
     max_candidates_to_surface_in_report: int = 10,
     include_web_search: bool = True,
     include_inactive_contextual: bool = False,
+    live_compumark: bool = False,
     language: str = "English",
     sessions_base_dir: str | Path = DEFAULT_SESSIONS_BASE_DIR,
     agent_config: TMKnockoutAgentConfig | None = None,
@@ -188,6 +202,7 @@ def check_tm_knockout(
         max_candidates_to_surface_in_report=max_candidates_to_surface_in_report,
         include_web_search=include_web_search,
         include_inactive_contextual=include_inactive_contextual,
+        live_compumark=live_compumark,
         language=language,
         sessions_base_dir=sessions_base_dir,
     )
@@ -216,11 +231,39 @@ def check_tm_knockout(
     plan = plan_trademark_search(criteria, budget=budget)
     normalized_candidates = _coerce_candidates(candidates or [])
     normalized_source_statuses = _coerce_source_statuses(source_statuses or [])
+    source_execution_result: TrademarkSourceExecutionResult | None = None
+    source_execution_skipped_reason: str | None = None
+    execution_completed_group_ids: list[str] = []
+    execution_completed_stages: list[TrademarkSearchStage] = []
+
+    if resolved_config.live_compumark:
+        if plan.requires_clarification:
+            source_execution_skipped_reason = (
+                "live_compumark skipped because criteria require clarification"
+            )
+        else:
+            source_execution_result = execute_trademark_search_plan(
+                plan,
+                max_candidates_to_normalize=budget.max_candidates_to_normalize,
+            )
+            normalized_candidates = flag_duplicate_candidates(
+                [*normalized_candidates, *source_execution_result.candidates]
+            )
+            normalized_source_statuses.extend(source_execution_result.source_statuses)
+            execution_completed_group_ids = source_execution_result.completed_query_group_ids
+            execution_completed_stages = source_execution_result.completed_stages
+
+    resolved_completed_query_group_ids = _merge_strings(
+        completed_query_group_ids or [],
+        execution_completed_group_ids,
+    )
+    resolved_completed_stages = _merge_stages(
+        [_coerce_stage(stage) for stage in completed_stages or []],
+        execution_completed_stages,
+    )
     progress = SearchProgress(
-        completed_query_group_ids=completed_query_group_ids or [],
-        completed_stages=[
-            _coerce_stage(stage) for stage in completed_stages or []
-        ],
+        completed_query_group_ids=resolved_completed_query_group_ids,
+        completed_stages=resolved_completed_stages,
         normalized_candidate_count=len(normalized_candidates),
         relevant_candidate_count=len(normalized_candidates),
         selected_for_deep_review_count=min(
@@ -261,6 +304,7 @@ def check_tm_knockout(
             "language": resolved_config.language,
             "thread_id": resolved_config.thread_id,
             "model": resolved_config.model,
+            "live_compumark": resolved_config.live_compumark,
         },
         base_dir=resolved_config.sessions_base_dir,
     )
@@ -291,6 +335,24 @@ def check_tm_knockout(
         manifest.session_id,
         "query_plan",
         plan,
+        base_dir=resolved_config.sessions_base_dir,
+    )
+    write_artifact(
+        manifest.session_id,
+        "compumark_results",
+        source_execution_result.compumark_results if source_execution_result else [],
+        base_dir=resolved_config.sessions_base_dir,
+    )
+    write_artifact(
+        manifest.session_id,
+        "web_results",
+        source_execution_result.web_results if source_execution_result else [],
+        base_dir=resolved_config.sessions_base_dir,
+    )
+    write_artifact(
+        manifest.session_id,
+        "source_statuses",
+        normalized_source_statuses,
         base_dir=resolved_config.sessions_base_dir,
     )
     write_artifact(
@@ -351,6 +413,8 @@ def check_tm_knockout(
             risk_assessment=risk_assessment,
             stopping_decision=stopping_decision,
             adversarial_review=adversarial_review,
+            live_compumark_requested=resolved_config.live_compumark,
+            source_execution_result=source_execution_result,
         )
         write_final_report(
             manifest.session_id,
@@ -369,8 +433,24 @@ def check_tm_knockout(
         "search_plan": plan.model_dump(mode="json"),
         "risk_assessment": risk_assessment.model_dump(mode="json"),
         "stopping_decision": stopping_decision.model_dump(mode="json"),
+        "source_execution": (
+            source_execution_result.model_dump(mode="json")
+            if source_execution_result
+            else {
+                "completed_query_group_ids": [],
+                "completed_stages": [],
+                "source_statuses": [
+                    status.model_dump(mode="json")
+                    for status in normalized_source_statuses
+                ],
+                "skipped_reason": source_execution_skipped_reason,
+                "live_api_calls": False,
+            }
+        ),
         "report_markdown": report_markdown,
-        "live_api_calls": False,
+        "live_api_calls": bool(
+            source_execution_result and source_execution_result.live_api_calls
+        ),
     }
 
 
@@ -434,6 +514,29 @@ def _coerce_stage(stage: TrademarkSearchStage | str) -> TrademarkSearchStage:
     return TrademarkSearchStage(stage)
 
 
+def _merge_strings(first: list[str], second: list[str]) -> list[str]:
+    merged: list[str] = []
+    seen: set[str] = set()
+    for value in [*first, *second]:
+        if value and value not in seen:
+            merged.append(value)
+            seen.add(value)
+    return merged
+
+
+def _merge_stages(
+    first: list[TrademarkSearchStage],
+    second: list[TrademarkSearchStage],
+) -> list[TrademarkSearchStage]:
+    merged: list[TrademarkSearchStage] = []
+    seen: set[TrademarkSearchStage] = set()
+    for stage in [*first, *second]:
+        if stage not in seen:
+            merged.append(stage)
+            seen.add(stage)
+    return merged
+
+
 def _build_markdown_report(
     *,
     criteria: TrademarkSearchCriteria,
@@ -442,7 +545,23 @@ def _build_markdown_report(
     risk_assessment: Any,
     stopping_decision: Any,
     adversarial_review: AdversarialReview,
+    live_compumark_requested: bool,
+    source_execution_result: TrademarkSourceExecutionResult | None,
 ) -> str:
+    limitations = [
+        f"Stopping decision: {stopping_decision.decision.value} ({stopping_decision.reason}).",
+    ]
+    if live_compumark_requested and source_execution_result:
+        limitations.append(
+            "CompuMark was queried through the configured API for planned CompuMark groups."
+        )
+    elif live_compumark_requested:
+        limitations.append("Live CompuMark execution was requested but skipped.")
+    else:
+        limitations.append("Live CompuMark was not executed in this run.")
+    limitations.append(
+        "Web/common-law integration is not active unless web evidence is supplied externally."
+    )
     return generate_trademark_report(
         {
             "search_criteria": criteria,
@@ -451,10 +570,7 @@ def _build_markdown_report(
             "ranked_findings": risk_assessment.findings,
             "risk_assessment": risk_assessment,
             "adversarial_review": adversarial_review,
-            "limitations": [
-                "Live CompuMark and web/common-law integrations are not active in this step.",
-                f"Stopping decision: {stopping_decision.decision.value} ({stopping_decision.reason}).",
-            ],
+            "limitations": limitations,
         }
     )
 

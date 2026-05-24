@@ -56,6 +56,12 @@ from src.tm_knockout_search_agent.services.report_validator import (
     extract_report_sections,
     validate_trademark_report,
 )
+from src.tm_knockout_search_agent.services.search_execution import (
+    CompuMarkExecutor,
+    SourceExecutionError,
+    TrademarkSourceExecutionResult,
+    execute_trademark_search_plan,
+)
 from src.tm_knockout_search_agent.services.stopping import (
     SearchProgress,
     StoppingDecision,
@@ -117,6 +123,10 @@ __all__ = [
     "ReportValidationResult",
     "extract_report_sections",
     "validate_trademark_report",
+    "CompuMarkExecutor",
+    "SourceExecutionError",
+    "TrademarkSourceExecutionResult",
+    "execute_trademark_search_plan",
     "SearchProgress",
     "StoppingDecision",
     "StoppingDecisionType",

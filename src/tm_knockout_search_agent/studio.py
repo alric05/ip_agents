@@ -45,6 +45,7 @@ class TMKnockoutGraphState(TypedDict, total=False):
     max_candidates_to_surface_in_report: int
     include_web_search: bool
     include_inactive_contextual: bool
+    live_compumark: bool
     use_llm: bool
     language: str
     result: dict[str, Any]
@@ -157,6 +158,7 @@ def _run_tm_knockout_screen(
                 ),
                 include_web_search=state.get("include_web_search", True),
                 include_inactive_contextual=state.get("include_inactive_contextual", False),
+                live_compumark=state.get("live_compumark", False),
                 language=state.get("language", "English"),
                 sessions_base_dir=state.get("sessions_base_dir", "sessions"),
             )

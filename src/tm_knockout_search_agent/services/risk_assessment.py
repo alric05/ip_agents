@@ -399,6 +399,9 @@ def _jurisdiction_overlap(
 def _is_active_candidate(candidate: TrademarkCandidate) -> bool:
     if candidate.source == TrademarkCandidateSource.WEB_COMMON_LAW:
         return False
+    raw_status = candidate.raw_source_metadata.get("status")
+    if isinstance(raw_status, dict) and isinstance(raw_status.get("active"), bool):
+        return raw_status["active"] and not _is_inactive_candidate(candidate)
     status = (candidate.status or "").lower()
     return any(term in status for term in _ACTIVE_STATUS_TERMS) and not any(
         term in status for term in _INACTIVE_STATUS_TERMS

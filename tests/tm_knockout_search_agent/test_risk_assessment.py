@@ -94,6 +94,24 @@ def test_similar_active_related_goods_same_jurisdiction_is_elevated() -> None:
     assert assessment.findings[0].goods_overlap in {"same", "related"}
 
 
+def test_compumark_raw_active_flag_marks_candidate_active() -> None:
+    assessment = assess_trademark_risk(
+        _criteria(brand_name="KLYRA", nice_classes=["3"], goods_services="cosmetics"),
+        [
+            _registry_candidate(
+                mark_name="SPARKXXXX",
+                classes=["3"],
+                goods_services="Cosmetics",
+                status="REGISXXXXX",
+                raw_source_metadata={"status": {"active": True}},
+            )
+        ],
+    )
+
+    assert assessment.findings[0].active_status is True
+    assert "active_registry_status=true" in assessment.findings[0].reasons
+
+
 def test_similar_unrelated_goods_famous_owner_is_medium() -> None:
     assessment = assess_trademark_risk(
         _criteria(nice_classes=["35"]),

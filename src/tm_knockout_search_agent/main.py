@@ -47,6 +47,14 @@ def create_parser() -> argparse.ArgumentParser:
         help="Include inactive/dead contextual search in the deterministic plan",
     )
     parser.add_argument(
+        "--live-compumark",
+        action="store_true",
+        help=(
+            "Execute planned CompuMark query groups with the configured "
+            "COMPUMARK_API_KEY. Web search remains separate."
+        ),
+    )
+    parser.add_argument(
         "--sessions-base-dir",
         default="sessions",
         help="Base directory for session artifacts",
@@ -86,6 +94,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         max_candidates_to_surface_in_report=args.max_candidates_to_surface_in_report,
         include_web_search=args.include_web_search,
         include_inactive_contextual=args.include_inactive_contextual,
+        live_compumark=args.live_compumark,
         language=args.language,
         sessions_base_dir=Path(args.sessions_base_dir),
     )
@@ -120,7 +129,7 @@ def _format_summary(result: dict) -> str:
         f"Stopping decision: {stop}",
         f"Planned query groups: {len(groups)}",
         f"Next query groups: {', '.join(next_groups) if next_groups else 'None'}",
-        "Live API calls: false",
+        f"Live API calls: {str(bool(result.get('live_api_calls'))).lower()}",
     ]
     if result.get("report_markdown"):
         lines.append("")

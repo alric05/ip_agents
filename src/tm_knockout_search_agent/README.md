@@ -109,14 +109,30 @@ Opt-in real LLM smoke input:
 }
 ```
 
-With `use_llm=true`, the graph still does not call CompuMark or web search. It
+With `use_llm=true` alone, the graph does not call CompuMark or web search. It
 makes one Azure OpenAI call to review the deterministic artifacts and writes
-`llm_review.json` under the session directory. If Azure OpenAI is reachable only
-through a private endpoint, run this smoke test from the approved network.
+`llm_review.json` under the session directory. Combine it with
+`live_compumark=true` only when a live registry smoke run is intended. If Azure
+OpenAI is reachable only through a private endpoint, run this smoke test from
+the approved network.
 
-The curated `compumark_trademark_search` tool can perform live CompuMark calls
-when invoked by an agent/tool run and `COMPUMARK_API_KEY` is available. Do not
-run broad live searches unless the source budget and scope are intentional.
+Opt-in live CompuMark smoke state:
+
+```json
+{
+  "brand": "KLYRA",
+  "countries": "US, EUIPO",
+  "goods": "cosmetics and skincare",
+  "include_web_search": false,
+  "live_compumark": true,
+  "session_id": "compumark-smoke-klyra"
+}
+```
+
+`live_compumark=true` executes planned CompuMark query groups. Set
+`include_web_search=false` for a registry-only smoke run that can reach a final
+report without waiting for the deferred web/common-law integration. Do not run
+broad live searches unless the source budget and scope are intentional.
 
 ## CLI
 
@@ -148,9 +164,23 @@ python -m src.tm_knockout_search_agent.main \
   --json
 ```
 
+Opt-in live CompuMark registry-only smoke run:
+
+```bash
+python -m src.tm_knockout_search_agent.main \
+  --brand "KLYRA" \
+  --countries "US, EUIPO" \
+  --goods "cosmetics and skincare" \
+  --live-compumark \
+  --no-include-web-search \
+  --max-results-per-query 5 \
+  --session-id "compumark-smoke-klyra"
+```
+
 The CLI validates required fields before invoking the deterministic checker.
 For missing-criteria behavior that returns an agent-style clarification state,
-use LangGraph Studio or the mocked E2E runner.
+use LangGraph Studio or the mocked E2E runner. Without `--live-compumark`, the
+CLI does not call CompuMark.
 
 ## Mocked E2E Tests
 

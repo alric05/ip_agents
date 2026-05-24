@@ -27,6 +27,7 @@ def test_cli_parser_supports_direct_brand_arguments() -> None:
             "US, EUIPO",
             "--goods",
             "cosmetics and skincare",
+            "--live-compumark",
         ]
     )
 
@@ -34,6 +35,7 @@ def test_cli_parser_supports_direct_brand_arguments() -> None:
     assert args.countries == "US, EUIPO"
     assert args.goods == "cosmetics and skincare"
     assert args.include_web_search is True
+    assert args.live_compumark is True
 
 
 def test_cli_main_runs_without_live_api_calls(tmp_path: Path, capsys) -> None:
