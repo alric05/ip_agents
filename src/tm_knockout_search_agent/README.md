@@ -1,19 +1,21 @@
 # TM Knockout Search Agent
 
-Initial package skeleton for the trademark knockout search agent.
+Initial implementation for the trademark knockout search agent.
 
 The intended agent will perform first-pass trademark and brand clearance
 screening for a proposed mark, target jurisdictions, and Nice classes or
-goods/services. This scaffold intentionally does not contain live API calls,
-full workflow logic, or LangGraph registration yet.
+goods/services. This v1 implementation intentionally does not contain live
+CompuMark or web API calls.
 
 ## Current Status
 
 - Package imports cleanly.
-- Prompt, state, skill, middleware, service, and tool placeholders are present.
-- `create_knockout_search_agent()` exists as a placeholder and raises
-  `NotImplementedError` when called.
-- The agent is not registered in `langgraph.json`.
+- Prompt, state, skill, middleware, service, and tool modules are present.
+- `create_tm_knockout_search_agent()` returns a deterministic invokable object.
+- `check_tm_knockout()` runs local planning, risk, stopping, session, and report
+  helpers without live external calls.
+- The assistant is registered in `langgraph.json` as
+  `tm_knockout_search_agent`.
 
 ## Intended Package Boundaries
 

@@ -18,6 +18,7 @@ MODULES = [
     "src.tm_knockout_search_agent.services.risk_assessment",
     "src.tm_knockout_search_agent.services.stopping",
     "src.tm_knockout_search_agent.services.workflow",
+    "src.tm_knockout_search_agent.studio",
     "src.tm_knockout_search_agent.tools",
     "src.tm_knockout_search_agent.tools.adapters",
     "src.tm_knockout_search_agent.tools.compumark",
