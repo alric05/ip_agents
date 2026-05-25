@@ -168,3 +168,92 @@ def test_tm_langgraph_entrypoint_records_mocked_llm_error(
         / "mock-llm-error"
         / "llm_review.json"
     ).exists()
+
+
+def test_tm_langgraph_conversational_path_extracts_runs_and_analyzes(
+    tmp_path: Path,
+    monkeypatch,
+) -> None:
+    module = importlib.import_module("src.tm_knockout_search_agent.studio")
+    captured = {}
+
+    def fake_llm_flow(**kwargs):
+        captured.update(kwargs)
+        return {
+            "agent_name": "tm_knockout_search_agent",
+            "session_id": kwargs["session_id"],
+            "conversation_intake": {
+                "brand_name": "KLYRA",
+                "countries": ["US", "EUIPO"],
+                "classes": ["3"],
+                "goods_services": "cosmetics and skincare",
+            },
+            "risk_assessment": {
+                "overall_risk_label": "MEDIUM",
+                "findings": [],
+                "missing_or_failed_source_notes": [],
+            },
+            "report_markdown": "# LLM TM report\n\nOverall risk: MEDIUM",
+            "llm_analysis": {"overall_risk_label": "MEDIUM"},
+            "conversational_agent": True,
+            "llm_response": "# LLM TM report\n\nOverall risk: MEDIUM",
+            "live_llm_call": True,
+            "live_api_calls": True,
+        }
+
+    monkeypatch.setattr(module, "run_llm_compumark_knockout_flow", fake_llm_flow)
+
+    result_state = module.graph.invoke(
+        {
+            "input_message": "Check KLYRA for cosmetics in the US and EUIPO class 3.",
+            "session_id": "conversational-smoke",
+            "sessions_base_dir": str(tmp_path / "sessions"),
+        }
+    )
+
+    assert captured["message"] == (
+        "Check KLYRA for cosmetics in the US and EUIPO class 3."
+    )
+    assert captured["session_id"] == "conversational-smoke"
+    assert captured["sessions_base_dir"] == str(tmp_path / "sessions")
+    assert captured["max_content_ids"] == 50
+    assert result_state["result"]["conversational_agent"] is True
+    assert result_state["result"]["report_markdown"].startswith("# LLM TM report")
+    assert result_state["result"]["llm_analysis"]["overall_risk_label"] == "MEDIUM"
+
+
+def test_tm_langgraph_conversational_path_asks_for_missing_input(
+    monkeypatch,
+) -> None:
+    from langchain_core.messages import AIMessage
+
+    class FakeLLM:
+        def invoke(self, messages):
+            return AIMessage(
+                content=json.dumps(
+                    {
+                        "brand_name": "KLYRA",
+                        "countries": [],
+                        "classes": [],
+                        "goods_services": None,
+                        "business_context": None,
+                        "assumptions": [],
+                        "missing_fields": [],
+                        "clarification_question": None,
+                        "ready_for_search": False,
+                        "reasoning": "Missing scope.",
+                        "language": "English",
+                    }
+                )
+            )
+
+    import src.config.llm as llm_config
+
+    monkeypatch.setattr(llm_config, "get_llm", lambda: FakeLLM())
+
+    module = importlib.import_module("src.tm_knockout_search_agent.studio")
+    result_state = module.graph.invoke({"input_message": "Check KLYRA."})
+
+    assert result_state["result"]["status"] == "NEEDS_INPUT"
+    assert "countries or regional trademark systems" in result_state["result"]["missing_fields"]
+    assert result_state["result"]["live_api_calls"] is False

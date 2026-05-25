@@ -1,8 +1,8 @@
 """LangGraph Studio entry point for the TM knockout search agent.
 
-This module exposes a minimal compiled graph for Studio registration. The v1
-graph wraps the local factory/services and does not call live trademark or web
-APIs. An opt-in `use_llm` flag can make one LLM call for local smoke testing.
+This module exposes the Studio-registered graph. It supports structured
+deterministic input and a conversational path: LLM intake, deterministic source
+execution, then LLM-authored analysis grounded in artifacts.
 """
 
 import json
@@ -17,6 +17,17 @@ from src.tm_knockout_search_agent.deep_agent import (
     TM_KNOCKOUT_AGENT_NAME,
     check_tm_knockout,
 )
+from src.tm_knockout_search_agent.services.conversation import (
+    analyze_tm_knockout_result,
+    extract_tm_search_criteria_from_message,
+)
+from src.tm_knockout_search_agent.services.llm_compumark_flow import (
+    run_llm_compumark_knockout_flow,
+)
+from src.tm_knockout_search_agent.services.session import (
+    write_artifact,
+    write_final_report,
+)
 
 
 class TMKnockoutGraphState(TypedDict, total=False):
@@ -30,6 +41,8 @@ class TMKnockoutGraphState(TypedDict, total=False):
     nice_classes: str | list[str]
     goods: str
     goods_services: str
+    input_message: str
+    conversational: bool
     business_context: str
     assumptions: list[str]
     candidates: list[dict[str, Any]]
@@ -41,6 +54,7 @@ class TMKnockoutGraphState(TypedDict, total=False):
     session_id: str
     sessions_base_dir: str
     max_results_per_query: int
+    max_content_ids: int
     max_candidates_to_normalize: int
     max_candidates_to_surface_in_report: int
     include_web_search: bool
@@ -132,6 +146,18 @@ def _run_tm_knockout_screen(
     config: RunnableConfig | None = None,
 ) -> dict[str, Any]:
     thread_id = state.get("thread_id") or _config_thread_id(config)
+    conversation_message = _conversation_message_from_state(state)
+    if conversation_message and (
+        state.get("conversational") or not _has_structured_criteria(state)
+    ):
+        result = _run_conversational_tm_knockout(
+            state,
+            conversation_message=conversation_message,
+            thread_id=thread_id,
+        )
+        messages = [*state.get("messages", []), _result_message(result)]
+        return {"result": result, "messages": messages}
+
     result = _preflight_missing_input_result(state)
 
     if result is None:
@@ -170,6 +196,193 @@ def _run_tm_knockout_screen(
 
     messages = [*state.get("messages", []), _result_message(result)]
     return {"result": result, "messages": messages}
+
+
+def _run_conversational_tm_knockout(
+    state: TMKnockoutGraphState,
+    *,
+    conversation_message: str,
+    thread_id: str | None,
+) -> dict[str, Any]:
+    """Run the LLM intake -> LLM payload -> CompuMark -> LLM analysis path."""
+    try:
+        return run_llm_compumark_knockout_flow(
+            message=conversation_message,
+            session_id=state.get("session_id") or thread_id,
+            thread_id=thread_id,
+            sessions_base_dir=state.get("sessions_base_dir", "sessions"),
+            max_content_ids=state.get(
+                "max_content_ids",
+                state.get("max_results_per_query", 50),
+            ),
+        )
+    except Exception as exc:
+        return {
+            "agent_name": TM_KNOCKOUT_AGENT_NAME,
+            "status": "LLM_COMPUMARK_FLOW_FAILED",
+            "message": "The conversational CompuMark workflow failed before completion.",
+            "error": str(exc),
+            "live_llm_call": False,
+            "live_llm_call_attempted": True,
+            "live_api_calls": False,
+        }
+
+
+def _run_legacy_conversational_tm_knockout(
+    state: TMKnockoutGraphState,
+    *,
+    conversation_message: str,
+    thread_id: str | None,
+) -> dict[str, Any]:
+    """Run the earlier LLM intake -> deterministic source -> LLM analysis path."""
+    try:
+        intake = extract_tm_search_criteria_from_message(conversation_message)
+    except Exception as exc:
+        return {
+            "agent_name": TM_KNOCKOUT_AGENT_NAME,
+            "status": "LLM_INTAKE_FAILED",
+            "message": "I could not reliably extract trademark search criteria from that message.",
+            "error": str(exc),
+            "live_llm_call": False,
+            "live_llm_call_attempted": True,
+            "live_api_calls": False,
+        }
+
+    if not intake.ready_for_search:
+        return {
+            "agent_name": TM_KNOCKOUT_AGENT_NAME,
+            "status": "NEEDS_INPUT",
+            "message": intake.clarification_question,
+            "conversation_intake": intake.model_dump(mode="json"),
+            "missing_fields": intake.missing_fields,
+            "live_llm_call": True,
+            "live_api_calls": False,
+        }
+
+    result = check_tm_knockout(
+        brand=intake.brand_name,
+        countries=intake.countries,
+        classes=intake.classes,
+        goods=intake.goods_services,
+        business_context=intake.business_context,
+        assumptions=intake.assumptions,
+        model=state.get("model"),
+        thread_id=thread_id,
+        session_id=state.get("session_id") or thread_id,
+        max_results_per_query=state.get("max_results_per_query", 5),
+        max_candidates_to_normalize=state.get("max_candidates_to_normalize", 100),
+        max_candidates_to_surface_in_report=state.get(
+            "max_candidates_to_surface_in_report",
+            10,
+        ),
+        include_web_search=state.get("include_web_search", True),
+        include_inactive_contextual=state.get("include_inactive_contextual", False),
+        live_compumark=state.get("live_compumark", True),
+        language=intake.language or state.get("language", "English"),
+        sessions_base_dir=state.get("sessions_base_dir", "sessions"),
+    )
+    result = {
+        **result,
+        "conversation_intake": intake.model_dump(mode="json"),
+        "conversational_agent": True,
+        "live_llm_call": True,
+        "live_llm_call_attempted": True,
+    }
+
+    try:
+        analysis = analyze_tm_knockout_result(result)
+        deterministic_report = result.get("report_markdown")
+        result = {
+            **result,
+            "deterministic_report_markdown": deterministic_report,
+            "report_markdown": analysis.final_response,
+            "llm_response": analysis.final_response,
+            "llm_analysis": analysis.model_dump(mode="json"),
+            "live_llm_call": True,
+        }
+        _write_conversational_artifacts(
+            result,
+            intake,
+            analysis,
+            base_dir=state.get("sessions_base_dir", "sessions"),
+        )
+    except Exception as exc:
+        result = {
+            **result,
+            "llm_error": str(exc),
+            "llm_response": None,
+            "live_llm_call": False,
+            "live_llm_call_attempted": True,
+        }
+    return result
+
+
+def _write_conversational_artifacts(
+    result: dict[str, Any],
+    intake: Any,
+    analysis: Any,
+    *,
+    base_dir: str,
+) -> None:
+    session_id = result.get("session_id")
+    if not session_id:
+        return
+    write_artifact(
+        str(session_id),
+        "llm_review",
+        {
+            "mode": "conversational",
+            "intake": intake.model_dump(mode="json"),
+            "analysis": analysis.model_dump(mode="json"),
+            "live_llm_call": True,
+        },
+        base_dir=base_dir,
+    )
+    write_final_report(str(session_id), analysis.final_response, base_dir=base_dir)
+
+
+def _has_structured_criteria(state: TMKnockoutGraphState) -> bool:
+    return bool(
+        (state.get("brand") or state.get("brand_name"))
+        and (state.get("countries") or state.get("jurisdictions"))
+        and (
+            state.get("classes")
+            or state.get("nice_classes")
+            or state.get("goods")
+            or state.get("goods_services")
+        )
+    )
+
+
+def _conversation_message_from_state(state: TMKnockoutGraphState) -> str | None:
+    if state.get("input_message"):
+        return str(state["input_message"]).strip() or None
+
+    for message in reversed(state.get("messages", [])):
+        role = _message_role(message)
+        if role not in {"human", "user"}:
+            continue
+        content = _message_content(message)
+        if content:
+            return content
+    return None
+
+
+def _message_role(message: Any) -> str | None:
+    if isinstance(message, dict):
+        value = message.get("role") or message.get("type")
+        return str(value).lower() if value else None
+    value = getattr(message, "type", None) or getattr(message, "role", None)
+    return str(value).lower() if value else None
+
+
+def _message_content(message: Any) -> str | None:
+    if isinstance(message, dict):
+        content = message.get("content")
+    else:
+        content = getattr(message, "content", None)
+    text = _message_content_to_text(content).strip() if content is not None else ""
+    return text or None
 
 
 def _attach_llm_review(

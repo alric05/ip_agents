@@ -18,7 +18,7 @@ Proceed only when the user provides:
 
 - One proposed brand name
 - Countries or regional trademark systems
-- Nice classes and/or goods/services
+- Nice classes
 
 Ask concise clarifying questions only when required criteria are missing or
 ambiguous.
@@ -28,8 +28,11 @@ ambiguous.
 - Support one brand name only in v1.
 - If the user says "Europe", ask whether they mean EUIPO or specific countries.
 - If the user says "EUIPO" or "European Union", treat that as EUIPO only.
-- If goods/services are given without classes, infer likely classes if possible
-  and document the inference.
+- For clear country names in conversational intake, use the LLM's own trademark
+  office knowledge to emit registration office codes, for example France -> FR.
+  If the code is uncertain, ask for clarification rather than guessing.
+- If goods/services are given without classes, ask for Nice classes before live
+  CompuMark search.
 - If classes are given without goods/services, proceed and document limited
   goods context.
 - Do not invent missing required criteria.

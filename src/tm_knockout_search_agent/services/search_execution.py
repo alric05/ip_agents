@@ -63,9 +63,8 @@ def execute_trademark_search_plan(
 ) -> TrademarkSourceExecutionResult:
     """Execute source-backed query groups in a trademark search plan.
 
-    Only CompuMark groups are executed in this phase. Web/common-law query
-    groups are intentionally left incomplete so stopping rules can continue to
-    request that stage when web search is enabled.
+    CompuMark groups use the configured API. Web/common-law groups are completed
+    deterministically with no live web call in this phase.
     """
     max_candidates = (
         max_candidates_to_normalize
@@ -76,11 +75,33 @@ def execute_trademark_search_plan(
     completed_stages: list[TrademarkSearchStage] = []
     candidates: list[TrademarkCandidate] = []
     compumark_results: list[dict[str, Any]] = []
+    web_results: list[dict[str, Any]] = []
     source_statuses: list[SourceSearchStatus] = []
     errors: list[SourceExecutionError] = []
     live_api_calls = False
 
     for group in plan.query_groups:
+        if group.source == TrademarkSearchSource.WEB_SEARCH:
+            web_results.append(
+                {
+                    "query_group_id": group.id,
+                    "stage": group.stage.value,
+                    "source": group.source.value,
+                    "succeeded": True,
+                    "live_api_calls": False,
+                    "results": [],
+                    "note": (
+                        "Deterministic v1 placeholder: no live web/common-law "
+                        "search was executed."
+                    ),
+                }
+            )
+            completed_query_group_ids.append(group.id)
+            if group.stage not in completed_stages:
+                completed_stages.append(group.stage)
+            source_statuses.extend(_statuses_for_group(group, succeeded=True))
+            continue
+
         if group.source not in {
             TrademarkSearchSource.COMPUMARK,
             TrademarkSearchSource.COMPUMARK_INACTIVE_CONTEXTUAL,
@@ -143,6 +164,7 @@ def execute_trademark_search_plan(
         completed_stages=completed_stages,
         candidates=normalized_candidates,
         compumark_results=compumark_results,
+        web_results=web_results,
         source_statuses=source_statuses,
         errors=errors,
         live_api_calls=live_api_calls,

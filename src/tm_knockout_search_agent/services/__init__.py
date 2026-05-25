@@ -28,6 +28,22 @@ from src.tm_knockout_search_agent.services.compumark_client import (
     execute_compumark_search,
     normalize_registration_office_codes,
 )
+from src.tm_knockout_search_agent.services.conversation import (
+    ConversationalAnalysisResult,
+    ConversationalIntakeResult,
+    analyze_tm_knockout_result,
+    extract_tm_search_criteria_from_message,
+)
+from src.tm_knockout_search_agent.services.llm_compumark_flow import (
+    CompuMarkContentAnalysis,
+    CompuMarkExecutionAttempt,
+    CompuMarkPayloadDraft,
+    CompuMarkQuestionDraft,
+    analyze_compumark_content,
+    draft_compumark_payload,
+    draft_compumark_search_question,
+    run_llm_compumark_knockout_flow,
+)
 from src.tm_knockout_search_agent.services.query_planner import (
     normalize_brand_name,
     plan_trademark_search,
@@ -103,6 +119,18 @@ __all__ = [
     "build_compumark_search_requests",
     "execute_compumark_search",
     "normalize_registration_office_codes",
+    "ConversationalAnalysisResult",
+    "ConversationalIntakeResult",
+    "analyze_tm_knockout_result",
+    "extract_tm_search_criteria_from_message",
+    "CompuMarkContentAnalysis",
+    "CompuMarkExecutionAttempt",
+    "CompuMarkPayloadDraft",
+    "CompuMarkQuestionDraft",
+    "analyze_compumark_content",
+    "draft_compumark_payload",
+    "draft_compumark_search_question",
+    "run_llm_compumark_knockout_flow",
     "normalize_brand_name",
     "plan_trademark_search",
     "CandidateAnalysis",

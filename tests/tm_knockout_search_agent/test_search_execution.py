@@ -68,10 +68,12 @@ def test_executes_compumark_query_groups_and_collects_candidates() -> None:
     assert result.completed_query_group_ids == [
         "QG-EXACT-ACTIVE-1",
         "QG-SIMILAR-ACTIVE-1",
+        "QG-WEB-COMMON-LAW-1",
     ]
     assert result.completed_stages == [
         TrademarkSearchStage.EXACT_ACTIVE,
         TrademarkSearchStage.SIMILAR_ACTIVE,
+        TrademarkSearchStage.WEB_COMMON_LAW,
     ]
     assert len(result.candidates) == 2
     assert result.compumark_results[0]["succeeded"] is True
@@ -80,7 +82,7 @@ def test_executes_compumark_query_groups_and_collects_candidates() -> None:
     assert {status.jurisdiction for status in result.source_statuses} >= {"US"}
 
 
-def test_web_groups_are_not_marked_complete_by_compumark_execution() -> None:
+def test_web_groups_are_completed_by_deterministic_placeholder() -> None:
     plan = plan_trademark_search(
         _criteria(),
         budget=TrademarkSearchBudget(include_web_search=True),
@@ -100,8 +102,10 @@ def test_web_groups_are_not_marked_complete_by_compumark_execution() -> None:
 
     result = execute_trademark_search_plan(plan, compumark_executor=executor)
 
-    assert TrademarkSearchStage.WEB_COMMON_LAW not in result.completed_stages
-    assert "QG-WEB-COMMON-LAW-1" not in result.completed_query_group_ids
+    assert TrademarkSearchStage.WEB_COMMON_LAW in result.completed_stages
+    assert "QG-WEB-COMMON-LAW-1" in result.completed_query_group_ids
+    assert result.web_results[0]["live_api_calls"] is False
+    assert "placeholder" in result.web_results[0]["note"].lower()
 
 
 def test_required_compumark_failure_creates_failed_source_status() -> None:

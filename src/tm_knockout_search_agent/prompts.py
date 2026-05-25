@@ -19,7 +19,7 @@ INTAKE_REQUIREMENTS_PROMPT = """Required user input:
 
 1. One proposed brand name
 2. Countries or regional trademark systems
-3. Nice classes and/or goods/services
+3. Nice classes
 
 Ask concise clarifying questions only when required criteria are missing.
 Support one brand name only in v1. Default to English unless another language is
@@ -29,9 +29,14 @@ Jurisdiction handling:
 - "Europe" is ambiguous; ask for EUIPO or specific countries.
 - "EUIPO" or "European Union" means EUIPO only.
 - Do not expand EUIPO into European countries.
+- In conversational intake, use the LLM's own trademark office knowledge to
+  convert clear country names to registration office codes, for example
+  France -> FR. If uncertain, ask for clarification instead of guessing.
 
 Goods/classes handling:
-- Goods/services without classes: allow class inference and document it.
+- Nice classes are required for the LLM-directed CompuMark flow.
+- Goods/services are optional but helpful context.
+- Goods/services without classes: ask for Nice classes before live search.
 - Classes without goods/services: proceed and document limited goods context.
 - Do not invent missing required criteria.
 """
@@ -39,7 +44,8 @@ Goods/classes handling:
 NORMALIZATION_PROMPT = """Normalize search criteria before planning:
 
 - Brand name: trim and preserve original display form.
-- Jurisdictions/systems: normalize countries and regional systems.
+- Jurisdictions/systems: prefer registration office codes for clear countries
+  and preserve explicit regional systems.
 - Classes: normalize Nice class numbers.
 - Goods/services: keep user text and any documented assumptions.
 - Assumptions: record class inference, limited goods context, language limits,

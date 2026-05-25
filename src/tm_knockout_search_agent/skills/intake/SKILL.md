@@ -18,7 +18,7 @@ Confirm that the user supplied:
 
 - One proposed brand name
 - Countries or regional trademark systems
-- Nice classes and/or goods/services
+- Nice classes
 
 Ask only for missing required criteria.
 
@@ -27,8 +27,8 @@ Ask only for missing required criteria.
 - Support one brand name only in v1.
 - If the user says "Europe", ask whether they mean EUIPO or specific countries.
 - If the user says "EUIPO" or "European Union", treat that as EUIPO only.
-- If goods/services are provided without classes, proceed with class inference
-  and document the inference.
+- If goods/services are provided without classes, ask for Nice classes before
+  live CompuMark search.
 - If classes are provided without goods/services, proceed and document limited
   goods context.
 - Do not invent missing criteria.

@@ -16,6 +16,7 @@ MODULES = [
     "src.tm_knockout_search_agent.middleware.stage_guard",
     "src.tm_knockout_search_agent.services",
     "src.tm_knockout_search_agent.services.compumark_client",
+    "src.tm_knockout_search_agent.services.conversation",
     "src.tm_knockout_search_agent.services.query_planner",
     "src.tm_knockout_search_agent.services.risk_assessment",
     "src.tm_knockout_search_agent.services.report",
